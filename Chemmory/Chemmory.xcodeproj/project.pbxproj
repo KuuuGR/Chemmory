@@ -12,6 +12,11 @@
 		22C481892226B91B00C6E530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C481872226B91B00C6E530 /* Main.storyboard */; };
 		22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C4818A2226B91D00C6E530 /* Assets.xcassets */; };
 		22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */; };
+		22FA5AE22229305D0026FC5D /* Gameboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE12229305D0026FC5D /* Gameboard.storyboard */; };
+		22FA5AE42229541D0026FC5D /* MemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE32229541D0026FC5D /* MemCell.xib */; };
+		22FA5AE6222958740026FC5D /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE5222958740026FC5D /* CardModel.swift */; };
+		22FA5AE8222961090026FC5D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE7222961090026FC5D /* Card.swift */; };
+		22FA5AEA22296D5E0026FC5D /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE922296D5E0026FC5D /* CardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		22C4818A2226B91D00C6E530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C4818D2226B91D00C6E530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C4818F2226B91D00C6E530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22FA5AE12229305D0026FC5D /* Gameboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gameboard.storyboard; sourceTree = "<group>"; };
+		22FA5AE32229541D0026FC5D /* MemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemCell.xib; sourceTree = "<group>"; };
+		22FA5AE5222958740026FC5D /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		22FA5AE7222961090026FC5D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		22FA5AE922296D5E0026FC5D /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,7 @@
 		22C481772226B91B00C6E530 = {
 			isa = PBXGroup;
 			children = (
+				22FA5AE32229541D0026FC5D /* MemCell.xib */,
 				22C481822226B91B00C6E530 /* Chemmory */,
 				22C481812226B91B00C6E530 /* Products */,
 			);
@@ -55,8 +66,12 @@
 			isa = PBXGroup;
 			children = (
 				22C481832226B91B00C6E530 /* AppDelegate.swift */,
+				22FA5AE5222958740026FC5D /* CardModel.swift */,
+				22FA5AE7222961090026FC5D /* Card.swift */,
+				22FA5AE922296D5E0026FC5D /* CardCollectionViewCell.swift */,
 				22C481852226B91B00C6E530 /* ViewController.swift */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
+				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
@@ -123,6 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */,
+				22FA5AE22229305D0026FC5D /* Gameboard.storyboard in Resources */,
+				22FA5AE42229541D0026FC5D /* MemCell.xib in Resources */,
 				22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
 			);
@@ -137,6 +154,9 @@
 			files = (
 				22C481862226B91B00C6E530 /* ViewController.swift in Sources */,
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
+				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
+				22FA5AEA22296D5E0026FC5D /* CardCollectionViewCell.swift in Sources */,
+				22FA5AE8222961090026FC5D /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,10 +301,10 @@
 		22C481932226B91D00C6E530 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQVN3U6RX9;
 				INFOPLIST_FILE = Chemmory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +319,10 @@
 		22C481942226B91D00C6E530 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQVN3U6RX9;
 				INFOPLIST_FILE = Chemmory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
