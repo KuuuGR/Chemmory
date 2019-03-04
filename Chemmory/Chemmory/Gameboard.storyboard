@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="hU9-XO-NmT">
             <objects>
-                <viewController id="oql-Na-0el" sceneMemberID="viewController">
+                <viewController id="oql-Na-0el" customClass="ViewController" customModule="Chemmory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IaC-U5-f5E">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1l9-WE-ZfQ"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="3Nt-XC-aNZ" id="fdf-GL-Qwv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuM-mR-8ot" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

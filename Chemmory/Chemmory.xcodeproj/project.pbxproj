@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE12229305D0026FC5D /* Gameboard.storyboard */; };
-		22C21B74222D415200EC9A48 /* MainViewControllerswift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewControllerswift */; };
+		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
 		22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481832226B91B00C6E530 /* AppDelegate.swift */; };
 		22C481862226B91B00C6E530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481852226B91B00C6E530 /* ViewController.swift */; };
 		22C481892226B91B00C6E530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C481872226B91B00C6E530 /* Main.storyboard */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22C21B73222D415200EC9A48 /* MainViewControllerswift */ = {isa = PBXFileReference; lastKnownFileType = text; path = MainViewControllerswift; sourceTree = "<group>"; };
+		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		22C481802226B91B00C6E530 /* Chemmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C481832226B91B00C6E530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22C481852226B91B00C6E530 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				22FA5AE7222961090026FC5D /* Card.swift */,
 				22FA5AE922296D5E0026FC5D /* CardCollectionViewCell.swift */,
 				22C481852226B91B00C6E530 /* ViewController.swift */,
-				22C21B73222D415200EC9A48 /* MainViewControllerswift */,
+				22C21B73222D415200EC9A48 /* MainViewController.swift */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
 				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
@@ -159,7 +159,7 @@
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
 				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
 				22FA5AEA22296D5E0026FC5D /* CardCollectionViewCell.swift in Sources */,
-				22C21B74222D415200EC9A48 /* MainViewControllerswift in Sources */,
+				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
 				22FA5AE8222961090026FC5D /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
