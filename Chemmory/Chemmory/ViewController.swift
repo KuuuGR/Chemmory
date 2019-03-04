@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    
     var model = CardModel()
     var cardArray = [Card]()
 

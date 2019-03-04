@@ -18,25 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Zrzut ekranu 2019-03-1 o 09.45.26" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-BQ-Iyb" userLabel="Background">
+                                <rect key="frame" x="20" y="0.0" width="627" height="375"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-XC-aNZ">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V4c-6H-G7B">
-                                    <size key="itemSize" width="160" height="187"/>
+                                    <size key="itemSize" width="158" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Zic-4A-dRe" userLabel="CardCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="187"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="Zic-4A-dRe" userLabel="CardCell" customClass="CardCollectionViewCell" customModule="Chemmory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="158" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="187"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-dx-GzY" userLabel="card">
-                                                    <rect key="frame" x="-95" y="-39" width="240" height="128"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-dx-GzY" userLabel="card1">
+                                                    <rect key="frame" x="9" y="9" width="160" height="178"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="YVe-cZ-xam" userLabel="back">
@@ -45,6 +48,10 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="backImageView" destination="YVe-cZ-xam" id="hqD-50-fGD"/>
+                                            <outlet property="frontImageView" destination="AIB-dx-GzY" id="FxS-P1-bko"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -55,14 +62,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="leading" secondItem="1l9-WE-ZfQ" secondAttribute="leading" id="7Fp-ll-Or6"/>
+                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="leading" secondItem="1l9-WE-ZfQ" secondAttribute="leading" id="6Px-K4-HVv"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="centerY" secondItem="1l9-WE-ZfQ" secondAttribute="centerY" id="EWi-jt-8JN"/>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="top" secondItem="1l9-WE-ZfQ" secondAttribute="top" id="NuZ-3c-koh"/>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="width" secondItem="IaC-U5-f5E" secondAttribute="width" id="Qcw-ZE-Qfo"/>
+                            <constraint firstItem="lR9-BQ-Iyb" firstAttribute="top" secondItem="IaC-U5-f5E" secondAttribute="topMargin" id="Ema-kQ-5LB"/>
+                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="trailing" secondItem="1l9-WE-ZfQ" secondAttribute="trailing" id="M0r-JL-iHs"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="width" secondItem="IaC-U5-f5E" secondAttribute="width" multiplier="0.4" id="Vue-HQ-Ghd"/>
+                            <constraint firstItem="lR9-BQ-Iyb" firstAttribute="leading" secondItem="IaC-U5-f5E" secondAttribute="leadingMargin" id="aDA-Iq-Rwy"/>
+                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="bottom" secondItem="1l9-WE-ZfQ" secondAttribute="bottom" id="gVj-Wj-6rN"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="height" secondItem="IaC-U5-f5E" secondAttribute="height" multiplier="0.4" id="kW9-Sq-QWA"/>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="height" secondItem="IaC-U5-f5E" secondAttribute="height" id="kac-nU-QQw"/>
+                            <constraint firstItem="lR9-BQ-Iyb" firstAttribute="bottom" secondItem="IaC-U5-f5E" secondAttribute="bottomMargin" id="oZA-Qs-bZh"/>
+                            <constraint firstItem="lR9-BQ-Iyb" firstAttribute="trailing" secondItem="IaC-U5-f5E" secondAttribute="trailingMargin" id="rIU-nJ-h5C"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="centerX" secondItem="1l9-WE-ZfQ" secondAttribute="centerX" id="yUj-4V-d87"/>
+                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="top" secondItem="1l9-WE-ZfQ" secondAttribute="top" id="z7O-cd-7aK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1l9-WE-ZfQ"/>
                     </view>
@@ -74,5 +85,6 @@
     </scenes>
     <resources>
         <image name="Back" width="439" height="434"/>
+        <image name="Zrzut ekranu 2019-03-1 o 09.45.26" width="919" height="560"/>
     </resources>
 </document>
