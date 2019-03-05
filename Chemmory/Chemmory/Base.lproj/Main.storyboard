@@ -18,19 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartEkran" translatesAutoresizingMaskIntoConstraints="NO" id="0MY-gk-UG8">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start the game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-7I-2sB">
-                                <rect key="frame" x="118.5" y="-189" width="430" height="553"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="121.5" y="-189" width="424" height="553"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.28721388920000002" blue="0.44759270639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-7r-Tk4">
-                                <rect key="frame" x="268" y="224" width="131" height="131"/>
-                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="270" y="121" width="131" height="131"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0WT-7r-Tk4" secondAttribute="height" multiplier="21:21" id="dBu-Kn-2rt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="titleShadowOffset" width="-2" height="0.0"/>
                                 <state key="normal" title="START">
@@ -44,19 +48,23 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0MY-gk-UG8" secondAttribute="trailing" id="4Fy-EP-3RB"/>
                             <constraint firstItem="tI5-7I-2sB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="SJO-6c-XTh"/>
+                            <constraint firstItem="0WT-7r-Tk4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-1" id="Te7-oq-AKc"/>
                             <constraint firstItem="tI5-7I-2sB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Txr-cg-WTw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0WT-7r-Tk4" secondAttribute="bottom" constant="20" id="bgF-em-01v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0MY-gk-UG8" secondAttribute="bottom" id="XJo-zB-UZN"/>
+                            <constraint firstItem="0MY-gk-UG8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="baJ-9G-SFd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tI5-7I-2sB" secondAttribute="bottom" constant="11" id="ftk-lC-tdc"/>
-                            <constraint firstItem="0WT-7r-Tk4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n9V-XH-nwa"/>
+                            <constraint firstItem="0WT-7r-Tk4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="2" id="n9V-XH-nwa"/>
                             <constraint firstItem="0WT-7r-Tk4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="r4l-uV-abi"/>
+                            <constraint firstItem="0MY-gk-UG8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zun-Xd-w81"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="-460"/>
+            <point key="canvasLocation" x="127.28635682158921" y="-460"/>
         </scene>
         <!--Gameboard-->
         <scene sceneID="wah-gu-31a">
@@ -67,4 +75,7 @@
             <point key="canvasLocation" x="33" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="StartEkran" width="1038" height="582"/>
+    </resources>
 </document>
