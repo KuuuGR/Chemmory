@@ -21,6 +21,18 @@ class CardCollectionViewCell: UICollectionViewCell {
         // Keep track of the card that gets passed in
         self.card = card
         
+        if card.isMatched == true {
+            // If the card has been matched, then the image views invisible
+            backImageView.alpha = 0
+            frontImageView.alpha = 0
+            
+            return
+        }
+        else {
+            // If the card hasn't been matched, then make te image views visable
+            backImageView.alpha = 1
+            frontImageView.alpha = 1
+        }
         frontImageView.image = UIImage(named: card.imageName)
         
         
