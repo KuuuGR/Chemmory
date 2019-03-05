@@ -20,7 +20,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var firstFlippedCardIndex: IndexPath?
     
     var timer:Timer?
-    var miliseconds:Float = 10 * 1000 // 10 seconds
+    var milliseconds:Float = 10 * 1000 // 10 seconds
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +45,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @objc func timerElapsed() {
         
-        miliseconds -= 1
+        milliseconds -= 1
         timerLabel.text?.append("A")
         // Convert to seconds
-        let seconds = String(format: "%.2f", miliseconds/1000)
+        let seconds = String(format: "%.2f", milliseconds/1000)
         
         // Set label
         timerLabel.text = "Timer Remaining: \(seconds)"
         
         //When the timer reached 0
-        if miliseconds <= 0 {
+        if milliseconds <= 0 {
+            
+            // Stop the timer
             timer?.invalidate()
+            timerLabel.textColor = UIColor.red
+            
+            // Check if there any cards unmatched
+            checkGameEnded()
         }
     }
     
@@ -81,6 +87,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //Check if there's any time left
+        if milliseconds <= 0 {
+            return
+        }
+        
         
         //Get cell that the user selected
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
@@ -140,6 +152,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cardOneCell?.remove()
             cardTwoCell?.remove()
             
+            //Check if there are any cards left unmatched
+            checkGameEnded()
+            
         }
         else {
             
@@ -162,6 +177,64 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         firstFlippedCardIndex = nil
         
     }
+    
+    func checkGameEnded() {
+    
+    // Determine if there any cards unmached
+    var isWon = true
+        
+        for card in cardArray {
+            
+            if card.isMatched == false {
+                isWon = false
+                break
+            }
+        }
+        
+    // Messeging variables
+        var title = ""
+        var message = ""
+        
+    //If not, then user has won, stop the timer
+        if isWon == true {
+            
+            if milliseconds > 0 {
+                timer?.invalidate()
+            }
+            
+            title = "Congratulations!"
+            message = "You've won"
+        }
+        else {
+            // If there are unmatched cards, check if there's any time left
+            
+            if milliseconds > 0 {
+                return
+            }
+            
+            title = "Game Over"
+            message = "You've lost"
+        }
+    
+        //Show won/lost messaging
+        showAlert(title, message)
+
+    }
+    
+    func showAlert(_ title: String, _ message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        alert.addAction(alertAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
     
 } // End ViewControoler class
 
