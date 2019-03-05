@@ -21,40 +21,59 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-BQ-Iyb" userLabel="Background">
                                 <rect key="frame" x="20" y="0.0" width="627" height="375"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-XC-aNZ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WaC-vt-uTu">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V4c-6H-G7B">
-                                    <size key="itemSize" width="170" height="190"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="Zic-4A-dRe" userLabel="CardCell" customClass="CardCollectionViewCell" customModule="Chemmory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="190"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="190"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-dx-GzY" userLabel="card1">
-                                                    <rect key="frame" x="9" y="9" width="160" height="178"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="YVe-cZ-xam" userLabel="back">
-                                                    <rect key="frame" x="9" y="0.0" width="151" height="187"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <connections>
-                                            <outlet property="backImageView" destination="YVe-cZ-xam" id="hqD-50-fGD"/>
-                                            <outlet property="frontImageView" destination="AIB-dx-GzY" id="FxS-P1-bko"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfP-tp-Yf0">
+                                        <rect key="frame" x="233.5" y="0.0" width="200" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="oRw-QV-j2K"/>
+                                            <constraint firstAttribute="width" constant="200" id="qCb-o4-X8s"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-XC-aNZ">
+                                        <rect key="frame" x="0.0" y="30" width="667" height="345"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V4c-6H-G7B">
+                                            <size key="itemSize" width="170" height="190"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CardCell" id="Zic-4A-dRe" userLabel="CardCell" customClass="CardCollectionViewCell" customModule="Chemmory" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="190"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="190"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-dx-GzY" userLabel="card1">
+                                                            <rect key="frame" x="9" y="9" width="160" height="178"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="YVe-cZ-xam" userLabel="back">
+                                                            <rect key="frame" x="9" y="0.0" width="151" height="187"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <connections>
+                                                    <outlet property="backImageView" destination="YVe-cZ-xam" id="hqD-50-fGD"/>
+                                                    <outlet property="frontImageView" destination="AIB-dx-GzY" id="FxS-P1-bko"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Nt-XC-aNZ" firstAttribute="width" secondItem="WaC-vt-uTu" secondAttribute="width" id="Fg1-vA-g1n"/>
+                                </constraints>
+                            </stackView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPt-yr-04F">
                                 <rect key="frame" x="200" y="112.5" width="267" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.28721388920000002" blue="0.44759270639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,28 +81,29 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="leading" secondItem="1l9-WE-ZfQ" secondAttribute="leading" id="6Px-K4-HVv"/>
+                            <constraint firstItem="WaC-vt-uTu" firstAttribute="leading" secondItem="1l9-WE-ZfQ" secondAttribute="leading" id="24r-uv-JhA"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="centerY" secondItem="1l9-WE-ZfQ" secondAttribute="centerY" id="EWi-jt-8JN"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="top" secondItem="IaC-U5-f5E" secondAttribute="topMargin" id="Ema-kQ-5LB"/>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="trailing" secondItem="1l9-WE-ZfQ" secondAttribute="trailing" id="M0r-JL-iHs"/>
+                            <constraint firstItem="WaC-vt-uTu" firstAttribute="bottom" secondItem="1l9-WE-ZfQ" secondAttribute="bottom" id="VDz-Nx-YKL"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="width" secondItem="IaC-U5-f5E" secondAttribute="width" multiplier="0.4" id="Vue-HQ-Ghd"/>
+                            <constraint firstItem="WaC-vt-uTu" firstAttribute="top" secondItem="1l9-WE-ZfQ" secondAttribute="top" id="Y17-qZ-Y2i"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="leading" secondItem="IaC-U5-f5E" secondAttribute="leadingMargin" id="aDA-Iq-Rwy"/>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="bottom" secondItem="1l9-WE-ZfQ" secondAttribute="bottom" id="gVj-Wj-6rN"/>
+                            <constraint firstItem="WaC-vt-uTu" firstAttribute="trailing" secondItem="1l9-WE-ZfQ" secondAttribute="trailing" id="cp3-EM-xzc"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="height" secondItem="IaC-U5-f5E" secondAttribute="height" multiplier="0.4" id="kW9-Sq-QWA"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="bottom" secondItem="IaC-U5-f5E" secondAttribute="bottomMargin" id="oZA-Qs-bZh"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="trailing" secondItem="IaC-U5-f5E" secondAttribute="trailingMargin" id="rIU-nJ-h5C"/>
                             <constraint firstItem="dPt-yr-04F" firstAttribute="centerX" secondItem="1l9-WE-ZfQ" secondAttribute="centerX" id="yUj-4V-d87"/>
-                            <constraint firstItem="3Nt-XC-aNZ" firstAttribute="top" secondItem="1l9-WE-ZfQ" secondAttribute="top" id="z7O-cd-7aK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1l9-WE-ZfQ"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="3Nt-XC-aNZ" id="fdf-GL-Qwv"/>
+                        <outlet property="timerLabel" destination="zfP-tp-Yf0" id="YkN-Vv-CtH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuM-mR-8ot" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543.1784107946028" y="-866.39999999999998"/>
+            <point key="canvasLocation" x="-1606" y="-910"/>
         </scene>
     </scenes>
     <resources>
