@@ -14,6 +14,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var model = CardModel()
     var cardArray = [Card]()
+    
+    var firstFlippedCardIndex: IndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,15 +66,67 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             //Set the status of teh card
             card.isFliped = true
-        }
-        else {
-            // Flip the card back
-            cell.flipBack()
             
-            //Ste the status of the card
-            card.isFliped = false
+            // Determine if it's the first card or second card that's flipped over
+            
+            if firstFlippedCardIndex == nil {
+                // This is the first card beign flipped
+                firstFlippedCardIndex = indexPath
+            }
+            else {
+                
+                // This is the second card beign flipped
+                
+                // TODO: Perform the matching logic
+                checkForMatches(indexPath)
+            }
         }
     
+    } // End the didSelectItemAt method
+    
+    // MARK: - Game Logic Methods
+    
+    func checkForMatches(_ secondFlippedCardIndex: IndexPath) {
+        
+        // Get the cells for the two cards that were revealed
+        let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? CardCollectionViewCell
+        let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? CardCollectionViewCell
+        
+        
+        // Get the cards for the two cards were revealed
+        let cardOne = cardArray[firstFlippedCardIndex!.row]
+        let cardTwo = cardArray[secondFlippedCardIndex.row]
+        
+        // Compare the two cards
+        if cardOne.imageName == cardTwo.imageName {
+            
+            //It's a match
+            
+            // Set the status of the cards
+            cardOne.isMatched = true
+            cardTwo.isMatched = true
+            
+            // Remove the cards from the grid
+            cardOneCell?.remove()
+            cardTwoCell?.remove()
+            
+        }
+        else {
+            
+            // It;s not a match
+            
+            // Set the statuses  of the cards
+            cardOne.isFliped = false
+            cardTwo.isFliped = false
+        
+            // Flip both cards back
+            cardOneCell?.flipBack()
+            cardTwoCell?.flipBack()
+        }
+        
+        firstFlippedCardIndex = nil
+        
     }
-}
+    
+} // End ViewControoler class
 
