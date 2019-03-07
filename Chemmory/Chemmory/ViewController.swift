@@ -67,6 +67,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             timer?.invalidate()
             timerLabel.textColor = UIColor.red
             
+            // Play sound
+            SoundManager.playSound(.lose)
+            
             // Check if there any cards unmatched
             checkGameEnded()
         }
@@ -216,6 +219,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             if milliseconds > 0 {
                 timer?.invalidate()
+                
+                // Play sound
+                SoundManager.playSound(.win)
             }
             
             title = "Congratulations!"

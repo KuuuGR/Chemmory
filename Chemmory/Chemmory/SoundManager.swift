@@ -18,6 +18,8 @@ class SoundManager {
         case shuffle
         case match
         case nomatch
+        case win
+        case lose
     }
     
     static func playSound(_ effect: SoundEffect){
@@ -39,7 +41,13 @@ class SoundManager {
             
         case .nomatch:
             soundFilename = "dingwrong"
+        
+        case .win:
+            soundFilename = "win"
             
+        case .lose:
+            soundFilename = "lose"
+        
         }
         
         // Get the path to the sound file inside the bundle
