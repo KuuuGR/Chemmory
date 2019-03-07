@@ -21,8 +21,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var timer:Timer?
     var milliseconds:Float = 10 * 1000 // 10 seconds
-    
-    var soundManager = SoundMenager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidAppear(_ animated: Bool) {
         
-        soundManager.playSound(.shuffle)
+        SoundManager.playSound(.shuffle)
         
     }
     
@@ -116,7 +114,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.flip()
             
             // Play the flip sound
-            soundManager.playSound(.flip)
+            SoundManager.playSound(.flip)
             
             //Set the status of teh card
             card.isFliped = true
@@ -157,7 +155,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             //It's a match
             
             // Play sound
-            soundManager.playSound(.match)
+            SoundManager.playSound(.match)
             
             // Set the status of the cards
             cardOne.isMatched = true
@@ -176,7 +174,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // It's not a match
             
             //Play Sound
-            soundManager.playSound(.nomatch)
+            SoundManager.playSound(.nomatch)
             
             // Set the statuses  of the cards
             cardOne.isFliped = false

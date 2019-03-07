@@ -9,9 +9,9 @@
 import Foundation
 import AVFoundation
 
-class SoundMenager {
+class SoundManager {
     
-    var audioPlayer: AVAudioPlayer?
+    static var audioPlayer: AVAudioPlayer?
     
     enum SoundEffect {
         case flip
@@ -20,7 +20,7 @@ class SoundMenager {
         case nomatch
     }
     
-    func playSound(_ effect: SoundEffect){
+    static func playSound(_ effect: SoundEffect){
         
         var soundFilename = ""
         
