@@ -20,7 +20,7 @@ class CardModel {
         for _ in 1...8 {
             
             //Get a random number
-            let randomNumber = arc4random_uniform(0) + 1
+            let randomNumber = arc4random_uniform(12) + 1
             
             //Log the number
             print(randomNumber)
