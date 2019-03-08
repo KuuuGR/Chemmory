@@ -14,6 +14,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     var model = CardModel()
     var cardArray = [Card]()
     
@@ -21,6 +23,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var timer:Timer?
     var milliseconds:Float = 30 * 1000 // 10 seconds
+    
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        backAction()
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,7 +168,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Compare the two cards
         if cardOne.imageName == cardTwo.imageName {
             
-            //It's a match
+            // It's a match
             
             // Play sound
             SoundManager.playSound(.match)
@@ -176,7 +189,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             // It's not a match
             
-            //Play Sound
+            // Play Sound
             SoundManager.playSound(.nomatch)
             
             // Set the statuses  of the cards
@@ -222,6 +235,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
                 // Play sound
                 SoundManager.playSound(.win)
+                
+                // OPTIONAL: - Makes background brighter (or pulse completion)
+                backgroundImage.alpha = 1
+        
             }
             
             title = "Congratulations!"
@@ -253,6 +270,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         present(alert, animated: true, completion: nil)
         
         
+    }
+    
+    func backAction(){
+        //print("Back Button Clicked")
+        timer?.invalidate()
+       self.dismiss(animated: true, completion: nil)
     }
     
     

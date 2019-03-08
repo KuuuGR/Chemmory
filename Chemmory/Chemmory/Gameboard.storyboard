@@ -46,10 +46,10 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CardCell" id="Zic-4A-dRe" userLabel="CardCell" customClass="CardCollectionViewCell" customModule="Chemmory" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-dx-GzY" userLabel="card1">
@@ -71,7 +71,6 @@
                                                     <constraint firstItem="YVe-cZ-xam" firstAttribute="width" secondItem="Zic-4A-dRe" secondAttribute="width" id="asN-w8-UGi"/>
                                                     <constraint firstItem="AIB-dx-GzY" firstAttribute="centerY" secondItem="Zic-4A-dRe" secondAttribute="centerY" id="vau-gB-PgZ"/>
                                                 </constraints>
-                                                <size key="customSize" width="50" height="100"/>
                                                 <connections>
                                                     <outlet property="backImageView" destination="YVe-cZ-xam" id="hqD-50-fGD"/>
                                                     <outlet property="frontImageView" destination="AIB-dx-GzY" id="FxS-P1-bko"/>
@@ -84,29 +83,50 @@
                                     <constraint firstItem="3Nt-XC-aNZ" firstAttribute="width" secondItem="WaC-vt-uTu" secondAttribute="width" id="Fg1-vA-g1n"/>
                                 </constraints>
                             </stackView>
-                            <view hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPt-yr-04F">
-                                <rect key="frame" x="200" y="112.5" width="267" height="150"/>
-                                <color key="backgroundColor" red="1" green="0.28721388920000002" blue="0.44759270639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPg-Jm-X4g">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JvK-Qa-YeV"/>
+                                    <constraint firstAttribute="width" constant="40" id="wi5-qY-pRK"/>
+                                </constraints>
+                                <state key="normal" title="B" image="leftArrow4"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="bCD-Wd-x4F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-94-CgF">
+                                <rect key="frame" x="627" y="0.0" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e9R-dG-B6N"/>
+                                    <constraint firstAttribute="width" constant="40" id="zFx-6f-ypq"/>
+                                </constraints>
+                                <state key="normal" title="Go" image="rightArrow5"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="GV3-sZ-FtF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WaC-vt-uTu" firstAttribute="leading" secondItem="1l9-WE-ZfQ" secondAttribute="leading" id="24r-uv-JhA"/>
-                            <constraint firstItem="dPt-yr-04F" firstAttribute="centerY" secondItem="1l9-WE-ZfQ" secondAttribute="centerY" id="EWi-jt-8JN"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="top" secondItem="IaC-U5-f5E" secondAttribute="topMargin" id="Ema-kQ-5LB"/>
+                            <constraint firstItem="dPg-Jm-X4g" firstAttribute="top" secondItem="1l9-WE-ZfQ" secondAttribute="top" id="NmI-AH-7xe"/>
+                            <constraint firstItem="1l9-WE-ZfQ" firstAttribute="trailing" secondItem="Sjd-94-CgF" secondAttribute="trailing" id="RgW-To-8s1"/>
+                            <constraint firstItem="dPg-Jm-X4g" firstAttribute="leading" secondItem="1l9-WE-ZfQ" secondAttribute="leading" id="UOM-lQ-bCI"/>
                             <constraint firstItem="WaC-vt-uTu" firstAttribute="bottom" secondItem="1l9-WE-ZfQ" secondAttribute="bottom" id="VDz-Nx-YKL"/>
-                            <constraint firstItem="dPt-yr-04F" firstAttribute="width" secondItem="IaC-U5-f5E" secondAttribute="width" multiplier="0.4" id="Vue-HQ-Ghd"/>
+                            <constraint firstItem="Sjd-94-CgF" firstAttribute="top" secondItem="1l9-WE-ZfQ" secondAttribute="top" id="Vlh-WZ-VAq"/>
                             <constraint firstItem="WaC-vt-uTu" firstAttribute="top" secondItem="1l9-WE-ZfQ" secondAttribute="top" id="Y17-qZ-Y2i"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="leading" secondItem="IaC-U5-f5E" secondAttribute="leadingMargin" id="aDA-Iq-Rwy"/>
                             <constraint firstItem="WaC-vt-uTu" firstAttribute="trailing" secondItem="1l9-WE-ZfQ" secondAttribute="trailing" id="cp3-EM-xzc"/>
-                            <constraint firstItem="dPt-yr-04F" firstAttribute="height" secondItem="IaC-U5-f5E" secondAttribute="height" multiplier="0.4" id="kW9-Sq-QWA"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="bottom" secondItem="IaC-U5-f5E" secondAttribute="bottomMargin" id="oZA-Qs-bZh"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="trailing" secondItem="IaC-U5-f5E" secondAttribute="trailingMargin" id="rIU-nJ-h5C"/>
-                            <constraint firstItem="dPt-yr-04F" firstAttribute="centerX" secondItem="1l9-WE-ZfQ" secondAttribute="centerX" id="yUj-4V-d87"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1l9-WE-ZfQ"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="lR9-BQ-Iyb" id="nQ6-Ml-NfZ"/>
                         <outlet property="collectionView" destination="3Nt-XC-aNZ" id="fdf-GL-Qwv"/>
                         <outlet property="timerLabel" destination="zfP-tp-Yf0" id="YkN-Vv-CtH"/>
                     </connections>
@@ -120,5 +140,7 @@
         <image name="Back" width="439" height="434"/>
         <image name="BackPT04" width="1365" height="732"/>
         <image name="card1" width="490" height="490"/>
+        <image name="leftArrow4" width="380" height="380"/>
+        <image name="rightArrow5" width="380" height="380"/>
     </resources>
 </document>
