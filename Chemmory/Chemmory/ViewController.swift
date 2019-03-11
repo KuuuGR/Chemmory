@@ -51,8 +51,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        
-        SoundManager.playSound(.shuffle)
+        // Play shuffle sound but only at the begining
+        if (milliseconds >= 29.5 * 1000) {SoundManager.playSound(.shuffle)}
         
     }
     

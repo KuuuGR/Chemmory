@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Result-->
+        <scene sceneID="YEY-5l-5Oj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Result" id="EZO-12-vAS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIz-f9-lns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1089" y="-1173"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hU9-XO-NmT">
             <objects>
@@ -83,7 +91,7 @@
                                     <constraint firstItem="3Nt-XC-aNZ" firstAttribute="width" secondItem="WaC-vt-uTu" secondAttribute="width" id="Fg1-vA-g1n"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPg-Jm-X4g">
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPg-Jm-X4g" userLabel="Back">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -95,7 +103,7 @@
                                     <action selector="backButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="bCD-Wd-x4F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-94-CgF">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-94-CgF" userLabel="GoNext">
                                 <rect key="frame" x="627" y="0.0" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -105,6 +113,7 @@
                                 <state key="normal" title="Go" image="rightArrow5"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="GV3-sZ-FtF"/>
+                                    <segue destination="EZO-12-vAS" kind="show" id="fWv-Wq-kck"/>
                                 </connections>
                             </button>
                         </subviews>
