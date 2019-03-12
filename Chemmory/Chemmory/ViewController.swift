@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var milliseconds:Float = 30 * 1000 // 10 seconds
     
     //Count Time Elapsed
-    let startingPoint = Date()
+    let timeCountStartingPoint = Date()
     
     @IBAction func backButtonPressed(_ sender: Any) {
         backAction()
@@ -237,7 +237,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 timer?.invalidate()
                 
                 // Show Time elapsed
-                print("\(self.startingPoint.timeIntervalSinceNow * -1) seconds elapsed")
+                print("\(self.timeCountStartingPoint.timeIntervalSinceNow * -1) seconds elapsed")
                 
                 // Play sound
                 SoundManager.playSound(.win)
