@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ResultViewController: UIViewController {
 
@@ -21,6 +22,28 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultButtonViewConfig()
+        
+        // TODO: Get time of solving puzzles (start time - end time). 
+        
+        
+        // Add result to database
+        let realm = try! Realm()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        
+        let results = realm.objects(Cat.self).filter("color = 'Orange'")
+        //let results1 = realm.objects(Cat.self).sorted(by: "")
+        //print(results[1].name ?? "Niema")
+        print(results.count)
+        
+/*        var myCat = Cat()
+        myCat.name = "Joe"
+        myCat.gender = "Male"
+        myCat.color = "Orange"
+        
+        try! realm.write {
+            realm.add(myCat)
+        } */
         
         // Do any additional setup after loading the view.
     }
