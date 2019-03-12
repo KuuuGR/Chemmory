@@ -24,6 +24,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var timer:Timer?
     var milliseconds:Float = 30 * 1000 // 10 seconds
     
+    //Count Time Elapsed
+    let startingPoint = Date()
     
     @IBAction func backButtonPressed(_ sender: Any) {
         backAction()
@@ -52,7 +54,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidAppear(_ animated: Bool) {
         // Play shuffle sound but only at the begining
-        if (milliseconds >= 29.5 * 1000) {SoundManager.playSound(.shuffle)}
+        if (milliseconds >= 29.5 * 1000) {SoundManager.playSound(.shuffle)
+        }
         
     }
     
@@ -232,6 +235,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             if milliseconds > 0 {
                 timer?.invalidate()
+                
+                // Show Time elapsed
+                print("\(self.startingPoint.timeIntervalSinceNow * -1) seconds elapsed")
                 
                 // Play sound
                 SoundManager.playSound(.win)
