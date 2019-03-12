@@ -19,12 +19,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var model = CardModel()
     var cardArray = [Card]()
     
+    var missesTry = 0  // bad guess counter
+    
     var firstFlippedCardIndex: IndexPath?
     
     var timer:Timer?
     var milliseconds:Float = 30 * 1000 // 10 seconds
     
-    //Count Time Elapsed
+    //Need for results count time elapsed and actual date
     let timeCountStartingPoint = Date()
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -195,6 +197,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // Play Sound
             SoundManager.playSound(.nomatch)
             
+            // Count misses
+            missesTry += 1
+            
             // Set the statuses  of the cards
             cardOne.isFliped = false
             cardTwo.isFliped = false
@@ -237,8 +242,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 timer?.invalidate()
                 
                 // Show Time elapsed
-                print("\(self.timeCountStartingPoint.timeIntervalSinceNow * -1) seconds elapsed")
+                print("\(self.timeCountStartingPoint.timeIntervalSinceNow * -1) seconds elapsed") // TTTT -> comment this
                 
+                // Show Current Daate
+                
+                print(actualDate())  // TTTT -> Del this
+                print("misses: \(missesTry)")
+                
+                // Prepare result for segue
+                prepareResult()
+            
                 // Play sound
                 SoundManager.playSound(.win)
                 
@@ -284,8 +297,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        self.dismiss(animated: true, completion: nil)
     }
     
+    func actualDate() -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: timeCountStartingPoint)
+        return result
+    }
     
-    
+    func prepareResult() {
+        let myResult = Result()
+        myResult.date = actualDate()
+        myResult.misses = String(missesTry)
+        myResult.name = "player"
+        myResult.time = String(self.timeCountStartingPoint.timeIntervalSinceNow * -1)
+    }
     
 } // End ViewControoler class
 

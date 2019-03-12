@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ResultViewController: UIViewController {
+class ResultsViewController: UIViewController {
 
     
     @IBOutlet weak var resultButtonView: UIView!
@@ -27,15 +27,20 @@ class ResultViewController: UIViewController {
         
         
         // Add result to database
-        let realm = try! Realm()
         
-        print(Realm.Configuration.defaultConfiguration.fileURL)
         
-        let results = realm.objects(Cat.self).filter("color = 'Orange'")
+        /*let realm = try! Realm()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+        
+        try! realm.write {
+        }*/
+        
+        
+        //let results = realm.objects(Results.self).filter("color = 'Orange'")
         //let results1 = realm.objects(Cat.self).sorted(by: "")
         //print(results[1].name ?? "Niema")
-        print(results.count)
-        
+        //print(results.count)
 /*        var myCat = Cat()
         myCat.name = "Joe"
         myCat.gender = "Male"

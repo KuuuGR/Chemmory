@@ -9,11 +9,11 @@
 import Foundation
 import RealmSwift
 
-class Cat: Object {
+class Result: Object {
     
     @objc dynamic var name: String?
-    @objc dynamic var color: String?
-    @objc dynamic var gender: String?
-    
+    @objc dynamic var date: String?
+    @objc dynamic var time: String?
+    @objc dynamic var misses: String?
     
 }

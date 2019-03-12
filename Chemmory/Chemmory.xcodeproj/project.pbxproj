@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		2219C7082231358C00875DD9 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C7072231358C00875DD9 /* win.wav */; };
 		2219C70A223135AB00875DD9 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C709223135AB00875DD9 /* lose.wav */; };
-		223577A722379AB800553DCC /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223577A622379AB800553DCC /* Cat.swift */; };
+		223577A722379AB800553DCC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223577A622379AB800553DCC /* Result.swift */; };
 		22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE12229305D0026FC5D /* Gameboard.storyboard */; };
-		22957C222233B688009AF033 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22957C212233B688009AF033 /* Result.storyboard */; };
-		22957C242233B7BD009AF033 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22957C232233B7BD009AF033 /* ResultViewController.swift */; };
+		22957C222233B688009AF033 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22957C212233B688009AF033 /* Results.storyboard */; };
+		22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22957C232233B7BD009AF033 /* ResultsViewController.swift */; };
 		2299340E2231114A000E7851 /* dingwrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2299340A2231114A000E7851 /* dingwrong.wav */; };
 		2299340F2231114A000E7851 /* cardflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2299340B2231114A000E7851 /* cardflip.wav */; };
 		229934102231114A000E7851 /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2299340C2231114A000E7851 /* shuffle.wav */; };
@@ -36,9 +36,9 @@
 		1551F878BC1FCB094F554423 /* Pods-Chemmory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemmory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chemmory/Pods-Chemmory.release.xcconfig"; sourceTree = "<group>"; };
 		2219C7072231358C00875DD9 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		2219C709223135AB00875DD9 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
-		223577A622379AB800553DCC /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
-		22957C212233B688009AF033 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
-		22957C232233B7BD009AF033 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		223577A622379AB800553DCC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		22957C212233B688009AF033 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		22957C232233B7BD009AF033 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2299340A2231114A000E7851 /* dingwrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingwrong.wav; sourceTree = "<group>"; };
 		2299340B2231114A000E7851 /* cardflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardflip.wav; sourceTree = "<group>"; };
 		2299340C2231114A000E7851 /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
@@ -126,15 +126,15 @@
 				22FA5AE922296D5E0026FC5D /* CardCollectionViewCell.swift */,
 				22C481852226B91B00C6E530 /* ViewController.swift */,
 				22C21B73222D415200EC9A48 /* MainViewController.swift */,
-				22957C232233B7BD009AF033 /* ResultViewController.swift */,
+				22957C232233B7BD009AF033 /* ResultsViewController.swift */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
 				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
-				22957C212233B688009AF033 /* Result.storyboard */,
+				22957C212233B688009AF033 /* Results.storyboard */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
 				229934152231123A000E7851 /* SoundManager.swift */,
-				223577A622379AB800553DCC /* Cat.swift */,
+				223577A622379AB800553DCC /* Result.swift */,
 			);
 			path = Chemmory;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 				2299340F2231114A000E7851 /* cardflip.wav in Resources */,
 				229934102231114A000E7851 /* shuffle.wav in Resources */,
 				22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */,
-				22957C222233B688009AF033 /* Result.storyboard in Resources */,
+				22957C222233B688009AF033 /* Results.storyboard in Resources */,
 				2219C70A223135AB00875DD9 /* lose.wav in Resources */,
 				2219C7082231358C00875DD9 /* win.wav in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
@@ -274,9 +274,9 @@
 				22C481862226B91B00C6E530 /* ViewController.swift in Sources */,
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
 				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
-				22957C242233B7BD009AF033 /* ResultViewController.swift in Sources */,
+				22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */,
 				22FA5AEA22296D5E0026FC5D /* CardCollectionViewCell.swift in Sources */,
-				223577A722379AB800553DCC /* Cat.swift in Sources */,
+				223577A722379AB800553DCC /* Result.swift in Sources */,
 				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
 				229934162231123A000E7851 /* SoundManager.swift in Sources */,
 				22FA5AE8222961090026FC5D /* Card.swift in Sources */,
