@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol GameResultDelegate: class {
+//    func didWinTheGame(gamePlayDate: String, missedGuess: Int, gameDurationTime: Double)
+
+    func wracamy(data: String)
+}
+
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -26,6 +32,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var timer:Timer?
     var milliseconds:Float = 30 * 1000 // 10 seconds
     
+    var lastGamePoint: Points?
+    
     //Need for results count time elapsed and actual date
     let timeCountStartingPoint = Date()
     
@@ -37,8 +45,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +57,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Create timer
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: .common)
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +64,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if (milliseconds >= 29.5 * 1000) {SoundManager.playSound(.shuffle)
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ResultsViewController {
+            vc.points = lastGamePoint
+            vc.delegate = self
+        }
+        
+        
+        print("ide sobie do: \(segue.destination)")
     }
     
     override func didReceiveMemoryWarning() {
@@ -245,13 +260,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 print("\(self.timeCountStartingPoint.timeIntervalSinceNow * -1) seconds elapsed") // TTTT -> comment this
                 
                 // Show Current Daate
-                
                 print(actualDate())  // TTTT -> Del this
                 print("misses: \(missesTry)")
                 
                 // Prepare result for segue
-                prepareResult()
-            
+                prepareResult() //TTTT -> Wywalić to i funkcję
+//                let dddd = actualDate()
+//                let mmmm = missesTry
+//                let tttt = self.timeCountStartingPoint.timeIntervalSinceNow * -1
+                
                 // Play sound
                 SoundManager.playSound(.win)
                 
@@ -314,3 +331,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 } // End ViewControoler class
 
+extension ViewController: GameResultDelegate {
+    func wracamy(data: String) {
+        print("Wracamy z \(data)")
+    }
+}

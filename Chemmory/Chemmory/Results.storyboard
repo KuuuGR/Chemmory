@@ -83,6 +83,9 @@
                                 <state key="normal" title="Button" image="ResetButton03">
                                     <color key="titleShadowColor" red="1" green="0.28721388920000002" blue="0.44759270639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="gMA-i1-zYM" eventType="touchUpInside" id="MuT-zK-ryJ"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljD-0p-FIu" userLabel="HighScoreView">
                                 <rect key="frame" x="0.0" y="94" width="297.5" height="187.5"/>

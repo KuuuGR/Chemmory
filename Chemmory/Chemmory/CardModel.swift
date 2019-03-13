@@ -10,7 +10,6 @@ import Foundation
 
 class CardModel {
     
-    
     func getCards() -> [Card] {
         
         //Declare an array to store numbers we've already generated
@@ -49,21 +48,9 @@ class CardModel {
                 
             }
         }
-        
-        //TODO: Randomize the array
-        for i in 0...generatedCardsArray.count - 1{
-            
-            // Find a random index to swap with
-            let randomNumber = Int(arc4random_uniform(UInt32(generatedCardsArray.count)))
-            
-            // Swap the two cards
-            let temporaryStorage = generatedCardsArray[i]
-            generatedCardsArray[i] = generatedCardsArray[randomNumber]
-            generatedCardsArray[randomNumber] = temporaryStorage
-        }
-        // Return the array
+        // Randomize the array
+        //return generatedCardsArray.shuffled()   //TTTT -> uncomment this in final version and remove next line
         return generatedCardsArray
-        
     }
     
     

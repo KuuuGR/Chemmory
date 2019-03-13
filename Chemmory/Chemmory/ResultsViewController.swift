@@ -9,19 +9,38 @@
 import UIKit
 import RealmSwift
 
+struct Points {
+    let value: Int
+}
+
 class ResultsViewController: UIViewController {
 
     
-    @IBOutlet weak var resultButtonView: UIView!
+    weak var delegate: GameResultDelegate?
     
+    var points: Points?
+    
+    @IBOutlet weak var resultButtonView: UIView!
     
     
     @IBAction func backButtonPressed(_ sender: Any) {
         backAction()
     }
+    
+    
+    @IBAction func resetButtonTapped(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultButtonViewConfig()
+        
+    
+    
         
         // TODO: Get time of solving puzzles (start time - end time). 
         
@@ -53,6 +72,13 @@ class ResultsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("Moje punkty: \(points?.value ?? 0)")
+        
+    }
+    
     
 
     /*
@@ -68,6 +94,7 @@ class ResultsViewController: UIViewController {
     func backAction(){
         //print("Back Button Clicked")
         self.dismiss(animated: true, completion: nil)
+        delegate?.wracamy(data: "Z widoku punktów")
     }
     
     func resultButtonViewConfig(){
@@ -85,4 +112,3 @@ class ResultsViewController: UIViewController {
     }
     
 }  // End ResoultViewController class
-
