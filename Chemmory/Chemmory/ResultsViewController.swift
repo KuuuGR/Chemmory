@@ -94,7 +94,7 @@ class ResultsViewController: UIViewController {
     func backAction(){
         //print("Back Button Clicked")
         self.dismiss(animated: true, completion: nil)
-        delegate?.wracamy(data: "Z widoku punktów")
+        delegate?.backFromResult(transferredDataToGameVC: "Z widoku punktów")
     }
     
     func resultButtonViewConfig(){

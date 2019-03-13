@@ -11,7 +11,7 @@ import UIKit
 protocol GameResultDelegate: class {
 //    func didWinTheGame(gamePlayDate: String, missedGuess: Int, gameDurationTime: Double)
 
-    func wracamy(data: String)
+    func backFromResult(transferredDataToGameVC: String)
 }
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -25,6 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var model = CardModel()
     var cardArray = [Card]()
     
+    var endGame = false
     var missesTry = 0  // bad guess counter
     
     var firstFlippedCardIndex: IndexPath?
@@ -56,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Create timer
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
-        RunLoop.main.add(timer!, forMode: .common)
+        //RunLoop.main.add(timer!, forMode: .common)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -279,6 +280,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             title = "Congratulations!"
             message = "You've won"
+            endGame = true
         }
         else {
             // If there are unmatched cards, check if there's any time left
@@ -289,6 +291,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             title = "Game Over"
             message = "You've lost"
+            endGame = true
         }
     
         //Show won/lost messaging
@@ -332,7 +335,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 } // End ViewControoler class
 
 extension ViewController: GameResultDelegate {
-    func wracamy(data: String) {
-        print("Wracamy z \(data)")
+    func backFromResult(transferredDataToGameVC: String) {
+        print("Wracamy z \(transferredDataToGameVC)")
+         if endGame == true {
+            backAction()
+        }
     }
 }
