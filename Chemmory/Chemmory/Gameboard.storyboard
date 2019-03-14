@@ -50,8 +50,12 @@
                                         <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-DQ-uYy">
-                                        <rect key="frame" x="267.5" y="8.5" width="211" height="20.5"/>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPc-Qa-0z1" userLabel="LifeBarBGView">
+                                        <rect key="frame" x="200" y="9.5" width="267" height="18.5"/>
+                                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-DQ-uYy" userLabel="LiveBarLabel">
+                                        <rect key="frame" x="200" y="9.5" width="267" height="18.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -71,16 +75,22 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="aPc-Qa-0z1" firstAttribute="centerY" secondItem="YGe-gN-M1y" secondAttribute="centerY" id="4ym-qZ-fEe"/>
+                                    <constraint firstItem="hKi-DQ-uYy" firstAttribute="leading" secondItem="aPc-Qa-0z1" secondAttribute="leading" id="8eh-bg-s2N"/>
                                     <constraint firstAttribute="trailing" secondItem="Sjd-94-CgF" secondAttribute="trailing" id="FjD-Z0-ef8"/>
+                                    <constraint firstItem="aPc-Qa-0z1" firstAttribute="centerX" secondItem="YGe-gN-M1y" secondAttribute="centerX" id="GVs-YA-jr7"/>
+                                    <constraint firstItem="aPc-Qa-0z1" firstAttribute="height" secondItem="YGe-gN-M1y" secondAttribute="height" multiplier="0.5" id="Mf0-Dv-u4J"/>
                                     <constraint firstItem="dPg-Jm-X4g" firstAttribute="top" secondItem="YGe-gN-M1y" secondAttribute="top" id="MlV-jS-Yq4"/>
                                     <constraint firstItem="dPg-Jm-X4g" firstAttribute="height" secondItem="YGe-gN-M1y" secondAttribute="height" id="UsW-LN-rHC"/>
-                                    <constraint firstItem="hKi-DQ-uYy" firstAttribute="leading" secondItem="dPg-Jm-X4g" secondAttribute="trailing" constant="230" id="XgN-Lf-hLP"/>
                                     <constraint firstItem="dPg-Jm-X4g" firstAttribute="leading" secondItem="YGe-gN-M1y" secondAttribute="leading" id="aCY-wP-ayr"/>
                                     <constraint firstItem="Sjd-94-CgF" firstAttribute="height" secondItem="YGe-gN-M1y" secondAttribute="height" id="bYg-gq-b69"/>
                                     <constraint firstItem="zfP-tp-Yf0" firstAttribute="leading" secondItem="dPg-Jm-X4g" secondAttribute="trailing" constant="20" id="f1e-pa-UYR"/>
+                                    <constraint firstItem="aPc-Qa-0z1" firstAttribute="width" secondItem="YGe-gN-M1y" secondAttribute="width" multiplier="0.4" id="feE-uk-zO7"/>
                                     <constraint firstItem="Sjd-94-CgF" firstAttribute="top" secondItem="YGe-gN-M1y" secondAttribute="top" id="kjZ-VQ-Qwz"/>
                                     <constraint firstItem="zfP-tp-Yf0" firstAttribute="centerY" secondItem="YGe-gN-M1y" secondAttribute="centerY" id="kv5-9m-iQx"/>
-                                    <constraint firstItem="hKi-DQ-uYy" firstAttribute="centerY" secondItem="YGe-gN-M1y" secondAttribute="centerY" id="r9y-vm-Llb"/>
+                                    <constraint firstItem="hKi-DQ-uYy" firstAttribute="centerY" secondItem="aPc-Qa-0z1" secondAttribute="centerY" id="oHJ-lE-L56"/>
+                                    <constraint firstItem="hKi-DQ-uYy" firstAttribute="width" secondItem="aPc-Qa-0z1" secondAttribute="width" id="q5a-YL-bxv"/>
+                                    <constraint firstItem="hKi-DQ-uYy" firstAttribute="height" secondItem="aPc-Qa-0z1" secondAttribute="height" id="scc-KR-g7u"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WaC-vt-uTu">
@@ -104,10 +114,10 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-dx-GzY" userLabel="card1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="108.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="YVe-cZ-xam" userLabel="back">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="108.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
                                                         </imageView>
                                                     </subviews>
                                                 </view>

@@ -35,6 +35,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var timer:Timer?
     var milliseconds:Float = 30 * 1000 // 10 seconds
     
+    
     var lastGamePoint: Points?
     
     //Need for results count time elapsed and actual date
@@ -60,6 +61,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Create timer
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         //RunLoop.main.add(timer!, forMode: .common)
+        
+        // Check total livepoints
+        let lifeBarPoints = self.timerLiveBar.text?.count ?? 1
+        milliseconds = Float(lifeBarPoints * 1000)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -93,10 +98,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Convert to seconds
         let seconds = String(format: "%.2f", milliseconds/1000)
         
-        // Show live bar IIIIIIIII
-        if (Int(milliseconds) % 100 == 0) && (timerLiveBar.text?.count != 0) {
-            timerLiveBar.text = String((timerLiveBar.text?.dropLast())!)
-        }
+        // Show and control live bar IIIIIIIII
         liveBar()
         
         // Set label
@@ -341,16 +343,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func liveBar() {
-        print(timerLiveBar.text?.count ?? 0)
         
-        switch timerLiveBar.text?.count ?? 0 {
-        case 0...5:
-            timerLiveBar.textColor = UIColor.red
-        case 6...30:
-            timerLiveBar.textColor = UIColor.magenta
-        default:
-            timerLiveBar.textColor = UIColor.green
+        if (Int(milliseconds) % 1000 == 0) && (timerLiveBar.text?.count != 0) {
+            timerLiveBar.text = String((timerLiveBar.text?.dropLast())!)
         }
+        
+        print(timerLiveBar.text?.count ?? 0)
+        let livePointsInBar = timerLiveBar.text?.count ?? 0
+        let lowLivePointsColor = 0.5 * CGFloat(1/(0.15 * (Double(livePointsInBar + 1))))
+        
+        switch livePointsInBar {
+        case 0...7:
+            timerLiveBar.textColor = UIColor(red: 0.5 + lowLivePointsColor, green: 1 - lowLivePointsColor, blue: 0.6 - lowLivePointsColor, alpha: 1)
+        default:
+            timerLiveBar.textColor = UIColor.yellow
+        }
+        
     }
     
 } // End ViewControoler class
