@@ -13,7 +13,7 @@ struct Points {
     let value: Int
 }
 
-class ResultsViewController: UIViewController {
+class ResultsViewController: UIViewController, UITextFieldDelegate {
 
     
     weak var delegate: GameResultDelegate?
@@ -39,6 +39,9 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.inputUserNameTextField.delegate = self
+
         resultButtonViewConfig()
         
         // Show Keyboard with text field go up animation
@@ -117,6 +120,7 @@ class ResultsViewController: UIViewController {
         self.resultButtonView.layer.shadowRadius = 22
     }
     
+    
     @objc func keyboardWillShow(notification: NSNotification) {
 
         if let info = notification.userInfo {
@@ -132,6 +136,14 @@ class ResultsViewController: UIViewController {
                 self.inputUserNameTextField.alpha = 1
                 })
         }
+    }
+    
+    // hide keyboard when pressed return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.inputUserNameTextField.alpha = 0.5
+        self.textFieldTopConstraint.constant = 12
+        return (true)
     }
     
     @objc func dismissKeyboard() {
