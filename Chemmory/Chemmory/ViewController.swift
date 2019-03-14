@@ -64,6 +64,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Check total livepoints
         let lifeBarPoints = self.timerLiveBar.text?.count ?? 1
+        // Set time equal lifepoints on bar
         milliseconds = Float(lifeBarPoints * 1000)
     }
 
@@ -94,15 +95,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func timerElapsed() {
         
         milliseconds -= 1
-        timerLabel.text?.append("A")
-        // Convert to seconds
-        let seconds = String(format: "%.2f", milliseconds/1000)
-        
         // Show and control live bar IIIIIIIII
         liveBar()
         
-        // Set label
-        timerLabel.text = "Timer Remaining: \(seconds)"
+        // Convert to pseudo seconds
+        //let seconds = String(format: "%.2f", milliseconds/1000)
+        // Set label with run-out numbers
+        //timerLabel.text = "Timer Remaining: \(seconds)"
         
         //When the timer reached 0
         if milliseconds <= 0 {
@@ -267,9 +266,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if milliseconds > 0 {
                 timer?.invalidate()
                 
-                // Show Time elapsed
-                print("\(self.timeCountStartingPoint.timeIntervalSinceNow * -1) seconds elapsed") // TTTT -> comment this
-                
                 // Show Current Daate
                 print(actualDate())  // TTTT -> Del this
                 print("misses: \(missesTry)")
@@ -348,7 +344,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             timerLiveBar.text = String((timerLiveBar.text?.dropLast())!)
         }
         
-        print(timerLiveBar.text?.count ?? 0)
         let livePointsInBar = timerLiveBar.text?.count ?? 0
         let lowLivePointsColor = 0.5 * CGFloat(1/(0.15 * (Double(livePointsInBar + 1))))
         
@@ -356,7 +351,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         case 0...7:
             timerLiveBar.textColor = UIColor(red: 0.5 + lowLivePointsColor, green: 1 - lowLivePointsColor, blue: 0.6 - lowLivePointsColor, alpha: 1)
         default:
-            timerLiveBar.textColor = UIColor.yellow
+            timerLiveBar.textColor = UIColor.green
         }
         
     }
