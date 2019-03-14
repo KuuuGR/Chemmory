@@ -17,6 +17,8 @@ protocol GameResultDelegate: class {
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timerLiveBar: UILabel!
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -90,6 +92,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         timerLabel.text?.append("A")
         // Convert to seconds
         let seconds = String(format: "%.2f", milliseconds/1000)
+        
+        if (Int(milliseconds) % 100 == 0) && (timerLiveBar.text?.count != 0) {
+            timerLiveBar.text = String((timerLiveBar.text?.dropLast())!)
+        }
         
         // Set label
         timerLabel.text = "Timer Remaining: \(seconds)"

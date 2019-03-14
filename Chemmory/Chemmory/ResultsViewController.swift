@@ -140,6 +140,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     // hide keyboard when pressed return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         textField.resignFirstResponder()
         self.inputUserNameTextField.alpha = 0.5
         self.textFieldTopConstraint.constant = 12
