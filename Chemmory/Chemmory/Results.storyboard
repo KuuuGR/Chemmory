@@ -59,7 +59,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJe-rX-1eq">
-                                <rect key="frame" x="268" y="5" width="131" height="35"/>
+                                <rect key="frame" x="37.5" y="5" width="131" height="35"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -150,6 +150,23 @@ day: 24.03.2019</string>
                                     <constraint firstItem="SXM-fT-SeF" firstAttribute="top" secondItem="o9C-DO-HmU" secondAttribute="bottom" constant="8" id="piT-gZ-ccK"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="krown" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-bb-bfF">
+                                <rect key="frame" x="302.5" y="10.5" width="195.5" height="79.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hsT-bb-bfF" secondAttribute="height" multiplier="200:81" id="Jjc-Fy-Qg8"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap Your'e name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G60-yH-Z7k">
+                                <rect key="frame" x="283" y="293.5" width="234.5" height="37.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="typingUserNameTextField:" destination="gMA-i1-zYM" eventType="editingDidEnd" id="Eqo-07-iRo"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -158,22 +175,31 @@ day: 24.03.2019</string>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerX" secondItem="x4N-Tp-J8p" secondAttribute="centerX" multiplier="1.2" id="6MR-I3-nIF"/>
                             <constraint firstAttribute="trailing" secondItem="WRw-H9-bg6" secondAttribute="trailing" constant="8" id="6em-cG-bsp"/>
                             <constraint firstItem="WRw-H9-bg6" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="AA7-ga-P14"/>
+                            <constraint firstItem="G60-yH-Z7k" firstAttribute="top" secondItem="xWe-Yu-QeG" secondAttribute="bottom" constant="12" id="Aaa-sW-T4B"/>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="Acl-p9-d6Z"/>
+                            <constraint firstItem="G60-yH-Z7k" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" multiplier="1.2" id="BEe-fc-Nvm"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="CC6-5C-3l8"/>
-                            <constraint firstItem="PJe-rX-1eq" firstAttribute="centerX" secondItem="x4N-Tp-J8p" secondAttribute="centerX" id="F25-EU-h0s"/>
+                            <constraint firstItem="G60-yH-Z7k" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="HH1-Fd-Tr9"/>
+                            <constraint firstItem="G60-yH-Z7k" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="O4H-3F-Zrk"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.5" id="THj-CU-bWn"/>
                             <constraint firstAttribute="bottom" secondItem="WRw-H9-bg6" secondAttribute="bottom" constant="8" id="Uwt-H8-Sic"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="WGI-Nm-GMY"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerY" secondItem="x4N-Tp-J8p" secondAttribute="centerY" id="abV-HT-VEK"/>
+                            <constraint firstItem="PJe-rX-1eq" firstAttribute="leading" secondItem="eeS-sc-Xbi" secondAttribute="leading" id="cdc-Ll-K3I"/>
+                            <constraint firstItem="hsT-bb-bfF" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="dPZ-2j-MCC"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="eFA-cr-3su"/>
+                            <constraint firstItem="hsT-bb-bfF" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" id="lZO-W0-CP2"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="leading" secondItem="ljD-0p-FIu" secondAttribute="trailing" constant="5" id="ltP-m4-26j"/>
+                            <constraint firstItem="xWe-Yu-QeG" firstAttribute="top" secondItem="hsT-bb-bfF" secondAttribute="bottom" constant="4" id="pet-ap-oMl"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" id="rKM-Ll-O8Z"/>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="vji-an-3Sa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x4N-Tp-J8p"/>
                     </view>
                     <connections>
+                        <outlet property="inputUserNameTextField" destination="G60-yH-Z7k" id="Lrg-GQ-XAE"/>
                         <outlet property="resultButtonView" destination="xWe-Yu-QeG" id="Tr1-Su-1Q3"/>
+                        <outlet property="textFieldTopConstraint" destination="Aaa-sW-T4B" id="lLY-4q-ZQ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mby-V9-jel" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,6 +210,7 @@ day: 24.03.2019</string>
     <resources>
         <image name="ResetButton03" width="650" height="650"/>
         <image name="card3" width="162" height="161"/>
+        <image name="krown" width="679" height="363"/>
         <image name="medalBronze" width="293" height="496"/>
         <image name="medalGold" width="293" height="496"/>
         <image name="medalSilver" width="293" height="496"/>

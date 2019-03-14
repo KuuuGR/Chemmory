@@ -13,7 +13,7 @@ struct Points {
     let value: Int
 }
 
-class ResultsViewController: UIViewController {
+class ResultsViewController: UIViewController, UITextFieldDelegate {
 
     
     weak var delegate: GameResultDelegate?
@@ -21,7 +21,8 @@ class ResultsViewController: UIViewController {
     var points: Points?
     
     @IBOutlet weak var resultButtonView: UIView!
-    
+    @IBOutlet weak var inputUserNameTextField: UITextField!
+    @IBOutlet weak var textFieldTopConstraint: NSLayoutConstraint!
     
     @IBAction func backButtonPressed(_ sender: Any) {
         backAction()
@@ -29,8 +30,12 @@ class ResultsViewController: UIViewController {
     
     
     @IBAction func resetButtonTapped(_ sender: Any) {
+        print ("reset")
     }
     
+    @IBAction func typingUserNameTextField(_ sender: Any) {
+        print ("type tye type: \(inputUserNameTextField.text!) !!")
+    }
     
     
     
@@ -39,8 +44,16 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         resultButtonViewConfig()
         
+        inputUserNameTextField.delegate=self
+
+        
+        // Show Keyboard with text field go up animation
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+            //UIApplication.keyboardWillChangeFrameNotification, object: nil)
     
-    
+        //Hide keyboard when tap elsewhere
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.dismissKeyboard))
+            self.view.addGestureRecognizer(tap)
         
         // TODO: Get time of solving puzzles (start time - end time). 
         
@@ -110,5 +123,44 @@ class ResultsViewController: UIViewController {
         self.resultButtonView.layer.shadowOffset = CGSize.zero
         self.resultButtonView.layer.shadowRadius = 22
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let info = notification.userInfo {
+            
+            let rect:CGRect = info["UIKeyboardFrameEndUserInfoKey"] as! CGRect
+            
+            self.view.layoutIfNeeded()
+            
+            UIView.animate(withDuration: 0.25, animations: {
+                
+                self.view.layoutIfNeeded()
+                self.textFieldTopConstraint.constant = 1 - rect.height
+                self.inputUserNameTextField.alpha = 1
+                })
+            
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+
+                self.inputUserNameTextField.alpha = 0.5
+                self.textFieldTopConstraint.constant = 12
+        
+        view.endEditing(true)
+    }
+    
+    private func textFieldShouldReturn(textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        performAction()
+        return true;
+    }
+    
+    func performAction(){
+        print("lolo")
+        //execute code for your action inside this function
+        
+    }
+    
     
 }  // End ResoultViewController class
