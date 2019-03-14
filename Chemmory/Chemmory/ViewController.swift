@@ -93,9 +93,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Convert to seconds
         let seconds = String(format: "%.2f", milliseconds/1000)
         
+        // Show live bar IIIIIIIII
         if (Int(milliseconds) % 100 == 0) && (timerLiveBar.text?.count != 0) {
             timerLiveBar.text = String((timerLiveBar.text?.dropLast())!)
         }
+        liveBar()
         
         // Set label
         timerLabel.text = "Timer Remaining: \(seconds)"
@@ -336,6 +338,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         myResult.misses = String(missesTry)
         myResult.name = "player"
         myResult.time = String(self.timeCountStartingPoint.timeIntervalSinceNow * -1)
+    }
+    
+    func liveBar() {
+        print(timerLiveBar.text?.count ?? 0)
+        
+        switch timerLiveBar.text?.count ?? 0 {
+        case 0...5:
+            timerLiveBar.textColor = UIColor.red
+        case 6...30:
+            timerLiveBar.textColor = UIColor.magenta
+        default:
+            timerLiveBar.textColor = UIColor.green
+        }
     }
     
 } // End ViewControoler class
