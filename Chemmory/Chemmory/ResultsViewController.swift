@@ -13,7 +13,7 @@ struct Points {
     let value: Int
 }
 
-class ResultsViewController: UIViewController, UITextFieldDelegate {
+class ResultsViewController: UIViewController {
 
     
     weak var delegate: GameResultDelegate?
@@ -37,19 +37,12 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         print ("type tye type: \(inputUserNameTextField.text!) !!")
     }
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultButtonViewConfig()
         
-        inputUserNameTextField.delegate=self
-
-        
         // Show Keyboard with text field go up animation
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-            //UIApplication.keyboardWillChangeFrameNotification, object: nil)
     
         //Hide keyboard when tap elsewhere
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.dismissKeyboard))
@@ -125,7 +118,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        
+
         if let info = notification.userInfo {
             
             let rect:CGRect = info["UIKeyboardFrameEndUserInfoKey"] as! CGRect
@@ -138,28 +131,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
                 self.textFieldTopConstraint.constant = 1 - rect.height
                 self.inputUserNameTextField.alpha = 1
                 })
-            
         }
     }
     
     @objc func dismissKeyboard() {
 
-                self.inputUserNameTextField.alpha = 0.5
-                self.textFieldTopConstraint.constant = 12
-        
+        self.inputUserNameTextField.alpha = 0.5
+        self.textFieldTopConstraint.constant = 12
         view.endEditing(true)
-    }
-    
-    private func textFieldShouldReturn(textField: UITextField) -> Bool{
-        textField.resignFirstResponder()
-        performAction()
-        return true;
-    }
-    
-    func performAction(){
-        print("lolo")
-        //execute code for your action inside this function
-        
     }
     
     
