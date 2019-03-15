@@ -61,17 +61,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         //RunLoop.main.add(timer!, forMode: .common)
         
-        // Check total livepoints
-        lifeBarPointsFill(ammount: liveBarScotchAmmount)
-        let lifeBarPoints = self.LifeBarLabel.text?.count ?? 1
+        // Set total lifepoints
+        lifeBarPointsFill(ammount: lifeBarScotchAmmount)
         // Set time equal lifepoints on bar
-        milliseconds = Float(lifeBarPoints * 1000)
+        milliseconds = Float(lifeBarScotchAmmount * 1000)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         
         // Play shuffle sound
-        if (milliseconds >= Float(liveBarScotchAmmount - 1) * 1000) { SoundManager.playSound(.shuffle) }
+        if (milliseconds >= Float(lifeBarScotchAmmount - 1) * 1000) { SoundManager.playSound(.shuffle) }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -357,7 +356,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             LifeBarLabel.text?.append("I")
         }
     }
-    
     
     
 } // End ViewControoler class
