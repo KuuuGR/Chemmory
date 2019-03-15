@@ -33,8 +33,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var firstFlippedCardIndex: IndexPath?
     
     var timer:Timer?
-    var milliseconds:Float = 30 * 1000 // 10 seconds
-    
+    var milliseconds:Float = 30 * 1000 // 30 pseudo - seconds
     
     var lastGamePoint: Points?
     
@@ -70,9 +69,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidAppear(_ animated: Bool) {
         // Play shuffle sound but only at the begining
-        if (milliseconds >= 29.5 * 1000) {SoundManager.playSound(.shuffle)
-        }
-        
+        if (milliseconds >= 56 * 1000) { SoundManager.playSound(.shuffle) }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -97,11 +94,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         milliseconds -= 1
         // Show and control live bar IIIIIII
         liveBar()
-        
-        // Convert to pseudo seconds
-        //let seconds = String(format: "%.2f", milliseconds/1000)
-        // Set label with run-out numbers
-        //timerLabel.text = "Timer Remaining: \(seconds)"
         
         //When the timer reached 0
         if milliseconds <= 0 {
@@ -339,7 +331,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func liveBar() {
-        
+    
         if (Int(milliseconds) % 1000 == 0) && (timerLiveBar.text?.count != 0) {
             timerLiveBar.text = String((timerLiveBar.text?.dropLast())!)
         }
