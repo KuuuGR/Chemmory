@@ -95,7 +95,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func timerElapsed() {
         
         milliseconds -= 1
-        // Show and control live bar IIIIIIIII
+        // Show and control live bar IIIIIII
         liveBar()
         
         // Convert to pseudo seconds
@@ -345,11 +345,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         let livePointsInBar = timerLiveBar.text?.count ?? 0
-        let lowLivePointsColor = 0.5 * CGFloat(1/(0.15 * (Double(livePointsInBar + 1))))
         
         switch livePointsInBar {
-        case 0...7:
-            timerLiveBar.textColor = UIColor(red: 0.5 + lowLivePointsColor, green: 1 - lowLivePointsColor, blue: 0.6 - lowLivePointsColor, alpha: 1)
+        case 0...6:
+            timerLiveBar.textColor = UIColor.red
+        case 7...19:
+            timerLiveBar.textColor = UIColor.yellow
         default:
             timerLiveBar.textColor = UIColor.green
         }

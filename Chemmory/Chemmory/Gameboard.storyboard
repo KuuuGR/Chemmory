@@ -44,7 +44,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfP-tp-Yf0">
-                                        <rect key="frame" x="57.5" y="8" width="61" height="21.5"/>
+                                        <rect key="frame" x="129" y="8" width="61" height="21.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,7 +54,7 @@
                                         <rect key="frame" x="200" y="9.5" width="267" height="18.5"/>
                                         <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-DQ-uYy" userLabel="LiveBarLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-DQ-uYy" userLabel="LiveBarLabel">
                                         <rect key="frame" x="200" y="9.5" width="267" height="18.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,13 +78,13 @@
                                     <constraint firstItem="aPc-Qa-0z1" firstAttribute="centerY" secondItem="YGe-gN-M1y" secondAttribute="centerY" id="4ym-qZ-fEe"/>
                                     <constraint firstItem="hKi-DQ-uYy" firstAttribute="leading" secondItem="aPc-Qa-0z1" secondAttribute="leading" id="8eh-bg-s2N"/>
                                     <constraint firstAttribute="trailing" secondItem="Sjd-94-CgF" secondAttribute="trailing" id="FjD-Z0-ef8"/>
+                                    <constraint firstItem="aPc-Qa-0z1" firstAttribute="leading" secondItem="zfP-tp-Yf0" secondAttribute="trailing" constant="10" id="FoE-HK-mwn"/>
                                     <constraint firstItem="aPc-Qa-0z1" firstAttribute="centerX" secondItem="YGe-gN-M1y" secondAttribute="centerX" id="GVs-YA-jr7"/>
                                     <constraint firstItem="aPc-Qa-0z1" firstAttribute="height" secondItem="YGe-gN-M1y" secondAttribute="height" multiplier="0.5" id="Mf0-Dv-u4J"/>
                                     <constraint firstItem="dPg-Jm-X4g" firstAttribute="top" secondItem="YGe-gN-M1y" secondAttribute="top" id="MlV-jS-Yq4"/>
                                     <constraint firstItem="dPg-Jm-X4g" firstAttribute="height" secondItem="YGe-gN-M1y" secondAttribute="height" id="UsW-LN-rHC"/>
                                     <constraint firstItem="dPg-Jm-X4g" firstAttribute="leading" secondItem="YGe-gN-M1y" secondAttribute="leading" id="aCY-wP-ayr"/>
                                     <constraint firstItem="Sjd-94-CgF" firstAttribute="height" secondItem="YGe-gN-M1y" secondAttribute="height" id="bYg-gq-b69"/>
-                                    <constraint firstItem="zfP-tp-Yf0" firstAttribute="leading" secondItem="dPg-Jm-X4g" secondAttribute="trailing" constant="20" id="f1e-pa-UYR"/>
                                     <constraint firstItem="aPc-Qa-0z1" firstAttribute="width" secondItem="YGe-gN-M1y" secondAttribute="width" multiplier="0.4" id="feE-uk-zO7"/>
                                     <constraint firstItem="Sjd-94-CgF" firstAttribute="top" secondItem="YGe-gN-M1y" secondAttribute="top" id="kjZ-VQ-Qwz"/>
                                     <constraint firstItem="zfP-tp-Yf0" firstAttribute="centerY" secondItem="YGe-gN-M1y" secondAttribute="centerY" id="kv5-9m-iQx"/>
