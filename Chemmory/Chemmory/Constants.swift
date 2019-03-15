@@ -6,4 +6,4 @@
 //  Copyright © 2019 Grzesiek Kulesza. All rights reserved.
 //
 
-var lifeBarScotchAmmount: Int = 57
+let lifeBarScotchAmmount: Int = 57

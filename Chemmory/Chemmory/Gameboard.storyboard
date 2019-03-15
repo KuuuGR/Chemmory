@@ -18,10 +18,10 @@
             </objects>
             <point key="canvasLocation" x="-1089" y="-1173"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="hU9-XO-NmT">
             <objects>
-                <viewController storyboardIdentifier="MainGameScreen" id="oql-Na-0el" customClass="ViewController" customModule="Chemmory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainGameScreen" id="oql-Na-0el" customClass="GameViewController" customModule="Chemmory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IaC-U5-f5E" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                                         <state key="normal" title="Go" image="rightArrow5"/>
                                         <connections>
                                             <action selector="nextButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="GV3-sZ-FtF"/>
-                                            <segue destination="EZO-12-vAS" kind="show" id="fWv-Wq-kck"/>
+                                            <segue destination="EZO-12-vAS" kind="show" identifier="resultsVC" id="fWv-Wq-kck"/>
                                         </connections>
                                     </button>
                                 </subviews>

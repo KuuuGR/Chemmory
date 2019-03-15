@@ -9,33 +9,30 @@
 import UIKit
 
 protocol GameResultDelegate: class {
-//    func didWinTheGame(gamePlayDate: String, missedGuess: Int, gameDurationTime: Double)
 
     func backFromResult(transferredDataToGameVC: String)
 }
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class GameViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var LifeBarLabel: UILabel!
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var backgroundImage: UIImageView!
     
     var model = CardModel()
     var cardArray = [Card]()
     
-    var endGame = false
     var missesTry = 0  // bad guess counter
+    var endGame = false
+    var winGameDate = ""
+    var winGameTry = ""
+    var winGameTime = ""
     
     var firstFlippedCardIndex: IndexPath?
     
     var timer:Timer?
     var milliseconds:Float = 30 * 1000 // 30 pseudo - seconds
-    
-    var lastGamePoint: Points?
     
     //Need for results count time elapsed and actual date
     let timeCountStartingPoint = Date()
@@ -45,7 +42,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        
+        performSegue(withIdentifier: "resultsVC", sender: self)
     }
     
     override func viewDidLoad() {
@@ -75,21 +72,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ResultsViewController {
-            vc.points = lastGamePoint
+            vc.tuPlePlePle = (winGameDate,winGameTime,winGameTry)
             vc.delegate = self
         }
-        
-        
-        print("ide sobie do: \(segue.destination)")
     }
     
     override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Timer Methods
-    
     @objc func timerElapsed() {
         
         milliseconds -= 1
@@ -139,13 +131,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return
         }
         
-        
         //Get cell that the user selected
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
         
         //Get the card that the user selected
         let card = cardArray[indexPath.row]
-        
         
         if card.isFliped == false && card.isMatched == false {
             
@@ -206,7 +196,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             //Check if there are any cards left unmatched
             checkGameEnded()
-            
         }
         else {
             
@@ -259,15 +248,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if milliseconds > 0 {
                 timer?.invalidate()
                 
-                // Show Current Daate
-                print(actualDate())  // TTTT -> Del this
-                print("misses: \(missesTry)")
-                
-                // Prepare result for segue
-                prepareResult() //TTTT -> Wywalić to i funkcję
-//                let dddd = actualDate()
-//                let mmmm = missesTry
-//                let tttt = self.timeCountStartingPoint.timeIntervalSinceNow * -1
+                //Prepare result for segue
+                winGameDate = actualDate()
+                winGameTry = String(missesTry)
+                winGameTime = String(self.timeCountStartingPoint.timeIntervalSinceNow * -1)
                 
                 // Play sound
                 SoundManager.playSound(.win)
@@ -306,14 +290,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         alert.addAction(alertAction)
         
         present(alert, animated: true, completion: nil)
-        
-        
     }
     
     func backAction(){
         //print("Back Button Clicked")
         timer?.invalidate()
-       self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func actualDate() -> String{
@@ -323,16 +305,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return result
     }
     
-    func prepareResult() {
-        let myResult = Result()
-        myResult.date = actualDate()
-        myResult.misses = String(missesTry)
-        myResult.name = "player"
-        myResult.time = String(self.timeCountStartingPoint.timeIntervalSinceNow * -1)
-    }
-    
     func liveBar() {
-    
         if (Int(milliseconds) % 1000 == 0) && (LifeBarLabel.text?.count != 0) {
             LifeBarLabel.text = String((LifeBarLabel.text?.dropLast())!)
         }
@@ -360,7 +333,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 } // End ViewControoler class
 
-extension ViewController: GameResultDelegate {
+extension GameViewController: GameResultDelegate {
     func backFromResult(transferredDataToGameVC: String) {
         print("Wracamy z \(transferredDataToGameVC)")
          if endGame == true {

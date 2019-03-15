@@ -9,16 +9,11 @@
 import UIKit
 import RealmSwift
 
-struct Points {
-    let value: Int
-}
-
 class ResultsViewController: UIViewController, UITextFieldDelegate {
 
+    var tuPlePlePle  = ("","","")
     
     weak var delegate: GameResultDelegate?
-    
-    var points: Points?
     
     @IBOutlet weak var resultButtonView: UIView!
     @IBOutlet weak var inputUserNameTextField: UITextField!
@@ -34,11 +29,13 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func typingUserNameTextField(_ sender: Any) {
-        print ("type tye type: \(inputUserNameTextField.text!) !!")
+        print ("You're typed: \(inputUserNameTextField.text!) !!")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(tuPlePlePle)
         
         self.inputUserNameTextField.delegate = self
 
@@ -84,10 +81,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("Moje punkty: \(points?.value ?? 0)")
-        
     }
-    
     
 
     /*
@@ -121,38 +115,31 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    // Animate textfield if Keyboard appears
     @objc func keyboardWillShow(notification: NSNotification) {
-
         if let info = notification.userInfo {
-            
             let rect:CGRect = info["UIKeyboardFrameEndUserInfoKey"] as! CGRect
-            
             self.view.layoutIfNeeded()
-            
             UIView.animate(withDuration: 0.25, animations: {
-                
                 self.view.layoutIfNeeded()
                 self.textFieldTopConstraint.constant = 1 - rect.height
                 self.inputUserNameTextField.alpha = 1
                 })
         }
     }
-    
     // hide keyboard when pressed return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
         self.inputUserNameTextField.alpha = 0.5
         self.textFieldTopConstraint.constant = 12
         return (true)
     }
-    
     @objc func dismissKeyboard() {
-
         self.inputUserNameTextField.alpha = 0.5
         self.textFieldTopConstraint.constant = 12
         view.endEditing(true)
     }
+    
     
     
 }  // End ResoultViewController class
