@@ -17,7 +17,7 @@ protocol GameResultDelegate: class {
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var timerLiveBar: UILabel!
+    @IBOutlet weak var LifeBarLabel: UILabel!
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -62,14 +62,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //RunLoop.main.add(timer!, forMode: .common)
         
         // Check total livepoints
-        let lifeBarPoints = self.timerLiveBar.text?.count ?? 1
+        lifeBarPointsFill(ammount: liveBarScotchAmmount)
+        let lifeBarPoints = self.LifeBarLabel.text?.count ?? 1
         // Set time equal lifepoints on bar
         milliseconds = Float(lifeBarPoints * 1000)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        // Play shuffle sound but only at the begining
-        if (milliseconds >= 56 * 1000) { SoundManager.playSound(.shuffle) }
+        
+        // Play shuffle sound
+        if (milliseconds >= Float(liveBarScotchAmmount - 1) * 1000) { SoundManager.playSound(.shuffle) }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -332,22 +334,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func liveBar() {
     
-        if (Int(milliseconds) % 1000 == 0) && (timerLiveBar.text?.count != 0) {
-            timerLiveBar.text = String((timerLiveBar.text?.dropLast())!)
+        if (Int(milliseconds) % 1000 == 0) && (LifeBarLabel.text?.count != 0) {
+            LifeBarLabel.text = String((LifeBarLabel.text?.dropLast())!)
         }
         
-        let livePointsInBar = timerLiveBar.text?.count ?? 0
+        let livePointsInBar = LifeBarLabel.text?.count ?? 0
         
         switch livePointsInBar {
         case 0...6:
-            timerLiveBar.textColor = UIColor.red
+            LifeBarLabel.textColor = UIColor.red
         case 7...19:
-            timerLiveBar.textColor = UIColor.yellow
+            LifeBarLabel.textColor = UIColor.yellow
         default:
-            timerLiveBar.textColor = UIColor.green
+            LifeBarLabel.textColor = UIColor.green
         }
         
     }
+    
+    func lifeBarPointsFill(ammount: Int) {
+            LifeBarLabel.text = ""
+        for _ in 0..<ammount {
+            LifeBarLabel.text?.append("I")
+        }
+    }
+    
+    
     
 } // End ViewControoler class
 

@@ -163,10 +163,10 @@
                         <viewLayoutGuide key="safeArea" id="1l9-WE-ZfQ"/>
                     </view>
                     <connections>
+                        <outlet property="LifeBarLabel" destination="hKi-DQ-uYy" id="f0C-JP-UeB"/>
                         <outlet property="backgroundImage" destination="lR9-BQ-Iyb" id="nQ6-Ml-NfZ"/>
                         <outlet property="collectionView" destination="3Nt-XC-aNZ" id="fdf-GL-Qwv"/>
                         <outlet property="timerLabel" destination="zfP-tp-Yf0" id="YkN-Vv-CtH"/>
-                        <outlet property="timerLiveBar" destination="hKi-DQ-uYy" id="f0C-JP-UeB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuM-mR-8ot" userLabel="First Responder" sceneMemberID="firstResponder"/>
