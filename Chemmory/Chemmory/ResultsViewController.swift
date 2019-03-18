@@ -29,38 +29,31 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func resetButtonTapped(_ sender: Any) {
         print ("reset")
+        print (myResult)
     }
     
     @IBAction func typingUserNameTextField(_ sender: Any) {
-        //print ("You're typed: \(inputUserNameTextField.text!) !!")
-        myResult.name = inputUserNameTextField.text ?? "no Name"
-        print ("You're typed: \(myResult.name!)")
-        print(myResult.name!.count)
+        // get user name and show save button
         saveButton.alpha = 1
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
-        // save tepped name and block to save result as another person
+        // save tepped name and game result and block to save result as another person
         if myResult.name?.count != 0 && saveButton.alpha == 1 {
-            myResult.name = inputUserNameTextField.text ?? "no Name"
+            saveResultToDatabase()
             inputUserNameTextField.isUserInteractionEnabled = false
             saveButton.alpha = 0.1
         }
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(winGameResultsData)
-        
         self.inputUserNameTextField.delegate = self
-
         resultButtonViewConfig()
         
-        
+        // show segue from GameVC
+        print(winGameResultsData)
         
         // Show Keyboard with text field go up animation
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -156,6 +149,13 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.inputUserNameTextField.alpha = 0.5
         self.textFieldTopConstraint.constant = 12
         view.endEditing(true)
+    }
+    
+    func saveResultToDatabase() {
+        myResult.name = inputUserNameTextField.text ?? "no Name"
+        myResult.date = winGameResultsData.0
+        myResult.time = winGameResultsData.1
+        myResult.misses = winGameResultsData.2
     }
     
 }  // End ResoultViewController class
