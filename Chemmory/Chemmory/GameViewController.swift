@@ -72,7 +72,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ResultsViewController {
-            vc.tuPlePlePle = (winGameDate,winGameTime,winGameTry)
+            vc.winGameResultsData = (winGameDate,winGameTime,winGameTry)
             vc.delegate = self
         }
     }

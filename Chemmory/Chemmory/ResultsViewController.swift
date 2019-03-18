@@ -11,13 +11,16 @@ import RealmSwift
 
 class ResultsViewController: UIViewController, UITextFieldDelegate {
 
-    var tuPlePlePle  = ("","","")
-    
-    weak var delegate: GameResultDelegate?
-    
     @IBOutlet weak var resultButtonView: UIView!
     @IBOutlet weak var inputUserNameTextField: UITextField!
     @IBOutlet weak var textFieldTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var saveButton: UIButton!
+    
+    var winGameResultsData  = ("","","")
+    var myName = ""
+    var myResult = Result()
+    
+    weak var delegate: GameResultDelegate?
     
     @IBAction func backButtonPressed(_ sender: Any) {
         backAction()
@@ -29,21 +32,38 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func typingUserNameTextField(_ sender: Any) {
-        print ("You're typed: \(inputUserNameTextField.text!) !!")
+        //print ("You're typed: \(inputUserNameTextField.text!) !!")
+        myResult.name = inputUserNameTextField.text ?? "no Name"
+        print ("You're typed: \(myResult.name!)")
+        print(myResult.name!.count)
+        saveButton.alpha = 1
     }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        
+        // save tepped name and block to save result as another person
+        if myResult.name?.count != 0 && saveButton.alpha == 1 {
+            myResult.name = inputUserNameTextField.text ?? "no Name"
+            inputUserNameTextField.isUserInteractionEnabled = false
+            saveButton.alpha = 0.1
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(tuPlePlePle)
+        print(winGameResultsData)
         
         self.inputUserNameTextField.delegate = self
 
         resultButtonViewConfig()
         
+        
+        
         // Show Keyboard with text field go up animation
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-    
         //Hide keyboard when tap elsewhere
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.dismissKeyboard))
             self.view.addGestureRecognizer(tap)
@@ -80,7 +100,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
 
@@ -114,7 +133,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.resultButtonView.layer.shadowRadius = 22
     }
     
-    
     // Animate textfield if Keyboard appears
     @objc func keyboardWillShow(notification: NSNotification) {
         if let info = notification.userInfo {
@@ -124,7 +142,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
                 self.view.layoutIfNeeded()
                 self.textFieldTopConstraint.constant = 1 - rect.height
                 self.inputUserNameTextField.alpha = 1
-                })
+            })
         }
     }
     // hide keyboard when pressed return key
@@ -139,7 +157,5 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.textFieldTopConstraint.constant = 12
         view.endEditing(true)
     }
-    
-    
     
 }  // End ResoultViewController class
