@@ -15,6 +15,10 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputUserNameTextField: UITextField!
     @IBOutlet weak var textFieldTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var firstPlaceHighScoreLabel: UILabel!
+    @IBOutlet weak var secondPlaceHighScoreLabel: UILabel!
+    @IBOutlet weak var thirdPlaceHighScoreLabel: UILabel!
+    
     
     var winGameResultsData  = ("","","")
     var myName = ""
@@ -52,6 +56,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.inputUserNameTextField.delegate = self
         resultButtonViewConfig()
         
+        // show High Score
+        showRecordResults()
+        
         // show segue from GameVC
         print(winGameResultsData)
         
@@ -61,11 +68,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.dismissKeyboard))
             self.view.addGestureRecognizer(tap)
         
-        // TODO: Get time of solving puzzles (start time - end time). 
-        
-        
+   
         // Add result to database
-        
         
         /*let realm = try! Realm()
         
@@ -73,7 +77,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         
         try! realm.write {
         }*/
-        
         
         //let results = realm.objects(Results.self).filter("color = 'Orange'")
         //let results1 = realm.objects(Cat.self).sorted(by: "")
@@ -156,6 +159,24 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         myResult.date = winGameResultsData.0
         myResult.time = winGameResultsData.1
         myResult.misses = winGameResultsData.2
+        
+        // Add result to database
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.add(myResult)
+        }
+        print("Realm save youre record at: ")
+        print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+    }
+    
+    func showRecordResults() {
+        
+        firstPlaceHighScoreLabel.text = ("\(myResult.name)\ntime: \(myResult.time)\nday: \(myResult.date)")
+        
+        secondPlaceHighScoreLabel.text = ("")
+        
+        thirdPlaceHighScoreLabel.text = ("")
     }
     
 }  // End ResoultViewController class

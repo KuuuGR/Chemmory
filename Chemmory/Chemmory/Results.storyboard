@@ -210,10 +210,13 @@ day: 24.03.2019</string>
                         <viewLayoutGuide key="safeArea" id="x4N-Tp-J8p"/>
                     </view>
                     <connections>
+                        <outlet property="firstPlaceHighScoreLabel" destination="eeS-sc-Xbi" id="jAG-Yn-7eO"/>
                         <outlet property="inputUserNameTextField" destination="G60-yH-Z7k" id="Lrg-GQ-XAE"/>
                         <outlet property="resultButtonView" destination="xWe-Yu-QeG" id="Tr1-Su-1Q3"/>
                         <outlet property="saveButton" destination="DV2-WH-h46" id="1zl-wG-t8y"/>
+                        <outlet property="secondPlaceHighScoreLabel" destination="o9C-DO-HmU" id="KYZ-iG-LXf"/>
                         <outlet property="textFieldTopConstraint" destination="Aaa-sW-T4B" id="lLY-4q-ZQ5"/>
+                        <outlet property="thirdPlaceHighScoreLabel" destination="SXM-fT-SeF" id="g0c-hv-7VD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mby-V9-jel" userLabel="First Responder" sceneMemberID="firstResponder"/>
