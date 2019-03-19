@@ -61,6 +61,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
             saveResultToDatabase()
             inputUserNameTextField.isUserInteractionEnabled = false
             saveButton.alpha = 0.1
+            //update result HighSore
+            showRecordResults()
         }
     }
     
@@ -210,31 +212,37 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         // get results from dataBase and show in scren
         
         let realm = try! Realm()
+        
         let grabReluts = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
-       
-        let firstName = grabReluts[0].name ?? "no Name"
-        let firstScore = String(format: "%.0f",grabReluts[0].score)
-        let firstDate = grabReluts[0].date ?? "no Date"
-        let firstTime = String(format: "%.1f",grabReluts[0].time)
         
-        let secondName = grabReluts[1].name ?? "no Name"
-        let secondScore = String(format: "%.0f",grabReluts[1].score)
-        let secondDate = grabReluts[1].date ?? "no Date"
-        let secondTime = String(format: "%.1f",grabReluts[1].time)
+        if grabReluts.count >= 1 {
+            let firstName = grabReluts[0].name ?? "no Name"
+            let firstScore = String(format: "%.0f",grabReluts[0].score)
+            let firstDate = grabReluts[0].date ?? "no Date"
+            let firstTime = String(format: "%.1f",grabReluts[0].time)
         
-        let thirdName = grabReluts[2].name ?? "no Name"
-        let thirdScore = String(format: "%.0f",grabReluts[2].score)
-        let thirdDate = grabReluts[2].date ?? "no Date"
-        let thirdTime = String(format: "%.1f",grabReluts[2].time)
+            if grabReluts.count >= 2 {
+                let secondName = grabReluts[1].name ?? "no Name"
+                let secondScore = String(format: "%.0f",grabReluts[1].score)
+                let secondDate = grabReluts[1].date ?? "no Date"
+                let secondTime = String(format: "%.1f",grabReluts[1].time)
+            
+                if grabReluts.count >= 3 {
+                    let thirdName = grabReluts[2].name ?? "no Name"
+                    let thirdScore = String(format: "%.0f",grabReluts[2].score)
+                    let thirdDate = grabReluts[2].date ?? "no Date"
+                    let thirdTime = String(format: "%.1f",grabReluts[2].time)
+
+                    thirdPlaceHighScoreLabel.text = ("\(thirdName)\ntime: \(thirdTime) s\nday: \(thirdDate)")
+                    thirdPlaceScoreValueLabel.text = "\(thirdScore)"
+                }
+                secondPlaceHighScoreLabel.text = ("\(secondName)\ntime: \(secondTime) s\nday: \(secondDate)")
+                secondPlaceScoreValueLabel.text = "\(secondScore)"
+            }
+            firstPlaceHighScoreLabel.text = ("\(firstName)\ntime: \(firstTime) s\nday: \(firstDate)")
+            firstPlaceScoreValueLabel.text = "\(firstScore)"
+        }
         
-        firstPlaceHighScoreLabel.text = ("\(firstName)\ntime: \(firstTime) s\nday: \(firstDate)")
-        firstPlaceScoreValueLabel.text = "\(firstScore)"
-        
-        secondPlaceHighScoreLabel.text = ("\(secondName)\ntime: \(secondTime) s\nday: \(secondDate)")
-        secondPlaceScoreValueLabel.text = "\(secondScore)"
-        
-        thirdPlaceHighScoreLabel.text = ("\(thirdName)\ntime: \(thirdTime) s\nday: \(thirdDate)")
-        thirdPlaceScoreValueLabel.text = "\(thirdScore)"
     }
-    
+ 
 }  // End ResoultViewController class
