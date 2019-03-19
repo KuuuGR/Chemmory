@@ -15,17 +15,18 @@ class Result: Object {
     @objc dynamic var date: String?
     @objc dynamic var time: String?
     @objc dynamic var misses: String?
+    @objc dynamic var score: String?
 //    @objc dynamic var score: Float?
 }
 
 class Result2: NSObject {
-    let name: String
-    let date: String
-    let time: String
-    let misses: Int
-    let score: Float
+    var name: String
+    var date: String
+    var time: String
+    var misses: Float
+    var score: Float
     
-    init(name: String, date: String, time: String, misses: Int, score: Float) {
+    init(name: String, date: String, time: String, misses: Float, score: Float) {
         self.name = name
         self.date = date
         self.time = time
