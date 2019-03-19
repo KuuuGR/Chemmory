@@ -199,6 +199,50 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u13-3P-vhR" userLabel="PasswoardView">
+                                <rect key="frame" x="499" y="94" width="39" height="187.5"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfE-xy-JfB" userLabel="Switch1">
+                                        <rect key="frame" x="-5" y="1" width="51" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-aZ-HKb" userLabel="Switch2">
+                                        <rect key="frame" x="-5" y="27" width="51" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D81-St-GO1" userLabel="Switch3">
+                                        <rect key="frame" x="-5" y="53" width="51" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxp-W1-gGM" userLabel="Switch4">
+                                        <rect key="frame" x="-5" y="79" width="51" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kqV-rG-CFX" userLabel="Switch5">
+                                        <rect key="frame" x="-5" y="105" width="51" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-tO-yID" userLabel="Switch6">
+                                        <rect key="frame" x="-5" y="131" width="51" height="31"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kqV-rG-CFX" firstAttribute="top" secondItem="jxp-W1-gGM" secondAttribute="bottom" constant="-5" id="7vJ-qT-faT"/>
+                                    <constraint firstItem="jxp-W1-gGM" firstAttribute="top" secondItem="D81-St-GO1" secondAttribute="bottom" constant="-5" id="84a-Oz-Hgj"/>
+                                    <constraint firstItem="M7d-aZ-HKb" firstAttribute="centerX" secondItem="qfE-xy-JfB" secondAttribute="centerX" id="CYe-YY-sde"/>
+                                    <constraint firstItem="Gy1-tO-yID" firstAttribute="centerX" secondItem="kqV-rG-CFX" secondAttribute="centerX" id="Kfs-Xc-3L1"/>
+                                    <constraint firstItem="kqV-rG-CFX" firstAttribute="centerX" secondItem="jxp-W1-gGM" secondAttribute="centerX" id="Lni-KX-Pgz"/>
+                                    <constraint firstItem="jxp-W1-gGM" firstAttribute="centerX" secondItem="D81-St-GO1" secondAttribute="centerX" id="PKB-hQ-0h0"/>
+                                    <constraint firstItem="qfE-xy-JfB" firstAttribute="centerX" secondItem="u13-3P-vhR" secondAttribute="centerX" id="Pcn-c5-TZq"/>
+                                    <constraint firstItem="D81-St-GO1" firstAttribute="centerX" secondItem="M7d-aZ-HKb" secondAttribute="centerX" id="REl-fi-Axy"/>
+                                    <constraint firstItem="Gy1-tO-yID" firstAttribute="top" secondItem="kqV-rG-CFX" secondAttribute="bottom" constant="-5" id="TAf-Og-0Zv"/>
+                                    <constraint firstItem="M7d-aZ-HKb" firstAttribute="top" secondItem="qfE-xy-JfB" secondAttribute="bottom" constant="-5" id="a3K-cL-cwt"/>
+                                    <constraint firstItem="D81-St-GO1" firstAttribute="top" secondItem="M7d-aZ-HKb" secondAttribute="bottom" constant="-5" id="gBo-RQ-CGA"/>
+                                    <constraint firstItem="qfE-xy-JfB" firstAttribute="top" secondItem="u13-3P-vhR" secondAttribute="top" constant="1" id="kkw-yI-ajd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -208,6 +252,7 @@
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="leading" secondItem="x4N-Tp-J8p" secondAttribute="leading" id="42J-kE-5sW"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerX" secondItem="x4N-Tp-J8p" secondAttribute="centerX" multiplier="1.2" id="6MR-I3-nIF"/>
                             <constraint firstAttribute="trailing" secondItem="WRw-H9-bg6" secondAttribute="trailing" constant="8" id="6em-cG-bsp"/>
+                            <constraint firstItem="u13-3P-vhR" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="9gc-Il-K73"/>
                             <constraint firstItem="DV2-WH-h46" firstAttribute="height" secondItem="G60-yH-Z7k" secondAttribute="height" id="9gh-zN-4rp"/>
                             <constraint firstItem="WRw-H9-bg6" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="AA7-ga-P14"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="top" secondItem="xWe-Yu-QeG" secondAttribute="bottom" constant="12" id="Aaa-sW-T4B"/>
@@ -222,9 +267,11 @@
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="O4H-3F-Zrk"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.5" id="THj-CU-bWn"/>
                             <constraint firstAttribute="bottom" secondItem="WRw-H9-bg6" secondAttribute="bottom" constant="8" id="Uwt-H8-Sic"/>
+                            <constraint firstItem="u13-3P-vhR" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" multiplier="0.2" id="W11-0B-Aep"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="WGI-Nm-GMY"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="top" secondItem="XEI-oZ-aZs" secondAttribute="bottom" constant="12.5" id="aE6-Nb-W6R"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerY" secondItem="x4N-Tp-J8p" secondAttribute="centerY" id="abV-HT-VEK"/>
+                            <constraint firstItem="u13-3P-vhR" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="c8k-Jg-4VB"/>
                             <constraint firstItem="PJe-rX-1eq" firstAttribute="leading" secondItem="eeS-sc-Xbi" secondAttribute="leading" id="cdc-Ll-K3I"/>
                             <constraint firstItem="hsT-bb-bfF" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="dPZ-2j-MCC"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="eFA-cr-3su"/>
@@ -237,6 +284,7 @@
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="vji-an-3Sa"/>
                             <constraint firstItem="DV2-WH-h46" firstAttribute="centerY" secondItem="G60-yH-Z7k" secondAttribute="centerY" id="wtw-Ci-mf2"/>
                             <constraint firstItem="DV2-WH-h46" firstAttribute="leading" secondItem="G60-yH-Z7k" secondAttribute="trailing" constant="2" id="xkk-TO-bfu"/>
+                            <constraint firstItem="u13-3P-vhR" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="1" id="zDA-gs-naV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x4N-Tp-J8p"/>
                     </view>
@@ -244,6 +292,13 @@
                         <outlet property="firstPlaceHighScoreLabel" destination="eeS-sc-Xbi" id="jAG-Yn-7eO"/>
                         <outlet property="firstPlaceScoreValueLabel" destination="cBF-KC-EVF" id="Eby-8i-cTz"/>
                         <outlet property="inputUserNameTextField" destination="G60-yH-Z7k" id="Lrg-GQ-XAE"/>
+                        <outlet property="passSwitch1" destination="qfE-xy-JfB" id="ucw-ek-1QU"/>
+                        <outlet property="passSwitch2" destination="M7d-aZ-HKb" id="FQ0-ll-yzg"/>
+                        <outlet property="passSwitch3" destination="D81-St-GO1" id="7q9-OI-D4I"/>
+                        <outlet property="passSwitch4" destination="jxp-W1-gGM" id="dTc-7o-fZf"/>
+                        <outlet property="passSwitch5" destination="kqV-rG-CFX" id="DAD-Vi-du4"/>
+                        <outlet property="passSwitch6" destination="Gy1-tO-yID" id="DSE-Sv-ABf"/>
+                        <outlet property="passwordView" destination="u13-3P-vhR" id="c2u-nV-MYf"/>
                         <outlet property="resultButtonView" destination="xWe-Yu-QeG" id="Tr1-Su-1Q3"/>
                         <outlet property="saveButton" destination="DV2-WH-h46" id="1zl-wG-t8y"/>
                         <outlet property="scoreTextLabel" destination="XEI-oZ-aZs" id="gkw-Vt-ZJ9"/>

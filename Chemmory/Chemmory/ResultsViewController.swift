@@ -23,7 +23,15 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var secondPlaceScoreValueLabel: UILabel!
     @IBOutlet weak var thirdPlaceHighScoreLabel: UILabel!
     @IBOutlet weak var thirdPlaceScoreValueLabel: UILabel!
+   
     
+    @IBOutlet weak var passwordView: UIView!
+    @IBOutlet weak var passSwitch1: UISwitch!
+    @IBOutlet weak var passSwitch2: UISwitch!
+    @IBOutlet weak var passSwitch3: UISwitch!
+    @IBOutlet weak var passSwitch4: UISwitch!
+    @IBOutlet weak var passSwitch5: UISwitch!
+    @IBOutlet weak var passSwitch6: UISwitch!
     
     var winGameResultsData  = ("","","")
     var myName = ""
@@ -37,13 +45,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
-        //update result HighSore
-        showRecordResults()
-        backAction()
+        passwordView.isHidden = false
+        preparePasswordField()
+            let realm = try! Realm()
+            try! realm.write {
+                realm.deleteAll()
+            }
+            //backAction()
+        
     }
     
     @IBAction func typingUserNameTextField(_ sender: Any) {
@@ -108,6 +117,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        passwordView.isHidden = true
     }
     
 
@@ -229,4 +239,35 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         
     }
  
+    func preparePasswordField() {
+        passwordView.backgroundColor = UIColor.gray
+        passwordView.layer.cornerRadius = 6
+        passwordView.layer.masksToBounds = true
+        let xScale = CGFloat(0.5)
+        let yScale = CGFloat(0.5)
+        passSwitch1.onTintColor = UIColor.blue
+        passSwitch1.transform = CGAffineTransform(scaleX: xScale, y: yScale)
+        passSwitch2.transform = CGAffineTransform(scaleX: xScale, y: yScale)
+        passSwitch3.transform = CGAffineTransform(scaleX: xScale, y: yScale)
+        passSwitch4.transform = CGAffineTransform(scaleX: xScale, y: yScale)
+        passSwitch5.transform = CGAffineTransform(scaleX: xScale, y: yScale)
+        passSwitch6.transform = CGAffineTransform(scaleX: xScale, y: yScale)
+        
+        //some fun element
+        if passSwitch1.isOn == false {
+            passSwitch3.onTintColor = UIColor.red
+            if passSwitch2.isOn == false {
+                passSwitch2.onTintColor = UIColor.yellow
+                passSwitch6.onTintColor = UIColor.magenta
+                if passSwitch4.isOn == false {
+                    passSwitch5.onTintColor = UIColor.green
+                    passSwitch4.onTintColor = UIColor.orange
+                }
+            }
+        }
+        
+        print("\(passSwitch1.isOn) \(passSwitch2.isOn) \(passSwitch3.isOn) \(passSwitch4.isOn) \(passSwitch5.isOn) \(passSwitch6.isOn)" )
+    }
+    
+    
 }  // End ResoultViewController class
