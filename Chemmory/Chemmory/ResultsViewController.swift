@@ -180,7 +180,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         myResult.time = Float(gameTime)
         myResult.misses = Int(gameMisses)
         
-        
         // Second way
         
         // score = 10000/(gameTime * (gameMisses+1))
@@ -195,7 +194,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         myResult2.misses = gameMisses
         myResult2.score = gameScore
         
-        
         // Add result to database
         let realm = try! Realm()
         
@@ -209,26 +207,25 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     func showRecordResults() {
         
+        // get results from dataBase and show in scren
+        
         let realm = try! Realm()
         let grabReluts = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
-        
-        print(grabReluts)
-        
-        print("Wynik z początku: \(String(describing: grabReluts[0].name))")
+       
         let firstName = grabReluts[0].name ?? "no Name"
-        let firstScore = grabReluts[0].score
+        let firstScore = String(format: "%.0f",grabReluts[0].score)
         let firstDate = grabReluts[0].date ?? "no Date"
-        let firstTime = grabReluts[0].time
+        let firstTime = String(format: "%.1f",grabReluts[0].time)
         
         let secondName = grabReluts[1].name ?? "no Name"
-        let secondScore = grabReluts[1].score
+        let secondScore = String(format: "%.0f",grabReluts[1].score)
         let secondDate = grabReluts[1].date ?? "no Date"
-        let secondTime = grabReluts[1].time
+        let secondTime = String(format: "%.1f",grabReluts[1].time)
         
         let thirdName = grabReluts[2].name ?? "no Name"
-        let thirdScore = grabReluts[2].score
+        let thirdScore = String(format: "%.0f",grabReluts[2].score)
         let thirdDate = grabReluts[2].date ?? "no Date"
-        let thirdTime = grabReluts[2].time
+        let thirdTime = String(format: "%.1f",grabReluts[2].time)
         
         firstPlaceHighScoreLabel.text = ("\(firstName)\ntime: \(firstTime) s\nday: \(firstDate)")
         firstPlaceScoreValueLabel.text = "\(firstScore)"

@@ -178,27 +178,27 @@ day: 24.03.2019</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-KC-EVF">
-                                <rect key="frame" x="548" y="111.5" width="42" height="21"/>
+                                <rect key="frame" x="559" y="111.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYN-7W-tuk">
-                                <rect key="frame" x="548" y="175.5" width="42" height="21"/>
+                                <rect key="frame" x="559" y="175.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li1-5w-86d">
-                                <rect key="frame" x="548" y="240" width="42" height="21"/>
+                                <rect key="frame" x="559" y="240" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.3921568627" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.85490196078431369" green="0.52941176470588236" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-oZ-aZs">
                                 <rect key="frame" x="548" y="60.5" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -217,19 +217,20 @@ day: 24.03.2019</string>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" multiplier="1.2" id="BEe-fc-Nvm"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="CC6-5C-3l8"/>
                             <constraint firstItem="cBF-KC-EVF" firstAttribute="centerY" secondItem="eeS-sc-Xbi" secondAttribute="centerY" id="Dc9-cp-FmB"/>
-                            <constraint firstItem="li1-5w-86d" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="50" id="GAk-73-JCh"/>
+                            <constraint firstItem="cBF-KC-EVF" firstAttribute="trailing" secondItem="XEI-oZ-aZs" secondAttribute="trailing" id="GKZ-e6-u4s"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="HH1-Fd-Tr9"/>
+                            <constraint firstItem="XEI-oZ-aZs" firstAttribute="leading" secondItem="sxq-kA-ENS" secondAttribute="trailing" constant="50" id="IUf-yM-k7u"/>
+                            <constraint firstItem="li1-5w-86d" firstAttribute="trailing" secondItem="mYN-7W-tuk" secondAttribute="trailing" id="J2u-DE-tE7"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="O4H-3F-Zrk"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.5" id="THj-CU-bWn"/>
                             <constraint firstAttribute="bottom" secondItem="WRw-H9-bg6" secondAttribute="bottom" constant="8" id="Uwt-H8-Sic"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="WGI-Nm-GMY"/>
-                            <constraint firstItem="XEI-oZ-aZs" firstAttribute="leading" secondItem="cBF-KC-EVF" secondAttribute="leading" id="aPF-YD-7KN"/>
+                            <constraint firstItem="sxq-kA-ENS" firstAttribute="top" secondItem="XEI-oZ-aZs" secondAttribute="bottom" constant="12.5" id="aE6-Nb-W6R"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerY" secondItem="x4N-Tp-J8p" secondAttribute="centerY" id="abV-HT-VEK"/>
                             <constraint firstItem="PJe-rX-1eq" firstAttribute="leading" secondItem="eeS-sc-Xbi" secondAttribute="leading" id="cdc-Ll-K3I"/>
                             <constraint firstItem="hsT-bb-bfF" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="dPZ-2j-MCC"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="eFA-cr-3su"/>
-                            <constraint firstItem="cBF-KC-EVF" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="50" id="eTR-Qo-epx"/>
-                            <constraint firstItem="mYN-7W-tuk" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="50" id="imh-yu-3pP"/>
+                            <constraint firstItem="mYN-7W-tuk" firstAttribute="trailing" secondItem="cBF-KC-EVF" secondAttribute="trailing" id="gHv-dB-E2l"/>
                             <constraint firstItem="hsT-bb-bfF" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" id="lZO-W0-CP2"/>
                             <constraint firstItem="li1-5w-86d" firstAttribute="centerY" secondItem="SXM-fT-SeF" secondAttribute="centerY" id="lcQ-yY-efS"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="leading" secondItem="ljD-0p-FIu" secondAttribute="trailing" constant="5" id="ltP-m4-26j"/>
