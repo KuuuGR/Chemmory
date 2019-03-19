@@ -177,10 +177,36 @@ day: 24.03.2019</string>
                                     <action selector="saveButtonTapped:" destination="gMA-i1-zYM" eventType="touchUpInside" id="SM4-3T-sSy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-KC-EVF">
+                                <rect key="frame" x="548" y="111.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYN-7W-tuk">
+                                <rect key="frame" x="548" y="175.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li1-5w-86d">
+                                <rect key="frame" x="548" y="240" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.3921568627" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-oZ-aZs">
+                                <rect key="frame" x="548" y="60.5" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PJe-rX-1eq" firstAttribute="top" secondItem="x4N-Tp-J8p" secondAttribute="top" constant="5" id="0Hp-Tf-ySI"/>
+                            <constraint firstItem="mYN-7W-tuk" firstAttribute="centerY" secondItem="o9C-DO-HmU" secondAttribute="centerY" id="0MC-hi-ZMO"/>
+                            <constraint firstItem="cBF-KC-EVF" firstAttribute="top" secondItem="XEI-oZ-aZs" secondAttribute="bottom" constant="30" id="0vU-3O-auU"/>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="leading" secondItem="x4N-Tp-J8p" secondAttribute="leading" id="42J-kE-5sW"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerX" secondItem="x4N-Tp-J8p" secondAttribute="centerX" multiplier="1.2" id="6MR-I3-nIF"/>
                             <constraint firstAttribute="trailing" secondItem="WRw-H9-bg6" secondAttribute="trailing" constant="8" id="6em-cG-bsp"/>
@@ -190,16 +216,22 @@ day: 24.03.2019</string>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="Acl-p9-d6Z"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" multiplier="1.2" id="BEe-fc-Nvm"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="CC6-5C-3l8"/>
+                            <constraint firstItem="cBF-KC-EVF" firstAttribute="centerY" secondItem="eeS-sc-Xbi" secondAttribute="centerY" id="Dc9-cp-FmB"/>
+                            <constraint firstItem="li1-5w-86d" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="50" id="GAk-73-JCh"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="HH1-Fd-Tr9"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="O4H-3F-Zrk"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.5" id="THj-CU-bWn"/>
                             <constraint firstAttribute="bottom" secondItem="WRw-H9-bg6" secondAttribute="bottom" constant="8" id="Uwt-H8-Sic"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="WGI-Nm-GMY"/>
+                            <constraint firstItem="XEI-oZ-aZs" firstAttribute="leading" secondItem="cBF-KC-EVF" secondAttribute="leading" id="aPF-YD-7KN"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerY" secondItem="x4N-Tp-J8p" secondAttribute="centerY" id="abV-HT-VEK"/>
                             <constraint firstItem="PJe-rX-1eq" firstAttribute="leading" secondItem="eeS-sc-Xbi" secondAttribute="leading" id="cdc-Ll-K3I"/>
                             <constraint firstItem="hsT-bb-bfF" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="dPZ-2j-MCC"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="eFA-cr-3su"/>
+                            <constraint firstItem="cBF-KC-EVF" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="50" id="eTR-Qo-epx"/>
+                            <constraint firstItem="mYN-7W-tuk" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="50" id="imh-yu-3pP"/>
                             <constraint firstItem="hsT-bb-bfF" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" id="lZO-W0-CP2"/>
+                            <constraint firstItem="li1-5w-86d" firstAttribute="centerY" secondItem="SXM-fT-SeF" secondAttribute="centerY" id="lcQ-yY-efS"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="leading" secondItem="ljD-0p-FIu" secondAttribute="trailing" constant="5" id="ltP-m4-26j"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="top" secondItem="hsT-bb-bfF" secondAttribute="bottom" constant="4" id="pet-ap-oMl"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" id="rKM-Ll-O8Z"/>
@@ -211,12 +243,16 @@ day: 24.03.2019</string>
                     </view>
                     <connections>
                         <outlet property="firstPlaceHighScoreLabel" destination="eeS-sc-Xbi" id="jAG-Yn-7eO"/>
+                        <outlet property="firstPlaceScoreValueLabel" destination="cBF-KC-EVF" id="Eby-8i-cTz"/>
                         <outlet property="inputUserNameTextField" destination="G60-yH-Z7k" id="Lrg-GQ-XAE"/>
                         <outlet property="resultButtonView" destination="xWe-Yu-QeG" id="Tr1-Su-1Q3"/>
                         <outlet property="saveButton" destination="DV2-WH-h46" id="1zl-wG-t8y"/>
+                        <outlet property="scoreTextLabel" destination="XEI-oZ-aZs" id="gkw-Vt-ZJ9"/>
                         <outlet property="secondPlaceHighScoreLabel" destination="o9C-DO-HmU" id="KYZ-iG-LXf"/>
+                        <outlet property="secondPlaceScoreValueLabel" destination="mYN-7W-tuk" id="Zu9-pN-Xk0"/>
                         <outlet property="textFieldTopConstraint" destination="Aaa-sW-T4B" id="lLY-4q-ZQ5"/>
                         <outlet property="thirdPlaceHighScoreLabel" destination="SXM-fT-SeF" id="g0c-hv-7VD"/>
+                        <outlet property="thirdPlaceScoreValueLabel" destination="li1-5w-86d" id="CsN-ap-FeB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mby-V9-jel" userLabel="First Responder" sceneMemberID="firstResponder"/>

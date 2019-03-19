@@ -15,9 +15,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputUserNameTextField: UITextField!
     @IBOutlet weak var textFieldTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var saveButton: UIButton!
+    
+    @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var firstPlaceHighScoreLabel: UILabel!
+    @IBOutlet weak var firstPlaceScoreValueLabel: UILabel!
     @IBOutlet weak var secondPlaceHighScoreLabel: UILabel!
+    @IBOutlet weak var secondPlaceScoreValueLabel: UILabel!
     @IBOutlet weak var thirdPlaceHighScoreLabel: UILabel!
+    @IBOutlet weak var thirdPlaceScoreValueLabel: UILabel!
     
     
     var winGameResultsData  = ("","","")
@@ -35,6 +40,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func resetButtonTapped(_ sender: Any) {
         print ("reset")
         print (myResult)
+        //let results = realm.objects(Results.self).filter("color = 'Orange'")
+        //let results1 = realm.objects(Cat.self).sorted(by: "")
+        
+        let realm = try! Realm()
+        let grabReluts = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
+        print(grabReluts)
+        print("Wynik z początku: \(String(describing: grabReluts[0].name))")
+        
     }
     
     @IBAction func typingUserNameTextField(_ sender: Any) {
@@ -164,8 +177,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         // First way
         myResult.name = userName
         myResult.date = gameDate
-        myResult.time = String(gameTime)
-        myResult.misses = String(gameMisses)
+        myResult.time = Float(gameTime)
+        myResult.misses = Int(gameMisses)
         
         
         // Second way
@@ -173,7 +186,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         // score = 10000/(gameTime * (gameMisses+1))
         let gameScore = 10000/(gameTime * (gameMisses+1.0))
         
-        myResult.score = String(gameScore)
+        myResult.score = gameScore
         
         //let myResult2 = Result2(name: userName, date: gameDate, time: String(gameTime), misses: gameMisses, score: gameScore)
         myResult2.name = userName
@@ -196,11 +209,35 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     func showRecordResults() {
         
-        firstPlaceHighScoreLabel.text = ("\(myResult.name)\ntime: \(myResult.time)\nday: \(myResult.date)")
+        let realm = try! Realm()
+        let grabReluts = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
         
-        secondPlaceHighScoreLabel.text = ("")
+        print(grabReluts)
         
-        thirdPlaceHighScoreLabel.text = ("")
+        print("Wynik z początku: \(String(describing: grabReluts[0].name))")
+        let firstName = grabReluts[0].name ?? "no Name"
+        let firstScore = grabReluts[0].score
+        let firstDate = grabReluts[0].date ?? "no Date"
+        let firstTime = grabReluts[0].time
+        
+        let secondName = grabReluts[1].name ?? "no Name"
+        let secondScore = grabReluts[1].score
+        let secondDate = grabReluts[1].date ?? "no Date"
+        let secondTime = grabReluts[1].time
+        
+        let thirdName = grabReluts[2].name ?? "no Name"
+        let thirdScore = grabReluts[2].score
+        let thirdDate = grabReluts[2].date ?? "no Date"
+        let thirdTime = grabReluts[2].time
+        
+        firstPlaceHighScoreLabel.text = ("\(firstName)\ntime: \(firstTime) s\nday: \(firstDate)")
+        firstPlaceScoreValueLabel.text = "\(firstScore)"
+        
+        secondPlaceHighScoreLabel.text = ("\(secondName)\ntime: \(secondTime) s\nday: \(secondDate)")
+        secondPlaceScoreValueLabel.text = "\(secondScore)"
+        
+        thirdPlaceHighScoreLabel.text = ("\(thirdName)\ntime: \(thirdTime) s\nday: \(thirdDate)")
+        thirdPlaceScoreValueLabel.text = "\(thirdScore)"
     }
     
 }  // End ResoultViewController class
