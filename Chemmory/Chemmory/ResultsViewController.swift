@@ -28,7 +28,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     var winGameResultsData  = ("","","")
     var myName = ""
     var myResult = Result()
-    var myResult2 = Result2(name: "", date: "", time: "999.9", misses: 999.9, score: 0.0)
     
     weak var delegate: GameResultDelegate?
     
@@ -38,16 +37,13 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        print ("reset")
-        print (myResult)
-        //let results = realm.objects(Results.self).filter("color = 'Orange'")
-        //let results1 = realm.objects(Cat.self).sorted(by: "")
-        
         let realm = try! Realm()
-        let grabReluts = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
-        print(grabReluts)
-        print("Wynik z początku: \(String(describing: grabReluts[0].name))")
-        
+        try! realm.write {
+            realm.deleteAll()
+        }
+        //update result HighSore
+        showRecordResults()
+        backAction()
     }
     
     @IBAction func typingUserNameTextField(_ sender: Any) {
@@ -182,26 +178,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         myResult.time = Float(gameTime)
         myResult.misses = Int(gameMisses)
         
-        // Second way
-        
         // score = 10000/(gameTime * (gameMisses+1))
         let gameScore = 10000/(gameTime * (gameMisses+1.0))
-        
         myResult.score = gameScore
-        
-        //let myResult2 = Result2(name: userName, date: gameDate, time: String(gameTime), misses: gameMisses, score: gameScore)
-        myResult2.name = userName
-        myResult2.date = gameDate
-        myResult2.time = String(gameTime)
-        myResult2.misses = gameMisses
-        myResult2.score = gameScore
         
         // Add result to database
         let realm = try! Realm()
-        
         try! realm.write {
             realm.add(myResult)
-            //realm.add(myResult2)
         }
         print("Realm save youre record at: ")
         print(Realm.Configuration.defaultConfiguration.fileURL as Any)
