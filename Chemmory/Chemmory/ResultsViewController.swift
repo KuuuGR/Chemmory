@@ -45,19 +45,27 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        passwordView.isHidden = false
+
         preparePasswordField()
+        if  passwordCorrect() == true {
             let realm = try! Realm()
             try! realm.write {
                 realm.deleteAll()
             }
-            //backAction()
+            SoundManager.playSound(.match)
+            backAction()
+        } else {
+            SoundManager.playSound(.nomatch)
+        }
         
     }
     
     @IBAction func typingUserNameTextField(_ sender: Any) {
-        // get user name and show save button
-        saveButton.alpha = 1
+        
+        // get user name and show save button only when win data exist
+        if winGameResultsData.0 != "" {
+            saveButton.alpha = 1
+        }
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -240,6 +248,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
  
     func preparePasswordField() {
+        
+        passwordView.isHidden = !passwordView.isHidden
+        
         passwordView.backgroundColor = UIColor.gray
         passwordView.layer.cornerRadius = 6
         passwordView.layer.masksToBounds = true
@@ -264,10 +275,37 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
                     passSwitch4.onTintColor = UIColor.orange
                 }
             }
+        } else {
+            passSwitch1.onTintColor = UIColor.green
+            passSwitch2.onTintColor = UIColor.green
+            passSwitch3.onTintColor = UIColor.green
+            passSwitch4.onTintColor = UIColor.green
+            passSwitch5.onTintColor = UIColor.cyan
+            passSwitch6.onTintColor = UIColor.green
         }
         
         print("\(passSwitch1.isOn) \(passSwitch2.isOn) \(passSwitch3.isOn) \(passSwitch4.isOn) \(passSwitch5.isOn) \(passSwitch6.isOn)" )
     }
     
+    func passwordCorrect() -> Bool{
+        
+        let sw1 = passSwitch1.isOn
+        let sw2 = passSwitch2.isOn
+        let sw3 = passSwitch3.isOn
+        let sw4 = passSwitch4.isOn
+        let sw5 = passSwitch5.isOn
+        let sw6 = passSwitch6.isOn
+        
+        let result = sw1 && sw2 && sw3 && !sw4 && sw5 && !sw6
+        
+        passSwitch1.isOn = false
+        passSwitch2.isOn = false
+        passSwitch3.isOn = false
+        passSwitch4.isOn = false
+        passSwitch5.isOn = false
+        passSwitch6.isOn = false
+        
+        return (result)
+    }
     
 }  // End ResoultViewController class
