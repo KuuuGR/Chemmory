@@ -54,7 +54,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
             }
             SoundManager.playSound(.match)
             backAction()
-        } else {
+        } else if passwordView.isHidden == true {
             SoundManager.playSound(.nomatch)
         }
         
@@ -125,20 +125,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        passwordView.isHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     func backAction(){
         //print("Back Button Clicked")
         self.dismiss(animated: true, completion: nil)
@@ -158,6 +146,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.resultButtonView.layer.shadowOffset = CGSize.zero
         self.resultButtonView.layer.shadowRadius = 22
     }
+    
+    // MARK: - Show keyboard control
     
     // Animate textfield if Keyboard appears
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -183,6 +173,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.textFieldTopConstraint.constant = 12
         view.endEditing(true)
     }
+    
+    // MARK: - Show and write Score to DB
     
     func saveResultToDatabase() {
        
@@ -246,7 +238,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
- 
+    
+     // MARK: - Password function
+    
     func preparePasswordField() {
         
         passwordView.isHidden = !passwordView.isHidden
