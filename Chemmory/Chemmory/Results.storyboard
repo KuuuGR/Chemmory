@@ -69,7 +69,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="height" multiplier="172:165" id="bbf-Ed-lGk"/>
                                 </constraints>
-                                <state key="normal" image="card3"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="gMA-i1-zYM" eventType="touchUpInside" id="IgC-8p-Pgn"/>
                                 </connections>
@@ -322,7 +321,6 @@
     <resources>
         <image name="ResetButton03" width="650" height="650"/>
         <image name="SaveResult" width="256" height="256"/>
-        <image name="card3" width="162" height="161"/>
         <image name="krown" width="679" height="363"/>
         <image name="medalBronze" width="293" height="496"/>
         <image name="medalGold" width="293" height="496"/>

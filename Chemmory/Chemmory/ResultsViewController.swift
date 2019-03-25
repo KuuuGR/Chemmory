@@ -81,7 +81,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        // save tepped name and game result and block to save result as another person
+        
+        // save tepped name & game result. Deny to save rsult twice
         if myResult.name?.count != 0 && saveButton.alpha == 1 {
             saveResultToDatabase()
             inputUserNameTextField.isUserInteractionEnabled = false
@@ -96,7 +97,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.inputUserNameTextField.delegate = self
         resultButtonViewConfig()
-        bigElementSymbolConfig(atomicNumber: "1", atomicSymbol: "Pu", atomicName: "Puto", atomicMass: "21", atomicGrup: 3)
         
         // show High Score
         showRecordResults()
@@ -110,7 +110,25 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.dismissKeyboard))
             self.view.addGestureRecognizer(tap)
         
-   
+        // Prepare and Show Big element picture
+        let realm = try! Realm()
+        let myScore = countGameScore()
+        let grabPosition = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false).filter("score >= " + String(myScore)).count + 1
+        print(grabPosition)
+        if myResult.name?.count != 0 {
+            bigElementSymbolConfig(atomicNumber: grabPosition, atomicSymbol: "Pu", atomicName: "Puto", atomicMass: 21.009, atomicGrup: 3)
+        }
+        
+        
+        
+        
+        
+        //print(myScore)
+        
+        
+        //let results1 = realm.objects(myResult.self).filter("score >= 2")
+        //print(results1.count)
+        
         // Add result to database
         
         /*let realm = try! Realm()
@@ -146,12 +164,12 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         delegate?.backFromResult(transferredDataToGameVC: "Z widoku punktów")
     }
     
-    func bigElementSymbolConfig(atomicNumber: String, atomicSymbol: String, atomicName: String, atomicMass: String, atomicGrup: Int){
+    func bigElementSymbolConfig(atomicNumber: Int, atomicSymbol: String, atomicName: String, atomicMass: Float, atomicGrup: Int){
 
-        positionLabel.text = atomicNumber
+        positionLabel.text = String(atomicNumber)
         elementSymbolLabel.text = atomicSymbol
         elementNameLabel.text = atomicName
-        elementAtomicMassLabel.text = atomicMass
+        elementAtomicMassLabel.text = String(atomicMass)
         switch atomicGrup {
         case 1:
             elementLogoView.backgroundColor = UIColor.red
@@ -210,6 +228,15 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Show and write Score to DB
     
+    func countGameScore() -> Float {
+        
+        let gameMisses = Float(winGameResultsData.2) ?? 999.9
+        let gameTime = Float(winGameResultsData.1) ?? 999.9
+        // score = 10000/(gameTime * (gameMisses+1))
+        let gameScore = 10000/(gameTime * (gameMisses+1.0))
+        return gameScore
+    }
+    
     func saveResultToDatabase() {
        
         let userName = inputUserNameTextField.text ?? "no Name"
@@ -221,10 +248,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         myResult.date = gameDate
         myResult.time = Float(gameTime)
         myResult.misses = Int(gameMisses)
-        
-        // score = 10000/(gameTime * (gameMisses+1))
-        let gameScore = 10000/(gameTime * (gameMisses+1.0))
-        myResult.score = gameScore
+        myResult.score = countGameScore()
         
         // Add result to database
         let realm = try! Realm()
@@ -234,6 +258,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         print("Realm save youre record at: ")
         print(Realm.Configuration.defaultConfiguration.fileURL as Any)
     }
+    
     
     func showRecordResults() {
         
