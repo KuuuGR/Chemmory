@@ -37,6 +37,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     var myName = ""
     var myResult = Result()
     
+     var testI = 0
+    
     weak var delegate: GameResultDelegate?
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -46,6 +48,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func resetButtonTapped(_ sender: Any) {
 
+        print("element nr\(testI) \(elements[testI])")
+        if (testI < 108) {testI += 1}
+        
         preparePasswordField()
         if  passwordCorrect() == true {
             let realm = try! Realm()
