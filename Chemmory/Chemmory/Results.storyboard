@@ -289,6 +289,10 @@
                         <viewLayoutGuide key="safeArea" id="x4N-Tp-J8p"/>
                     </view>
                     <connections>
+                        <outlet property="elementAtomicMassLabel" destination="kF8-dt-INT" id="Nt9-Mk-VC4"/>
+                        <outlet property="elementLogoView" destination="xWe-Yu-QeG" id="USk-by-jIS"/>
+                        <outlet property="elementNameLabel" destination="MeZ-6Z-Ijm" id="Lok-gA-UPX"/>
+                        <outlet property="elementSymbolLabel" destination="HXD-qu-Za6" id="glL-eo-fnb"/>
                         <outlet property="firstPlaceHighScoreLabel" destination="eeS-sc-Xbi" id="jAG-Yn-7eO"/>
                         <outlet property="firstPlaceScoreValueLabel" destination="cBF-KC-EVF" id="Eby-8i-cTz"/>
                         <outlet property="inputUserNameTextField" destination="G60-yH-Z7k" id="Lrg-GQ-XAE"/>
@@ -299,6 +303,7 @@
                         <outlet property="passSwitch5" destination="kqV-rG-CFX" id="DAD-Vi-du4"/>
                         <outlet property="passSwitch6" destination="Gy1-tO-yID" id="DSE-Sv-ABf"/>
                         <outlet property="passwordView" destination="u13-3P-vhR" id="c2u-nV-MYf"/>
+                        <outlet property="positionLabel" destination="dqw-RK-453" id="6f5-IO-fjt"/>
                         <outlet property="resultButtonView" destination="xWe-Yu-QeG" id="Tr1-Su-1Q3"/>
                         <outlet property="saveButton" destination="DV2-WH-h46" id="1zl-wG-t8y"/>
                         <outlet property="scoreTextLabel" destination="XEI-oZ-aZs" id="gkw-Vt-ZJ9"/>

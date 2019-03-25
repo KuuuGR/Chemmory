@@ -24,7 +24,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var thirdPlaceHighScoreLabel: UILabel!
     @IBOutlet weak var thirdPlaceScoreValueLabel: UILabel!
    
-    
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passSwitch1: UISwitch!
     @IBOutlet weak var passSwitch2: UISwitch!
@@ -32,6 +31,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passSwitch4: UISwitch!
     @IBOutlet weak var passSwitch5: UISwitch!
     @IBOutlet weak var passSwitch6: UISwitch!
+    
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var elementSymbolLabel: UILabel!
+    @IBOutlet weak var elementNameLabel: UILabel!
+    @IBOutlet weak var elementAtomicMassLabel: UILabel!
+    @IBOutlet weak var elementLogoView: UIView!
+    
+    
     
     var winGameResultsData  = ("","","")
     var myName = ""
@@ -89,6 +96,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.inputUserNameTextField.delegate = self
         resultButtonViewConfig()
+        bigElementSymbolConfig(atomicNumber: "1", atomicSymbol: "Pu", atomicName: "Puto", atomicMass: "21", atomicGrup: 3)
         
         // show High Score
         showRecordResults()
@@ -137,6 +145,27 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
         delegate?.backFromResult(transferredDataToGameVC: "Z widoku punktów")
     }
+    
+    func bigElementSymbolConfig(atomicNumber: String, atomicSymbol: String, atomicName: String, atomicMass: String, atomicGrup: Int){
+
+        positionLabel.text = atomicNumber
+        elementSymbolLabel.text = atomicSymbol
+        elementNameLabel.text = atomicName
+        elementAtomicMassLabel.text = atomicMass
+        switch atomicGrup {
+        case 1:
+            elementLogoView.backgroundColor = UIColor.red
+        case 2:
+            elementLogoView.backgroundColor = UIColor.green
+        case 3:
+            elementLogoView.backgroundColor = UIColor.cyan
+        case 4:
+            elementLogoView.backgroundColor = UIColor.yellow
+        default:
+            elementLogoView.backgroundColor = UIColor.white
+        }
+    }
+    
     
     func resultButtonViewConfig(){
         self.resultButtonView.alpha = 0.9
