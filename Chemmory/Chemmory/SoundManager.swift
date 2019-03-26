@@ -31,22 +31,22 @@ class SoundManager {
         
         switch effect {
         case .flip:
-            soundFilename = "cardflip"
+            soundFilename = "flip05"//"cardflip"
             
         case .shuffle:
             soundFilename = "shuffle"
             
         case .match:
-            soundFilename = "dingcorrect"
+            soundFilename = "flip08"//"dingcorrect"
             
         case .nomatch:
-            soundFilename = "dingwrong"
+            soundFilename = "flipBack04"//"dingwrong"
         
         case .win:
-            soundFilename = "win"
+            soundFilename = "win01"
             
         case .lose:
-            soundFilename = "lose"
+            soundFilename = "fail01" //"lose"
         
         }
         

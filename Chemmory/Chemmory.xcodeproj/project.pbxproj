@@ -21,6 +21,14 @@
 		229934112231114A000E7851 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2299340D2231114A000E7851 /* dingcorrect.wav */; };
 		22993414223111CE000E7851 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22993413223111CE000E7851 /* AVFoundation.framework */; };
 		229934162231123A000E7851 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229934152231123A000E7851 /* SoundManager.swift */; };
+		22A9E944224A28C000EBA981 /* win01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E943224A28C000EBA981 /* win01.wav */; };
+		22A9E946224A29A700EBA981 /* flip05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E945224A29A700EBA981 /* flip05.wav */; };
+		22A9E948224A29D300EBA981 /* flip08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E947224A29D200EBA981 /* flip08.wav */; };
+		22A9E94A224A2A5300EBA981 /* flipBack01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E949224A2A5300EBA981 /* flipBack01.wav */; };
+		22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E94B224A2AE800EBA981 /* fail01.wav */; };
+		22A9E94E224A2B8B00EBA981 /* flipBack03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E94D224A2B8B00EBA981 /* flipBack03.wav */; };
+		22A9E950224A2C6400EBA981 /* flipBack02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E94F224A2C6400EBA981 /* flipBack02.wav */; };
+		22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E951224A2D4D00EBA981 /* flipBack04.wav */; };
 		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
 		22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481832226B91B00C6E530 /* AppDelegate.swift */; };
 		22C481862226B91B00C6E530 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481852226B91B00C6E530 /* GameViewController.swift */; };
@@ -49,6 +57,14 @@
 		2299340D2231114A000E7851 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
 		22993413223111CE000E7851 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		229934152231123A000E7851 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		22A9E943224A28C000EBA981 /* win01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win01.wav; sourceTree = "<group>"; };
+		22A9E945224A29A700EBA981 /* flip05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip05.wav; sourceTree = "<group>"; };
+		22A9E947224A29D200EBA981 /* flip08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip08.wav; sourceTree = "<group>"; };
+		22A9E949224A2A5300EBA981 /* flipBack01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack01.wav; sourceTree = "<group>"; };
+		22A9E94B224A2AE800EBA981 /* fail01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail01.wav; sourceTree = "<group>"; };
+		22A9E94D224A2B8B00EBA981 /* flipBack03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack03.wav; sourceTree = "<group>"; };
+		22A9E94F224A2C6400EBA981 /* flipBack02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack02.wav; sourceTree = "<group>"; };
+		22A9E951224A2D4D00EBA981 /* flipBack04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack04.wav; sourceTree = "<group>"; };
 		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		22C481802226B91B00C6E530 /* Chemmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C481832226B91B00C6E530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +99,16 @@
 			isa = PBXGroup;
 			children = (
 				2299340B2231114A000E7851 /* cardflip.wav */,
+				22A9E945224A29A700EBA981 /* flip05.wav */,
+				22A9E947224A29D200EBA981 /* flip08.wav */,
+				22A9E949224A2A5300EBA981 /* flipBack01.wav */,
 				2299340D2231114A000E7851 /* dingcorrect.wav */,
+				22A9E94B224A2AE800EBA981 /* fail01.wav */,
 				2219C7072231358C00875DD9 /* win.wav */,
+				22A9E94D224A2B8B00EBA981 /* flipBack03.wav */,
+				22A9E94F224A2C6400EBA981 /* flipBack02.wav */,
+				22A9E943224A28C000EBA981 /* win01.wav */,
+				22A9E951224A2D4D00EBA981 /* flipBack04.wav */,
 				2219C709223135AB00875DD9 /* lose.wav */,
 				2299340A2231114A000E7851 /* dingwrong.wav */,
 				2299340C2231114A000E7851 /* shuffle.wav */,
@@ -215,16 +239,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */,
+				22A9E94E224A2B8B00EBA981 /* flipBack03.wav in Resources */,
 				22FA5AE42229541D0026FC5D /* MemCell.xib in Resources */,
 				229934112231114A000E7851 /* dingcorrect.wav in Resources */,
+				22A9E948224A29D300EBA981 /* flip08.wav in Resources */,
 				2299340E2231114A000E7851 /* dingwrong.wav in Resources */,
 				2299340F2231114A000E7851 /* cardflip.wav in Resources */,
 				229934102231114A000E7851 /* shuffle.wav in Resources */,
+				22A9E94A224A2A5300EBA981 /* flipBack01.wav in Resources */,
 				22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */,
+				22A9E944224A28C000EBA981 /* win01.wav in Resources */,
 				22957C222233B688009AF033 /* Results.storyboard in Resources */,
 				2219C70A223135AB00875DD9 /* lose.wav in Resources */,
+				22A9E946224A29A700EBA981 /* flip05.wav in Resources */,
+				22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */,
+				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
 				2219C7082231358C00875DD9 /* win.wav in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
+				22A9E950224A2C6400EBA981 /* flipBack02.wav in Resources */,
 				22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
