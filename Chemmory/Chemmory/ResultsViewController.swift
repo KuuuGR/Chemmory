@@ -130,7 +130,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         case 3:
              crownImageView.image = #imageLiteral(resourceName: "krown_bronze")
         default:
-            crownImageView.image = #imageLiteral(resourceName: "krown_metal")
+            crownImageView.image = #imageLiteral(resourceName: "Crown_cord01") // #imageLiteral(resourceName: "krown_metal")
         }
         
         for element in elements {
@@ -165,17 +165,32 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         elementSymbolLabel.text = atomicSymbol
         elementNameLabel.text = atomicName
         elementAtomicMassLabel.text = String(atomicMass)
+        
         switch atomicGrup {
+        case 0:
+            elementLogoView.backgroundColor = UIColor.chHydrogen
         case 1:
-            elementLogoView.backgroundColor = UIColor.red
+            elementLogoView.backgroundColor = UIColor.chAlkaliMetals
         case 2:
-            elementLogoView.backgroundColor = UIColor.green
+            elementLogoView.backgroundColor = UIColor.chAlkalineEarthMetals
         case 3:
-            elementLogoView.backgroundColor = UIColor.cyan
+            elementLogoView.backgroundColor = UIColor.chTransitionMetals
         case 4:
-            elementLogoView.backgroundColor = UIColor.yellow
+            elementLogoView.backgroundColor = UIColor.chLanthanides
+        case 5:
+            elementLogoView.backgroundColor = UIColor.chActinides
+        case 6:
+            elementLogoView.backgroundColor = UIColor.chPoorMetals
+        case 7:
+            elementLogoView.backgroundColor = UIColor.chMetaloids
+        case 8:
+            elementLogoView.backgroundColor = UIColor.chOtherNonMetals
+        case 9:
+            elementLogoView.backgroundColor = UIColor.chHalogens
+        case 10:
+            elementLogoView.backgroundColor = UIColor.chNobelGasses
         default:
-            elementLogoView.backgroundColor = UIColor.white
+            elementLogoView.backgroundColor = UIColor.chNoName
         }
     }
     

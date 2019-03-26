@@ -40,7 +40,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="54.234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF8-dt-INT">
-                                        <rect key="frame" x="69.5" y="140" width="56" height="21"/>
+                                        <rect key="frame" x="69.5" y="142" width="56" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                     <constraint firstItem="MeZ-6Z-Ijm" firstAttribute="top" secondItem="HXD-qu-Za6" secondAttribute="bottom" constant="-15" id="3g8-cB-pxw"/>
                                     <constraint firstItem="HXD-qu-Za6" firstAttribute="centerX" secondItem="xWe-Yu-QeG" secondAttribute="centerX" id="YRp-hh-iaG"/>
                                     <constraint firstItem="dqw-RK-453" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="leading" constant="15" id="bIB-Bt-Xme"/>
-                                    <constraint firstItem="kF8-dt-INT" firstAttribute="top" secondItem="MeZ-6Z-Ijm" secondAttribute="bottom" constant="5" id="kTh-tI-T6V"/>
+                                    <constraint firstItem="kF8-dt-INT" firstAttribute="top" secondItem="MeZ-6Z-Ijm" secondAttribute="bottom" constant="7" id="kTh-tI-T6V"/>
                                     <constraint firstItem="MeZ-6Z-Ijm" firstAttribute="centerX" secondItem="HXD-qu-Za6" secondAttribute="centerX" id="rnY-OO-RIQ"/>
                                     <constraint firstItem="HXD-qu-Za6" firstAttribute="centerY" secondItem="xWe-Yu-QeG" secondAttribute="centerY" multiplier="0.8" id="x7r-6b-iZr"/>
                                     <constraint firstItem="dqw-RK-453" firstAttribute="top" secondItem="xWe-Yu-QeG" secondAttribute="top" constant="10" id="zrb-ea-uYh"/>
