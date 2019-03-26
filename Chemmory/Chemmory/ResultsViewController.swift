@@ -110,48 +110,30 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.dismissKeyboard))
             self.view.addGestureRecognizer(tap)
         
-        // Prepare and Show Big element picture
+        // MARK: - Prepare big element view  -
+        var playAtomicSymbol: String = ""
+        var playAtomicName: String = ""
+        var playAtomicMass: Float = 0.0
+        var playAtomicGrup: Int = 0
+        
         let realm = try! Realm()
         let myScore = countGameScore()
-        let grabPosition = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false).filter("score >= " + String(myScore)).count + 1
-        print(grabPosition)
-        if myResult.name?.count != 0 {
-            bigElementSymbolConfig(atomicNumber: grabPosition, atomicSymbol: "Pu", atomicName: "Puto", atomicMass: 21.009, atomicGrup: 3)
+        let actualGamePosition = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false).filter("score >= " + String(myScore)).count + 1
+        print(actualGamePosition)
+        
+        for element in elements {
+            if element.atomicNumber == actualGamePosition {
+                playAtomicSymbol = element.symbol
+                playAtomicName = element.name
+                playAtomicMass = element.atomicMass
+                playAtomicGrup = element.group
+                break
+            }
         }
         
+        bigElementSymbolConfig(atomicNumber: actualGamePosition, atomicSymbol: playAtomicSymbol, atomicName: playAtomicName, atomicMass: playAtomicMass, atomicGrup: playAtomicGrup)
+  
         
-        
-        
-        
-        //print(myScore)
-        
-        
-        //let results1 = realm.objects(myResult.self).filter("score >= 2")
-        //print(results1.count)
-        
-        // Add result to database
-        
-        /*let realm = try! Realm()
-        
-        print(Realm.Configuration.defaultConfiguration.fileURL as Any)
-        
-        try! realm.write {
-        }*/
-        
-        //let results = realm.objects(Results.self).filter("color = 'Orange'")
-        //let results1 = realm.objects(Cat.self).sorted(by: "")
-        //print(results[1].name ?? "Niema")
-        //print(results.count)
-/*        var myCat = Cat()
-        myCat.name = "Joe"
-        myCat.gender = "Male"
-        myCat.color = "Orange"
-        
-        try! realm.write {
-            realm.add(myCat)
-        } */
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -163,6 +145,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
         delegate?.backFromResult(transferredDataToGameVC: "Z widoku punktów")
     }
+    
     
     func bigElementSymbolConfig(atomicNumber: Int, atomicSymbol: String, atomicName: String, atomicMass: Float, atomicGrup: Int){
 
