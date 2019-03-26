@@ -32,7 +32,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passSwitch5: UISwitch!
     @IBOutlet weak var passSwitch6: UISwitch!
     
-    
     @IBOutlet weak var crownImageView: UIImageView!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var elementSymbolLabel: UILabel!
@@ -40,13 +39,11 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var elementAtomicMassLabel: UILabel!
     @IBOutlet weak var elementLogoView: UIView!
     
-    
-    
     var winGameResultsData  = ("","","")
     var myName = ""
     var myResult = Result()
     
-     var testI = 0
+    var resetDbFuse: Bool = false
     
     weak var delegate: GameResultDelegate?
     
@@ -57,19 +54,21 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func resetButtonTapped(_ sender: Any) {
 
-        print("element nr\(testI) \(elements[testI])")
-        if (testI < 108) {testI += 1}
-        
         preparePasswordField()
-        if  passwordCorrect() == true {
+        if  resetDbFuse && passwordCorrect() == true{
+            SoundManager.playSound(.match)
             let realm = try! Realm()
             try! realm.write {
                 realm.deleteAll()
             }
-            SoundManager.playSound(.match)
             backAction()
-        } else if passwordView.isHidden == true {
+        } else if  passwordCorrect() == true{
             SoundManager.playSound(.nomatch)
+            resetDbFuse = true
+        } else if passwordView.isHidden == true{
+            SoundManager.playSound(.nomatch)
+            resetDbFuse = false
+            
         }
         
     }
