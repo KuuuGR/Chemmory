@@ -32,6 +32,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passSwitch5: UISwitch!
     @IBOutlet weak var passSwitch6: UISwitch!
     
+    
+    @IBOutlet weak var crownImageView: UIImageView!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var elementSymbolLabel: UILabel!
     @IBOutlet weak var elementNameLabel: UILabel!
@@ -120,6 +122,17 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         let myScore = countGameScore()
         let actualGamePosition = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false).filter("score >= " + String(myScore)).count + 1
         print(actualGamePosition)
+        
+        switch actualGamePosition {
+        case 1:
+             crownImageView.image = #imageLiteral(resourceName: "krown_gold")
+        case 2:
+             crownImageView.image = #imageLiteral(resourceName: "krown_silver")
+        case 3:
+             crownImageView.image = #imageLiteral(resourceName: "krown_bronze")
+        default:
+            crownImageView.image = #imageLiteral(resourceName: "krown_metal")
+        }
         
         for element in elements {
             if element.atomicNumber == actualGamePosition {

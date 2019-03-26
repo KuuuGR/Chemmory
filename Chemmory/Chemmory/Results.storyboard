@@ -147,7 +147,7 @@
                                     <constraint firstItem="SXM-fT-SeF" firstAttribute="top" secondItem="o9C-DO-HmU" secondAttribute="bottom" constant="8" id="piT-gZ-ccK"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="krown" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-bb-bfF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="krown_metal" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-bb-bfF">
                                 <rect key="frame" x="302.5" y="10.5" width="195.5" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hsT-bb-bfF" secondAttribute="height" multiplier="200:81" id="Jjc-Fy-Qg8"/>
@@ -288,6 +288,7 @@
                         <viewLayoutGuide key="safeArea" id="x4N-Tp-J8p"/>
                     </view>
                     <connections>
+                        <outlet property="crownImageView" destination="hsT-bb-bfF" id="zzI-Pr-3uK"/>
                         <outlet property="elementAtomicMassLabel" destination="kF8-dt-INT" id="Nt9-Mk-VC4"/>
                         <outlet property="elementLogoView" destination="xWe-Yu-QeG" id="USk-by-jIS"/>
                         <outlet property="elementNameLabel" destination="MeZ-6Z-Ijm" id="Lok-gA-UPX"/>
@@ -321,7 +322,7 @@
     <resources>
         <image name="ResetButton03" width="650" height="650"/>
         <image name="SaveResult" width="256" height="256"/>
-        <image name="krown" width="679" height="363"/>
+        <image name="krown_metal" width="679" height="363"/>
         <image name="medalBronze" width="293" height="496"/>
         <image name="medalGold" width="293" height="496"/>
         <image name="medalSilver" width="293" height="496"/>
