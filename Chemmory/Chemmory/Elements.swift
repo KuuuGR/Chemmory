@@ -25,8 +25,6 @@ extension UIColor: DummyUIColorCustom {
     static let chNobelGasses = #colorLiteral(red: 0.7995236516, green: 0.8028283715, blue: 0.9931235909, alpha: 1)   //10
     static let chNoName = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)   //10
     
-    static let chcCalcButtonColor = #colorLiteral(red: 0.1411764706, green: 0.1411764706, blue: 0.1411764706, alpha: 1)
-    
 }
 
 class Element: Object {
