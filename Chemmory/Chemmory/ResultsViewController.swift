@@ -103,7 +103,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         showRecordResults()
         
         // show segue from GameVC
-        print(winGameResultsData)
+        //print(winGameResultsData)
         
         // Show Keyboard with text field go up animation
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -153,7 +153,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func backAction(){
-        //print("Back Button Clicked")
+
         self.dismiss(animated: true, completion: nil)
         delegate?.backFromResult(transferredDataToGameVC: "Z widoku punktów")
     }
@@ -272,7 +272,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     func showRecordResults() {
         
-        // get results from dataBase and show in scren
+        // get results from dataBase and show in screen
         
         let realm = try! Realm()
         
@@ -313,7 +313,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     func preparePasswordField() {
         
         passwordView.isHidden = !passwordView.isHidden
-        
+
         passwordView.backgroundColor = UIColor.gray
         passwordView.layer.cornerRadius = 6
         passwordView.layer.masksToBounds = true
@@ -347,7 +347,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
             passSwitch6.onTintColor = UIColor.green
         }
         
-        print("\(passSwitch1.isOn) \(passSwitch2.isOn) \(passSwitch3.isOn) \(passSwitch4.isOn) \(passSwitch5.isOn) \(passSwitch6.isOn)" )
     }
     
     func passwordCorrect() -> Bool{
