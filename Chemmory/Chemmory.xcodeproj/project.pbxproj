@@ -29,13 +29,14 @@
 		22A9E94E224A2B8B00EBA981 /* flipBack03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E94D224A2B8B00EBA981 /* flipBack03.wav */; };
 		22A9E950224A2C6400EBA981 /* flipBack02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E94F224A2C6400EBA981 /* flipBack02.wav */; };
 		22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E951224A2D4D00EBA981 /* flipBack04.wav */; };
+		22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */; };
+		22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */; };
 		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
 		22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481832226B91B00C6E530 /* AppDelegate.swift */; };
 		22C481862226B91B00C6E530 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481852226B91B00C6E530 /* GameViewController.swift */; };
 		22C481892226B91B00C6E530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C481872226B91B00C6E530 /* Main.storyboard */; };
 		22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C4818A2226B91D00C6E530 /* Assets.xcassets */; };
 		22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */; };
-		22FA5AE42229541D0026FC5D /* MemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE32229541D0026FC5D /* MemCell.xib */; };
 		22FA5AE6222958740026FC5D /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE5222958740026FC5D /* CardModel.swift */; };
 		22FA5AE8222961090026FC5D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE7222961090026FC5D /* Card.swift */; };
 		22FA5AEA22296D5E0026FC5D /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE922296D5E0026FC5D /* CardCollectionViewCell.swift */; };
@@ -65,6 +66,8 @@
 		22A9E94D224A2B8B00EBA981 /* flipBack03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack03.wav; sourceTree = "<group>"; };
 		22A9E94F224A2C6400EBA981 /* flipBack02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack02.wav; sourceTree = "<group>"; };
 		22A9E951224A2D4D00EBA981 /* flipBack04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack04.wav; sourceTree = "<group>"; };
+		22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		22C481802226B91B00C6E530 /* Chemmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C481832226B91B00C6E530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		22C4818D2226B91D00C6E530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C4818F2226B91D00C6E530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FA5AE12229305D0026FC5D /* Gameboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gameboard.storyboard; sourceTree = "<group>"; };
-		22FA5AE32229541D0026FC5D /* MemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemCell.xib; sourceTree = "<group>"; };
 		22FA5AE5222958740026FC5D /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		22FA5AE7222961090026FC5D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		22FA5AE922296D5E0026FC5D /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -125,10 +127,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		22AE75BD22520D440026DA17 /* NewCollectionCellCar */ = {
+			isa = PBXGroup;
+			children = (
+				22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */,
+				22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */,
+			);
+			path = NewCollectionCellCar;
+			sourceTree = "<group>";
+		};
 		22C481772226B91B00C6E530 = {
 			isa = PBXGroup;
 			children = (
-				22FA5AE32229541D0026FC5D /* MemCell.xib */,
 				22C481822226B91B00C6E530 /* Chemmory */,
 				22C481812226B91B00C6E530 /* Products */,
 				22993412223111CE000E7851 /* Frameworks */,
@@ -147,6 +157,7 @@
 		22C481822226B91B00C6E530 /* Chemmory */ = {
 			isa = PBXGroup;
 			children = (
+				22AE75BD22520D440026DA17 /* NewCollectionCellCar */,
 				22C481852226B91B00C6E530 /* GameViewController.swift */,
 				22957C232233B7BD009AF033 /* ResultsViewController.swift */,
 				223577A622379AB800553DCC /* Result.swift */,
@@ -241,7 +252,6 @@
 			files = (
 				22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */,
 				22A9E94E224A2B8B00EBA981 /* flipBack03.wav in Resources */,
-				22FA5AE42229541D0026FC5D /* MemCell.xib in Resources */,
 				229934112231114A000E7851 /* dingcorrect.wav in Resources */,
 				22A9E948224A29D300EBA981 /* flip08.wav in Resources */,
 				2299340E2231114A000E7851 /* dingwrong.wav in Resources */,
@@ -257,6 +267,7 @@
 				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
 				2219C7082231358C00875DD9 /* win.wav in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
+				22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */,
 				22A9E950224A2C6400EBA981 /* flipBack02.wav in Resources */,
 				22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */,
 			);
@@ -316,6 +327,7 @@
 				22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */,
 				22FA5AEA22296D5E0026FC5D /* CardCollectionViewCell.swift in Sources */,
 				22240531223BA0BE008FCC4C /* Constants.swift in Sources */,
+				22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */,
 				223577A722379AB800553DCC /* Result.swift in Sources */,
 				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
 				229934162231123A000E7851 /* SoundManager.swift in Sources */,

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oql-Na-0el">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oql-Na-0el">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,39 +105,7 @@
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CardCell" id="Zic-4A-dRe" userLabel="CardCell" customClass="CardCollectionViewCell" customModule="Chemmory" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-dx-GzY" userLabel="card1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="YVe-cZ-xam" userLabel="back">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                </view>
-                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                                <constraints>
-                                                    <constraint firstItem="AIB-dx-GzY" firstAttribute="height" secondItem="Zic-4A-dRe" secondAttribute="height" id="1ON-ZW-k3x"/>
-                                                    <constraint firstItem="YVe-cZ-xam" firstAttribute="centerY" secondItem="Zic-4A-dRe" secondAttribute="centerY" id="6nn-e8-CQ4"/>
-                                                    <constraint firstItem="AIB-dx-GzY" firstAttribute="centerX" secondItem="Zic-4A-dRe" secondAttribute="centerX" id="8NB-Pv-gEj"/>
-                                                    <constraint firstItem="AIB-dx-GzY" firstAttribute="width" secondItem="Zic-4A-dRe" secondAttribute="width" id="Awg-SM-bMz"/>
-                                                    <constraint firstItem="YVe-cZ-xam" firstAttribute="height" secondItem="Zic-4A-dRe" secondAttribute="height" id="FII-cj-8tw"/>
-                                                    <constraint firstItem="AIB-dx-GzY" firstAttribute="centerY" secondItem="Zic-4A-dRe" secondAttribute="centerY" id="OCH-AU-Zzv"/>
-                                                    <constraint firstItem="YVe-cZ-xam" firstAttribute="centerX" secondItem="Zic-4A-dRe" secondAttribute="centerX" id="W6H-eO-r30"/>
-                                                    <constraint firstItem="YVe-cZ-xam" firstAttribute="width" secondItem="Zic-4A-dRe" secondAttribute="width" id="pnR-Y3-KLs"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="backImageView" destination="YVe-cZ-xam" id="hqD-50-fGD"/>
-                                                    <outlet property="frontImageView" destination="AIB-dx-GzY" id="FxS-P1-bko"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
+                                        <cells/>
                                     </collectionView>
                                 </subviews>
                                 <constraints>
@@ -175,9 +143,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back" width="439" height="434"/>
         <image name="BackPT09" width="1365" height="732"/>
-        <image name="card1" width="490" height="490"/>
         <image name="leftArrow4" width="380" height="380"/>
         <image name="rightArrow5" width="380" height="380"/>
     </resources>

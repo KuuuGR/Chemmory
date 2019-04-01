@@ -13,7 +13,7 @@ protocol GameResultDelegate: class {
     func backFromResult(transferredDataToGameVC: String)
 }
 
-class GameViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class GameViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var LifeBarLabel: UILabel!
@@ -53,6 +53,8 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        collectionView.register(UINib(nibName: "ChemCardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ChemCardCollectionViewCell")
         
         // Create timer
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
@@ -113,7 +115,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // Get an CardCollectionViewCell object
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChemCardCollectionViewCell", for: indexPath) as! ChemCardCollectionViewCell
         
         // Get the card that the collection view is trying to display
         let card = cardArray[indexPath.row]
@@ -132,7 +134,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         
         //Get cell that the user selected
-        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as! ChemCardCollectionViewCell
         
         //Get the card that the user selected
         let card = cardArray[indexPath.row]
@@ -165,13 +167,17 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     } // End the didSelectItemAt method
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
+    }
+    
     // MARK: - Game Logic Methods
     
     func checkForMatches(_ secondFlippedCardIndex: IndexPath) {
         
         // Get the cells for the two cards that were revealed
-        let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? CardCollectionViewCell
-        let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? CardCollectionViewCell
+        let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? ChemCardCollectionViewCell
+        let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? ChemCardCollectionViewCell
         
         
         // Get the cards for the two cards were revealed
