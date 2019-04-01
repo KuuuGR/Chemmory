@@ -168,7 +168,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     } // End the didSelectItemAt method
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: 120, height: 120)
     }
     
     // MARK: - Game Logic Methods

@@ -11,8 +11,13 @@ import UIKit
 class ChemCardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var frontImageView: UIImageView!
-    
     @IBOutlet weak var backImageView: UIImageView!
+    
+    @IBOutlet weak var elementNumberLabel: UILabel!
+    @IBOutlet weak var elementValenceLabel: UILabel!
+    @IBOutlet weak var elementSymbolLabel: UILabel!
+    @IBOutlet weak var elementNameLabel: UILabel!
+    @IBOutlet weak var elementMassLabel: UILabel!
     
     var card:Card?
 
@@ -56,7 +61,6 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
     func flip() {
         
         UIView.transition(from: backImageView, to: frontImageView, duration: 0.3, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
-        
     }
     
     
@@ -65,10 +69,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
             
             UIView.transition(from: self.frontImageView, to: self.backImageView, duration: 0.3, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
-            
         }
-        
-        
     }
     
     func remove() {
@@ -76,11 +77,8 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         //Removes both imageviews from beign visable
         backImageView.alpha = 0
         
-        // TODO: Animate it
         UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseOut, animations: {
             self.frontImageView.alpha = 0
         }, completion: nil)
-        
     }
-
 }

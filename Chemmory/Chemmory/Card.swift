@@ -10,9 +10,15 @@ import Foundation
 
 class Card {
     
-    var imageName = ""
     var isFliped = false
     var isMatched = false
+    
+    var imageName = ""
+    var elementName: String = ""
+    var elementValence: String = ""
+    var elementNumber: Int = 0
+    var elementSybmol: String = ""
+    var elementMass: Float = 0.0
     
     //need som additional linformation like valence (less common,all), atomic number, atomic name, atomic full name
 }

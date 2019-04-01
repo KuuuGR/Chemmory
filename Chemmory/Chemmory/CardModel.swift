@@ -20,7 +20,7 @@ class CardModel {
         
         // Randomly generate pairs of cards
         //Make it so we only have inique pair of cards
-        while generatedNumbersArray.count < 8 {
+        while generatedNumbersArray.count < 9 {
             
             //Get a random number
             let randomNumber = arc4random_uniform(13) + 1
