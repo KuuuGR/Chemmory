@@ -38,11 +38,37 @@ class CardModel {
                 let cardOne = Card()
                 cardOne.imageName = "card\(randomNumber)"
                 
+                for element in elements {
+                    if element.atomicNumber == randomNumber {
+                        cardOne.elementMass = element.atomicMass
+                        cardOne.elementName = element.name
+                        cardOne.elementNumber = element.atomicNumber
+                        cardOne.elementSybmol = element.symbol
+                        cardOne.elementValence = element.valence
+                        // TODO: Make "bold part of string" if element rare and common
+                        break
+                    }
+                }
+                
+                
                 generatedCardsArray.append(cardOne)
                 
                 // Create the second card object
                 let cardTwo = Card()
                 cardTwo.imageName = "card\(randomNumber)"
+                
+                for element in elements {
+                    if element.atomicNumber == randomNumber {
+                        cardTwo.elementMass = element.atomicMass
+                        cardTwo.elementName = element.name
+                        cardTwo.elementNumber = element.atomicNumber
+                        cardTwo.elementSybmol = element.symbol
+                        cardTwo.elementValence = element.valence
+                        // TODO: Make "bold part of string" if element rare and common
+                        break
+                    }
+                }
+                
                 
                 generatedCardsArray.append(cardTwo)
                 

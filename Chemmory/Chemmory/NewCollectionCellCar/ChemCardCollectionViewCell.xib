@@ -43,16 +43,15 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="137,327" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-6n-kcW">
-                        <rect key="frame" x="35" y="95" width="54" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56765" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-rw-w20">
                         <rect key="frame" x="62" y="15.5" width="48" height="19.5"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="137,327" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-6n-kcW">
+                        <rect key="frame" x="5" y="97.5" width="110" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -61,6 +60,7 @@
             <constraints>
                 <constraint firstItem="Zbz-qj-AQF" firstAttribute="top" secondItem="kGy-nq-b30" secondAttribute="top" id="3MT-mY-7t2"/>
                 <constraint firstAttribute="trailing" secondItem="ahe-rw-w20" secondAttribute="trailing" constant="10" id="4l7-NX-F95"/>
+                <constraint firstItem="dkx-6n-kcW" firstAttribute="top" secondItem="sLq-tA-bcA" secondAttribute="bottom" constant="-5" id="5cW-GY-eJq"/>
                 <constraint firstItem="Efz-tg-PZV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ChT-UJ-qa2"/>
                 <constraint firstItem="sLq-tA-bcA" firstAttribute="centerX" secondItem="17u-9t-vVa" secondAttribute="centerX" id="Fjo-K2-Cdd"/>
                 <constraint firstItem="ahe-rw-w20" firstAttribute="centerY" secondItem="Efz-tg-PZV" secondAttribute="centerY" id="K2i-LZ-4Oy"/>
@@ -75,6 +75,8 @@
                 <constraint firstItem="sLq-tA-bcA" firstAttribute="top" secondItem="17u-9t-vVa" secondAttribute="bottom" constant="-15" id="jXv-9R-pCT"/>
                 <constraint firstItem="kGy-nq-b30" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="k75-u7-fxF"/>
                 <constraint firstItem="Efz-tg-PZV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="lfK-Yl-hYW"/>
+                <constraint firstAttribute="trailing" secondItem="dkx-6n-kcW" secondAttribute="trailing" constant="5" id="mD1-WS-okV"/>
+                <constraint firstItem="dkx-6n-kcW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="paP-uc-IXO"/>
                 <constraint firstItem="Zbz-qj-AQF" firstAttribute="leading" secondItem="kGy-nq-b30" secondAttribute="leading" id="vC0-Fn-Xdr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

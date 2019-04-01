@@ -42,8 +42,13 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
             backImageView.alpha = 1
             frontImageView.alpha = 1
         }
-        frontImageView.image = UIImage(named: card.imageName)
         
+        frontImageView.image = UIImage(named: card.imageName)
+        elementNumberLabel.text = String(card.elementNumber)
+        elementValenceLabel.text = card.elementValence
+        elementSymbolLabel.text = card.elementSybmol
+        elementNameLabel.text = card.elementName
+        elementMassLabel.text = String(format: "%.3f",card.elementMass)
         
         // Determine if teh card is in flipped up state or flipped down state
         if card.isFliped == true {
