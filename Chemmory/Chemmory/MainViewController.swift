@@ -10,9 +10,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var startButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startButton.layer.backgroundColor = UIColor.red.cgColor
+        startButton.layer.cornerRadius = startButton.bounds.size.width * 0.55
+        startButton.layer.borderWidth = 8
+        startButton.layer.borderColor = UIColor.white.cgColor
     }
 
 }

@@ -49,6 +49,7 @@ class CardModel {
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }
+                    
                 }
 
                 generatedCardsArray.append(cardOne)
@@ -78,6 +79,5 @@ class CardModel {
         //return generatedCardsArray.shuffled()   //TTTT -> uncomment this in final version and remove next line
         return generatedCardsArray
     }
-    
     
 }
