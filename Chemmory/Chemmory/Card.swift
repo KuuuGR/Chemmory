@@ -19,6 +19,7 @@ class Card {
     var elementNumber: Int = 0
     var elementSybmol: String = ""
     var elementMass: Float = 0.0
+    var elementGrup: Int = 0
     
-    //need som additional linformation like valence (less common,all), atomic number, atomic name, atomic full name
+    //need som additional linformation - valence (common, rare)
 }

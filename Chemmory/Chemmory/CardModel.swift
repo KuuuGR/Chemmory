@@ -45,12 +45,12 @@ class CardModel {
                         cardOne.elementNumber = element.atomicNumber
                         cardOne.elementSybmol = element.symbol
                         cardOne.elementValence = element.valence
+                        cardOne.elementGrup = element.group
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }
                 }
-                
-                
+
                 generatedCardsArray.append(cardOne)
                 
                 // Create the second card object
@@ -64,11 +64,11 @@ class CardModel {
                         cardTwo.elementNumber = element.atomicNumber
                         cardTwo.elementSybmol = element.symbol
                         cardTwo.elementValence = element.valence
+                        cardTwo.elementGrup = element.group
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }
                 }
-                
                 
                 generatedCardsArray.append(cardTwo)
                 

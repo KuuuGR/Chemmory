@@ -157,10 +157,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 firstFlippedCardIndex = indexPath
             }
             else {
-                
                 // This is the second card beign flipped
-                
-                // TODO: Perform the matching logic
                 checkForMatches(indexPath)
             }
         }
@@ -178,7 +175,6 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Get the cells for the two cards that were revealed
         let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? ChemCardCollectionViewCell
         let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? ChemCardCollectionViewCell
-        
         
         // Get the cards for the two cards were revealed
         let cardOne = cardArray[firstFlippedCardIndex!.row]
@@ -222,13 +218,12 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cardTwoCell?.flipBack()
         }
         
-            // Tell the collectionView to relad the cell of the first card if it is nil
+            // Tell the collectionView to reload the cell of the first card if it is nil
         if cardOneCell == nil {
             collectionView.reloadItems(at: [firstFlippedCardIndex!])
         }
         // Reset the property that tracks the first card flipped
         firstFlippedCardIndex = nil
-        
     }
     
     func checkGameEnded() {

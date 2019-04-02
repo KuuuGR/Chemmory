@@ -45,27 +45,18 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
             frontImageView.alpha = 0
             frontCardView.alpha = 1
         }
-        //self.frontCardView.layer.cornerRadius = self.frontCardView.frame.size.width / 3
+        
         self.frontCardView.layer.cornerRadius = 22.0
-        let blackU = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-        let yelloU = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        //self.layer.borderColor = red.CGColor
-        self.frontCardView.layer.borderColor = blackU.cgColor
+        self.frontCardView.layer.borderColor = UIColor.black.cgColor
         self.frontCardView.layer.borderWidth = 2
-        //self.frontCardView.layer.backgroundColor =
 
-        
-        self.frontCardView.layer.backgroundColor = yelloU.cgColor
-        self.frontCardView.clipsToBounds = false
-        //frontCardView.layer.cornerRadius = 20.0
-        
-        
         frontImageView.image = UIImage(named: card.imageName)
         elementNumberLabel.text = String(card.elementNumber)
         elementValenceLabel.text = card.elementValence
         elementSymbolLabel.text = card.elementSybmol
         elementNameLabel.text = card.elementName
         elementMassLabel.text = String(format: "%.3f",card.elementMass)
+        frontCardView.backgroundColor = returnElementGrupColor(grup: card.elementGrup)
         
         // Determine if teh card is in flipped up state or flipped down state
         if card.isFliped == true {
@@ -94,6 +85,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    
     func remove() {
         
         //Removes both imageviews from beign visable
@@ -102,6 +94,52 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseOut, animations: {
             self.frontImageView.alpha = 0
             self.frontCardView.alpha = 0
+            
         }, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.elementNumberLabel.isHidden = true
+            self.elementValenceLabel.isHidden = true
+            self.elementSymbolLabel.isHidden = true
+            self.elementNameLabel.isHidden = true
+            self.elementMassLabel.isHidden = true
+        }
+        
     }
+    
+    
+    func returnElementGrupColor(grup: Int) -> UIColor {
+        var cardViewColor = UIColor.black
+        
+        switch grup {
+        case 0:
+            cardViewColor = UIColor.chHydrogen
+        case 1:
+            cardViewColor = UIColor.chAlkaliMetals
+        case 2:
+            cardViewColor = UIColor.chAlkalineEarthMetals
+        case 3:
+            cardViewColor = UIColor.chTransitionMetals
+        case 4:
+            cardViewColor = UIColor.chLanthanides
+        case 5:
+            cardViewColor = UIColor.chActinides
+        case 6:
+            cardViewColor = UIColor.chPoorMetals
+        case 7:
+            cardViewColor = UIColor.chMetaloids
+        case 8:
+            cardViewColor = UIColor.chOtherNonMetals
+        case 9:
+            cardViewColor = UIColor.chHalogens
+        case 10:
+            cardViewColor = UIColor.chNobelGasses
+        default:
+            cardViewColor = UIColor.chNoName
+        }
+        
+        return cardViewColor
+    }
+    
+    
 }

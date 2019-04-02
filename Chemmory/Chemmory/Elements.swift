@@ -179,7 +179,3 @@ var elements: [Element] = [e00,eH0,eHe,eLi,eBe,eB0,eC0,eN0,eO0,eF0,eNe,eNa,eMg,e
     eXe,eCs,eBa,eLa,eCe,ePr,eNd,ePm,eSm,eEu,eGd,eTb,eDy,eHo,eEr,eTm,eYb,eLu,eHf,eTa,
     eW0,eRe,eOs,eIr,ePt,eAu,eHg,eTl,ePb,eBi,ePo,eAt,eRn,eFr,eRa,eAc,eTh,ePa,eU0,eNp,
     ePu,eAm,eCm,eBk,eCf,eEs,eFm,eMd,eNo,eLr,eRf,eDb,eSg,eBh,eHs,eMt,eDs,eRg,eCn]
-
-
-
-
