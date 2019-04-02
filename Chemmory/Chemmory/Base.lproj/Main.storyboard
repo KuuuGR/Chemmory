@@ -148,8 +148,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottom_cardButton" destination="goj-mb-VvB" id="FnL-W9-mJ0"/>
+                        <outlet property="c_cardButton" destination="G0o-Wn-hIq" id="w7f-3U-QiN"/>
+                        <outlet property="he_cardButton" destination="YlG-Ru-QUo" id="HL7-gf-M7W"/>
+                        <outlet property="left_cardButton" destination="PtR-6P-vTj" id="SLD-sW-gVl"/>
+                        <outlet property="m_CardButton" destination="Lvg-CC-62J" id="m6L-GF-eT8"/>
+                        <outlet property="mo_cardButton" destination="Wdw-c8-dvz" id="uZY-aM-YGx"/>
+                        <outlet property="r_cardButton" destination="m2f-3M-ogC" id="35l-Gb-K06"/>
+                        <outlet property="right_cardButton" destination="Paw-w6-T3C" id="beV-TP-ECY"/>
                         <outlet property="startButton" destination="0WT-7r-Tk4" id="gfa-w3-B2L"/>
                         <outlet property="startGameLabel" destination="tI5-7I-2sB" id="PPG-9M-1mf"/>
+                        <outlet property="y_cardButton" destination="wRU-Aa-lNh" id="Sjo-ZE-hQg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
