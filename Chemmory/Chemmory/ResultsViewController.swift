@@ -51,7 +51,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         backAction()
     }
     
-    
     @IBAction func resetButtonTapped(_ sender: Any) {
 
         preparePasswordField()

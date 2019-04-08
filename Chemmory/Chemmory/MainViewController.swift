@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     
     var mPress: Int = 0
     var rPress: Int = 0
+    var alphaCard: CGFloat = 0.9
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var startGameLabel: UILabel!
@@ -29,37 +30,44 @@ class MainViewController: UIViewController {
     @IBAction func cButtonPush(_ sender: Any) {
         
         c_cardButton.setImage(#imageLiteral(resourceName: "card_c"), for: .normal)
+        c_cardButton.alpha = alphaCard
     }
     
     @IBAction func heButtonPush(_ sender: Any) {
         he_cardButton.setImage(#imageLiteral(resourceName: "card_he"), for: .normal)
+        he_cardButton.alpha = alphaCard
     }
     
     @IBAction func mButtonPush(_ sender: Any) {
-       
+        m_cardButton.setImage(#imageLiteral(resourceName: "card_m1"), for: .normal)
+        m_cardButton.alpha = alphaCard
         mPress += 1
         if mPress > 50 {
             m_cardButton.setImage(#imageLiteral(resourceName: "card_M"), for: .normal)
+        
         }
     }
     
     
     @IBAction func moButtonPush(_ sender: Any) {
         mo_cardButton.setImage(#imageLiteral(resourceName: "card_mo"), for: .normal)
+        mo_cardButton.alpha = alphaCard
     }
     
     
     @IBAction func rButtonPush(_ sender: Any) {
+        r_cardButton.setImage(#imageLiteral(resourceName: "card_R1"), for: .normal)
+        r_cardButton.alpha = alphaCard
         rPress += 1
-        
         if rPress > 50 {
             r_cardButton.setImage(#imageLiteral(resourceName: "card_R"), for: .normal)
-        } 
+        }
     }
     
     
     
     @IBAction func yButtonPush(_ sender: Any) {
+        y_cardButton.alpha = alphaCard
         y_cardButton.setImage(#imageLiteral(resourceName: "card_y"), for: .normal)
     }
     

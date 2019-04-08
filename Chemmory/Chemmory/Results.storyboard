@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gMA-i1-zYM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gMA-i1-zYM">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -242,6 +242,16 @@
                                     <constraint firstItem="qfE-xy-JfB" firstAttribute="top" secondItem="u13-3P-vhR" secondAttribute="top" constant="1" id="kkw-yI-ajd"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7g-5P-doc">
+                                <rect key="frame" x="13" y="329.5" width="37.5" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L7g-5P-doc" secondAttribute="height" multiplier="1:1" id="kse-wD-ehe"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="leftArrow4"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="gMA-i1-zYM" eventType="touchUpInside" id="NzB-gM-Psw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -249,6 +259,7 @@
                             <constraint firstItem="mYN-7W-tuk" firstAttribute="centerY" secondItem="o9C-DO-HmU" secondAttribute="centerY" id="0MC-hi-ZMO"/>
                             <constraint firstItem="cBF-KC-EVF" firstAttribute="top" secondItem="XEI-oZ-aZs" secondAttribute="bottom" constant="30" id="0vU-3O-auU"/>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="leading" secondItem="x4N-Tp-J8p" secondAttribute="leading" id="42J-kE-5sW"/>
+                            <constraint firstItem="L7g-5P-doc" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="57b-8X-3W2"/>
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerX" secondItem="x4N-Tp-J8p" secondAttribute="centerX" multiplier="1.2" id="6MR-I3-nIF"/>
                             <constraint firstAttribute="trailing" secondItem="WRw-H9-bg6" secondAttribute="trailing" constant="8" id="6em-cG-bsp"/>
                             <constraint firstItem="u13-3P-vhR" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="9gc-Il-K73"/>
@@ -259,6 +270,7 @@
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" multiplier="1.2" id="BEe-fc-Nvm"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="centerX" secondItem="sxq-kA-ENS" secondAttribute="centerX" id="CC6-5C-3l8"/>
                             <constraint firstItem="cBF-KC-EVF" firstAttribute="centerY" secondItem="eeS-sc-Xbi" secondAttribute="centerY" id="Dc9-cp-FmB"/>
+                            <constraint firstItem="L7g-5P-doc" firstAttribute="leading" secondItem="C4Q-p7-ZUG" secondAttribute="trailing" constant="-19.5" id="FSn-Vw-Zwk"/>
                             <constraint firstItem="cBF-KC-EVF" firstAttribute="trailing" secondItem="XEI-oZ-aZs" secondAttribute="trailing" id="GKZ-e6-u4s"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="HH1-Fd-Tr9"/>
                             <constraint firstItem="XEI-oZ-aZs" firstAttribute="leading" secondItem="sxq-kA-ENS" secondAttribute="trailing" constant="50" id="IUf-yM-k7u"/>
@@ -281,6 +293,7 @@
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="top" secondItem="hsT-bb-bfF" secondAttribute="bottom" constant="4" id="pet-ap-oMl"/>
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" id="rKM-Ll-O8Z"/>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="vji-an-3Sa"/>
+                            <constraint firstItem="L7g-5P-doc" firstAttribute="centerY" secondItem="WRw-H9-bg6" secondAttribute="centerY" id="wV3-gB-CAz"/>
                             <constraint firstItem="DV2-WH-h46" firstAttribute="centerY" secondItem="G60-yH-Z7k" secondAttribute="centerY" id="wtw-Ci-mf2"/>
                             <constraint firstItem="DV2-WH-h46" firstAttribute="leading" secondItem="G60-yH-Z7k" secondAttribute="trailing" constant="2" id="xkk-TO-bfu"/>
                             <constraint firstItem="u13-3P-vhR" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="1" id="zDA-gs-naV"/>
@@ -323,6 +336,7 @@
         <image name="ResetButton03" width="650" height="650"/>
         <image name="SaveResult" width="256" height="256"/>
         <image name="krown_metal" width="679" height="363"/>
+        <image name="leftArrow4" width="380" height="380"/>
         <image name="medalBronze" width="293" height="496"/>
         <image name="medalGold" width="293" height="496"/>
         <image name="medalSilver" width="293" height="496"/>
