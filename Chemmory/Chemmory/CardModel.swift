@@ -45,7 +45,7 @@ class CardModel {
                         cardOne.elementNumber = element.atomicNumber
                         cardOne.elementSybmol = element.symbol
                         cardOne.elementValence = element.valence
-                        cardOne.elementGrup = element.group
+                        cardBackgroundIsWhite == true ? (cardOne.elementGrup = 11) : (cardOne.elementGrup = element.group)
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }
@@ -66,6 +66,7 @@ class CardModel {
                         cardTwo.elementSybmol = element.symbol
                         cardTwo.elementValence = element.valence
                         cardTwo.elementGrup = element.group
+                        cardBackgroundIsWhite == true ? (cardTwo.elementGrup = 11) : (cardTwo.elementGrup = element.group)
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }
