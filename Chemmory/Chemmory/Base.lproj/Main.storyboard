@@ -29,17 +29,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-w6-T3C">
                                 <rect key="frame" x="513" y="174.5" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="BrainLanguage_02"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goj-mb-VvB">
                                 <rect key="frame" x="296" y="298" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Brain_options"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtR-6P-vTj">
                                 <rect key="frame" x="79" y="174.5" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="Brain_right02"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0o-Wn-hIq">
                                 <rect key="frame" x="2" y="2" width="75" height="75"/>
@@ -49,36 +49,54 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="cButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5n-fz-gQt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlG-Ru-QUo">
                                 <rect key="frame" x="79" y="2" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="He"/>
+                                <connections>
+                                    <action selector="heButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pY6-mW-AhH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-CC-62J">
                                 <rect key="frame" x="156" y="2" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="M"/>
+                                <connections>
+                                    <action selector="mButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v3e-bu-TbI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdw-c8-dvz">
                                 <rect key="frame" x="436" y="2" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Mo"/>
+                                <connections>
+                                    <action selector="moButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBS-fP-XYF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2f-3M-ogC">
                                 <rect key="frame" x="513" y="2" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="r"/>
+                                <connections>
+                                    <action selector="rButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DP8-DU-Knb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRU-Aa-lNh">
                                 <rect key="frame" x="590" y="2" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Y"/>
+                                <connections>
+                                    <action selector="yButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFg-ua-qpw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-7r-Tk4">
                                 <rect key="frame" x="273.5" y="152" width="120" height="120"/>
@@ -152,7 +170,7 @@
                         <outlet property="c_cardButton" destination="G0o-Wn-hIq" id="w7f-3U-QiN"/>
                         <outlet property="he_cardButton" destination="YlG-Ru-QUo" id="HL7-gf-M7W"/>
                         <outlet property="left_cardButton" destination="PtR-6P-vTj" id="SLD-sW-gVl"/>
-                        <outlet property="m_CardButton" destination="Lvg-CC-62J" id="m6L-GF-eT8"/>
+                        <outlet property="m_cardButton" destination="Lvg-CC-62J" id="m6L-GF-eT8"/>
                         <outlet property="mo_cardButton" destination="Wdw-c8-dvz" id="uZY-aM-YGx"/>
                         <outlet property="r_cardButton" destination="m2f-3M-ogC" id="35l-Gb-K06"/>
                         <outlet property="right_cardButton" destination="Paw-w6-T3C" id="beV-TP-ECY"/>
@@ -174,4 +192,9 @@
             <point key="canvasLocation" x="33" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BrainLanguage_02" width="407" height="407"/>
+        <image name="Brain_options" width="473" height="474"/>
+        <image name="Brain_right02" width="407" height="407"/>
+    </resources>
 </document>
