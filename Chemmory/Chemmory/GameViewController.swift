@@ -164,9 +164,24 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     } // End the didSelectItemAt method
     
+    
+    // Make there is only six cards on row
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 120)
+        
+        let noOfCellsInRow = 6
+        
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
+        
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+        
+        return CGSize(width: size, height: size)
     }
+    
+    
     
     // MARK: - Game Logic Methods
     
