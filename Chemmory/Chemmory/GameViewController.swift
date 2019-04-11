@@ -19,6 +19,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var LifeBarLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var goNextBigButton: UIButton!
     
     var model = CardModel()
     var cardArray = [Card]()
@@ -47,6 +48,8 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        goNextBigButton.isHidden = true
         
         //Call the getCard method of the card model
         cardArray = model.getCards()
@@ -280,6 +283,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
             title = "Congratulations!"
             message = "You've won"
             endGame = true
+            goNextBigButton.isHidden = false
         }
         else {
             // If there are unmatched cards, check if there's any time left

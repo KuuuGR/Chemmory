@@ -112,6 +112,16 @@
                                     <constraint firstItem="3Nt-XC-aNZ" firstAttribute="width" secondItem="WaC-vt-uTu" secondAttribute="width" id="gTk-oa-s25"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ti-Zb-wWK" userLabel="nextBigButton">
+                                <rect key="frame" x="240" y="94" width="187.5" height="187.5"/>
+                                <size key="titleShadowOffset" width="10" height="10"/>
+                                <state key="normal" title="Button" image="rightArrow1">
+                                    <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="Vcv-W4-QEz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -122,8 +132,12 @@
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="top" secondItem="IaC-U5-f5E" secondAttribute="topMargin" id="Ema-kQ-5LB"/>
                             <constraint firstItem="YGe-gN-M1y" firstAttribute="top" secondItem="IaC-U5-f5E" secondAttribute="top" id="UYE-3y-0Se"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="leading" secondItem="IaC-U5-f5E" secondAttribute="leadingMargin" id="aDA-Iq-Rwy"/>
+                            <constraint firstItem="3ti-Zb-wWK" firstAttribute="centerX" secondItem="1l9-WE-ZfQ" secondAttribute="centerX" id="aSX-6B-SR5"/>
+                            <constraint firstItem="3ti-Zb-wWK" firstAttribute="centerY" secondItem="1l9-WE-ZfQ" secondAttribute="centerY" id="bG6-rh-k2x"/>
                             <constraint firstItem="WaC-vt-uTu" firstAttribute="top" secondItem="YGe-gN-M1y" secondAttribute="bottom" id="bM6-Rb-Wr8"/>
+                            <constraint firstItem="3ti-Zb-wWK" firstAttribute="width" secondItem="IaC-U5-f5E" secondAttribute="height" multiplier="1:2" id="fS7-9o-cQ3"/>
                             <constraint firstAttribute="trailing" secondItem="YGe-gN-M1y" secondAttribute="trailing" id="gxS-Gg-r2J"/>
+                            <constraint firstItem="3ti-Zb-wWK" firstAttribute="height" secondItem="lR9-BQ-Iyb" secondAttribute="height" multiplier="0.5" id="hor-UU-8bN"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="bottom" secondItem="IaC-U5-f5E" secondAttribute="bottomMargin" id="oZA-Qs-bZh"/>
                             <constraint firstItem="YGe-gN-M1y" firstAttribute="leading" secondItem="IaC-U5-f5E" secondAttribute="leading" id="p4T-si-i5v"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="trailing" secondItem="IaC-U5-f5E" secondAttribute="trailingMargin" id="rIU-nJ-h5C"/>
@@ -134,6 +148,7 @@
                         <outlet property="LifeBarLabel" destination="hKi-DQ-uYy" id="f0C-JP-UeB"/>
                         <outlet property="backgroundImage" destination="lR9-BQ-Iyb" id="nQ6-Ml-NfZ"/>
                         <outlet property="collectionView" destination="3Nt-XC-aNZ" id="fdf-GL-Qwv"/>
+                        <outlet property="goNextBigButton" destination="3ti-Zb-wWK" id="aMn-aW-7Hg"/>
                         <outlet property="timerLabel" destination="zfP-tp-Yf0" id="YkN-Vv-CtH"/>
                     </connections>
                 </viewController>
@@ -145,6 +160,7 @@
     <resources>
         <image name="BackPT09" width="1365" height="732"/>
         <image name="leftArrow4" width="380" height="380"/>
+        <image name="rightArrow1" width="380" height="380"/>
         <image name="rightArrow5" width="380" height="380"/>
     </resources>
 </document>
