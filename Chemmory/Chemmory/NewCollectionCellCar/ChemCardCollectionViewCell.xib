@@ -55,7 +55,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back02a" translatesAutoresizingMaskIntoConstraints="NO" id="Zbz-qj-AQF">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardBack1" translatesAutoresizingMaskIntoConstraints="NO" id="Zbz-qj-AQF">
                                 <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
                             </imageView>
                         </subviews>
@@ -110,6 +110,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Back02a" width="240" height="240"/>
+        <image name="CardBack1" width="240" height="240"/>
     </resources>
 </document>

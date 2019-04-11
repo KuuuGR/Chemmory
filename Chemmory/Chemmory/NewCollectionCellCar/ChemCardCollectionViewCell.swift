@@ -57,19 +57,6 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         elementNameLabel.text = card.elementName
         elementMassLabel.text = String(format: "%.3f",card.elementMass)
         frontCardView.backgroundColor = returnElementGrupColor(grup: card.elementGrup)
-        
-       
-//        elementNameLabel.sizeToFit()
-//        elementNumberLabel.sizeToFit()
-//        elementValenceLabel.sizeToFit()
-//        elementSymbolLabel.sizeToFit()
-//        elementNameLabel.sizeToFit()
-//        elementMassLabel.sizeToFit()
-//        elementNumberLabel.adjustsFontSizeToFitWidth = true
-//        elementValenceLabel.adjustsFontSizeToFitWidth = true
-//        elementSymbolLabel.adjustsFontSizeToFitWidth = true
-//        elementNameLabel.adjustsFontSizeToFitWidth = true
-//        elementMassLabel.adjustsFontSizeToFitWidth = true
 
         
         // Determine if teh card is in flipped up state or flipped down state

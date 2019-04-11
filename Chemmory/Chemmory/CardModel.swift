@@ -23,7 +23,7 @@ class CardModel {
         while generatedNumbersArray.count < 9 {
             
             //Get a random number
-            let randomNumber = arc4random_uniform(13) + 1
+            let randomNumber = arc4random_uniform(112) + 1
             
             // Ensure that the number isn't one we already have
             if generatedNumbersArray.contains(Int(randomNumber)) == false {
