@@ -30,16 +30,25 @@
                                 <rect key="frame" x="513" y="174.5" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="BrainLanguage_02"/>
+                                <connections>
+                                    <action selector="languageButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2s-9P-OJL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goj-mb-VvB">
                                 <rect key="frame" x="296" y="298" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="Brain_options"/>
+                                <connections>
+                                    <action selector="creditsButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QwP-Pd-2hB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtR-6P-vTj">
                                 <rect key="frame" x="79" y="174.5" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="Brain_right02"/>
+                                <connections>
+                                    <action selector="optionsButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jDF-Zb-mxS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0o-Wn-hIq">
                                 <rect key="frame" x="2" y="2" width="75" height="75"/>

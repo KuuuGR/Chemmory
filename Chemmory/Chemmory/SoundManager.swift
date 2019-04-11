@@ -20,6 +20,9 @@ class SoundManager {
         case nomatch
         case win
         case lose
+        case options
+        case title
+        case results
     }
     
     static func playSound(_ effect: SoundEffect){
@@ -47,6 +50,15 @@ class SoundManager {
             
         case .lose:
             soundFilename = "fail01" //"lose"
+        
+        case .results:
+            soundFilename = "boom"
+            
+        case .options:
+            soundFilename = "plum"
+            
+        case .title:
+            soundFilename = "puck"
         
         }
         

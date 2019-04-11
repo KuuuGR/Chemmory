@@ -38,11 +38,15 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //Need for results count time elapsed and actual date
     let timeCountStartingPoint = Date()
     
-    @IBAction func backButtonPressed(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: UIButton) {
         backAction()
     }
     
-    @IBAction func nextButtonPressed(_ sender: Any) {
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        if sender.tag == 1 {
+            SoundManager.playSound(.results)
+            
+        }
         performSegue(withIdentifier: "resultsVC", sender: self)
     }
     
