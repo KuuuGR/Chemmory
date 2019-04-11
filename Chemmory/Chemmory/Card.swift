@@ -13,7 +13,7 @@ class Card {
     var isFliped = false
     var isMatched = false
     
-    var imageName = ""
+    var imageBackName = ""
     var elementName: String = ""
     var elementValence: String = ""
     var elementNumber: Int = 0

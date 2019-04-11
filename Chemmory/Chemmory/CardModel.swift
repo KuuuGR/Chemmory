@@ -36,8 +36,7 @@ class CardModel {
                 
                 //Create the first card object
                 let cardOne = Card()
-                cardOne.imageName = "card\(randomNumber)"
-                
+                cardOne.imageBackName = "CardBack\(backgroundPictureNumber)"
                 for element in elements {
                     if element.atomicNumber == randomNumber {
                         cardOne.elementMass = element.atomicMass
@@ -56,8 +55,7 @@ class CardModel {
                 
                 // Create the second card object
                 let cardTwo = Card()
-                cardTwo.imageName = "card\(randomNumber)"
-                
+                cardTwo.imageBackName = "CardBack\(backgroundPictureNumber)"
                 for element in elements {
                     if element.atomicNumber == randomNumber {
                         cardTwo.elementMass = element.atomicMass

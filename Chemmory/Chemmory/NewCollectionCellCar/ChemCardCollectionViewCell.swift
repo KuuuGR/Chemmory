@@ -50,7 +50,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         self.frontCardView.layer.borderColor = UIColor.black.cgColor
         self.frontCardView.layer.borderWidth = 2
 
-        frontImageView.image = UIImage(named: card.imageName)
+        backImageView.image = UIImage(named: card.imageBackName)
         elementNumberLabel.text = String(card.elementNumber)
         elementValenceLabel.text = card.elementValence
         elementSymbolLabel.text = card.elementSybmol
