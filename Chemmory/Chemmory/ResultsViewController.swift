@@ -47,7 +47,10 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     weak var delegate: GameResultDelegate?
     
-    @IBAction func backButtonPressed(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        if sender.tag == 1 {
+            SoundManager.playSound(.back)
+        }
         backAction()
     }
     

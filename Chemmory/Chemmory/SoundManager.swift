@@ -23,6 +23,7 @@ class SoundManager {
         case options
         case title
         case results
+        case back
     }
     
     static func playSound(_ effect: SoundEffect){
@@ -59,6 +60,9 @@ class SoundManager {
             
         case .title:
             soundFilename = "puck"
+            
+        case .back:
+            soundFilename = "spring"
         
         }
         

@@ -10,6 +10,7 @@
 		2219C7082231358C00875DD9 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C7072231358C00875DD9 /* win.wav */; };
 		2219C70A223135AB00875DD9 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C709223135AB00875DD9 /* lose.wav */; };
 		22240531223BA0BE008FCC4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22240530223BA0BE008FCC4C /* Constants.swift */; };
+		2227B865225F41B900B6A785 /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B864225F41B900B6A785 /* spring.wav */; };
 		223577A722379AB800553DCC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223577A622379AB800553DCC /* Result.swift */; };
 		2235CF60225F387A00A334D4 /* plum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5E225F387A00A334D4 /* plum.wav */; };
 		2235CF61225F387A00A334D4 /* puck.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5F225F387A00A334D4 /* puck.wav */; };
@@ -50,6 +51,7 @@
 		2219C7072231358C00875DD9 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		2219C709223135AB00875DD9 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
 		22240530223BA0BE008FCC4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2227B864225F41B900B6A785 /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
 		223577A622379AB800553DCC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2235CF5E225F387A00A334D4 /* plum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = plum.wav; sourceTree = "<group>"; };
 		2235CF5F225F387A00A334D4 /* puck.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = puck.wav; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				22A9E947224A29D200EBA981 /* flip08.wav */,
 				22A9E949224A2A5300EBA981 /* flipBack01.wav */,
 				2299340D2231114A000E7851 /* dingcorrect.wav */,
+				2227B864225F41B900B6A785 /* spring.wav */,
 				22A9E94B224A2AE800EBA981 /* fail01.wav */,
 				2219C7072231358C00875DD9 /* win.wav */,
 				22A9E94D224A2B8B00EBA981 /* flipBack03.wav */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */,
+				2227B865225F41B900B6A785 /* spring.wav in Resources */,
 				22A9E94E224A2B8B00EBA981 /* flipBack03.wav in Resources */,
 				229934112231114A000E7851 /* dingcorrect.wav in Resources */,
 				22A9E948224A29D300EBA981 /* flip08.wav in Resources */,
