@@ -12,7 +12,8 @@ class MainViewController: UIViewController {
     
     var mPress: Int = 0
     var rPress: Int = 0
-    var alphaCard: CGFloat = 0.9
+    var alphaStartedCard: CGFloat = 0.2
+    var alphaTappedCard: CGFloat = 0.9
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var startGameLabel: UILabel!
@@ -28,19 +29,19 @@ class MainViewController: UIViewController {
     @IBOutlet weak var bottom_cardButton: UIButton!
     
     @IBAction func cButtonPush(_ sender: Any) {
-        c_cardButton.alpha = alphaCard
+        c_cardButton.alpha = alphaTappedCard
         c_cardButton.setImage(#imageLiteral(resourceName: "card_c"), for: .normal)
         SoundManager.playSound(.title)
     }
     
     @IBAction func heButtonPush(_ sender: Any) {
-        he_cardButton.alpha = alphaCard
+        he_cardButton.alpha = alphaTappedCard
         he_cardButton.setImage(#imageLiteral(resourceName: "card_he"), for: .normal)
         SoundManager.playSound(.title)
     }
     
     @IBAction func mButtonPush(_ sender: Any) {
-        m_cardButton.alpha = alphaCard
+        m_cardButton.alpha = alphaTappedCard
         m_cardButton.setImage(#imageLiteral(resourceName: "card_m1"), for: .normal)
         SoundManager.playSound(.title)
         mPress += 1
@@ -52,14 +53,14 @@ class MainViewController: UIViewController {
     
     
     @IBAction func moButtonPush(_ sender: Any) {
-        mo_cardButton.alpha = alphaCard
+        mo_cardButton.alpha = alphaTappedCard
         mo_cardButton.setImage(#imageLiteral(resourceName: "card_mo"), for: .normal)
         SoundManager.playSound(.title)
     }
     
     
     @IBAction func rButtonPush(_ sender: Any) {
-        r_cardButton.alpha = alphaCard
+        r_cardButton.alpha = alphaTappedCard
         r_cardButton.setImage(#imageLiteral(resourceName: "card_R1"), for: .normal)
         SoundManager.playSound(.title)
         rPress += 1
@@ -71,31 +72,34 @@ class MainViewController: UIViewController {
     
     
     @IBAction func yButtonPush(_ sender: Any) {
-        y_cardButton.alpha = alphaCard
+        y_cardButton.alpha = alphaTappedCard
         y_cardButton.setImage(#imageLiteral(resourceName: "card_y"), for: .normal)
         SoundManager.playSound(.title)
     }
     
     
     @IBAction func optionsButtonPush(_ sender: Any) {
-        left_cardButton.alpha = alphaCard
+        left_cardButton.alpha = alphaTappedCard
         left_cardButton.setImage(#imageLiteral(resourceName: "card_oo"), for: .normal)
         SoundManager.playSound(.options)
     }
     
     @IBAction func languageButtonPush(_ sender: Any) {
-        right_cardButton.alpha = alphaCard
+        right_cardButton.alpha = alphaTappedCard
         right_cardButton.setImage(#imageLiteral(resourceName: "card_ol"), for: .normal)
         SoundManager.playSound(.options)
     }
     
     
     @IBAction func creditsButtonPush(_ sender: Any) {
-        bottom_cardButton.alpha = alphaCard
+        bottom_cardButton.alpha = alphaTappedCard
         bottom_cardButton.setImage(#imageLiteral(resourceName: "card_oc"), for: .normal)
         SoundManager.playSound(.options)
     }
     
+    @IBAction func startButtonPush(_ sender: Any) {
+        SoundManager.playSound(.shuffle)
+    }
     
     
     
@@ -137,9 +141,9 @@ class MainViewController: UIViewController {
     
     
     func prepareButton(button: UIButton) {
+        button.alpha = alphaStartedCard
         button.layer.backgroundColor = UIColor.orange.cgColor
         button.layer.cornerRadius = button.bounds.size.height * 0.1
-        button.alpha = 0.4
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.white.cgColor
         button.clipsToBounds = true

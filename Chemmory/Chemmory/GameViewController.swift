@@ -76,7 +76,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidAppear(_ animated: Bool) {
         
         // Play shuffle sound
-        if (milliseconds >= Float(lifeBarScotchAmmount - 1) * 1000) { SoundManager.playSound(.shuffle) }
+        if (milliseconds >= Float(lifeBarScotchAmmount - 1) * 1000) {} //SoundManager.playSound(.shuffle) }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

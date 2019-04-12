@@ -24,6 +24,7 @@ class SoundManager {
         case title
         case results
         case back
+        case start
     }
     
     static func playSound(_ effect: SoundEffect){
@@ -38,7 +39,7 @@ class SoundManager {
             soundFilename = "flip05"//"cardflip"
             
         case .shuffle:
-            soundFilename = "shuffle"
+            soundFilename = "shuffle1"
             
         case .match:
             soundFilename = "flip08"//"dingcorrect"
@@ -63,6 +64,9 @@ class SoundManager {
             
         case .back:
             soundFilename = "spring"
+            
+        case .start:
+            soundFilename = "start1"
         
         }
         
