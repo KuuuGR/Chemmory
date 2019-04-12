@@ -167,10 +167,10 @@ var eDb = Element(name: "Dubnium",      symbol: "Db", atomicNumber: 105, valence
 var eSg = Element(name: "Seaborgium",   symbol: "Sg", atomicNumber: 106, valence: "6", valenceCommon: "6", valenceRare: "", atomicMass: 266, group: 3 )
 var eBh = Element(name: "Bohrium",      symbol: "Bh", atomicNumber: 107, valence: "7", valenceCommon: "7", valenceRare: "", atomicMass: 270, group: 3 )
 var eHs = Element(name: "Hassium",      symbol: "Hs", atomicNumber: 108, valence: "8", valenceCommon: "8", valenceRare: "", atomicMass: 277, group: 3 )
-var eMt = Element(name: "Meitnerium",   symbol: "Hs", atomicNumber: 109, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 276, group: 3 )
-var eDs = Element(name: "Darmstadtium", symbol: "Hs", atomicNumber: 110, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 281, group: 3 )
-var eRg = Element(name: "Roentgenium",  symbol: "Hs", atomicNumber: 111, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 281, group: 3 )
-var eCn = Element(name: "Copernicium",  symbol: "Hs", atomicNumber: 112, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 285, group: 3 )
+var eMt = Element(name: "Meitnerium",   symbol: "Mt", atomicNumber: 109, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 276, group: 3 )
+var eDs = Element(name: "Darmstadtium", symbol: "Ds", atomicNumber: 110, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 281, group: 3 )
+var eRg = Element(name: "Roentgenium",  symbol: "Rg", atomicNumber: 111, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 281, group: 3 )
+var eCn = Element(name: "Copernicium",  symbol: "Cn", atomicNumber: 112, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 285, group: 3 )
 
 
 var elements: [Element] = [e00,eH0,eHe,eLi,eBe,eB0,eC0,eN0,eO0,eF0,eNe,eNa,eMg,eAl,
