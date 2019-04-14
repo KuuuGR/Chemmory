@@ -184,8 +184,9 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
             + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
         
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+        let size1 = Int((collectionView.bounds.height - totalSpace) / CGFloat(3))
         
-        return CGSize(width: size, height: size)
+        return CGSize(width: size, height: size1)
     }
     
     
