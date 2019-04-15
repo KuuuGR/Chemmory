@@ -12,6 +12,7 @@ class Card {
     
     var isFliped = false
     var isMatched = false
+    var isCardOne = true
     
     var imageBackName = ""
     var elementName: String = ""

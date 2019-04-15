@@ -37,6 +37,7 @@ class CardModel {
                 //Create the first card object
                 let cardOne = Card()
                 cardOne.imageBackName = "CardBack\(backgroundPictureNumber)"
+                cardOne.isCardOne = true
                 for element in elements {
                     if element.atomicNumber == randomNumber {
                         cardOne.elementMass = element.atomicMass
@@ -48,7 +49,6 @@ class CardModel {
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }
-                    
                 }
 
                 generatedCardsArray.append(cardOne)
@@ -56,6 +56,7 @@ class CardModel {
                 // Create the second card object
                 let cardTwo = Card()
                 cardTwo.imageBackName = "CardBack\(backgroundPictureNumber)"
+                cardTwo.isCardOne = false
                 for element in elements {
                     if element.atomicNumber == randomNumber {
                         cardTwo.elementMass = element.atomicMass

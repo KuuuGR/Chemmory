@@ -9,4 +9,5 @@
 let lifeBarScotchAmmount: Int = 57
 let cardBackgroundIsWhite: Bool = false
 var backgroundPictureNumber = Int.random(in: 0..<101) // 0 - 101
+var showHintUserSelect: String = "name" //mass,valence,number,symbol
 
