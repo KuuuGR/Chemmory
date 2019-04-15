@@ -46,17 +46,14 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     @IBAction func reloadGameButtonPressed(_ sender: Any) {
-        timer?.invalidate()
-        self.dismiss(animated: true, completion: nil)
+        backAction()
     }
     
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        if sender.tag == 1 {
+        if sender.tag == 2 {
             SoundManager.playSound(.results)
-            
         }
-        performSegue(withIdentifier: "resultsVC", sender: self)
     }
     
     override func viewDidLoad() {
@@ -333,7 +330,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func backAction(){
         //print("Back Button Clicked")
         timer?.invalidate()
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func actualDate() -> String{

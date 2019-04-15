@@ -28,6 +28,7 @@
 		229934112231114A000E7851 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2299340D2231114A000E7851 /* dingcorrect.wav */; };
 		22993414223111CE000E7851 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22993413223111CE000E7851 /* AVFoundation.framework */; };
 		229934162231123A000E7851 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229934152231123A000E7851 /* SoundManager.swift */; };
+		229A695E226493FF009A049B /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A695D226493FF009A049B /* Options.storyboard */; };
 		22A9E944224A28C000EBA981 /* win01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E943224A28C000EBA981 /* win01.wav */; };
 		22A9E946224A29A700EBA981 /* flip05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E945224A29A700EBA981 /* flip05.wav */; };
 		22A9E948224A29D300EBA981 /* flip08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E947224A29D200EBA981 /* flip08.wav */; };
@@ -71,6 +72,7 @@
 		2299340D2231114A000E7851 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
 		22993413223111CE000E7851 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		229934152231123A000E7851 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		229A695D226493FF009A049B /* Options.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Options.storyboard; sourceTree = "<group>"; };
 		22A9E943224A28C000EBA981 /* win01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win01.wav; sourceTree = "<group>"; };
 		22A9E945224A29A700EBA981 /* flip05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip05.wav; sourceTree = "<group>"; };
 		22A9E947224A29D200EBA981 /* flip08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip08.wav; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				229934152231123A000E7851 /* SoundManager.swift */,
 				22240530223BA0BE008FCC4C /* Constants.swift */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
+				229A695D226493FF009A049B /* Options.storyboard */,
 				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
 				22957C212233B688009AF033 /* Results.storyboard */,
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				2227B86922605B2000B6A785 /* start1.wav in Resources */,
 				2219C7082231358C00875DD9 /* win.wav in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
+				229A695E226493FF009A049B /* Options.storyboard in Resources */,
 				22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */,
 				2235CF60225F387A00A334D4 /* plum.wav in Resources */,
 				2235CF61225F387A00A334D4 /* puck.wav in Resources */,

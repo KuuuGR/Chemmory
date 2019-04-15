@@ -14,6 +14,10 @@ class MainViewController: UIViewController {
     var rPress: Int = 0
     var alphaStartedCard: CGFloat = 0.2
     var alphaTappedCard: CGFloat = 0.9
+    var optionsButtonTapped = false
+    var languageButtonTapped = false
+    var CreditsButtonTapped = false
+    
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var startGameLabel: UILabel!
@@ -82,6 +86,18 @@ class MainViewController: UIViewController {
         left_cardButton.alpha = alphaTappedCard
         left_cardButton.setImage(#imageLiteral(resourceName: "card_oo"), for: .normal)
         SoundManager.playSound(.options)
+        if optionsButtonTapped {
+            
+            switchToViewController(identifier: "OptionsViewController", sbName: "Options")
+/*            let viewController:UIViewController = UIStoryboard(name: "Options.storyboard", bundle: nil).instantiateViewController(withIdentifier: "OptionsViewController") as UIViewController
+            self.present(viewController, animated: false, completion: nil)
+ */
+//            let storyboard = UIStoryboard(name: "OptionStoryboard", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "OptionViewController")
+//            self.present(controller, animated: true, completion: nil)
+        }
+        optionsButtonTapped = true
+        
     }
     
     @IBAction func languageButtonPush(_ sender: Any) {
@@ -124,6 +140,7 @@ class MainViewController: UIViewController {
         startButton.layer.borderWidth = 8
         startButton.layer.borderColor = UIColor.white.cgColor
         startGameLabel.textColor = UIColor.yellow
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -147,6 +164,16 @@ class MainViewController: UIViewController {
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.white.cgColor
         button.clipsToBounds = true
+    }
+    
+    func switchToViewController(identifier: String, sbName: String? = nil) {
+        var storyBoard = self.storyboard
+        if let sbName = sbName {
+            storyBoard = UIStoryboard(name: sbName, bundle: nil)
+        }
+        if let viewController = storyBoard?.instantiateViewController(withIdentifier: identifier) {
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
 }

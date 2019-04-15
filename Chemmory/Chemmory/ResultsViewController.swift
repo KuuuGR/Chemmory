@@ -155,8 +155,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func backAction(){
-
-        self.dismiss(animated: true, completion: nil)
+        
+        self.navigationController?.popViewController(animated: true)
         delegate?.backFromResult(transferredDataToGameVC: "Z widoku punktów")
     }
     
