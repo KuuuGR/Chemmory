@@ -20,6 +20,8 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var goNextBigButton: UIButton!
+    @IBOutlet weak var reloadBigButton: UIButton!
+    
     
     var model = CardModel()
     var cardArray = [Card]()
@@ -42,6 +44,13 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         backAction()
     }
     
+    
+    @IBAction func reloadGameButtonPressed(_ sender: Any) {
+        timer?.invalidate()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         if sender.tag == 1 {
             SoundManager.playSound(.results)
@@ -54,6 +63,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         
         goNextBigButton.isHidden = true
+        reloadBigButton.isHidden = true
         
         //Call the getCard method of the card model
         cardArray = model.getCards()
@@ -269,26 +279,29 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //If not, then user has won, stop the timer
         if isWon == true {
             
+            // Count points player earn
+            let timeStartToWinGame = (self.timeCountStartingPoint.timeIntervalSinceNow * -1)
+            let gameScore = String(format: "%.0f",10000.0/(timeStartToWinGame * (Double(missesTry + 1))))
+
             if milliseconds > 0 {
                 timer?.invalidate()
                 
                 //Prepare result for segue
                 winGameDate = actualDate()
                 winGameTry = String(missesTry)
-                winGameTime = String(self.timeCountStartingPoint.timeIntervalSinceNow * -1)
+                winGameTime = String(timeStartToWinGame)
                 
                 // Play sound
                 SoundManager.playSound(.win)
                 
                 // OPTIONAL: - Makes background brighter (or pulse completion)
                 backgroundImage.alpha = 1
-        
             }
-            
             title = "Congratulations!"
-            message = "You've won"
+            message = "You've won \n result: \(gameScore) pts."
             endGame = true
             goNextBigButton.isHidden = false
+            reloadBigButton.isHidden = false
         }
         else {
             // If there are unmatched cards, check if there's any time left

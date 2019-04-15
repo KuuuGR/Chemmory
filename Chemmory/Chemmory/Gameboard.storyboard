@@ -113,13 +113,21 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" alpha="0.59999999999999998" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ti-Zb-wWK" userLabel="nextBigButton">
-                                <rect key="frame" x="240" y="94" width="187.5" height="187.5"/>
+                                <rect key="frame" x="373" y="94" width="187.5" height="187.5"/>
                                 <size key="titleShadowOffset" width="10" height="10"/>
                                 <state key="normal" title="Button" image="rightArrow1">
                                     <color key="titleShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="Vcv-W4-QEz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS5-gG-sGx" userLabel="reloadViewButon">
+                                <rect key="frame" x="112" y="84.5" width="206" height="206"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button" image="ReloadArrow"/>
+                                <connections>
+                                    <action selector="reloadGameButtonPressed:" destination="oql-Na-0el" eventType="touchUpInside" id="9uX-Kd-60G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,8 +139,10 @@
                             <constraint firstItem="YGe-gN-M1y" firstAttribute="height" secondItem="IaC-U5-f5E" secondAttribute="height" multiplier="0.1" id="Afe-BS-qnQ"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="top" secondItem="IaC-U5-f5E" secondAttribute="topMargin" id="Ema-kQ-5LB"/>
                             <constraint firstItem="YGe-gN-M1y" firstAttribute="top" secondItem="IaC-U5-f5E" secondAttribute="top" id="UYE-3y-0Se"/>
+                            <constraint firstItem="HS5-gG-sGx" firstAttribute="centerY" secondItem="3ti-Zb-wWK" secondAttribute="centerY" id="YGb-M9-JDr"/>
+                            <constraint firstItem="HS5-gG-sGx" firstAttribute="width" secondItem="3ti-Zb-wWK" secondAttribute="width" multiplier="1.1" id="Z3S-Og-FgD"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="leading" secondItem="IaC-U5-f5E" secondAttribute="leadingMargin" id="aDA-Iq-Rwy"/>
-                            <constraint firstItem="3ti-Zb-wWK" firstAttribute="centerX" secondItem="1l9-WE-ZfQ" secondAttribute="centerX" id="aSX-6B-SR5"/>
+                            <constraint firstItem="3ti-Zb-wWK" firstAttribute="centerX" secondItem="1l9-WE-ZfQ" secondAttribute="centerX" multiplier="1.4" id="aSX-6B-SR5"/>
                             <constraint firstItem="3ti-Zb-wWK" firstAttribute="centerY" secondItem="1l9-WE-ZfQ" secondAttribute="centerY" id="bG6-rh-k2x"/>
                             <constraint firstItem="WaC-vt-uTu" firstAttribute="top" secondItem="YGe-gN-M1y" secondAttribute="bottom" id="bM6-Rb-Wr8"/>
                             <constraint firstItem="3ti-Zb-wWK" firstAttribute="width" secondItem="IaC-U5-f5E" secondAttribute="height" multiplier="1:2" id="fS7-9o-cQ3"/>
@@ -141,6 +151,8 @@
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="bottom" secondItem="IaC-U5-f5E" secondAttribute="bottomMargin" id="oZA-Qs-bZh"/>
                             <constraint firstItem="YGe-gN-M1y" firstAttribute="leading" secondItem="IaC-U5-f5E" secondAttribute="leading" id="p4T-si-i5v"/>
                             <constraint firstItem="lR9-BQ-Iyb" firstAttribute="trailing" secondItem="IaC-U5-f5E" secondAttribute="trailingMargin" id="rIU-nJ-h5C"/>
+                            <constraint firstItem="HS5-gG-sGx" firstAttribute="height" secondItem="3ti-Zb-wWK" secondAttribute="height" multiplier="1.1" id="sJF-md-0ts"/>
+                            <constraint firstItem="HS5-gG-sGx" firstAttribute="leading" secondItem="3ti-Zb-wWK" secondAttribute="leading" multiplier="0.3" id="ubL-bO-aKF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1l9-WE-ZfQ"/>
                     </view>
@@ -149,6 +161,7 @@
                         <outlet property="backgroundImage" destination="lR9-BQ-Iyb" id="nQ6-Ml-NfZ"/>
                         <outlet property="collectionView" destination="3Nt-XC-aNZ" id="fdf-GL-Qwv"/>
                         <outlet property="goNextBigButton" destination="3ti-Zb-wWK" id="aMn-aW-7Hg"/>
+                        <outlet property="reloadBigButton" destination="HS5-gG-sGx" id="iWh-QO-awr"/>
                         <outlet property="timerLabel" destination="zfP-tp-Yf0" id="YkN-Vv-CtH"/>
                     </connections>
                 </viewController>
@@ -159,6 +172,7 @@
     </scenes>
     <resources>
         <image name="BackPT09" width="1365" height="732"/>
+        <image name="ReloadArrow" width="520" height="520"/>
         <image name="leftArrow4" width="380" height="380"/>
         <image name="rightArrow1" width="400" height="400"/>
         <image name="rightArrow5" width="380" height="380"/>

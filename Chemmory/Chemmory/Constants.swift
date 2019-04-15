@@ -8,5 +8,5 @@
 
 let lifeBarScotchAmmount: Int = 57
 let cardBackgroundIsWhite: Bool = false
-var backgroundPictureNumber: Int = 29 // 0 - 16
+var backgroundPictureNumber = Int.random(in: 0..<101) // 0 - 101
 
