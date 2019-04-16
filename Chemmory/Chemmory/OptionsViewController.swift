@@ -20,16 +20,24 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var fontGZipper: UISlider!
     @IBOutlet weak var fontBZipper: UISlider!
     
+    @IBOutlet weak var saveButtonYes: UIButton!
+    @IBOutlet weak var saveButonNo: UIButton!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Card Background Images
         backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
         backgroundNumber.text = String(backgroundPictureNumber)
-
+        // Save buttons round
+        saveButtonYes.layer.cornerRadius = saveButtonYes.frame.height / 2
+        saveButonNo.layer.cornerRadius = saveButonNo.frame.height / 2
+        
+       
     }
     
     //Background Options
@@ -65,7 +73,11 @@ class OptionsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func saveCancelAndQuit(_ sender: UIButton) {
+        // TODO: make template to cancel
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     
     func changeCardBackPicture(increasing: Bool) {

@@ -169,7 +169,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DV2-WH-h46" secondAttribute="height" multiplier="3:2" id="UhU-cb-H4S"/>
                                 </constraints>
-                                <state key="normal" title="S" image="saveIoc2"/>
+                                <state key="normal" title="S" image="SaveYes"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="gMA-i1-zYM" eventType="touchUpInside" id="SM4-3T-sSy"/>
                                 </connections>
@@ -334,11 +334,11 @@
     </scenes>
     <resources>
         <image name="ResetButton03" width="650" height="650"/>
+        <image name="SaveYes" width="550" height="350"/>
         <image name="krown_metal" width="679" height="363"/>
         <image name="leftArrow4" width="380" height="380"/>
         <image name="medalBronze" width="293" height="496"/>
         <image name="medalGold" width="293" height="496"/>
         <image name="medalSilver" width="293" height="496"/>
-        <image name="saveIoc2" width="519" height="339"/>
     </resources>
 </document>

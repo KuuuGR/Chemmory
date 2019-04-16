@@ -261,11 +261,24 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7p3-LD-EOH" userLabel="Save Options">
                                                         <rect key="frame" x="36.666666666666686" y="940" width="662.66666666666652" height="300"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3m-GT-ZT2">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35M-OG-vMr">
+                                                                <rect key="frame" x="291" y="15" width="81" height="39"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFT-iC-cEG">
+                                                                <rect key="frame" x="486.33333333333331" y="241" width="47.999999999999943" height="39"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3m-GT-ZT2" userLabel="Buttons View">
                                                                 <rect key="frame" x="33.333333333333314" y="75" width="596" height="150"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-cN-7E4">
                                                                         <rect key="frame" x="0.0" y="0.0" width="238.33333333333334" height="150"/>
+                                                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" title="Button" image="SaveButtonYes"/>
                                                                         <connections>
                                                                             <action selector="saveAndQuit:" destination="2Cc-fd-noi" eventType="touchUpInside" id="0tx-qJ-QhT"/>
@@ -273,7 +286,11 @@
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1q-Tp-HI5">
                                                                         <rect key="frame" x="357.66666666666669" y="0.0" width="238.33333333333331" height="150"/>
+                                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <state key="normal" title="Button" image="SaveButtonNo"/>
+                                                                        <connections>
+                                                                            <action selector="saveCancelAndQuit:" destination="2Cc-fd-noi" eventType="touchUpInside" id="sdq-rc-Me9"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -288,14 +305,26 @@
                                                                     <constraint firstItem="Fbq-cN-7E4" firstAttribute="leading" secondItem="v3m-GT-ZT2" secondAttribute="leading" id="uJn-rW-QcT"/>
                                                                 </constraints>
                                                             </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXU-g0-g4v">
+                                                                <rect key="frame" x="122" y="241" width="61" height="39"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="v3m-GT-ZT2" firstAttribute="centerX" secondItem="7p3-LD-EOH" secondAttribute="centerX" id="49q-Fa-ERZ"/>
                                                             <constraint firstItem="v3m-GT-ZT2" firstAttribute="centerY" secondItem="7p3-LD-EOH" secondAttribute="centerY" id="6Cv-Cy-z4K"/>
+                                                            <constraint firstItem="tFT-iC-cEG" firstAttribute="top" secondItem="v3m-GT-ZT2" secondAttribute="bottom" constant="16" id="9pt-NB-tfw"/>
                                                             <constraint firstAttribute="height" constant="300" id="Hm6-ZO-yHn"/>
+                                                            <constraint firstItem="35M-OG-vMr" firstAttribute="centerX" secondItem="7p3-LD-EOH" secondAttribute="centerX" id="RzQ-nU-e15"/>
                                                             <constraint firstItem="v3m-GT-ZT2" firstAttribute="width" secondItem="7p3-LD-EOH" secondAttribute="width" multiplier="0.9" id="TfF-g2-Lcl"/>
                                                             <constraint firstItem="v3m-GT-ZT2" firstAttribute="height" secondItem="7p3-LD-EOH" secondAttribute="height" multiplier="0.5" id="ZZR-bV-EEZ"/>
+                                                            <constraint firstItem="35M-OG-vMr" firstAttribute="top" secondItem="7p3-LD-EOH" secondAttribute="top" constant="15" id="ZZr-dV-5MP"/>
+                                                            <constraint firstItem="TXU-g0-g4v" firstAttribute="top" secondItem="v3m-GT-ZT2" secondAttribute="bottom" constant="16" id="fsY-wF-QN4"/>
+                                                            <constraint firstItem="TXU-g0-g4v" firstAttribute="centerX" secondItem="Fbq-cN-7E4" secondAttribute="centerX" id="k8Y-UE-Kt7"/>
+                                                            <constraint firstItem="tFT-iC-cEG" firstAttribute="centerX" secondItem="X1q-Tp-HI5" secondAttribute="centerX" id="kz7-WO-HeZ"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -362,6 +391,8 @@
                         <outlet property="fontGZipper" destination="Hox-n4-yrh" id="sPv-44-afF"/>
                         <outlet property="fontOptionsCardImage" destination="MYB-6w-zeN" id="r3Q-0Q-Ubz"/>
                         <outlet property="fontRZipper" destination="nFp-8j-Omw" id="yj2-RD-rr9"/>
+                        <outlet property="saveButonNo" destination="X1q-Tp-HI5" id="jO0-ko-JTR"/>
+                        <outlet property="saveButtonYes" destination="Fbq-cN-7E4" id="gCB-TW-4ID"/>
                         <outletCollection property="fontOptionsLabelsCollection" destination="3kw-ye-Ypx" collectionClass="NSMutableArray" id="2hV-yx-e7M"/>
                         <outletCollection property="fontOptionsLabelsCollection" destination="3Yx-aS-bwe" collectionClass="NSMutableArray" id="NQf-gJ-7D2"/>
                         <outletCollection property="fontOptionsLabelsCollection" destination="Ki7-E8-1S5" collectionClass="NSMutableArray" id="giu-R3-2b6"/>
