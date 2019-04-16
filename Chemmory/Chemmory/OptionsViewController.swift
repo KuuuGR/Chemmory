@@ -10,7 +10,9 @@ import UIKit
 
 class OptionsViewController: UIViewController {
 
-    @IBOutlet weak var ScrollView: UIScrollView!
+    
+    @IBOutlet weak var backgroundNumber: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     
     override func viewDidLoad() {
@@ -20,7 +22,23 @@ class OptionsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    
+    @IBAction func dcsImageNrButtonTapped(_ sender: UIButton) {
+        
+        backgroundNumber.text = String(lifeBarScotchAmmount)
+    }
+    
+    @IBAction func incImageNrButtonTapped(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
