@@ -165,11 +165,11 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV2-WH-h46" userLabel="SaveButton">
-                                <rect key="frame" x="519.5" y="293.5" width="37.5" height="37.5"/>
+                                <rect key="frame" x="519.5" y="282.5" width="78.5" height="52.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DV2-WH-h46" secondAttribute="height" multiplier="1:1" id="UhU-cb-H4S"/>
+                                    <constraint firstAttribute="width" secondItem="DV2-WH-h46" secondAttribute="height" multiplier="3:2" id="UhU-cb-H4S"/>
                                 </constraints>
-                                <state key="normal" title="S" image="SaveResult"/>
+                                <state key="normal" title="S" image="saveIoc2"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="gMA-i1-zYM" eventType="touchUpInside" id="SM4-3T-sSy"/>
                                 </connections>
@@ -242,7 +242,7 @@
                                     <constraint firstItem="qfE-xy-JfB" firstAttribute="top" secondItem="u13-3P-vhR" secondAttribute="top" constant="1" id="kkw-yI-ajd"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7g-5P-doc">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7g-5P-doc">
                                 <rect key="frame" x="13" y="329.5" width="37.5" height="37.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="L7g-5P-doc" secondAttribute="height" multiplier="1:1" id="kse-wD-ehe"/>
@@ -263,7 +263,7 @@
                             <constraint firstItem="sxq-kA-ENS" firstAttribute="centerX" secondItem="x4N-Tp-J8p" secondAttribute="centerX" multiplier="1.2" id="6MR-I3-nIF"/>
                             <constraint firstAttribute="trailing" secondItem="WRw-H9-bg6" secondAttribute="trailing" constant="8" id="6em-cG-bsp"/>
                             <constraint firstItem="u13-3P-vhR" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="9gc-Il-K73"/>
-                            <constraint firstItem="DV2-WH-h46" firstAttribute="height" secondItem="G60-yH-Z7k" secondAttribute="height" id="9gh-zN-4rp"/>
+                            <constraint firstItem="DV2-WH-h46" firstAttribute="height" secondItem="G60-yH-Z7k" secondAttribute="height" multiplier="1.4" id="9gh-zN-4rp"/>
                             <constraint firstItem="WRw-H9-bg6" firstAttribute="height" secondItem="x6G-hM-xUp" secondAttribute="height" multiplier="0.1" id="AA7-ga-P14"/>
                             <constraint firstItem="G60-yH-Z7k" firstAttribute="top" secondItem="xWe-Yu-QeG" secondAttribute="bottom" constant="12" id="Aaa-sW-T4B"/>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="height" secondItem="sxq-kA-ENS" secondAttribute="height" id="Acl-p9-d6Z"/>
@@ -294,7 +294,7 @@
                             <constraint firstItem="xWe-Yu-QeG" firstAttribute="width" secondItem="sxq-kA-ENS" secondAttribute="width" id="rKM-Ll-O8Z"/>
                             <constraint firstItem="ljD-0p-FIu" firstAttribute="centerY" secondItem="sxq-kA-ENS" secondAttribute="centerY" id="vji-an-3Sa"/>
                             <constraint firstItem="L7g-5P-doc" firstAttribute="centerY" secondItem="WRw-H9-bg6" secondAttribute="centerY" id="wV3-gB-CAz"/>
-                            <constraint firstItem="DV2-WH-h46" firstAttribute="centerY" secondItem="G60-yH-Z7k" secondAttribute="centerY" id="wtw-Ci-mf2"/>
+                            <constraint firstItem="DV2-WH-h46" firstAttribute="centerY" secondItem="G60-yH-Z7k" secondAttribute="centerY" multiplier="0.99" id="wtw-Ci-mf2"/>
                             <constraint firstItem="DV2-WH-h46" firstAttribute="leading" secondItem="G60-yH-Z7k" secondAttribute="trailing" constant="2" id="xkk-TO-bfu"/>
                             <constraint firstItem="u13-3P-vhR" firstAttribute="leading" secondItem="xWe-Yu-QeG" secondAttribute="trailing" constant="1" id="zDA-gs-naV"/>
                         </constraints>
@@ -334,11 +334,11 @@
     </scenes>
     <resources>
         <image name="ResetButton03" width="650" height="650"/>
-        <image name="SaveResult" width="256" height="256"/>
         <image name="krown_metal" width="679" height="363"/>
         <image name="leftArrow4" width="380" height="380"/>
         <image name="medalBronze" width="293" height="496"/>
         <image name="medalGold" width="293" height="496"/>
         <image name="medalSilver" width="293" height="496"/>
+        <image name="saveIoc2" width="519" height="339"/>
     </resources>
 </document>

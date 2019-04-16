@@ -12,39 +12,47 @@ class OptionsViewController: UIViewController {
 
     
     @IBOutlet weak var backgroundNumber: UILabel!
-    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var backgroundOptionsCardImage: UIImageView!
+    @IBOutlet weak var fontOptionsCardImage: UIImageView!
+    @IBOutlet var fontOptionsLabelsCollection: [UILabel]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //ScrollView.contentSize.height = 1000
-        // Do any additional setup after loading the view.
+        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
+        fontOptionsCardImage.image = backgroundOptionsCardImage.image
+        backgroundNumber.text = String(backgroundPictureNumber)
+        for element in fontOptionsLabelsCollection {
+            element.textColor = UIColor.red
+        }
     }
     
-    
+    //Background Options
     
     @IBAction func dcsImageNrButtonTapped(_ sender: UIButton) {
-        incCardPicture(increasing: false)
-        
+        changeCardBackPicture(increasing: false)
     }
     
     @IBAction func incImageNrButtonTapped(_ sender: Any) {
-        incCardPicture(increasing: true)
+        changeCardBackPicture(increasing: true)
     }
     
-    
-    func incCardPicture(increasing: Bool) {
+    func changeCardBackPicture(increasing: Bool) {
         
         if (backgroundPictureNumber < 101), increasing  {
             backgroundPictureNumber += 1
         } else if (backgroundPictureNumber > 0 ), !increasing {
             backgroundPictureNumber -= 1
         }
-        backgroundImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
+        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
         backgroundNumber.text = String(backgroundPictureNumber)
+        fontOptionsCardImage.image = backgroundOptionsCardImage.image
     }
 
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

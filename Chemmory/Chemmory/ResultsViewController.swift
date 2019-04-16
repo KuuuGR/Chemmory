@@ -42,6 +42,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     var winGameResultsData  = ("","","")
     var myName = ""
     var myResult = Result()
+    var backButtonTappedOnce = false
     
     var resetDbFuse: Bool = false
     
@@ -51,7 +52,10 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         if sender.tag == 1 {
             SoundManager.playSound(.back)
         }
-        backAction()
+        if backButtonTappedOnce {
+          backAction()
+        }
+        backButtonTappedOnce = true
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
