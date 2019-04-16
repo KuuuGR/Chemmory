@@ -25,20 +25,26 @@ class OptionsViewController: UIViewController {
     
     
     @IBAction func dcsImageNrButtonTapped(_ sender: UIButton) {
+        incCardPicture(increasing: false)
         
-        backgroundNumber.text = String(lifeBarScotchAmmount)
     }
     
     @IBAction func incImageNrButtonTapped(_ sender: Any) {
-        
+        incCardPicture(increasing: true)
     }
     
     
-    
-    
-    
-    
-    
+    func incCardPicture(increasing: Bool) {
+        
+        if (backgroundPictureNumber < 101), increasing  {
+            backgroundPictureNumber += 1
+        } else if (backgroundPictureNumber > 0 ), !increasing {
+            backgroundPictureNumber -= 1
+        }
+        backgroundImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
+        backgroundNumber.text = String(backgroundPictureNumber)
+    }
+
     /*
     // MARK: - Navigation
 
@@ -50,3 +56,5 @@ class OptionsViewController: UIViewController {
     */
 
 }
+
+
