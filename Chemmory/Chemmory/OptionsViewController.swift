@@ -16,15 +16,20 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var fontOptionsCardImage: UIImageView!
     @IBOutlet var fontOptionsLabelsCollection: [UILabel]!
     
+    @IBOutlet weak var fontRZipper: UISlider!
+    @IBOutlet weak var fontGZipper: UISlider!
+    @IBOutlet weak var fontBZipper: UISlider!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
         backgroundNumber.text = String(backgroundPictureNumber)
-        for element in fontOptionsLabelsCollection {
-            element.textColor = UIColor.red
-        }
+
     }
     
     //Background Options
@@ -36,6 +41,32 @@ class OptionsViewController: UIViewController {
     @IBAction func incImageNrButtonTapped(_ sender: Any) {
         changeCardBackPicture(increasing: true)
     }
+    
+    //Fonts Options
+    
+    @IBAction func fontRZipperAction(_ sender: Any) {
+        setFontsColor()
+        takeActualFontColor()
+    }
+    @IBAction func fontGZipperAction(_ sender: Any) {
+        setFontsColor()
+        takeActualFontColor()
+    }
+    
+    @IBAction func fontBZipperAction(_ sender: Any) {
+        setFontsColor()
+        takeActualFontColor()
+    }
+    
+    
+    //Save Options
+    
+    @IBAction func saveAndQuit(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+
+    
     
     func changeCardBackPicture(increasing: Bool) {
         
@@ -49,9 +80,17 @@ class OptionsViewController: UIViewController {
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
     }
 
+    func setFontsColor(){
+        for element in fontOptionsLabelsCollection {
+            element.textColor = UIColor(red: CGFloat(fontRZipper.value/255), green: CGFloat(fontGZipper.value/255), blue: CGFloat(fontBZipper.value/255), alpha: 1.0)
+        }
+    }
     
-    
-    
+    func takeActualFontColor(){
+        cardFontsColor[0] = fontRZipper.value/255
+        cardFontsColor[1] = fontGZipper.value/255
+        cardFontsColor[2] = fontBZipper.value/255
+    }
     
     /*
     // MARK: - Navigation

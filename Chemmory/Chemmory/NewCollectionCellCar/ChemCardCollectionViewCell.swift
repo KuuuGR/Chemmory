@@ -19,12 +19,16 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var elementSymbolLabel: UILabel!
     @IBOutlet weak var elementNameLabel: UILabel!
     @IBOutlet weak var elementMassLabel: UILabel!
+    @IBOutlet var elementFontLabels: [UILabel]!
+    
     
     var card:Card?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
+        colorFontsOnCard()
     }
     
     enum elementPart {
@@ -96,8 +100,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         self.frontCardView.layer.borderColor = UIColor.black.cgColor
         self.frontCardView.layer.borderWidth = 2
       
-        // TODO: Show only selected from menu
-        // TODO: Show Throu BASCkground
+
         switch showHintUserSelect {
         case "name":
             if card.isCardOne {
@@ -221,6 +224,13 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         }
         
         return cardViewColor
+    }
+    
+    func colorFontsOnCard() {
+        for label in elementFontLabels {
+            label.textColor = UIColor(red: CGFloat(cardFontsColor[0]), green: CGFloat(cardFontsColor[1]), blue: CGFloat(cardFontsColor[2]), alpha: 1.0)
+        }
+        
     }
     
     

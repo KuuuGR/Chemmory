@@ -132,6 +132,11 @@
                 <outlet property="elementValenceLabel" destination="ahe-rw-w20" id="ZkO-Nw-IaQ"/>
                 <outlet property="frontCardView" destination="ue4-La-jti" id="End-VB-9Wy"/>
                 <outlet property="frontImageView" destination="kGy-nq-b30" id="zXd-Vl-BIP"/>
+                <outletCollection property="elementFontLabels" destination="17u-9t-vVa" collectionClass="NSMutableArray" id="6fX-1j-JJH"/>
+                <outletCollection property="elementFontLabels" destination="sLq-tA-bcA" collectionClass="NSMutableArray" id="7yJ-ff-zKg"/>
+                <outletCollection property="elementFontLabels" destination="dkx-6n-kcW" collectionClass="NSMutableArray" id="wMM-uq-zjD"/>
+                <outletCollection property="elementFontLabels" destination="Efz-tg-PZV" collectionClass="NSMutableArray" id="zIk-AY-S2e"/>
+                <outletCollection property="elementFontLabels" destination="ahe-rw-w20" collectionClass="NSMutableArray" id="5kb-HX-6cT"/>
             </connections>
             <point key="canvasLocation" x="-220.625" y="177.1875"/>
         </collectionViewCell>

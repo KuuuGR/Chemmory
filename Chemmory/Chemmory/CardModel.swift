@@ -33,7 +33,7 @@ class CardModel {
                 
                 //Store the number into generatedNumberArray
                 generatedNumbersArray.append(Int(randomNumber))
-                
+             
                 //Create the first card object
                 let cardOne = Card()
                 cardOne.imageBackName = "CardBack\(backgroundPictureNumber)"
