@@ -147,7 +147,7 @@ class OptionsViewController: UIViewController {
     
     func changeCardBackPicture(increasing: Bool) {
         
-        if (backgroundPictureNumber < 101), increasing  {
+        if (backgroundPictureNumber < 117), increasing  {
             backgroundPictureNumber += 1
         } else if (backgroundPictureNumber > 0 ), !increasing {
             backgroundPictureNumber -= 1

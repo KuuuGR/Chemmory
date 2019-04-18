@@ -293,9 +293,9 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.20000000000000001" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-31-zsz">
-                                                                        <rect key="frame" x="7.6666666666666714" y="0.0" width="30" height="38"/>
+                                                                        <rect key="frame" x="1.6666666666666714" y="0.0" width="42" height="38"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                                                        <state key="normal" title="84">
+                                                                        <state key="normal" title=" 84  ">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
@@ -303,9 +303,9 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.20000000000000001" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-pl-0Pl">
-                                                                        <rect key="frame" x="48.000000000000014" y="115" width="54" height="35"/>
+                                                                        <rect key="frame" x="21.666666666666671" y="115" width="107.00000000000001" height="35"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                                        <state key="normal" title="209.0">
+                                                                        <state key="normal" title="      209.0      ">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
@@ -313,9 +313,9 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.20000000000000001" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-Wh-XkV">
-                                                                        <rect key="frame" x="31.000000000000014" y="79" width="88" height="36"/>
+                                                                        <rect key="frame" x="18.000000000000014" y="79" width="113.99999999999999" height="36"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <state key="normal" title="Polonium">
+                                                                        <state key="normal" title="   Polonium   ">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
