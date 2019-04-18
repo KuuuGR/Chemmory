@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class MainViewController: UIViewController {
     var languageButtonTapped = false
     var CreditsButtonTapped = false
     
+    var mySettings = UserSettings()
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var startGameLabel: UILabel!
@@ -55,10 +57,8 @@ class MainViewController: UIViewController {
         mPress += 1
         if mPress > 50 {
             m_cardButton.setImage(#imageLiteral(resourceName: "card_M"), for: .normal)
-        
         }
     }
-    
     
     @IBAction func moButtonPush(_ sender: Any) {
         mo_cardButton.alpha = alphaTappedCard
@@ -76,7 +76,6 @@ class MainViewController: UIViewController {
             r_cardButton.setImage(#imageLiteral(resourceName: "card_R"), for: .normal)
         }
     }
-    
     
     
     @IBAction func yButtonPush(_ sender: Any) {
@@ -119,12 +118,17 @@ class MainViewController: UIViewController {
     }
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add result to database
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(mySettings)
+        }
+        print("Realm save youre options at: ")
+        print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+  
         prepareButton(button: c_cardButton)
         prepareButton(button: he_cardButton)
         prepareButton(button: m_cardButton)
@@ -164,9 +168,6 @@ class MainViewController: UIViewController {
         creditsSplashImage.isHidden = true
         languageSplashImage.isHidden = true
     }
-    
-    
-    
     
     
     func prepareButton(button: UIButton) {
