@@ -10,7 +10,6 @@ import UIKit
 
 class OptionsViewController: UIViewController {
 
-    
     @IBOutlet weak var backgroundNumber: UILabel!
     @IBOutlet weak var backgroundOptionsCardImage: UIImageView!
     @IBOutlet weak var fontOptionsCardImage: UIImageView!
@@ -30,8 +29,22 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var saveButonNo: UIButton!
     
   
+    // backup copy of setings
+    
+    var backup_cardBackgroundIsWhite: Bool = true
+    var backup_backgroundPictureNumber: Int = 0
+    var backup_showHintUserSelect: String = ""
+    var backup_cardFontsColor: [Float] = [0,0,0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set backup Options
+        backup_cardBackgroundIsWhite = cardBackgroundIsWhite
+        backup_backgroundPictureNumber = backgroundPictureNumber
+        backup_showHintUserSelect = showHintUserSelect
+        backup_cardFontsColor = cardFontsColor
+        
         markCurrentSetHint()
         markActualFontColorSet()
         markWhiteForegroundChecked()
@@ -138,8 +151,12 @@ class OptionsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func saveCancelAndQuit(_ sender: UIButton) {
-        // TODO: make template to cancel
+    @IBAction func cancelSaveAndQuit(_ sender: UIButton) {
+         cardBackgroundIsWhite = backup_cardBackgroundIsWhite
+         backgroundPictureNumber = backup_backgroundPictureNumber
+         showHintUserSelect = backup_showHintUserSelect
+         cardFontsColor = backup_cardFontsColor
+    
         self.navigationController?.popViewController(animated: true)
     }
     

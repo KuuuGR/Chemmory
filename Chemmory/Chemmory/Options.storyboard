@@ -398,7 +398,7 @@
                                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <state key="normal" title="Button" image="SaveButtonNo"/>
                                                                         <connections>
-                                                                            <action selector="saveCancelAndQuit:" destination="2Cc-fd-noi" eventType="touchUpInside" id="sdq-rc-Me9"/>
+                                                                            <action selector="cancelSaveAndQuit:" destination="2Cc-fd-noi" eventType="touchUpInside" id="sdq-rc-Me9"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
