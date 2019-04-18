@@ -20,6 +20,10 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var fontGZipper: UISlider!
     @IBOutlet weak var fontBZipper: UISlider!
     
+    @IBOutlet weak var hintCardImage: UIImageView!
+    @IBOutlet weak var hintCardView: UIView!
+    
+    
     @IBOutlet weak var saveButtonYes: UIButton!
     @IBOutlet weak var saveButonNo: UIButton!
     
@@ -32,11 +36,15 @@ class OptionsViewController: UIViewController {
         // Card Background Images
         backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
+        
         backgroundNumber.text = String(backgroundPictureNumber)
         // Save buttons round
         saveButtonYes.layer.cornerRadius = saveButtonYes.frame.height / 2
         saveButonNo.layer.cornerRadius = saveButonNo.frame.height / 2
         
+        // Hint image and view
+        hintCardImage.image = backgroundOptionsCardImage.image
+        hintCardView.layer.cornerRadius = saveButonNo.frame.height * 0.2
        
     }
     
@@ -90,6 +98,7 @@ class OptionsViewController: UIViewController {
         backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
         backgroundNumber.text = String(backgroundPictureNumber)
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
+        hintCardImage.image = backgroundOptionsCardImage.image
     }
 
     func setFontsColor(){
