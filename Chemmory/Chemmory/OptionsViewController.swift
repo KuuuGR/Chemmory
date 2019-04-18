@@ -22,13 +22,14 @@ class OptionsViewController: UIViewController {
     
     @IBOutlet weak var hintCardImage: UIImageView!
     @IBOutlet weak var hintCardView: UIView!
+    @IBOutlet weak var hintForegroundButton: UIButton!
+    @IBOutlet var hintButtonsOnElement: [UIButton]!
     
     
     @IBOutlet weak var saveButtonYes: UIButton!
     @IBOutlet weak var saveButonNo: UIButton!
     
-    
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +74,69 @@ class OptionsViewController: UIViewController {
         setFontsColor()
         takeActualFontColor()
     }
+    
+    //Hint Options
+    
+    
+    @IBAction func hintOnElementButtonPressed(_ sender: UIButton) {
+        
+        for button in hintButtonsOnElement {
+            button.alpha = 0.3
+        }
+        
+        switch sender.tag {
+        case 1:
+            for button in hintButtonsOnElement {
+                if button.tag == 1 {
+                   button.alpha = 1.0
+                }
+            }
+        case 2:
+            for button in hintButtonsOnElement {
+                if button.tag == 2 {
+                    button.alpha = 1.0
+                }
+            }
+        case 3:
+            for button in hintButtonsOnElement {
+                if button.tag == 3 {
+                    button.alpha = 1.0
+                }
+            }
+        case 4:
+            for button in hintButtonsOnElement {
+                if button.tag == 4 {
+                    button.alpha = 1.0
+                }
+            }
+        default:
+            for button in hintButtonsOnElement {
+                button.alpha = 0.3
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    @IBAction func hintForegroundButtonPressed(_ sender: Any) {
+
+        if hintForegroundButton.currentImage == #imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite") {
+            hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolUncheckedWhite"), for: .normal)
+            hintCardView.backgroundColor = UIColor.chMetaloids
+        } else {
+            hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite"), for: .normal)
+            hintCardView.backgroundColor = UIColor.white
+        }
+        
+    }
+    
+    
     
     
     //Save Options

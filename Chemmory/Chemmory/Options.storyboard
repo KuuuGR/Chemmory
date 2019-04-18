@@ -260,36 +260,57 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="white foreground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmA-VR-LuY">
+                                                                <rect key="frame" x="255.66666666666663" y="135" width="201" height="30"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardBack33" translatesAutoresizingMaskIntoConstraints="NO" id="elh-U0-5FV" userLabel="Hint Options">
-                                                                <rect key="frame" x="256.33333333333331" y="75" width="150" height="150"/>
+                                                                <rect key="frame" x="90.666666666666657" y="75" width="150" height="150"/>
                                                             </imageView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnY-IV-0Ps">
-                                                                <rect key="frame" x="256.33333333333331" y="75" width="150" height="150"/>
+                                                                <rect key="frame" x="90.666666666666657" y="75" width="150" height="150"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-Lr-fLc">
-                                                                        <rect key="frame" x="44.666666666666686" y="13.666666666666629" width="61" height="78"/>
+                                                                        <rect key="frame" x="44.666666666666671" y="13.666666666666629" width="61" height="78"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                                                         <state key="normal" title="Po"/>
+                                                                        <connections>
+                                                                            <action selector="hintOnElementButtonPressed:" destination="2Cc-fd-noi" eventType="touchUpInside" id="bvt-1u-CIv"/>
+                                                                        </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXl-2b-med">
-                                                                        <rect key="frame" x="98" y="0.0" width="44" height="36"/>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXl-2b-med">
+                                                                        <rect key="frame" x="98.000000000000014" y="0.0" width="43.999999999999986" height="36"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <state key="normal" title="1,2,3"/>
+                                                                        <connections>
+                                                                            <action selector="hintOnElementButtonPressed:" destination="2Cc-fd-noi" eventType="touchUpInside" id="5CF-uB-pLe"/>
+                                                                        </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-31-zsz">
-                                                                        <rect key="frame" x="7.6666666666666856" y="0.0" width="30" height="36"/>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-31-zsz">
+                                                                        <rect key="frame" x="7.6666666666666714" y="0.0" width="30" height="36"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <state key="normal" title="84"/>
+                                                                        <connections>
+                                                                            <action selector="hintOnElementButtonPressed:" destination="2Cc-fd-noi" eventType="touchUpInside" id="NZd-6f-5Tf"/>
+                                                                        </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-pl-0Pl">
-                                                                        <rect key="frame" x="47.666666666666686" y="114" width="55" height="36"/>
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-pl-0Pl">
+                                                                        <rect key="frame" x="47.666666666666671" y="114" width="55" height="36"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <state key="normal" title="209.0"/>
+                                                                        <connections>
+                                                                            <action selector="hintOnElementButtonPressed:" destination="2Cc-fd-noi" eventType="touchUpInside" id="D56-Tg-h76"/>
+                                                                        </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-Wh-XkV">
-                                                                        <rect key="frame" x="34.666666666666686" y="78" width="81" height="36"/>
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-Wh-XkV">
+                                                                        <rect key="frame" x="34.666666666666671" y="78" width="81" height="36"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <state key="normal" title="Polonium"/>
+                                                                        <connections>
+                                                                            <action selector="hintOnElementButtonPressed:" destination="2Cc-fd-noi" eventType="touchUpInside" id="NuN-Bb-R52"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -307,23 +328,33 @@
                                                                     <constraint firstItem="TWQ-Lr-fLc" firstAttribute="centerY" secondItem="lnY-IV-0Ps" secondAttribute="centerY" multiplier="0.7" id="lCa-wH-XDS"/>
                                                                 </constraints>
                                                             </view>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-bA-ull">
-                                                                <rect key="frame" x="465" y="75" width="46" height="30"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" title="Button"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-bA-ull">
+                                                                <rect key="frame" x="336.33333333333331" y="170" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="CQ5-f2-jPY"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="OFb-sO-8uR"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="CheckmarkSymbolCheckedWhite"/>
+                                                                <connections>
+                                                                    <action selector="hintForegroundButtonPressed:" destination="2Cc-fd-noi" eventType="touchUpInside" id="jM1-ry-GME"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
+                                                            <constraint firstItem="ByN-bA-ull" firstAttribute="top" secondItem="qmA-VR-LuY" secondAttribute="bottom" constant="5" id="04g-bc-8tH"/>
                                                             <constraint firstItem="elh-U0-5FV" firstAttribute="centerY" secondItem="x5D-wF-oNg" secondAttribute="centerY" id="NGB-PR-rBW"/>
                                                             <constraint firstItem="lnY-IV-0Ps" firstAttribute="height" secondItem="elh-U0-5FV" secondAttribute="height" id="OUo-jK-Yxu"/>
                                                             <constraint firstItem="wxK-kL-ET7" firstAttribute="top" secondItem="x5D-wF-oNg" secondAttribute="top" constant="15" id="XPW-ld-1my"/>
-                                                            <constraint firstItem="elh-U0-5FV" firstAttribute="centerX" secondItem="x5D-wF-oNg" secondAttribute="centerX" id="b3v-Qk-lfb"/>
+                                                            <constraint firstItem="elh-U0-5FV" firstAttribute="centerX" secondItem="x5D-wF-oNg" secondAttribute="centerX" multiplier="0.5" id="b3v-Qk-lfb"/>
                                                             <constraint firstAttribute="height" constant="300" id="dM3-mf-5Os"/>
                                                             <constraint firstItem="lnY-IV-0Ps" firstAttribute="centerY" secondItem="elh-U0-5FV" secondAttribute="centerY" id="dUv-oP-vMI"/>
+                                                            <constraint firstItem="qmA-VR-LuY" firstAttribute="leading" secondItem="elh-U0-5FV" secondAttribute="trailing" constant="15" id="e1o-0U-g2u"/>
                                                             <constraint firstItem="wxK-kL-ET7" firstAttribute="centerX" secondItem="x5D-wF-oNg" secondAttribute="centerX" id="eM4-55-0zH"/>
                                                             <constraint firstItem="lnY-IV-0Ps" firstAttribute="width" secondItem="elh-U0-5FV" secondAttribute="width" id="hdm-Ym-PlH"/>
+                                                            <constraint firstItem="ByN-bA-ull" firstAttribute="centerX" secondItem="qmA-VR-LuY" secondAttribute="centerX" id="kh9-EK-0vv"/>
                                                             <constraint firstItem="lnY-IV-0Ps" firstAttribute="centerX" secondItem="elh-U0-5FV" secondAttribute="centerX" id="nps-gR-eYd"/>
+                                                            <constraint firstItem="qmA-VR-LuY" firstAttribute="centerY" secondItem="lnY-IV-0Ps" secondAttribute="centerY" id="xqM-hl-oSl"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7p3-LD-EOH" userLabel="Save Options">
@@ -463,6 +494,7 @@
                         <outlet property="fontRZipper" destination="nFp-8j-Omw" id="yj2-RD-rr9"/>
                         <outlet property="hintCardImage" destination="elh-U0-5FV" id="0k9-kv-T1t"/>
                         <outlet property="hintCardView" destination="lnY-IV-0Ps" id="JLr-CM-jrZ"/>
+                        <outlet property="hintForegroundButton" destination="ByN-bA-ull" id="NsC-mS-mfQ"/>
                         <outlet property="saveButonNo" destination="X1q-Tp-HI5" id="jO0-ko-JTR"/>
                         <outlet property="saveButtonYes" destination="Fbq-cN-7E4" id="gCB-TW-4ID"/>
                         <outletCollection property="fontOptionsLabelsCollection" destination="3kw-ye-Ypx" collectionClass="NSMutableArray" id="2hV-yx-e7M"/>
@@ -470,6 +502,11 @@
                         <outletCollection property="fontOptionsLabelsCollection" destination="Ki7-E8-1S5" collectionClass="NSMutableArray" id="giu-R3-2b6"/>
                         <outletCollection property="fontOptionsLabelsCollection" destination="yWv-Zf-dNn" collectionClass="NSMutableArray" id="EpA-Pf-auk"/>
                         <outletCollection property="fontOptionsLabelsCollection" destination="7pH-P5-VdJ" collectionClass="NSMutableArray" id="gmu-RT-SDR"/>
+                        <outletCollection property="hintButtonsOnElement" destination="TWQ-Lr-fLc" collectionClass="NSMutableArray" id="EXC-x6-lay"/>
+                        <outletCollection property="hintButtonsOnElement" destination="TXl-2b-med" collectionClass="NSMutableArray" id="rgL-0k-O9d"/>
+                        <outletCollection property="hintButtonsOnElement" destination="0WB-31-zsz" collectionClass="NSMutableArray" id="r91-5H-xSq"/>
+                        <outletCollection property="hintButtonsOnElement" destination="OSr-pl-0Pl" collectionClass="NSMutableArray" id="gLW-r1-Fv6"/>
+                        <outletCollection property="hintButtonsOnElement" destination="z3f-Wh-XkV" collectionClass="NSMutableArray" id="FOO-KO-Ax4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ct-IY-Dp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -481,6 +518,7 @@
         <image name="BackPT01" width="1000" height="350"/>
         <image name="CardBack33" width="240" height="240"/>
         <image name="CardBack34" width="240" height="240"/>
+        <image name="CheckmarkSymbolCheckedWhite" width="212" height="200"/>
         <image name="SaveButtonNo" width="550" height="350"/>
         <image name="SaveButtonYes" width="550" height="350"/>
         <image name="leftArrow2" width="400" height="400"/>
