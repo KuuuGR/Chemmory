@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2219C7082231358C00875DD9 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C7072231358C00875DD9 /* win.wav */; };
 		2219C70A223135AB00875DD9 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C709223135AB00875DD9 /* lose.wav */; };
-		22240531223BA0BE008FCC4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22240530223BA0BE008FCC4C /* Constants.swift */; };
+		22240531223BA0BE008FCC4C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22240530223BA0BE008FCC4C /* Settings.swift */; };
 		2227B865225F41B900B6A785 /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B864225F41B900B6A785 /* spring.wav */; };
 		2227B867226058E300B6A785 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B866226058E300B6A785 /* start.wav */; };
 		2227B86922605B2000B6A785 /* start1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B86822605B2000B6A785 /* start1.wav */; };
@@ -55,7 +55,7 @@
 		1551F878BC1FCB094F554423 /* Pods-Chemmory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemmory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chemmory/Pods-Chemmory.release.xcconfig"; sourceTree = "<group>"; };
 		2219C7072231358C00875DD9 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		2219C709223135AB00875DD9 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
-		22240530223BA0BE008FCC4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22240530223BA0BE008FCC4C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2227B864225F41B900B6A785 /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
 		2227B866226058E300B6A785 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
 		2227B86822605B2000B6A785 /* start1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start1.wav; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 				22FA5AE7222961090026FC5D /* Card.swift */,
 				22C21B73222D415200EC9A48 /* MainViewController.swift */,
 				229934152231123A000E7851 /* SoundManager.swift */,
-				22240530223BA0BE008FCC4C /* Constants.swift */,
+				22240530223BA0BE008FCC4C /* Settings.swift */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
 				229A695D226493FF009A049B /* Options.storyboard */,
 				229A695F22659E8D009A049B /* OptionsViewController.swift */,
@@ -357,7 +357,7 @@
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
 				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
 				22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */,
-				22240531223BA0BE008FCC4C /* Constants.swift in Sources */,
+				22240531223BA0BE008FCC4C /* Settings.swift in Sources */,
 				22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */,
 				223577A722379AB800553DCC /* Result.swift in Sources */,
 				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,

@@ -30,9 +30,12 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var saveButonNo: UIButton!
     
   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        markCurrentSetHint()
+        markActualFontColorSet()
+        markWhiteForegroundChecked()
+
         
         // Card Background Images
         backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
@@ -89,49 +92,44 @@ class OptionsViewController: UIViewController {
             for button in hintButtonsOnElement {
                 if button.tag == 1 {
                    button.alpha = 1.0
+                    showHintUserSelect = "number"
                 }
             }
         case 2:
             for button in hintButtonsOnElement {
                 if button.tag == 2 {
                     button.alpha = 1.0
+                    showHintUserSelect = "valence"
                 }
             }
         case 3:
             for button in hintButtonsOnElement {
                 if button.tag == 3 {
                     button.alpha = 1.0
+                    showHintUserSelect = "name"
                 }
             }
         case 4:
             for button in hintButtonsOnElement {
                 if button.tag == 4 {
                     button.alpha = 1.0
+                    showHintUserSelect = "mass"
                 }
             }
         default:
             for button in hintButtonsOnElement {
                 button.alpha = 0.2
+                showHintUserSelect = "symbol"
             }
         }
     }
     
     
     @IBAction func hintForegroundButtonPressed(_ sender: Any) {
-
-        if hintForegroundButton.currentImage == #imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite") {
-            hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolUncheckedWhite"), for: .normal)
-            hintCardView.backgroundColor = UIColor.chMetaloids
-            cardBackgroundIsWhite = false
-        } else {
-            hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite"), for: .normal)
-            hintCardView.backgroundColor = UIColor.white
-            cardBackgroundIsWhite = true
-        }
+        cardBackgroundIsWhite = !cardBackgroundIsWhite
+        markWhiteForegroundChecked()
         
     }
-    
-    
     
     
     //Save Options
@@ -161,16 +159,69 @@ class OptionsViewController: UIViewController {
     }
 
     func setFontsColor(){
-        for element in fontOptionsLabelsCollection {
-            element.textColor = UIColor(red: CGFloat(fontRZipper.value/255), green: CGFloat(fontGZipper.value/255), blue: CGFloat(fontBZipper.value/255), alpha: 1.0)
+        for label in fontOptionsLabelsCollection {
+            label.textColor = UIColor(red: CGFloat(fontRZipper.value/255), green: CGFloat(fontGZipper.value/255), blue: CGFloat(fontBZipper.value/255), alpha: 1.0)
         }
     }
     
+    //fontRZipper
     func takeActualFontColor(){
         cardFontsColor[0] = fontRZipper.value/255
         cardFontsColor[1] = fontGZipper.value/255
         cardFontsColor[2] = fontBZipper.value/255
     }
+    
+      func markActualFontColorSet(){
+        fontRZipper.value = cardFontsColor[0] * 255
+        fontGZipper.value = cardFontsColor[1] * 255
+        fontBZipper.value = cardFontsColor[2] * 255
+        
+        setFontsColor()
+        
+    }
+    
+    
+    func markCurrentSetHint(){
+        for button in hintButtonsOnElement {
+            switch button.tag {
+            case 0:
+                if showHintUserSelect == "symbol" {
+                button.alpha = 1
+                }
+            case 1:
+                if showHintUserSelect == "number" {
+                button.alpha = 1
+                }
+            case 2:
+                if showHintUserSelect == "valence" {
+                button.alpha = 1
+                }
+            case 3:
+                if showHintUserSelect == "name" {
+                button.alpha = 1
+                }
+            case 4:
+                if showHintUserSelect == "mass" {
+                button.alpha = 1
+                }
+            default:
+                return
+            }
+        }
+    }
+    
+    func markWhiteForegroundChecked(){
+        if cardBackgroundIsWhite == false {
+            hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolUncheckedWhite"), for: .normal)
+            hintCardView.backgroundColor = UIColor.chMetaloids
+        } else {
+            hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite"), for: .normal)
+            hintCardView.backgroundColor = UIColor.white
+        }
+        
+    }
+    
+    
     
     /*
     // MARK: - Navigation

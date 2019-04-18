@@ -312,7 +312,7 @@
                                                                             <action selector="hintOnElementButtonPressed:" destination="2Cc-fd-noi" eventType="touchUpInside" id="D56-Tg-h76"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-Wh-XkV">
+                                                                    <button opaque="NO" alpha="0.20000000000000001" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3f-Wh-XkV">
                                                                         <rect key="frame" x="31.000000000000014" y="79" width="88" height="36"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <state key="normal" title="Polonium">
