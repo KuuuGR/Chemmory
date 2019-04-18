@@ -28,9 +28,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mo_cardButton: UIButton!
     @IBOutlet weak var r_cardButton: UIButton!
     @IBOutlet weak var y_cardButton: UIButton!
-    @IBOutlet weak var left_cardButton: UIButton!
-    @IBOutlet weak var right_cardButton: UIButton!
-    @IBOutlet weak var bottom_cardButton: UIButton!
+    
+    @IBOutlet weak var options_cardButton: UIButton!
+    @IBOutlet weak var optionsSplashImage: UIImageView!
+    @IBOutlet weak var language_cardButton: UIButton!
+    @IBOutlet weak var languageSplashImage: UIImageView!
+    @IBOutlet weak var credits_cardButton: UIButton!
+    @IBOutlet weak var creditsSplashImage: UIImageView!
     
     @IBAction func cButtonPush(_ sender: Any) {
         c_cardButton.alpha = alphaTappedCard
@@ -83,33 +87,30 @@ class MainViewController: UIViewController {
     
     
     @IBAction func optionsButtonPush(_ sender: Any) {
-        left_cardButton.alpha = alphaTappedCard
-        left_cardButton.setImage(#imageLiteral(resourceName: "card_oo"), for: .normal)
+        options_cardButton.alpha = alphaTappedCard
+        options_cardButton.setImage(#imageLiteral(resourceName: "card_oo"), for: .normal)
+       optionsSplashImage.isHidden = false
         SoundManager.playSound(.options)
         if optionsButtonTapped {
             
             switchToViewController(identifier: "OptionsViewController", sbName: "Options")
-/*            let viewController:UIViewController = UIStoryboard(name: "Options.storyboard", bundle: nil).instantiateViewController(withIdentifier: "OptionsViewController") as UIViewController
-            self.present(viewController, animated: false, completion: nil)
- */
-//            let storyboard = UIStoryboard(name: "OptionStoryboard", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "OptionViewController")
-//            self.present(controller, animated: true, completion: nil)
         }
         optionsButtonTapped = true
         
     }
     
     @IBAction func languageButtonPush(_ sender: Any) {
-        right_cardButton.alpha = alphaTappedCard
-        right_cardButton.setImage(#imageLiteral(resourceName: "card_ol"), for: .normal)
+        language_cardButton.alpha = alphaTappedCard
+        language_cardButton.setImage(#imageLiteral(resourceName: "card_ol"), for: .normal)
+        languageSplashImage.isHidden = false
         SoundManager.playSound(.options)
     }
     
     
     @IBAction func creditsButtonPush(_ sender: Any) {
-        bottom_cardButton.alpha = alphaTappedCard
-        bottom_cardButton.setImage(#imageLiteral(resourceName: "card_oc"), for: .normal)
+        credits_cardButton.alpha = alphaTappedCard
+        credits_cardButton.setImage(#imageLiteral(resourceName: "card_oc"), for: .normal)
+        creditsSplashImage.isHidden = false
         SoundManager.playSound(.options)
     }
     
@@ -130,9 +131,9 @@ class MainViewController: UIViewController {
         prepareButton(button: mo_cardButton)
         prepareButton(button: r_cardButton)
         prepareButton(button: y_cardButton)
-        prepareButton(button: left_cardButton)
-        prepareButton(button: right_cardButton)
-        prepareButton(button: bottom_cardButton)
+        prepareButton(button: options_cardButton)
+        prepareButton(button: language_cardButton)
+        prepareButton(button: credits_cardButton)
 
         startButton.layer.backgroundColor = UIColor.red.cgColor
         startButton.layer.cornerRadius = 60
@@ -155,6 +156,17 @@ class MainViewController: UIViewController {
         
         super.viewDidAppear(true)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // Hide Splashes
+        optionsSplashImage.isHidden = true
+        creditsSplashImage.isHidden = true
+        languageSplashImage.isHidden = true
+    }
+    
+    
+    
     
     
     func prepareButton(button: UIButton) {

@@ -211,7 +211,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cardTwo = cardArray[secondFlippedCardIndex.row]
         
         // Compare the two cards
-        if cardOne.elementNumber == cardTwo.elementNumber {
+        if cardOne.elementSybmol == cardTwo.elementSybmol {
             
             // It's a match
             

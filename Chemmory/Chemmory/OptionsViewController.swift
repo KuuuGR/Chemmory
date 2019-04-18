@@ -81,7 +81,7 @@ class OptionsViewController: UIViewController {
     @IBAction func hintOnElementButtonPressed(_ sender: UIButton) {
         
         for button in hintButtonsOnElement {
-            button.alpha = 0.3
+            button.alpha = 0.2
         }
         
         switch sender.tag {
@@ -111,17 +111,10 @@ class OptionsViewController: UIViewController {
             }
         default:
             for button in hintButtonsOnElement {
-                button.alpha = 0.3
+                button.alpha = 0.2
             }
         }
-        
-        
-        
     }
-    
-    
-    
-    
     
     
     @IBAction func hintForegroundButtonPressed(_ sender: Any) {
@@ -129,9 +122,11 @@ class OptionsViewController: UIViewController {
         if hintForegroundButton.currentImage == #imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite") {
             hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolUncheckedWhite"), for: .normal)
             hintCardView.backgroundColor = UIColor.chMetaloids
+            cardBackgroundIsWhite = false
         } else {
             hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite"), for: .normal)
             hintCardView.backgroundColor = UIColor.white
+            cardBackgroundIsWhite = true
         }
         
     }
