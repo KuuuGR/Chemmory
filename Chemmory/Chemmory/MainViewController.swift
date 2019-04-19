@@ -19,8 +19,6 @@ class MainViewController: UIViewController {
     var languageButtonTapped = false
     var CreditsButtonTapped = false
     
-    var mySettings = UserSettings()
-    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var startGameLabel: UILabel!
 
@@ -121,14 +119,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Add result to database
+   /*     // Add result to database
         let realm = try! Realm()
         try! realm.write {
-            realm.add(mySettings)
+            realm.add(globalSettings)
         }
         print("Realm save youre options at: ")
         print(Realm.Configuration.defaultConfiguration.fileURL as Any)
-  
+  */
         prepareButton(button: c_cardButton)
         prepareButton(button: he_cardButton)
         prepareButton(button: m_cardButton)

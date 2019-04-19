@@ -23,7 +23,8 @@ extension UIColor: DummyUIColorCustom {
     static let chOtherNonMetals = #colorLiteral(red: 0.5182282925, green: 0.9968604445, blue: 0.8344674706, alpha: 1)  //8
     static let chHalogens = #colorLiteral(red: 0.6068072915, green: 0.8026075959, blue: 0.9931539893, alpha: 1)  //9
     static let chNobelGasses = #colorLiteral(red: 0.7995236516, green: 0.8028283715, blue: 0.9931235909, alpha: 1)   //10
-    static let chNoName = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)   //11
+    //static let chNoName = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)   //11
+    static let chNoName =  UIColor(red: CGFloat(globalSettings.cardFrontColorRed), green: CGFloat(globalSettings.cardFrontColorGreen), blue: CGFloat(globalSettings.cardFrontColorBlue), alpha: 1.0)
     
 }
 

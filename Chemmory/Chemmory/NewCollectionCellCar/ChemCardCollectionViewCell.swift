@@ -130,8 +130,6 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
             
         }
         
-  
-        
         backImageView.image = UIImage(named: card.imageBackName)
         elementNumberLabel.text = String(card.elementNumber)
         elementValenceLabel.text = card.elementValence
