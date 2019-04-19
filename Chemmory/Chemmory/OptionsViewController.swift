@@ -52,6 +52,7 @@ class OptionsViewController: UIViewController {
         
         markCurrentSetHint()
         markActualFontColor()
+        markActualFrontCardColor()
         setForegroundCardColor()
         markWhiteForegroundChecked()
 
@@ -89,33 +90,33 @@ class OptionsViewController: UIViewController {
     
     @IBAction func fontRZipperAction(_ sender: Any) {
         setFontsColor()
-        takeActualFontColor()
+        cardFontsColor[0] = fontRZipper.value
     }
     @IBAction func fontGZipperAction(_ sender: Any) {
         setFontsColor()
-        takeActualFontColor()
+        cardFontsColor[1] = fontGZipper.value
     }
     
     @IBAction func fontBZipperAction(_ sender: Any) {
         setFontsColor()
-        takeActualFontColor()
+        cardFontsColor[2] = fontBZipper.value
     }
     
     //Front Card Color Options
     
     @IBAction func frontCardRZipperAction(_ sender: Any) {
-        markActualFrontCardColor()
-        takeActualFrontCardColor()
+        setForegroundCardColor()
+        globalSettings.cardFrontColorRed = frontCardRZipper.value
     }
     
     @IBAction func frontCardGZipperAction(_ sender: Any) {
-        markActualFrontCardColor()
-        takeActualFrontCardColor()
+        setForegroundCardColor()
+        globalSettings.cardFrontColorGreen = frontCardGZipper.value
     }
     
     @IBAction func frontCardBZipperAction(_ sender: Any) {
-        markActualFrontCardColor()
-        takeActualFrontCardColor()
+        setForegroundCardColor()
+        globalSettings.cardFrontColorBlue = frontCardBZipper.value
     }
     
     
@@ -205,10 +206,10 @@ class OptionsViewController: UIViewController {
 
     func setFontsColor(){
         for label in fontOptionsLabelsCollection {
-            label.textColor = UIColor(red: CGFloat(fontRZipper.value/255), green: CGFloat(fontGZipper.value/255), blue: CGFloat(fontBZipper.value/255), alpha: 1.0)
+            label.textColor = UIColor(red: CGFloat(fontRZipper.value), green: CGFloat(fontGZipper.value), blue: CGFloat(fontBZipper.value), alpha: 1.0)
         }
         for label in frontCardLabelsOnElement {
-            label.textColor = UIColor(red: CGFloat(fontRZipper.value/255), green: CGFloat(fontGZipper.value/255), blue: CGFloat(fontBZipper.value/255), alpha: 1.0)
+            label.textColor = UIColor(red: CGFloat(fontRZipper.value), green: CGFloat(fontGZipper.value), blue: CGFloat(fontBZipper.value), alpha: 1.0)
         }
     }
     
@@ -217,29 +218,18 @@ class OptionsViewController: UIViewController {
     }
     
     //font Zipper
-    func takeActualFontColor(){
-        cardFontsColor[0] = fontRZipper.value/255
-        cardFontsColor[1] = fontGZipper.value/255
-        cardFontsColor[2] = fontBZipper.value/255
-    }
     
       func markActualFontColor(){
-        fontRZipper.value = cardFontsColor[0] * 255
-        fontGZipper.value = cardFontsColor[1] * 255
-        fontBZipper.value = cardFontsColor[2] * 255
+        
+        fontRZipper.value = cardFontsColor[0]
+        fontGZipper.value = cardFontsColor[1]
+        fontBZipper.value = cardFontsColor[2]
         
         setFontsColor()
         
     }
     
     //front card color Zippers
-    
-    func takeActualFrontCardColor(){
-        
-        globalSettings.cardFrontColorRed = fontRZipper.value
-        globalSettings.cardFrontColorGreen = fontGZipper.value
-        globalSettings.cardFrontColorBlue = fontBZipper.value
-    }
     
     func markActualFrontCardColor(){
 

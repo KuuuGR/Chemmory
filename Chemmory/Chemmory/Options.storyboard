@@ -178,49 +178,52 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPd-Re-PY6" userLabel="RGB zippers View">
-                                                                <rect key="frame" x="250.66666666666663" y="75" width="402" height="150"/>
+                                                                <rect key="frame" x="260.66666666666663" y="75" width="392" height="150"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kez-Rh-ftb">
-                                                                        <rect key="frame" x="170" y="0.0" width="17" height="30"/>
+                                                                        <rect key="frame" x="245.00000000000006" y="0.0" width="132" height="30"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1u-72-b9r">
-                                                                        <rect key="frame" x="170" y="60" width="19" height="30"/>
+                                                                        <rect key="frame" x="245.00000000000006" y="60" width="132" height="30"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </label>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="nFp-8j-Omw">
-                                                                        <rect key="frame" x="-2" y="0.0" width="154" height="31"/>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nFp-8j-Omw">
+                                                                        <rect key="frame" x="-2" y="0.0" width="229" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontRZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="720-KB-ck4"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Hox-n4-yrh">
-                                                                        <rect key="frame" x="-2" y="60" width="154" height="31"/>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hox-n4-yrh">
+                                                                        <rect key="frame" x="-2" y="60" width="229" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontGZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="hIw-w6-S0L"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="5E5-gg-ivv">
-                                                                        <rect key="frame" x="-2" y="120" width="154" height="31"/>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5E5-gg-ivv">
+                                                                        <rect key="frame" x="-2" y="120" width="229" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontBZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="WcF-RQ-dKA"/>
                                                                         </connections>
                                                                     </slider>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-19-4G8">
-                                                                        <rect key="frame" x="170" y="120" width="17" height="30"/>
+                                                                        <rect key="frame" x="245.00000000000006" y="120" width="132" height="30"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="Y1u-72-b9r" secondAttribute="trailing" constant="15" id="6fS-yJ-vEH"/>
                                                                     <constraint firstItem="MMO-19-4G8" firstAttribute="centerY" secondItem="5E5-gg-ivv" secondAttribute="centerY" id="9GI-4J-MfD"/>
                                                                     <constraint firstItem="Y1u-72-b9r" firstAttribute="centerY" secondItem="Hox-n4-yrh" secondAttribute="centerY" id="Be9-CN-iH8"/>
                                                                     <constraint firstItem="nFp-8j-Omw" firstAttribute="leading" secondItem="uPd-Re-PY6" secondAttribute="leading" id="GEG-yI-dAd"/>
                                                                     <constraint firstAttribute="bottom" secondItem="5E5-gg-ivv" secondAttribute="bottom" id="NFy-RT-1nc"/>
                                                                     <constraint firstItem="Hox-n4-yrh" firstAttribute="leading" secondItem="uPd-Re-PY6" secondAttribute="leading" id="QSc-Zp-0rH"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Kez-Rh-ftb" secondAttribute="trailing" constant="15" id="ThQ-ZL-ae0"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="MMO-19-4G8" secondAttribute="trailing" constant="15" id="UfH-94-QfU"/>
                                                                     <constraint firstItem="Kez-Rh-ftb" firstAttribute="centerY" secondItem="nFp-8j-Omw" secondAttribute="centerY" id="VZB-3h-6Rx"/>
                                                                     <constraint firstItem="5E5-gg-ivv" firstAttribute="leading" secondItem="uPd-Re-PY6" secondAttribute="leading" id="m2u-GB-6OX"/>
                                                                     <constraint firstItem="nFp-8j-Omw" firstAttribute="top" secondItem="uPd-Re-PY6" secondAttribute="top" id="nii-Ee-4zW"/>
@@ -237,18 +240,18 @@
                                                             <constraint firstItem="b9U-bG-Ond" firstAttribute="top" secondItem="siE-rT-h7Z" secondAttribute="top" constant="15" id="70P-9b-FKL"/>
                                                             <constraint firstAttribute="height" constant="300" id="BRJ-VN-CcV"/>
                                                             <constraint firstItem="uPd-Re-PY6" firstAttribute="centerY" secondItem="QCa-Pq-fuF" secondAttribute="centerY" id="Cbc-X6-U4W"/>
-                                                            <constraint firstItem="nFp-8j-Omw" firstAttribute="width" secondItem="QCa-Pq-fuF" secondAttribute="width" id="G80-BY-nXI"/>
+                                                            <constraint firstItem="nFp-8j-Omw" firstAttribute="width" secondItem="QCa-Pq-fuF" secondAttribute="width" multiplier="1.5" id="G80-BY-nXI"/>
                                                             <constraint firstItem="QCa-Pq-fuF" firstAttribute="height" secondItem="MYB-6w-zeN" secondAttribute="height" id="KZX-CR-5sF"/>
                                                             <constraint firstItem="QCa-Pq-fuF" firstAttribute="centerX" secondItem="MYB-6w-zeN" secondAttribute="centerX" id="NKj-if-SOA"/>
                                                             <constraint firstItem="QCa-Pq-fuF" firstAttribute="centerY" secondItem="MYB-6w-zeN" secondAttribute="centerY" id="Nv7-bD-pUe"/>
                                                             <constraint firstAttribute="trailing" secondItem="uPd-Re-PY6" secondAttribute="trailing" constant="10" id="O2B-Sq-w3h"/>
                                                             <constraint firstItem="MYB-6w-zeN" firstAttribute="centerY" secondItem="siE-rT-h7Z" secondAttribute="centerY" id="OHH-dK-dG2"/>
                                                             <constraint firstItem="QCa-Pq-fuF" firstAttribute="width" secondItem="MYB-6w-zeN" secondAttribute="width" id="StZ-zx-ZJ4"/>
-                                                            <constraint firstItem="5E5-gg-ivv" firstAttribute="width" secondItem="QCa-Pq-fuF" secondAttribute="width" id="Uvq-cB-B3D"/>
+                                                            <constraint firstItem="5E5-gg-ivv" firstAttribute="width" secondItem="QCa-Pq-fuF" secondAttribute="width" multiplier="1.5" id="Uvq-cB-B3D"/>
                                                             <constraint firstItem="MYB-6w-zeN" firstAttribute="centerX" secondItem="siE-rT-h7Z" secondAttribute="centerX" multiplier="0.5" id="aXK-FP-TGa"/>
-                                                            <constraint firstItem="Hox-n4-yrh" firstAttribute="width" secondItem="QCa-Pq-fuF" secondAttribute="width" id="fzW-B8-rW7"/>
+                                                            <constraint firstItem="Hox-n4-yrh" firstAttribute="width" secondItem="QCa-Pq-fuF" secondAttribute="width" multiplier="1.5" id="fzW-B8-rW7"/>
                                                             <constraint firstItem="b9U-bG-Ond" firstAttribute="centerX" secondItem="siE-rT-h7Z" secondAttribute="centerX" id="hbY-TY-KYS"/>
-                                                            <constraint firstItem="uPd-Re-PY6" firstAttribute="leading" secondItem="MYB-6w-zeN" secondAttribute="trailing" constant="10" id="v7o-5Y-kuh"/>
+                                                            <constraint firstItem="uPd-Re-PY6" firstAttribute="leading" secondItem="MYB-6w-zeN" secondAttribute="trailing" constant="20" id="v7o-5Y-kuh"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5M-QF-Iae" userLabel="Front Card Color Options">
@@ -340,41 +343,41 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWN-56-X9W" userLabel="RGB zippers View">
-                                                                <rect key="frame" x="250.66666666666663" y="75" width="402" height="150"/>
+                                                                <rect key="frame" x="260.66666666666663" y="75" width="392" height="150"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n8-2p-9fT">
-                                                                        <rect key="frame" x="170" y="0.0" width="17" height="30"/>
+                                                                        <rect key="frame" x="245.00000000000006" y="0.0" width="17" height="30"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNX-nY-ndc">
-                                                                        <rect key="frame" x="170" y="60" width="19" height="30"/>
+                                                                        <rect key="frame" x="245.00000000000006" y="60" width="19" height="30"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </label>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fLw-4j-ZaI">
-                                                                        <rect key="frame" x="-2" y="0.0" width="154" height="31"/>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fLw-4j-ZaI">
+                                                                        <rect key="frame" x="-2" y="0.0" width="229" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontRZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="2Rg-oE-5uv"/>
                                                                             <action selector="frontCardRZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="T1O-Ln-9bO"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-v5-diR">
-                                                                        <rect key="frame" x="-2" y="60" width="154" height="31"/>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-v5-diR">
+                                                                        <rect key="frame" x="-2" y="60" width="229" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontGZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="Uc2-oj-eMs"/>
                                                                             <action selector="frontCardGZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="C5a-Cr-yXl"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="POV-ec-hdK">
-                                                                        <rect key="frame" x="-2" y="120" width="154" height="31"/>
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="POV-ec-hdK">
+                                                                        <rect key="frame" x="-2" y="120" width="229" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontBZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="laW-D7-6e2"/>
                                                                             <action selector="frontCardBZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="dgH-mF-43u"/>
                                                                         </connections>
                                                                     </slider>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZz-Nh-5a9">
-                                                                        <rect key="frame" x="170" y="120" width="17" height="30"/>
+                                                                        <rect key="frame" x="245.00000000000006" y="120" width="17" height="30"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </label>
@@ -399,7 +402,7 @@
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="3ju-cC-6bc"/>
-                                                            <constraint firstItem="xWN-56-X9W" firstAttribute="leading" secondItem="SwZ-6U-ek5" secondAttribute="trailing" constant="10" id="EDt-dX-hhl"/>
+                                                            <constraint firstItem="xWN-56-X9W" firstAttribute="leading" secondItem="SwZ-6U-ek5" secondAttribute="trailing" constant="20" id="EDt-dX-hhl"/>
                                                             <constraint firstItem="sal-SZ-2jJ" firstAttribute="centerY" secondItem="SwZ-6U-ek5" secondAttribute="centerY" id="KYx-7k-r6y"/>
                                                             <constraint firstItem="SwZ-6U-ek5" firstAttribute="centerY" secondItem="p5M-QF-Iae" secondAttribute="centerY" id="L6A-1U-WmW"/>
                                                             <constraint firstItem="xWN-56-X9W" firstAttribute="height" secondItem="sal-SZ-2jJ" secondAttribute="height" id="NRo-tv-Fec"/>
@@ -409,9 +412,9 @@
                                                             <constraint firstAttribute="trailing" secondItem="xWN-56-X9W" secondAttribute="trailing" constant="10" id="cbd-sk-C5v"/>
                                                             <constraint firstItem="amr-f3-KtD" firstAttribute="centerX" secondItem="p5M-QF-Iae" secondAttribute="centerX" id="hrL-Lt-h5n"/>
                                                             <constraint firstItem="sal-SZ-2jJ" firstAttribute="height" secondItem="SwZ-6U-ek5" secondAttribute="height" id="kGW-9z-Sub"/>
-                                                            <constraint firstItem="gCQ-v5-diR" firstAttribute="width" secondItem="sal-SZ-2jJ" secondAttribute="width" id="m3g-qA-Cj3"/>
-                                                            <constraint firstItem="fLw-4j-ZaI" firstAttribute="width" secondItem="sal-SZ-2jJ" secondAttribute="width" id="qWw-nn-xts"/>
-                                                            <constraint firstItem="POV-ec-hdK" firstAttribute="width" secondItem="sal-SZ-2jJ" secondAttribute="width" id="vHa-zc-GoU"/>
+                                                            <constraint firstItem="gCQ-v5-diR" firstAttribute="width" secondItem="sal-SZ-2jJ" secondAttribute="width" multiplier="1.5" id="m3g-qA-Cj3"/>
+                                                            <constraint firstItem="fLw-4j-ZaI" firstAttribute="width" secondItem="sal-SZ-2jJ" secondAttribute="width" multiplier="1.5" id="qWw-nn-xts"/>
+                                                            <constraint firstItem="POV-ec-hdK" firstAttribute="width" secondItem="sal-SZ-2jJ" secondAttribute="width" multiplier="1.5" id="vHa-zc-GoU"/>
                                                             <constraint firstItem="sal-SZ-2jJ" firstAttribute="centerX" secondItem="SwZ-6U-ek5" secondAttribute="centerX" id="zqi-2s-oL6"/>
                                                         </constraints>
                                                     </view>

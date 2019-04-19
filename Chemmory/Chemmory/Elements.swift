@@ -24,8 +24,7 @@ extension UIColor: DummyUIColorCustom {
     static let chHalogens = #colorLiteral(red: 0.6068072915, green: 0.8026075959, blue: 0.9931539893, alpha: 1)  //9
     static let chNobelGasses = #colorLiteral(red: 0.7995236516, green: 0.8028283715, blue: 0.9931235909, alpha: 1)   //10
     //static let chNoName = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)   //11
-    static let chNoName =  UIColor(red: CGFloat(globalSettings.cardFrontColorRed), green: CGFloat(globalSettings.cardFrontColorGreen), blue: CGFloat(globalSettings.cardFrontColorBlue), alpha: 1.0)
-    
+    static let chNoName =  UIColor(red: CGFloat(globalSettings.cardFrontColorRed), green: CGFloat(globalSettings.cardFrontColorGreen), blue: CGFloat(globalSettings.cardFrontColorBlue), alpha: 1.0) //11
 }
 
 class Element: Object {
@@ -57,7 +56,6 @@ class Element: Object {
         return "key"
     }
 }
-
 
 var e00 = Element(name: "Noname",       symbol: "Nn", atomicNumber: 0, valence: "", valenceCommon: "", valenceRare: "", atomicMass: 0, group: 11)
 var eH0 = Element(name: "Hydrogen",     symbol: "H",  atomicNumber: 1, valence: "1", valenceCommon: "", valenceRare: "", atomicMass: 1.00794, group: 0 )
