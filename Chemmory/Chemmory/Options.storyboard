@@ -251,10 +251,10 @@
                                                             <constraint firstItem="uPd-Re-PY6" firstAttribute="leading" secondItem="MYB-6w-zeN" secondAttribute="trailing" constant="10" id="v7o-5Y-kuh"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5M-QF-Iae" userLabel="Foreground Options">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5M-QF-Iae" userLabel="Front Card Color Options">
                                                         <rect key="frame" x="36.666666666666686" y="630" width="662.66666666666652" height="300"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SwZ-6U-ek5">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SwZ-6U-ek5" userLabel="ElementView">
                                                                 <rect key="frame" x="90.666666666666657" y="75" width="150" height="150"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
@@ -352,22 +352,25 @@
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </label>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="fLw-4j-ZaI">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="fLw-4j-ZaI">
                                                                         <rect key="frame" x="-2" y="0.0" width="154" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontRZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="2Rg-oE-5uv"/>
+                                                                            <action selector="frontCardRZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="T1O-Ln-9bO"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-v5-diR">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-v5-diR">
                                                                         <rect key="frame" x="-2" y="60" width="154" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontGZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="Uc2-oj-eMs"/>
+                                                                            <action selector="frontCardGZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="C5a-Cr-yXl"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="POV-ec-hdK">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="POV-ec-hdK">
                                                                         <rect key="frame" x="-2" y="120" width="154" height="31"/>
                                                                         <connections>
                                                                             <action selector="fontBZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="laW-D7-6e2"/>
+                                                                            <action selector="frontCardBZipperAction:" destination="2Cc-fd-noi" eventType="valueChanged" id="dgH-mF-43u"/>
                                                                         </connections>
                                                                     </slider>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZz-Nh-5a9">
@@ -734,6 +737,10 @@
                         <outlet property="fontGZipper" destination="Hox-n4-yrh" id="sPv-44-afF"/>
                         <outlet property="fontOptionsCardImage" destination="MYB-6w-zeN" id="r3Q-0Q-Ubz"/>
                         <outlet property="fontRZipper" destination="nFp-8j-Omw" id="yj2-RD-rr9"/>
+                        <outlet property="frontCardBZipper" destination="POV-ec-hdK" id="Nq2-BQ-lnQ"/>
+                        <outlet property="frontCardGZipper" destination="gCQ-v5-diR" id="UOq-gM-iGQ"/>
+                        <outlet property="frontCardRZipper" destination="fLw-4j-ZaI" id="0w7-2R-cHb"/>
+                        <outlet property="frontElementView" destination="SwZ-6U-ek5" id="b36-9G-5hV"/>
                         <outlet property="hintCardImage" destination="elh-U0-5FV" id="0k9-kv-T1t"/>
                         <outlet property="hintCardView" destination="lnY-IV-0Ps" id="JLr-CM-jrZ"/>
                         <outlet property="hintForegroundButton" destination="ByN-bA-ull" id="NsC-mS-mfQ"/>
@@ -749,6 +756,11 @@
                         <outletCollection property="hintButtonsOnElement" destination="0WB-31-zsz" collectionClass="NSMutableArray" id="r91-5H-xSq"/>
                         <outletCollection property="hintButtonsOnElement" destination="OSr-pl-0Pl" collectionClass="NSMutableArray" id="gLW-r1-Fv6"/>
                         <outletCollection property="hintButtonsOnElement" destination="z3f-Wh-XkV" collectionClass="NSMutableArray" id="FOO-KO-Ax4"/>
+                        <outletCollection property="frontCardLabelsOnElement" destination="1D7-Yh-E9W" collectionClass="NSMutableArray" id="h3q-JR-i0e"/>
+                        <outletCollection property="frontCardLabelsOnElement" destination="HtB-Md-JJb" collectionClass="NSMutableArray" id="x12-Zf-5o3"/>
+                        <outletCollection property="frontCardLabelsOnElement" destination="IcA-PB-xJL" collectionClass="NSMutableArray" id="uGa-9N-LW1"/>
+                        <outletCollection property="frontCardLabelsOnElement" destination="ip9-J5-jcz" collectionClass="NSMutableArray" id="DW2-I2-AnQ"/>
+                        <outletCollection property="frontCardLabelsOnElement" destination="iHz-8C-58D" collectionClass="NSMutableArray" id="nF9-sd-VbV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ct-IY-Dp8" userLabel="First Responder" sceneMemberID="firstResponder"/>

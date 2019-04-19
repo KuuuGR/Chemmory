@@ -12,12 +12,18 @@ class OptionsViewController: UIViewController {
 
     @IBOutlet weak var backgroundNumber: UILabel!
     @IBOutlet weak var backgroundOptionsCardImage: UIImageView!
+    
     @IBOutlet weak var fontOptionsCardImage: UIImageView!
     @IBOutlet var fontOptionsLabelsCollection: [UILabel]!
-    
     @IBOutlet weak var fontRZipper: UISlider!
     @IBOutlet weak var fontGZipper: UISlider!
     @IBOutlet weak var fontBZipper: UISlider!
+    
+    @IBOutlet var frontCardLabelsOnElement: [UILabel]!
+    @IBOutlet weak var frontElementView: UIView!
+    @IBOutlet weak var frontCardRZipper: UISlider!
+    @IBOutlet weak var frontCardGZipper: UISlider!
+    @IBOutlet weak var frontCardBZipper: UISlider!
     
     @IBOutlet weak var hintCardImage: UIImageView!
     @IBOutlet weak var hintCardView: UIView!
@@ -28,7 +34,6 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var saveButtonYes: UIButton!
     @IBOutlet weak var saveButonNo: UIButton!
     
-  
     // backup copy of setings
     
     var backup_cardBackgroundIsWhite: Bool = true
@@ -55,6 +60,10 @@ class OptionsViewController: UIViewController {
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
         
         backgroundNumber.text = String(backgroundPictureNumber)
+        
+        //Front card color Button round
+        frontElementView.layer.cornerRadius = saveButonNo.frame.height * 0.2
+        
         // Save buttons round
         saveButtonYes.layer.cornerRadius = saveButtonYes.frame.height / 2
         saveButonNo.layer.cornerRadius = saveButonNo.frame.height / 2
@@ -90,6 +99,23 @@ class OptionsViewController: UIViewController {
         setFontsColor()
         takeActualFontColor()
     }
+    
+    //Front Card Color Options
+    
+    @IBAction func frontCardRZipperAction(_ sender: Any) {
+        setBackgroundColor()
+    }
+    
+    @IBAction func frontCardGZipperAction(_ sender: Any) {
+        setBackgroundColor()
+    }
+    
+    @IBAction func frontCardBZipperAction(_ sender: Any) {
+        setBackgroundColor()
+    }
+    
+    
+    
     
     //Hint Options
     
@@ -179,6 +205,13 @@ class OptionsViewController: UIViewController {
         for label in fontOptionsLabelsCollection {
             label.textColor = UIColor(red: CGFloat(fontRZipper.value/255), green: CGFloat(fontGZipper.value/255), blue: CGFloat(fontBZipper.value/255), alpha: 1.0)
         }
+        for label in frontCardLabelsOnElement {
+            label.textColor = UIColor(red: CGFloat(fontRZipper.value/255), green: CGFloat(fontGZipper.value/255), blue: CGFloat(fontBZipper.value/255), alpha: 1.0)
+        }
+    }
+    
+    func setBackgroundColor() {
+        frontElementView.backgroundColor = UIColor(red: CGFloat(frontCardRZipper.value/255), green: CGFloat(frontCardGZipper.value/255), blue: CGFloat(frontCardBZipper.value/255), alpha: 1.0)
     }
     
     //fontRZipper
