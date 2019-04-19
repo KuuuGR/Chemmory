@@ -226,7 +226,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
     
     func colorFontsOnCard() {
         for label in elementFontLabels {
-            label.textColor = UIColor(red: CGFloat(cardFontsColor[0]), green: CGFloat(cardFontsColor[1]), blue: CGFloat(cardFontsColor[2]), alpha: 1.0)
+            label.textColor = UIColor(red: CGFloat(globalSettings.cardFontsColorRed), green: CGFloat(globalSettings.cardFontsColorGreen), blue: CGFloat(globalSettings.cardFontsColorBlue), alpha: 1.0)
         }
         
     }

@@ -30,25 +30,16 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var hintForegroundButton: UIButton!
     @IBOutlet var hintButtonsOnElement: [UIButton]!
     
-    
     @IBOutlet weak var saveButtonYes: UIButton!
     @IBOutlet weak var saveButonNo: UIButton!
     
-    // backup copy of setings
-    
-    var backup_cardBackgroundIsWhite: Bool = true
-    var backup_backgroundPictureNumber: Int = 0
-    var backup_showHintUserSelect: String = ""
-    var backup_cardFontsColor: [Float] = [0,0,0]
+    let backupGlobalSettings = UserSettings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set backup Options
-        backup_cardBackgroundIsWhite = cardBackgroundIsWhite
-        backup_backgroundPictureNumber = backgroundPictureNumber
-        backup_showHintUserSelect = showHintUserSelect
-        backup_cardFontsColor = cardFontsColor
+         // backup copy of setings
+        copyMySetingsTo(target: backupGlobalSettings)
         
         markCurrentSetHint()
         markActualFontColor()
@@ -90,16 +81,16 @@ class OptionsViewController: UIViewController {
     
     @IBAction func fontRZipperAction(_ sender: Any) {
         setFontsColor()
-        cardFontsColor[0] = fontRZipper.value
+        globalSettings.cardFontsColorRed = fontRZipper.value
     }
     @IBAction func fontGZipperAction(_ sender: Any) {
         setFontsColor()
-        cardFontsColor[1] = fontGZipper.value
+        globalSettings.cardFontsColorGreen = fontGZipper.value
     }
     
     @IBAction func fontBZipperAction(_ sender: Any) {
         setFontsColor()
-        cardFontsColor[2] = fontBZipper.value
+        globalSettings.cardFontsColorBlue = fontBZipper.value
     }
     
     //Front Card Color Options
@@ -181,10 +172,12 @@ class OptionsViewController: UIViewController {
     }
     
     @IBAction func cancelSaveAndQuit(_ sender: UIButton) {
-         cardBackgroundIsWhite = backup_cardBackgroundIsWhite
-         backgroundPictureNumber = backup_backgroundPictureNumber
-         showHintUserSelect = backup_showHintUserSelect
-         cardFontsColor = backup_cardFontsColor
+        
+//         cardBackgroundIsWhite = backup_cardBackgroundIsWhite
+//         backgroundPictureNumber = backup_backgroundPictureNumber
+//         showHintUserSelect = backup_showHintUserSelect
+//         cardFontsColor = backup_cardFontsColor
+        globalSettings = backupGlobalSettings
     
         self.navigationController?.popViewController(animated: true)
     }
@@ -206,10 +199,10 @@ class OptionsViewController: UIViewController {
 
     func setFontsColor(){
         for label in fontOptionsLabelsCollection {
-            label.textColor = UIColor(red: CGFloat(fontRZipper.value), green: CGFloat(fontGZipper.value), blue: CGFloat(fontBZipper.value), alpha: 1.0)
+            label.textColor = UIColor(red: CGFloat(globalSettings.cardFontsColorRed), green: CGFloat(globalSettings.cardFontsColorGreen), blue: CGFloat(globalSettings.cardFontsColorBlue), alpha: 1.0)
         }
         for label in frontCardLabelsOnElement {
-            label.textColor = UIColor(red: CGFloat(fontRZipper.value), green: CGFloat(fontGZipper.value), blue: CGFloat(fontBZipper.value), alpha: 1.0)
+            label.textColor = UIColor(red: CGFloat(globalSettings.cardFontsColorRed), green: CGFloat(globalSettings.cardFontsColorGreen), blue: CGFloat(globalSettings.cardFontsColorBlue), alpha: 1.0)
         }
     }
     
@@ -221,12 +214,11 @@ class OptionsViewController: UIViewController {
     
       func markActualFontColor(){
         
-        fontRZipper.value = cardFontsColor[0]
-        fontGZipper.value = cardFontsColor[1]
-        fontBZipper.value = cardFontsColor[2]
+        fontRZipper.value = globalSettings.cardFontsColorRed
+        fontGZipper.value = globalSettings.cardFontsColorGreen
+        fontBZipper.value = globalSettings.cardFontsColorBlue
         
         setFontsColor()
-        
     }
     
     //front card color Zippers
@@ -279,6 +271,21 @@ class OptionsViewController: UIViewController {
             hintCardView.backgroundColor = UIColor.white
         }
         
+    }
+    
+    func copyMySetingsTo(target: UserSettings ){
+        
+        target.cardForegroundColorIsCustom = globalSettings.cardForegroundColorIsCustom
+        target.backgroundPictureNumber = globalSettings.backgroundPictureNumber
+        target.gameBackgroundPictureNumber = globalSettings.gameBackgroundPictureNumber
+        target.showHintUserSelect = globalSettings.showHintUserSelect
+        target.languageChosen = globalSettings.languageChosen
+        target.cardFontsColorRed = globalSettings.cardFontsColorRed
+        target.cardFontsColorGreen = globalSettings.cardFontsColorGreen
+        target.cardFontsColorBlue = globalSettings.cardFontsColorBlue
+        target.cardFrontColorRed = globalSettings.cardFrontColorRed
+        target.cardFrontColorGreen = globalSettings.cardFrontColorGreen
+        target.cardFrontColorBlue = globalSettings.cardFrontColorBlue
     }
     
     
