@@ -25,6 +25,9 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var frontCardGZipper: UISlider!
     @IBOutlet weak var frontCardBZipper: UISlider!
     
+    @IBOutlet weak var backgroundPictureInOptions: UIImageView!
+    @IBOutlet weak var backgroundPictureNumberLabel: UILabel!
+    
     @IBOutlet weak var hintCardImage: UIImageView!
     @IBOutlet weak var hintCardView: UIView!
     @IBOutlet weak var hintForegroundButton: UIButton!
@@ -39,7 +42,7 @@ class OptionsViewController: UIViewController {
         super.viewDidLoad()
         
          // backup copy of setings
-        copyMySetingsTo(target: backupGlobalSettings)
+       globalSettings.copyMySetingsTo(target: backupGlobalSettings)
         
         markCurrentSetHint()
         markActualFontColor()
@@ -49,13 +52,17 @@ class OptionsViewController: UIViewController {
 
         
         // Card Background Images
-        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
+        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundCardPictureNumber)")
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
         
-        backgroundNumber.text = String(backgroundPictureNumber)
+        backgroundNumber.text = String(backgroundCardPictureNumber)
         
         //Front card color Button round
         frontElementView.layer.cornerRadius = saveButonNo.frame.height * 0.2
+        
+        //BackgroundImage
+        backgroundPictureNumberLabel.text = String(backgroundPictureNumber)
+        backgroundPictureInOptions.image = UIImage(named: "BackPT\(backgroundPictureNumber)")
         
         // Save buttons round
         saveButtonYes.layer.cornerRadius = saveButtonYes.frame.height / 2
@@ -67,7 +74,7 @@ class OptionsViewController: UIViewController {
        
     }
     
-    //Background Options
+    //Card background Options
     
     @IBAction func dcsImageNrButtonTapped(_ sender: UIButton) {
         changeCardBackPicture(increasing: false)
@@ -77,7 +84,7 @@ class OptionsViewController: UIViewController {
         changeCardBackPicture(increasing: true)
     }
     
-    //Fonts Options
+    //Fonts color Options
     
     @IBAction func fontRZipperAction(_ sender: Any) {
         setFontsColor()
@@ -108,6 +115,18 @@ class OptionsViewController: UIViewController {
     @IBAction func frontCardBZipperAction(_ sender: Any) {
         setForegroundCardColor()
         globalSettings.cardFrontColorBlue = frontCardBZipper.value
+    }
+    
+    // Game Bcakground
+    
+    @IBAction func changeBackgroundButtonPush(_ sender: UIButton) {
+        if (sender.tag == 1), (backgroundPictureNumber > 0) {
+            backgroundPictureNumber -= 1
+        } else if (sender.tag == 2), (backgroundPictureNumber < 22) {
+            backgroundPictureNumber += 1
+        }
+        backgroundPictureNumberLabel.text = String(backgroundPictureNumber)
+        backgroundPictureInOptions.image = UIImage(named: "BackPT\(backgroundPictureNumber)")
     }
     
     
@@ -186,13 +205,13 @@ class OptionsViewController: UIViewController {
     
     func changeCardBackPicture(increasing: Bool) {
         
-        if (backgroundPictureNumber < 117), increasing  {
-            backgroundPictureNumber += 1
-        } else if (backgroundPictureNumber > 0 ), !increasing {
-            backgroundPictureNumber -= 1
+        if (backgroundCardPictureNumber < 117), increasing  {
+            backgroundCardPictureNumber += 1
+        } else if (backgroundCardPictureNumber > 0 ), !increasing {
+            backgroundCardPictureNumber -= 1
         }
-        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundPictureNumber)")
-        backgroundNumber.text = String(backgroundPictureNumber)
+        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundCardPictureNumber)")
+        backgroundNumber.text = String(backgroundCardPictureNumber)
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
         hintCardImage.image = backgroundOptionsCardImage.image
     }
@@ -273,20 +292,7 @@ class OptionsViewController: UIViewController {
         
     }
     
-    func copyMySetingsTo(target: UserSettings ){
-        
-        target.cardForegroundColorIsCustom = globalSettings.cardForegroundColorIsCustom
-        target.backgroundPictureNumber = globalSettings.backgroundPictureNumber
-        target.gameBackgroundPictureNumber = globalSettings.gameBackgroundPictureNumber
-        target.showHintUserSelect = globalSettings.showHintUserSelect
-        target.languageChosen = globalSettings.languageChosen
-        target.cardFontsColorRed = globalSettings.cardFontsColorRed
-        target.cardFontsColorGreen = globalSettings.cardFontsColorGreen
-        target.cardFontsColorBlue = globalSettings.cardFontsColorBlue
-        target.cardFrontColorRed = globalSettings.cardFrontColorRed
-        target.cardFrontColorGreen = globalSettings.cardFrontColorGreen
-        target.cardFrontColorBlue = globalSettings.cardFrontColorBlue
-    }
+
     
     
     

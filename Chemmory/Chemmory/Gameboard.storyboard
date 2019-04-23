@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="BackPT09" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-BQ-Iyb" userLabel="Background">
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="BackPT9" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-BQ-Iyb" userLabel="Background">
                                 <rect key="frame" x="20" y="0.0" width="627" height="375"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-gN-M1y" userLabel="ControlBar">
@@ -172,7 +172,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackPT09" width="1365" height="732"/>
+        <image name="BackPT9" width="1365" height="732"/>
         <image name="ReloadArrow" width="520" height="520"/>
         <image name="leftArrow4" width="380" height="380"/>
         <image name="rightArrow1" width="400" height="400"/>

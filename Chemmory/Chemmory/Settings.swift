@@ -10,7 +10,8 @@ import RealmSwift
 
 let lifeBarScotchAmmount: Int = 57
 var cardBackgroundIsWhite: Bool = true
-var backgroundPictureNumber = Int.random(in: 0...117) // 0 - 1017
+var backgroundCardPictureNumber = Int.random(in: 0...117) // 0 - 117
+var backgroundPictureNumber = Int.random(in: 0...22) //0 - 22
 var showHintUserSelect: String = "name" //mass,valence,number,symbol
 
 class UserSettings: Object {
@@ -29,6 +30,20 @@ class UserSettings: Object {
     @objc dynamic var  cardFrontColorGreen: Float = 1
     @objc dynamic var  cardFrontColorBlue: Float = 1
     
+    func copyMySetingsTo(target: UserSettings ){
+        
+        target.cardForegroundColorIsCustom = globalSettings.cardForegroundColorIsCustom
+        target.backgroundPictureNumber = globalSettings.backgroundPictureNumber
+        target.gameBackgroundPictureNumber = globalSettings.gameBackgroundPictureNumber
+        target.showHintUserSelect = globalSettings.showHintUserSelect
+        target.languageChosen = globalSettings.languageChosen
+        target.cardFontsColorRed = globalSettings.cardFontsColorRed
+        target.cardFontsColorGreen = globalSettings.cardFontsColorGreen
+        target.cardFontsColorBlue = globalSettings.cardFontsColorBlue
+        target.cardFrontColorRed = globalSettings.cardFrontColorRed
+        target.cardFrontColorGreen = globalSettings.cardFrontColorGreen
+        target.cardFrontColorBlue = globalSettings.cardFrontColorBlue
+    }
 }
 
 var globalSettings = UserSettings()

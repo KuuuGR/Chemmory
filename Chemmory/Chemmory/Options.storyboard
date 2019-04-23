@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackPT01" translatesAutoresizingMaskIntoConstraints="NO" id="tQN-sh-jV2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackPT1" translatesAutoresizingMaskIntoConstraints="NO" id="tQN-sh-jV2">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="2000"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-ft-QIz">
@@ -421,7 +421,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQA-vx-fRi" userLabel="Game Background Options">
                                                         <rect key="frame" x="36.666666666666686" y="940" width="662.66666666666652" height="300"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackPT09" translatesAutoresizingMaskIntoConstraints="NO" id="mrp-hx-jfo">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackPT9" translatesAutoresizingMaskIntoConstraints="NO" id="mrp-hx-jfo">
                                                                 <rect key="frame" x="151.33333333333337" y="60" width="360" height="180"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="mrp-hx-jfo" secondAttribute="height" multiplier="2:1" id="vLc-Zg-kvz"/>
@@ -433,24 +433,24 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVu-6y-Zef">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVu-6y-Zef">
                                                                 <rect key="frame" x="10" y="105" width="90" height="90"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="sVu-6y-Zef" secondAttribute="height" multiplier="1:1" id="JjI-Yx-Cvm"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="leftArrow2"/>
                                                                 <connections>
-                                                                    <action selector="dcsImageNrButtonTapped:" destination="2Cc-fd-noi" eventType="touchUpInside" id="dQ9-Zs-qd4"/>
+                                                                    <action selector="changeBackgroundButtonPush:" destination="2Cc-fd-noi" eventType="touchUpInside" id="xKH-Tz-Rxp"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFr-G1-1dM">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFr-G1-1dM">
                                                                 <rect key="frame" x="562.66666666666674" y="105" width="90" height="90"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="BFr-G1-1dM" secondAttribute="height" multiplier="1:1" id="mtj-H4-0ef"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="rightArrow1"/>
                                                                 <connections>
-                                                                    <action selector="incImageNrButtonTapped:" destination="2Cc-fd-noi" eventType="touchUpInside" id="1V8-lV-TA9"/>
+                                                                    <action selector="changeBackgroundButtonPush:" destination="2Cc-fd-noi" eventType="touchUpInside" id="Vqg-xx-F3V"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="103" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBb-4w-Msg">
@@ -737,6 +737,8 @@
                     <connections>
                         <outlet property="backgroundNumber" destination="NBV-pl-W0u" id="Fi2-7t-5El"/>
                         <outlet property="backgroundOptionsCardImage" destination="oRA-ae-Z3o" id="zPf-CX-Q2c"/>
+                        <outlet property="backgroundPictureInOptions" destination="mrp-hx-jfo" id="c2V-4S-nge"/>
+                        <outlet property="backgroundPictureNumberLabel" destination="CBb-4w-Msg" id="iPS-0G-9ha"/>
                         <outlet property="fontBZipper" destination="5E5-gg-ivv" id="ABo-pK-PiC"/>
                         <outlet property="fontGZipper" destination="Hox-n4-yrh" id="sPv-44-afF"/>
                         <outlet property="fontOptionsCardImage" destination="MYB-6w-zeN" id="r3Q-0Q-Ubz"/>
@@ -773,8 +775,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackPT01" width="1000" height="350"/>
-        <image name="BackPT09" width="1365" height="732"/>
+        <image name="BackPT1" width="1000" height="350"/>
+        <image name="BackPT9" width="1365" height="732"/>
         <image name="CardBack33" width="240" height="240"/>
         <image name="CardBack34" width="240" height="240"/>
         <image name="CheckmarkSymbolCheckedWhite" width="212" height="200"/>

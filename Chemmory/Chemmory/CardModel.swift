@@ -36,7 +36,7 @@ class CardModel {
              
                 //Create the first card object
                 let cardOne = Card()
-                cardOne.imageBackName = "CardBack\(backgroundPictureNumber)"
+                cardOne.imageBackName = "CardBack\(backgroundCardPictureNumber)"
                 cardOne.isCardOne = true
                 for element in elements {
                     if element.atomicNumber == randomNumber {
@@ -55,7 +55,7 @@ class CardModel {
                 
                 // Create the second card object
                 let cardTwo = Card()
-                cardTwo.imageBackName = "CardBack\(backgroundPictureNumber)"
+                cardTwo.imageBackName = "CardBack\(backgroundCardPictureNumber)"
                 cardTwo.isCardOne = false
                 for element in elements {
                     if element.atomicNumber == randomNumber {
