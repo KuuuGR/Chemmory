@@ -65,7 +65,6 @@ class OptionsViewController: UIViewController {
             }
         }
 */
-        
         markCurrentSetHint()
         markActualFontColor()
         markActualFrontCardColor()
