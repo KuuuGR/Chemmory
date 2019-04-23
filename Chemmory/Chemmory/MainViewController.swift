@@ -119,14 +119,87 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-   /*     // Add result to database
+       
+        // Check is options database exist
         let realm = try! Realm()
-        try! realm.write {
-            realm.add(globalSettings)
+        
+        func objectExists(id: Int) -> Bool {
+            return realm.object(ofType: UserSettings.self, forPrimaryKey: id) != nil
         }
+        if objectExists(id: 0) == true {
+        //Set options from Database
+            
+            let realm = try! Realm()
+            
+            let grabOptions = realm.objects(UserSettings.self)
+            
+            globalSettings.backgroundPictureNumber = grabOptions[0].backgroundPictureNumber
+            globalSettings.cardForegroundColorIsCustom = grabOptions[0].cardForegroundColorIsCustom
+            globalSettings.backgroundPictureNumber = grabOptions[0].backgroundPictureNumber
+            globalSettings.gameBackgroundPictureNumber = grabOptions[0].gameBackgroundPictureNumber
+            globalSettings.showHintUserSelect = grabOptions[0].showHintUserSelect
+            globalSettings.languageChosen = grabOptions[0].languageChosen
+            //fonts zippers:
+            globalSettings.cardFontsColorRed = grabOptions[0].cardFontsColorRed
+            globalSettings.cardFontsColorGreen = grabOptions[0].cardFontsColorGreen
+            globalSettings.cardFontsColorBlue = grabOptions[0].cardFontsColorBlue
+            //zippers foreground card:
+            globalSettings.cardFrontColorRed = grabOptions[0].cardFrontColorRed
+            globalSettings.cardFrontColorGreen = grabOptions[0].cardFrontColorGreen
+            globalSettings.cardFrontColorBlue = grabOptions[0].cardFrontColorBlue
+  
+            
+        } else if objectExists(id: 0) == false {
+            print("zakładam bazę danych")
+            try! realm.write {
+                realm.add(globalSettings)
+            }
+        }
+        //print("takie o zwracam: \(objectExists(id: 0))")
+        
+//        let realm = try! Realm()
+//        try! realm.write {
+//            realm.add(globalSettings)
+//        }
+        
+//            if let actualGameSettings = realm.objects(globalSettings)
+//            {
+//            realm.add(globalSettings, update: true)
+//           // realm.add(globalSettings)
+//            }
+
+            
+            // Check for specific object with primary key
+            
+//            func objectExist (id: String) -> Bool {
+//                return realm.object(ofType: UserSettings.self, forPrimaryKey: id) != nil
+//            }
+            
+            // Returns true or false
+//            print(objectExist(id: "1"))
+            
+            
+
+        //}
         print("Realm save youre options at: ")
         print(Realm.Configuration.defaultConfiguration.fileURL as Any)
-  */
+
+  
+        
+        /*
+        /////////////
+        let workouts = realm.objects(WorkoutsCount.self).filter("date = %@", removeTodaysItem)
+        
+        let realm = try! Realm()
+        if let workout = workouts.first {
+            try! realm.write {
+                workout.date = today
+                workout.count = plusOne
+            }
+        }
+        ////////////
+        */
+        
         prepareButton(button: c_cardButton)
         prepareButton(button: he_cardButton)
         prepareButton(button: m_cardButton)
@@ -186,6 +259,7 @@ class MainViewController: UIViewController {
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    
     
 }
 

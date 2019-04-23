@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class OptionsViewController: UIViewController {
 
@@ -43,6 +44,27 @@ class OptionsViewController: UIViewController {
         
          // backup copy of setings
        globalSettings.copyMySetingsTo(target: backupGlobalSettings)
+        
+        // save options to database
+/*
+            let realm = try! Realm()
+        
+        func objectExists(id: Int) -> Bool {
+            return realm.object(ofType: UserSettings.self, forPrimaryKey: id) != nil
+        }
+        if objectExists(id: 0) {
+            print("baza danych już istnieje")
+            try! realm.write {
+                realm.add(globalSettings, update: true)
+            }
+            
+        } else if objectExists(id: 0) == false {
+            print("zakładam bazę danych")
+            try! realm.write {
+                realm.add(globalSettings)
+            }
+        }
+*/
         
         markCurrentSetHint()
         markActualFontColor()
@@ -187,8 +209,19 @@ class OptionsViewController: UIViewController {
     //Save Options
     
     @IBAction func saveAndQuit(_ sender: Any) {
+    
+        //update settings database
+
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(globalSettings, update: true)
+        }
+
+        //back to main view
         self.navigationController?.popViewController(animated: true)
-    }
+
+         }
+
     
     @IBAction func cancelSaveAndQuit(_ sender: UIButton) {
         

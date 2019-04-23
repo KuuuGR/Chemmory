@@ -218,7 +218,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         case 10:
             cardViewColor = UIColor.chNobelGasses
         default:
-            cardViewColor = UIColor(red: CGFloat(globalSettings.cardFrontColorRed), green: CGFloat(globalSettings.cardFrontColorGreen), blue: CGFloat(globalSettings.cardFrontColorBlue), alpha: 1.0) 
+            cardViewColor = UIColor(red: CGFloat(globalSettings.cardFrontColorRed), green: CGFloat(globalSettings.cardFrontColorGreen), blue: CGFloat(globalSettings.cardFrontColorBlue), alpha: 1.0)
         }
         
         return cardViewColor
@@ -230,6 +230,5 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         }
         
     }
-    
     
 }

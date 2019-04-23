@@ -16,6 +16,7 @@ var showHintUserSelect: String = "name" //mass,valence,number,symbol
 
 class UserSettings: Object {
     
+    @objc dynamic var id: Int = 0
     @objc dynamic var cardForegroundColorIsCustom: Bool = true
     @objc dynamic var backgroundPictureNumber: Int = 0
     @objc dynamic var gameBackgroundPictureNumber: Int = 0
@@ -29,6 +30,10 @@ class UserSettings: Object {
     @objc dynamic var  cardFrontColorRed: Float = 1
     @objc dynamic var  cardFrontColorGreen: Float = 1
     @objc dynamic var  cardFrontColorBlue: Float = 1
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
     
     func copyMySetingsTo(target: UserSettings ){
         
