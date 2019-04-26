@@ -22,7 +22,6 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var goNextBigButton: UIButton!
     @IBOutlet weak var reloadBigButton: UIButton!
     
-    
     var model = CardModel()
     var cardArray = [Card]()
     

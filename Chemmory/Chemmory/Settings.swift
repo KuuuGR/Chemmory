@@ -9,18 +9,16 @@ import Foundation
 import RealmSwift
 
 let lifeBarScotchAmmount: Int = 57
-//var cardBackgroundIsWhite: Bool = true
-//var backgroundCardPictureNumber = Int.random(in: 0...117) // 0 - 117
-//var backgroundPictureNumber = Int.random(in: 0...22) //0 - 22
-//var showHintUserSelect: String = "name" //mass,valence,number,symbol
+let maxBackgroundCardPictureNumber = 117
+let maxGameBackgroundPictureNumber = 22
 
-class UserSettings: Object {
+class UserGameSettings: Object {
     
     @objc dynamic var id: Int = 0
     @objc dynamic var cardForegroundColorIsCustom: Bool = true
     @objc dynamic var backgroundCardPictureNumber: Int = 0
     @objc dynamic var gameBackgroundPictureNumber: Int = 0
-    @objc dynamic var showHintUserSelect: String = ""
+    @objc dynamic var showHintUserSelect: String = "name" //name,mass,valence,number,symbol
     @objc dynamic var  languageChosen: String = ""
     //fonts zippers:
     @objc dynamic var  cardFontsColorRed: Float = 0
@@ -35,20 +33,21 @@ class UserSettings: Object {
         return "id"
     }
     
-    func copyMySetingsTo(target: UserSettings ){
+    func copyUserGameSetings(from: UserGameSettings, to: UserGameSettings){
         
-        target.cardForegroundColorIsCustom = globalSettings.cardForegroundColorIsCustom
-        target.backgroundCardPictureNumber = globalSettings.backgroundCardPictureNumber
-        target.gameBackgroundPictureNumber = globalSettings.gameBackgroundPictureNumber
-        target.showHintUserSelect = globalSettings.showHintUserSelect
-        target.languageChosen = globalSettings.languageChosen
-        target.cardFontsColorRed = globalSettings.cardFontsColorRed
-        target.cardFontsColorGreen = globalSettings.cardFontsColorGreen
-        target.cardFontsColorBlue = globalSettings.cardFontsColorBlue
-        target.cardFrontColorRed = globalSettings.cardFrontColorRed
-        target.cardFrontColorGreen = globalSettings.cardFrontColorGreen
-        target.cardFrontColorBlue = globalSettings.cardFrontColorBlue
+        to.cardForegroundColorIsCustom = from.cardForegroundColorIsCustom
+        to.backgroundCardPictureNumber = from.backgroundCardPictureNumber
+        to.gameBackgroundPictureNumber = from.gameBackgroundPictureNumber
+        to.showHintUserSelect = from.showHintUserSelect
+        to.languageChosen = from.languageChosen
+        to.cardFontsColorRed = from.cardFontsColorRed
+        to.cardFontsColorGreen = from.cardFontsColorGreen
+        to.cardFontsColorBlue = from.cardFontsColorBlue
+        to.cardFrontColorRed = from.cardFrontColorRed
+        to.cardFrontColorGreen = from.cardFrontColorGreen
+        to.cardFrontColorBlue = from.cardFrontColorBlue
     }
 }
 
-var globalSettings = UserSettings()
+var globalSettings = UserGameSettings()
+var tempSettings = UserGameSettings()
