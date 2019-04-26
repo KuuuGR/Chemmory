@@ -36,7 +36,7 @@ class CardModel {
              
                 //Create the first card object
                 let cardOne = Card()
-                cardOne.imageBackName = "CardBack\(backgroundCardPictureNumber)"
+                cardOne.imageBackName = "CardBack\(globalSettings.backgroundCardPictureNumber)"
                 cardOne.isCardOne = true
                 for element in elements {
                     if element.atomicNumber == randomNumber {
@@ -45,7 +45,7 @@ class CardModel {
                         cardOne.elementNumber = element.atomicNumber
                         cardOne.elementSybmol = element.symbol
                         cardOne.elementValence = element.valence
-                        cardBackgroundIsWhite == true ? (cardOne.elementGrup = 11) : (cardOne.elementGrup = element.group)
+                        globalSettings.cardForegroundColorIsCustom == true ? (cardOne.elementGrup = 11) : (cardOne.elementGrup = element.group)
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }
@@ -55,7 +55,7 @@ class CardModel {
                 
                 // Create the second card object
                 let cardTwo = Card()
-                cardTwo.imageBackName = "CardBack\(backgroundCardPictureNumber)"
+                cardTwo.imageBackName = "CardBack\(globalSettings.backgroundCardPictureNumber)"
                 cardTwo.isCardOne = false
                 for element in elements {
                     if element.atomicNumber == randomNumber {
@@ -65,7 +65,7 @@ class CardModel {
                         cardTwo.elementSybmol = element.symbol
                         cardTwo.elementValence = element.valence
                         cardTwo.elementGrup = element.group
-                        cardBackgroundIsWhite == true ? (cardTwo.elementGrup = 11) : (cardTwo.elementGrup = element.group)
+                        globalSettings.cardForegroundColorIsCustom == true ? (cardTwo.elementGrup = 11) : (cardTwo.elementGrup = element.group)
                         // TODO: Make "bold part of string" if element rare and common
                         break
                     }

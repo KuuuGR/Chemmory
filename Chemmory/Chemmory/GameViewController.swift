@@ -59,7 +59,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backgroundImage.image = UIImage.init(imageLiteralResourceName: "BackPT\(backgroundPictureNumber)")
+        backgroundImage.image = UIImage.init(imageLiteralResourceName: "BackPT\(globalSettings.gameBackgroundPictureNumber)")
         
         goNextBigButton.isHidden = true
         reloadBigButton.isHidden = true

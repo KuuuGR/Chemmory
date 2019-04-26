@@ -133,9 +133,9 @@ class MainViewController: UIViewController {
             
             let grabOptions = realm.objects(UserSettings.self)
             
-            globalSettings.backgroundPictureNumber = grabOptions[0].backgroundPictureNumber
+            globalSettings.backgroundCardPictureNumber = grabOptions[0].backgroundCardPictureNumber
             globalSettings.cardForegroundColorIsCustom = grabOptions[0].cardForegroundColorIsCustom
-            globalSettings.backgroundPictureNumber = grabOptions[0].backgroundPictureNumber
+            globalSettings.backgroundCardPictureNumber = grabOptions[0].backgroundCardPictureNumber
             globalSettings.gameBackgroundPictureNumber = grabOptions[0].gameBackgroundPictureNumber
             globalSettings.showHintUserSelect = grabOptions[0].showHintUserSelect
             globalSettings.languageChosen = grabOptions[0].languageChosen

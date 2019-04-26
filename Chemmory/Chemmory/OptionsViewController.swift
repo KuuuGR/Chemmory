@@ -73,17 +73,17 @@ class OptionsViewController: UIViewController {
 
         
         // Card Background Images
-        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundCardPictureNumber)")
+        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(globalSettings.backgroundCardPictureNumber)")
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
         
-        backgroundNumber.text = String(backgroundCardPictureNumber)
+        backgroundNumber.text = String(globalSettings.backgroundCardPictureNumber)
         
         //Front card color Button round
         frontElementView.layer.cornerRadius = saveButonNo.frame.height * 0.2
         
         //BackgroundImage
-        backgroundPictureNumberLabel.text = String(backgroundPictureNumber)
-        backgroundPictureInOptions.image = UIImage(named: "BackPT\(backgroundPictureNumber)")
+        backgroundPictureNumberLabel.text = String(globalSettings.gameBackgroundPictureNumber)
+        backgroundPictureInOptions.image = UIImage(named: "BackPT\(globalSettings.gameBackgroundPictureNumber)")
         
         // Save buttons round
         saveButtonYes.layer.cornerRadius = saveButtonYes.frame.height / 2
@@ -141,18 +141,16 @@ class OptionsViewController: UIViewController {
     // Game Bcakground
     
     @IBAction func changeBackgroundButtonPush(_ sender: UIButton) {
-        if (sender.tag == 1), (backgroundPictureNumber > 0) {
-            backgroundPictureNumber -= 1
-        } else if (sender.tag == 2), (backgroundPictureNumber < 22) {
-            backgroundPictureNumber += 1
+        if (sender.tag == 1), (globalSettings.gameBackgroundPictureNumber > 0) {
+            globalSettings.gameBackgroundPictureNumber -= 1
+        } else if (sender.tag == 2), (globalSettings.gameBackgroundPictureNumber < 22) {
+            globalSettings.gameBackgroundPictureNumber += 1
         }
-        backgroundPictureNumberLabel.text = String(backgroundPictureNumber)
-        backgroundPictureInOptions.image = UIImage(named: "BackPT\(backgroundPictureNumber)")
+        backgroundPictureNumberLabel.text = String(globalSettings.gameBackgroundPictureNumber)
+        backgroundPictureInOptions.image = UIImage(named: "BackPT\(globalSettings.gameBackgroundPictureNumber)")
     }
     
-    
     //Hint Options
-    
     
     @IBAction func hintOnElementButtonPressed(_ sender: UIButton) {
         
@@ -165,41 +163,41 @@ class OptionsViewController: UIViewController {
             for button in hintButtonsOnElement {
                 if button.tag == 1 {
                    button.alpha = 1.0
-                    showHintUserSelect = "number"
+                    globalSettings.showHintUserSelect = "number"
                 }
             }
         case 2:
             for button in hintButtonsOnElement {
                 if button.tag == 2 {
                     button.alpha = 1.0
-                    showHintUserSelect = "valence"
+                    globalSettings.showHintUserSelect = "valence"
                 }
             }
         case 3:
             for button in hintButtonsOnElement {
                 if button.tag == 3 {
                     button.alpha = 1.0
-                    showHintUserSelect = "name"
+                    globalSettings.showHintUserSelect = "name"
                 }
             }
         case 4:
             for button in hintButtonsOnElement {
                 if button.tag == 4 {
                     button.alpha = 1.0
-                    showHintUserSelect = "mass"
+                    globalSettings.showHintUserSelect = "mass"
                 }
             }
         default:
             for button in hintButtonsOnElement {
                 button.alpha = 0.2
-                showHintUserSelect = "symbol"
+                globalSettings.showHintUserSelect = "symbol"
             }
         }
     }
     
     
     @IBAction func hintForegroundButtonPressed(_ sender: Any) {
-        cardBackgroundIsWhite = !cardBackgroundIsWhite
+        globalSettings.cardForegroundColorIsCustom  = !globalSettings.cardForegroundColorIsCustom
         markWhiteForegroundChecked()
         
     }
@@ -210,7 +208,6 @@ class OptionsViewController: UIViewController {
     @IBAction func saveAndQuit(_ sender: Any) {
     
         //update settings database
-
         let realm = try! Realm()
         try! realm.write {
             realm.add(globalSettings, update: true)
@@ -237,13 +234,13 @@ class OptionsViewController: UIViewController {
     
     func changeCardBackPicture(increasing: Bool) {
         
-        if (backgroundCardPictureNumber < 117), increasing  {
-            backgroundCardPictureNumber += 1
-        } else if (backgroundCardPictureNumber > 0 ), !increasing {
-            backgroundCardPictureNumber -= 1
+        if (globalSettings.backgroundCardPictureNumber < 117), increasing  {
+            globalSettings.backgroundCardPictureNumber += 1
+        } else if (globalSettings.backgroundCardPictureNumber > 0 ), !increasing {
+            globalSettings.backgroundCardPictureNumber -= 1
         }
-        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(backgroundCardPictureNumber)")
-        backgroundNumber.text = String(backgroundCardPictureNumber)
+        backgroundOptionsCardImage.image = UIImage(named: "CardBack\(globalSettings.backgroundCardPictureNumber)")
+        backgroundNumber.text = String(globalSettings.backgroundCardPictureNumber)
         fontOptionsCardImage.image = backgroundOptionsCardImage.image
         hintCardImage.image = backgroundOptionsCardImage.image
     }
@@ -288,23 +285,23 @@ class OptionsViewController: UIViewController {
         for button in hintButtonsOnElement {
             switch button.tag {
             case 0:
-                if showHintUserSelect == "symbol" {
+                if globalSettings.showHintUserSelect == "symbol" {
                 button.alpha = 1
                 }
             case 1:
-                if showHintUserSelect == "number" {
+                if globalSettings.showHintUserSelect == "number" {
                 button.alpha = 1
                 }
             case 2:
-                if showHintUserSelect == "valence" {
+                if globalSettings.showHintUserSelect == "valence" {
                 button.alpha = 1
                 }
             case 3:
-                if showHintUserSelect == "name" {
+                if globalSettings.showHintUserSelect == "name" {
                 button.alpha = 1
                 }
             case 4:
-                if showHintUserSelect == "mass" {
+                if globalSettings.showHintUserSelect == "mass" {
                 button.alpha = 1
                 }
             default:
@@ -314,7 +311,7 @@ class OptionsViewController: UIViewController {
     }
     
     func markWhiteForegroundChecked(){
-        if cardBackgroundIsWhite == false {
+        if globalSettings.cardForegroundColorIsCustom == false {
             hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolUncheckedWhite"), for: .normal)
             hintCardView.backgroundColor = UIColor.chMetaloids
         } else {
@@ -323,10 +320,6 @@ class OptionsViewController: UIViewController {
         }
         
     }
-    
-
-    
-    
     
     /*
     // MARK: - Navigation
