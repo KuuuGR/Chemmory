@@ -41,6 +41,8 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var saveButtonYes: UIButton!
     @IBOutlet weak var saveButonNo: UIButton!
     
+    @IBOutlet var OptionsFoldViews: [UIView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +54,7 @@ class OptionsViewController: UIViewController {
         markActualFrontCardColor()
         setForegroundCardColor(view: frontElementView)
         markWhiteForegroundChecked()
+        roundCornersOptionsFoldViews()
 
         // Card Background Images
         backgroundOptionsCardImage.image = UIImage(named: "CardBack\(tempSettings.backgroundCardPictureNumber)")
@@ -74,6 +77,14 @@ class OptionsViewController: UIViewController {
         hintCardImage.image = backgroundOptionsCardImage.image
         hintCardView.layer.cornerRadius = saveButonNo.frame.height * 0.2
        
+    }
+    
+    deinit {
+        fontOptionsLabelsCollection.removeAll()
+        frontCardLabelsOnElement.removeAll()
+        hintButtonsOnElement.removeAll()
+        OptionsFoldViews.removeAll()
+        
     }
     
     //MARK: - Background Options
@@ -304,6 +315,12 @@ class OptionsViewController: UIViewController {
             setForegroundCardColor(view: hintCard04View)
         }
         
+    }
+    
+    func roundCornersOptionsFoldViews(){
+        for fold in OptionsFoldViews {
+            fold.layer.cornerRadius = 10
+        }
     }
     
 

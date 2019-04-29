@@ -908,6 +908,12 @@
                         <outletCollection property="frontCardLabelsOnElement" destination="reY-eG-aVN" collectionClass="NSMutableArray" id="eXW-0d-q1J"/>
                         <outletCollection property="frontCardLabelsOnElement" destination="jpM-wv-qGH" collectionClass="NSMutableArray" id="JkV-yd-gBs"/>
                         <outletCollection property="frontCardLabelsOnElement" destination="n6g-bM-dtu" collectionClass="NSMutableArray" id="PMs-r0-aae"/>
+                        <outletCollection property="OptionsFoldViews" destination="Lkz-MH-hJK" collectionClass="NSMutableArray" id="Djv-74-4cl"/>
+                        <outletCollection property="OptionsFoldViews" destination="siE-rT-h7Z" collectionClass="NSMutableArray" id="Lrd-gn-M6U"/>
+                        <outletCollection property="OptionsFoldViews" destination="p5M-QF-Iae" collectionClass="NSMutableArray" id="Nam-Cn-PW2"/>
+                        <outletCollection property="OptionsFoldViews" destination="gQA-vx-fRi" collectionClass="NSMutableArray" id="Aqw-sp-Jot"/>
+                        <outletCollection property="OptionsFoldViews" destination="x5D-wF-oNg" collectionClass="NSMutableArray" id="Gz0-ul-VkU"/>
+                        <outletCollection property="OptionsFoldViews" destination="7p3-LD-EOH" collectionClass="NSMutableArray" id="cl4-jD-oMl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ct-IY-Dp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
