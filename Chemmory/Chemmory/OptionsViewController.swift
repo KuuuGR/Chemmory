@@ -33,6 +33,10 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var hintCardView: UIView!
     @IBOutlet weak var hintForegroundButton: UIButton!
     @IBOutlet var hintButtonsOnElement: [UIButton]!
+    @IBOutlet weak var hintCard01View: UIView!
+    @IBOutlet weak var hintCard02View: UIView!
+    @IBOutlet weak var hintCard03View: UIView!
+    @IBOutlet weak var hintCard04View: UIView!
     
     @IBOutlet weak var saveButtonYes: UIButton!
     @IBOutlet weak var saveButonNo: UIButton!
@@ -46,7 +50,7 @@ class OptionsViewController: UIViewController {
         markCurrentSetHint()
         markActualFontColor()
         markActualFrontCardColor()
-        setForegroundCardColor()
+        setForegroundCardColor(view: frontElementView)
         markWhiteForegroundChecked()
 
         // Card Background Images
@@ -101,17 +105,17 @@ class OptionsViewController: UIViewController {
     //MARK: - Front Card Color Options
     
     @IBAction func frontCardRZipperAction(_ sender: Any) {
-        setForegroundCardColor()
+        setForegroundCardColor(view: frontElementView)
         tempSettings.cardFrontColorRed = frontCardRZipper.value
     }
     
     @IBAction func frontCardGZipperAction(_ sender: Any) {
-        setForegroundCardColor()
+        setForegroundCardColor(view: frontElementView)
         tempSettings.cardFrontColorGreen = frontCardGZipper.value
     }
     
     @IBAction func frontCardBZipperAction(_ sender: Any) {
-        setForegroundCardColor()
+        setForegroundCardColor(view: frontElementView)
         tempSettings.cardFrontColorBlue = frontCardBZipper.value
     }
     
@@ -222,8 +226,8 @@ class OptionsViewController: UIViewController {
         }
     }
     
-    func setForegroundCardColor() {
-        frontElementView.backgroundColor = UIColor(red: CGFloat(tempSettings.cardFrontColorRed), green: CGFloat(tempSettings.cardFrontColorGreen), blue: CGFloat(tempSettings.cardFrontColorBlue), alpha: 1.0)
+    func setForegroundCardColor(view: UIView) {
+        view.backgroundColor = UIColor(red: CGFloat(tempSettings.cardFrontColorRed), green: CGFloat(tempSettings.cardFrontColorGreen), blue: CGFloat(tempSettings.cardFrontColorBlue), alpha: 1.0)
     }
     
     //MARK: - ZIPPERS
@@ -244,7 +248,11 @@ class OptionsViewController: UIViewController {
         frontCardGZipper.value = tempSettings.cardFrontColorGreen
         frontCardBZipper.value = tempSettings.cardFrontColorBlue
     
-        setForegroundCardColor()
+        setForegroundCardColor(view: frontElementView)
+        setForegroundCardColor(view: hintCard01View)
+        setForegroundCardColor(view: hintCard02View)
+        setForegroundCardColor(view: hintCard03View)
+        setForegroundCardColor(view: hintCard04View)
     }
     
     //MARK: - Hints
@@ -281,9 +289,19 @@ class OptionsViewController: UIViewController {
         if tempSettings.cardForegroundColorIsCustom == false {
             hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolUncheckedWhite"), for: .normal)
             hintCardView.backgroundColor = UIColor.chMetaloids
+            hintCard01View.backgroundColor = UIColor.chNobelGasses
+            hintCard02View.backgroundColor = UIColor.chOtherNonMetals
+            hintCard03View.backgroundColor = UIColor.chTransitionMetals
+            hintCard04View.backgroundColor = UIColor.chHydrogen
+            
         } else {
             hintForegroundButton.setImage(#imageLiteral(resourceName: "CheckmarkSymbolCheckedWhite"), for: .normal)
             hintCardView.backgroundColor = UIColor.white
+            //setForegroundCardColor(view: hintCardView)
+            setForegroundCardColor(view: hintCard01View)
+            setForegroundCardColor(view: hintCard02View)
+            setForegroundCardColor(view: hintCard03View)
+            setForegroundCardColor(view: hintCard04View)
         }
         
     }
