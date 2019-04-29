@@ -77,7 +77,7 @@ class CardModel {
         }
         // Randomize the array
         //return generatedCardsArray.shuffled()   //TTTT -> uncomment this in final version and remove next line
-        return generatedCardsArray
+        return generatedCardsArray.shuffled()
     }
     
 }

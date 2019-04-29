@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 let lifeBarScotchAmmount: Int = 57
-let maxBackgroundCardPictureNumber = 117
+let maxBackgroundCardPictureNumber = 205
 let maxGameBackgroundPictureNumber = 22
 
 class UserGameSettings: Object {
