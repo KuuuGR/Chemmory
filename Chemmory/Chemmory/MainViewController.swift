@@ -145,6 +145,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TODO: make languages set by choosen
+        for i in 0...112 {
+         print("\"\(elements[i].name)\",")
+            
+        }
+        
         setBackgroundCardsImages(bcgImage: #imageLiteral(resourceName: "CurieBack"))
         
         // Check is options database exist
