@@ -19,7 +19,7 @@ class UserGameSettings: Object {
     @objc dynamic var backgroundCardPictureNumber: Int = 0
     @objc dynamic var gameBackgroundPictureNumber: Int = 0
     @objc dynamic var showHintUserSelect: String = "name" //name,mass,valence,number,symbol
-    @objc dynamic var  languageChosen: String = ""
+    @objc dynamic var  languageChosen: String = "EN"
     //fonts zippers:
     @objc dynamic var  cardFontsColorRed: Float = 0
     @objc dynamic var  cardFontsColorGreen: Float = 0

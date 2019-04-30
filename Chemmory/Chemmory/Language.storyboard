@@ -32,29 +32,47 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-Fe-iRn" userLabel="FalgsView">
                                 <rect key="frame" x="50" y="94.333333333333343" width="656" height="289.66666666666663"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZT-bB-Jhp">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZT-bB-Jhp">
                                         <rect key="frame" x="52" y="0.0" width="164" height="115.66666666666667"/>
                                         <state key="normal" image="languagePLflag"/>
+                                        <connections>
+                                            <action selector="flagButtonPressed:" destination="hhb-s9-MPV" eventType="touchUpInside" id="oaq-3u-Qfu"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr7-PL-oXD">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr7-PL-oXD">
                                         <rect key="frame" x="246" y="0.0" width="164" height="115.66666666666667"/>
                                         <state key="normal" image="languageGBflag"/>
+                                        <connections>
+                                            <action selector="flagButtonPressed:" destination="hhb-s9-MPV" eventType="touchUpInside" id="ukl-zZ-MrC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvF-f5-Qse">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvF-f5-Qse">
                                         <rect key="frame" x="440" y="0.0" width="164" height="115.66666666666667"/>
                                         <state key="normal" image="languageRUflag"/>
+                                        <connections>
+                                            <action selector="flagButtonPressed:" destination="hhb-s9-MPV" eventType="touchUpInside" id="vhk-md-bjo"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DK-MO-Qe4">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DK-MO-Qe4">
                                         <rect key="frame" x="52" y="173.66666666666669" width="164" height="116"/>
                                         <state key="normal" image="languageESflag"/>
+                                        <connections>
+                                            <action selector="flagButtonPressed:" destination="hhb-s9-MPV" eventType="touchUpInside" id="0WE-Fa-qxp"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-6s-cX6">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-6s-cX6">
                                         <rect key="frame" x="440" y="173.66666666666669" width="164" height="116"/>
                                         <state key="normal" image="languageDEflag"/>
+                                        <connections>
+                                            <action selector="flagButtonPressed:" destination="hhb-s9-MPV" eventType="touchUpInside" id="vl5-h9-APC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-ga-CTm">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-ga-CTm">
                                         <rect key="frame" x="246" y="173.66666666666669" width="164" height="116"/>
                                         <state key="normal" image="languageFRflag"/>
+                                        <connections>
+                                            <action selector="flagButtonPressed:" destination="hhb-s9-MPV" eventType="touchUpInside" id="Dj9-Rx-S5t"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,14 +103,23 @@
                                     <constraint firstItem="bvF-f5-Qse" firstAttribute="height" secondItem="Pr7-PL-oXD" secondAttribute="height" id="wYd-YR-Wdm"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JoM-3I-cIt">
+                                <rect key="frame" x="80" y="16.000000000000004" width="626" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="M29-bC-HJF" firstAttribute="trailing" secondItem="JoM-3I-cIt" secondAttribute="trailing" constant="30" id="3FH-nh-ntG"/>
+                            <constraint firstItem="JoM-3I-cIt" firstAttribute="leading" secondItem="PRC-i3-dtn" secondAttribute="trailing" constant="10" id="7h4-hP-ugD"/>
                             <constraint firstItem="PRC-i3-dtn" firstAttribute="leading" secondItem="UID-iD-K84" secondAttribute="leading" id="964-Xc-eMq"/>
                             <constraint firstItem="M29-bC-HJF" firstAttribute="trailing" secondItem="cPR-Fe-iRn" secondAttribute="trailing" constant="30" id="LZz-LY-qEf"/>
                             <constraint firstItem="PRC-i3-dtn" firstAttribute="top" secondItem="UID-iD-K84" secondAttribute="top" id="NMT-Qa-K2Q"/>
                             <constraint firstItem="cPR-Fe-iRn" firstAttribute="leading" secondItem="UID-iD-K84" secondAttribute="leadingMargin" constant="30" id="Pe4-Tr-KVl"/>
                             <constraint firstItem="cPR-Fe-iRn" firstAttribute="height" secondItem="UID-iD-K84" secondAttribute="height" multiplier="0.7" id="f53-8U-dUL"/>
+                            <constraint firstItem="JoM-3I-cIt" firstAttribute="centerY" secondItem="PRC-i3-dtn" secondAttribute="centerY" id="uwC-yX-Sch"/>
                             <constraint firstItem="M29-bC-HJF" firstAttribute="bottom" secondItem="cPR-Fe-iRn" secondAttribute="bottom" constant="30" id="zY3-Va-7LL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M29-bC-HJF"/>
