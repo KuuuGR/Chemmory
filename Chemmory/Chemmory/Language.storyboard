@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Language View Controller-->
+        <scene sceneID="Mzm-cY-PJG">
+            <objects>
+                <viewController storyboardIdentifier="LanguageViewController" id="hhb-s9-MPV" customClass="LanguageViewController" customModule="Chemmory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UID-iD-K84">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-i3-dtn" userLabel="BackButton">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="JGS-av-O8e"/>
+                                    <constraint firstAttribute="width" constant="70" id="XhZ-st-3IJ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="leftArrow4"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="hhb-s9-MPV" eventType="touchUpInside" id="Lx8-Jx-AWc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-Fe-iRn" userLabel="FalgsView">
+                                <rect key="frame" x="50" y="94.333333333333343" width="656" height="289.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZT-bB-Jhp">
+                                        <rect key="frame" x="52" y="0.0" width="164" height="115.66666666666667"/>
+                                        <state key="normal" image="languagePLflag"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr7-PL-oXD">
+                                        <rect key="frame" x="246" y="0.0" width="164" height="115.66666666666667"/>
+                                        <state key="normal" image="languageGBflag"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvF-f5-Qse">
+                                        <rect key="frame" x="440" y="0.0" width="164" height="115.66666666666667"/>
+                                        <state key="normal" image="languageRUflag"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DK-MO-Qe4">
+                                        <rect key="frame" x="52" y="173.66666666666669" width="164" height="116"/>
+                                        <state key="normal" image="languageESflag"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-6s-cX6">
+                                        <rect key="frame" x="440" y="173.66666666666669" width="164" height="116"/>
+                                        <state key="normal" image="languageDEflag"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-ga-CTm">
+                                        <rect key="frame" x="246" y="173.66666666666669" width="164" height="116"/>
+                                        <state key="normal" image="languageFRflag"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Pr7-PL-oXD" firstAttribute="width" secondItem="cPR-Fe-iRn" secondAttribute="width" multiplier="0.25" id="1tj-LT-Wjd"/>
+                                    <constraint firstItem="7DK-MO-Qe4" firstAttribute="height" secondItem="xRv-ga-CTm" secondAttribute="height" id="3Xc-w0-LLg"/>
+                                    <constraint firstItem="nde-6s-cX6" firstAttribute="width" secondItem="Pr7-PL-oXD" secondAttribute="width" id="63W-h6-3sr"/>
+                                    <constraint firstItem="Pr7-PL-oXD" firstAttribute="centerX" secondItem="cPR-Fe-iRn" secondAttribute="centerX" id="8aH-Pf-6fP"/>
+                                    <constraint firstItem="Pr7-PL-oXD" firstAttribute="leading" secondItem="dZT-bB-Jhp" secondAttribute="trailing" constant="30" id="BIO-Ie-9Cw"/>
+                                    <constraint firstItem="nde-6s-cX6" firstAttribute="leading" secondItem="xRv-ga-CTm" secondAttribute="trailing" constant="30" id="Djf-Xl-d1S"/>
+                                    <constraint firstItem="7DK-MO-Qe4" firstAttribute="width" secondItem="Pr7-PL-oXD" secondAttribute="width" id="Nes-OP-gae"/>
+                                    <constraint firstItem="Pr7-PL-oXD" firstAttribute="height" secondItem="cPR-Fe-iRn" secondAttribute="height" multiplier="0.4" id="Rg2-uU-JPp"/>
+                                    <constraint firstItem="bvF-f5-Qse" firstAttribute="leading" secondItem="Pr7-PL-oXD" secondAttribute="trailing" constant="30" id="V6v-JN-tx1"/>
+                                    <constraint firstAttribute="bottom" secondItem="xRv-ga-CTm" secondAttribute="bottom" id="VaM-cp-jbe"/>
+                                    <constraint firstItem="dZT-bB-Jhp" firstAttribute="width" secondItem="Pr7-PL-oXD" secondAttribute="width" id="X4c-LF-Sps"/>
+                                    <constraint firstItem="xRv-ga-CTm" firstAttribute="leading" secondItem="7DK-MO-Qe4" secondAttribute="trailing" constant="30" id="XCq-nE-CSp"/>
+                                    <constraint firstItem="bvF-f5-Qse" firstAttribute="centerY" secondItem="Pr7-PL-oXD" secondAttribute="centerY" id="XNp-5E-dv8"/>
+                                    <constraint firstItem="xRv-ga-CTm" firstAttribute="centerX" secondItem="cPR-Fe-iRn" secondAttribute="centerX" id="ZFZ-PR-0oO"/>
+                                    <constraint firstItem="dZT-bB-Jhp" firstAttribute="height" secondItem="Pr7-PL-oXD" secondAttribute="height" id="ZSD-3g-0Gh"/>
+                                    <constraint firstItem="nde-6s-cX6" firstAttribute="height" secondItem="xRv-ga-CTm" secondAttribute="height" id="a76-uh-fVP"/>
+                                    <constraint firstItem="bvF-f5-Qse" firstAttribute="width" secondItem="Pr7-PL-oXD" secondAttribute="width" id="h26-7A-uZm"/>
+                                    <constraint firstItem="7DK-MO-Qe4" firstAttribute="centerY" secondItem="xRv-ga-CTm" secondAttribute="centerY" id="jKi-i1-HnR"/>
+                                    <constraint firstItem="xRv-ga-CTm" firstAttribute="height" secondItem="Pr7-PL-oXD" secondAttribute="height" id="muD-51-XaQ"/>
+                                    <constraint firstItem="Pr7-PL-oXD" firstAttribute="top" secondItem="cPR-Fe-iRn" secondAttribute="top" id="nYV-eO-5aD"/>
+                                    <constraint firstItem="dZT-bB-Jhp" firstAttribute="centerY" secondItem="Pr7-PL-oXD" secondAttribute="centerY" id="qCF-Ss-5Jp"/>
+                                    <constraint firstItem="xRv-ga-CTm" firstAttribute="width" secondItem="Pr7-PL-oXD" secondAttribute="width" id="r78-hb-5f4"/>
+                                    <constraint firstItem="nde-6s-cX6" firstAttribute="centerY" secondItem="xRv-ga-CTm" secondAttribute="centerY" id="ulL-9a-1PK"/>
+                                    <constraint firstItem="bvF-f5-Qse" firstAttribute="height" secondItem="Pr7-PL-oXD" secondAttribute="height" id="wYd-YR-Wdm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PRC-i3-dtn" firstAttribute="leading" secondItem="UID-iD-K84" secondAttribute="leading" id="964-Xc-eMq"/>
+                            <constraint firstItem="M29-bC-HJF" firstAttribute="trailing" secondItem="cPR-Fe-iRn" secondAttribute="trailing" constant="30" id="LZz-LY-qEf"/>
+                            <constraint firstItem="PRC-i3-dtn" firstAttribute="top" secondItem="UID-iD-K84" secondAttribute="top" id="NMT-Qa-K2Q"/>
+                            <constraint firstItem="cPR-Fe-iRn" firstAttribute="leading" secondItem="UID-iD-K84" secondAttribute="leadingMargin" constant="30" id="Pe4-Tr-KVl"/>
+                            <constraint firstItem="cPR-Fe-iRn" firstAttribute="height" secondItem="UID-iD-K84" secondAttribute="height" multiplier="0.7" id="f53-8U-dUL"/>
+                            <constraint firstItem="M29-bC-HJF" firstAttribute="bottom" secondItem="cPR-Fe-iRn" secondAttribute="bottom" constant="30" id="zY3-Va-7LL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M29-bC-HJF"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="languageButtonsCollection" destination="dZT-bB-Jhp" collectionClass="NSMutableArray" id="lOP-jo-479"/>
+                        <outletCollection property="languageButtonsCollection" destination="Pr7-PL-oXD" collectionClass="NSMutableArray" id="MOm-Wk-Llc"/>
+                        <outletCollection property="languageButtonsCollection" destination="bvF-f5-Qse" collectionClass="NSMutableArray" id="Y0I-n3-MYE"/>
+                        <outletCollection property="languageButtonsCollection" destination="7DK-MO-Qe4" collectionClass="NSMutableArray" id="1ph-6w-ghJ"/>
+                        <outletCollection property="languageButtonsCollection" destination="xRv-ga-CTm" collectionClass="NSMutableArray" id="afX-zm-MHQ"/>
+                        <outletCollection property="languageButtonsCollection" destination="nde-6s-cX6" collectionClass="NSMutableArray" id="Mk1-Ee-OWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFc-NR-F9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="languageDEflag" width="150" height="107"/>
+        <image name="languageESflag" width="165" height="118"/>
+        <image name="languageFRflag" width="150" height="107"/>
+        <image name="languageGBflag" width="150" height="108"/>
+        <image name="languagePLflag" width="150" height="107"/>
+        <image name="languageRUflag" width="150" height="105"/>
+        <image name="leftArrow4" width="380" height="380"/>
+    </resources>
+</document>

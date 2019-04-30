@@ -18,8 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackPT1" translatesAutoresizingMaskIntoConstraints="NO" id="tQN-sh-jV2">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackPT1" translatesAutoresizingMaskIntoConstraints="NO" id="tQN-sh-jV2">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="2000"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-ft-QIz">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="2000"/>
@@ -78,7 +79,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.070588235294117646" green="0.29803921568627451" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="fRY-pg-PCG" firstAttribute="top" secondItem="Lkz-MH-hJK" secondAttribute="top" constant="15" id="0ov-nh-IKx"/>
                                                                     <constraint firstItem="NBV-pl-W0u" firstAttribute="centerX" secondItem="oRA-ae-Z3o" secondAttribute="centerX" id="2FR-LO-Rci"/>
@@ -244,7 +245,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.070588235294117646" green="0.29803921568627451" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="QCa-Pq-fuF" firstAttribute="centerY" secondItem="siE-rT-h7Z" secondAttribute="centerY" id="5Bj-vv-fP5"/>
                                                                     <constraint firstItem="b9U-bG-Ond" firstAttribute="top" secondItem="siE-rT-h7Z" secondAttribute="top" constant="15" id="70P-9b-FKL"/>
@@ -411,7 +412,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.070588235294117646" green="0.29803921568627451" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="300" id="3ju-cC-6bc"/>
                                                                     <constraint firstItem="amr-f3-KtD" firstAttribute="top" secondItem="p5M-QF-Iae" secondAttribute="top" constant="15" id="PmO-Bs-Ncs"/>
@@ -468,7 +469,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.070588235294117646" green="0.29803921568627451" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="sVu-6y-Zef" firstAttribute="centerY" secondItem="mrp-hx-jfo" secondAttribute="centerY" id="27g-Rc-nHN"/>
                                                                     <constraint firstItem="4eP-lh-ozt" firstAttribute="top" secondItem="gQA-vx-fRi" secondAttribute="top" constant="15" id="A7u-ks-nIY"/>
@@ -712,7 +713,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.070588235294117646" green="0.29803921568627451" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="VdO-zK-Gae" firstAttribute="top" secondItem="wxK-kL-ET7" secondAttribute="bottom" constant="30" id="3ra-n2-Etj"/>
                                                                     <constraint firstAttribute="trailing" secondItem="qmA-VR-LuY" secondAttribute="trailing" constant="30" id="6ox-q1-5CB"/>
@@ -795,7 +796,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.071883358061313629" green="0.29881981015205383" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="v3m-GT-ZT2" firstAttribute="centerY" secondItem="7p3-LD-EOH" secondAttribute="centerY" id="6Cv-Cy-z4K"/>
                                                                     <constraint firstItem="tFT-iC-cEG" firstAttribute="top" secondItem="v3m-GT-ZT2" secondAttribute="bottom" constant="16" id="9pt-NB-tfw"/>
@@ -837,7 +838,7 @@
                                         </constraints>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="j7O-YB-M9B" firstAttribute="top" secondItem="cGp-ft-QIz" secondAttribute="top" id="BpT-sg-d8R"/>
                                     <constraint firstItem="j7O-YB-M9B" firstAttribute="height" secondItem="cGp-ft-QIz" secondAttribute="height" priority="250" id="FAR-Lj-ADU"/>

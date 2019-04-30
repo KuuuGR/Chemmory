@@ -18,6 +18,8 @@
 		2235CF60225F387A00A334D4 /* plum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5E225F387A00A334D4 /* plum.wav */; };
 		2235CF61225F387A00A334D4 /* puck.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5F225F387A00A334D4 /* puck.wav */; };
 		2235CF63225F3CA500A334D4 /* boom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF62225F3CA500A334D4 /* boom.wav */; };
+		223FEF1B22783DE300B9876F /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223FEF1A22783DE300B9876F /* Language.storyboard */; };
+		223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FEF1C22783E2D00B9876F /* LanguageViewController.swift */; };
 		22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE12229305D0026FC5D /* Gameboard.storyboard */; };
 		228203962248CC8900CFFFB9 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228203952248CC8900CFFFB9 /* Elements.swift */; };
 		22957C222233B688009AF033 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22957C212233B688009AF033 /* Results.storyboard */; };
@@ -64,6 +66,8 @@
 		2235CF5E225F387A00A334D4 /* plum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = plum.wav; sourceTree = "<group>"; };
 		2235CF5F225F387A00A334D4 /* puck.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = puck.wav; sourceTree = "<group>"; };
 		2235CF62225F3CA500A334D4 /* boom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom.wav; sourceTree = "<group>"; };
+		223FEF1A22783DE300B9876F /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
+		223FEF1C22783E2D00B9876F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		228203952248CC8900CFFFB9 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		22957C212233B688009AF033 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		22957C232233B7BD009AF033 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				22FA5AE7222961090026FC5D /* Card.swift */,
 				229934152231123A000E7851 /* SoundManager.swift */,
 				22240530223BA0BE008FCC4C /* Settings.swift */,
+				223FEF1C22783E2D00B9876F /* LanguageViewController.swift */,
+				223FEF1A22783DE300B9876F /* Language.storyboard */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
 				229A695D226493FF009A049B /* Options.storyboard */,
 				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
@@ -290,6 +296,7 @@
 				2219C70A223135AB00875DD9 /* lose.wav in Resources */,
 				2227B867226058E300B6A785 /* start.wav in Resources */,
 				22A9E946224A29A700EBA981 /* flip05.wav in Resources */,
+				223FEF1B22783DE300B9876F /* Language.storyboard in Resources */,
 				22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */,
 				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
 				2227B86922605B2000B6A785 /* start1.wav in Resources */,
@@ -363,6 +370,7 @@
 				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
 				229934162231123A000E7851 /* SoundManager.swift in Sources */,
 				229A696022659E8D009A049B /* OptionsViewController.swift in Sources */,
+				223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */,
 				228203962248CC8900CFFFB9 /* Elements.swift in Sources */,
 				22FA5AE8222961090026FC5D /* Card.swift in Sources */,
 			);

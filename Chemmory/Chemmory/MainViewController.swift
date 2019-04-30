@@ -11,9 +11,14 @@ import RealmSwift
 
 class MainViewController: UIViewController {
     
+    var cPress: Int = 0
+    var hePress: Int = 0
     var mPress: Int = 0
+    var moPress: Int = 0
     var rPress: Int = 0
-    var alphaStartedCard: CGFloat = 0.2
+    var yPress: Int = 0
+    
+    var alphaStartedCard: CGFloat = 0.4
     var alphaTappedCard: CGFloat = 0.9
     var optionsButtonTapped = false
     var languageButtonTapped = false
@@ -40,12 +45,20 @@ class MainViewController: UIViewController {
         c_cardButton.alpha = alphaTappedCard
         c_cardButton.setImage(#imageLiteral(resourceName: "card_c"), for: .normal)
         SoundManager.playSound(.title)
+        cPress += 1
+        if cPress > 5 {
+            c_cardButton.setImage(#imageLiteral(resourceName: "card_c_color"), for: .normal)
+        }
     }
     
     @IBAction func heButtonPush(_ sender: Any) {
         he_cardButton.alpha = alphaTappedCard
         he_cardButton.setImage(#imageLiteral(resourceName: "card_he"), for: .normal)
         SoundManager.playSound(.title)
+        hePress += 1
+        if hePress > 5 {
+            he_cardButton.setImage(#imageLiteral(resourceName: "card_he_color"), for: .normal)
+        }
     }
     
     @IBAction func mButtonPush(_ sender: Any) {
@@ -54,7 +67,7 @@ class MainViewController: UIViewController {
         SoundManager.playSound(.title)
         mPress += 1
         if mPress > 50 {
-            m_cardButton.setImage(#imageLiteral(resourceName: "card_M"), for: .normal)
+            m_cardButton.setImage(#imageLiteral(resourceName: "card_m1_color"), for: .normal)
         }
     }
     
@@ -62,16 +75,20 @@ class MainViewController: UIViewController {
         mo_cardButton.alpha = alphaTappedCard
         mo_cardButton.setImage(#imageLiteral(resourceName: "card_mo"), for: .normal)
         SoundManager.playSound(.title)
+        moPress += 1
+        if moPress > 5 {
+            mo_cardButton.setImage(#imageLiteral(resourceName: "card_mo_color"), for: .normal)
+        }
     }
     
     
     @IBAction func rButtonPush(_ sender: Any) {
         r_cardButton.alpha = alphaTappedCard
-        r_cardButton.setImage(#imageLiteral(resourceName: "card_R1"), for: .normal)
+        r_cardButton.setImage(#imageLiteral(resourceName: "card_r1"), for: .normal)
         SoundManager.playSound(.title)
         rPress += 1
         if rPress > 50 {
-            r_cardButton.setImage(#imageLiteral(resourceName: "card_R"), for: .normal)
+            r_cardButton.setImage(#imageLiteral(resourceName: "card_r1_color"), for: .normal)
         }
     }
     
@@ -80,6 +97,10 @@ class MainViewController: UIViewController {
         y_cardButton.alpha = alphaTappedCard
         y_cardButton.setImage(#imageLiteral(resourceName: "card_y"), for: .normal)
         SoundManager.playSound(.title)
+        yPress += 1
+        if yPress > 5 {
+            y_cardButton.setImage(#imageLiteral(resourceName: "card_y_color"), for: .normal)
+        }
     }
     
     
@@ -89,7 +110,7 @@ class MainViewController: UIViewController {
        optionsSplashImage.isHidden = false
         SoundManager.playSound(.options)
         if optionsButtonTapped {
-            
+
             switchToViewController(identifier: "OptionsViewController", sbName: "Options")
         }
         optionsButtonTapped = true
@@ -101,6 +122,11 @@ class MainViewController: UIViewController {
         language_cardButton.setImage(#imageLiteral(resourceName: "card_ol"), for: .normal)
         languageSplashImage.isHidden = false
         SoundManager.playSound(.options)
+        if languageButtonTapped {
+            
+        switchToViewController(identifier: "LanguageViewController", sbName: "Language")
+        }
+        languageButtonTapped = true
     }
     
     
@@ -118,6 +144,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setBackgroundCardsImages(bcgImage: #imageLiteral(resourceName: "CurieBack"))
         
         // Check is options database exist
         let realm = try! Realm()
@@ -187,7 +215,7 @@ class MainViewController: UIViewController {
     
     func prepareButton(button: UIButton) {
         button.alpha = alphaStartedCard
-        button.layer.backgroundColor = UIColor.orange.cgColor
+        button.layer.backgroundColor = UIColor.white.cgColor
         button.layer.cornerRadius = button.bounds.size.height * 0.1
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.white.cgColor
@@ -210,6 +238,18 @@ class MainViewController: UIViewController {
         let grabOptions = realm.objects(UserGameSettings.self)
         globalSettings = grabOptions[0]
         
+    }
+    
+    func setBackgroundCardsImages(bcgImage: UIImage){
+        c_cardButton.setImage(bcgImage, for: .normal)
+        he_cardButton.setImage(bcgImage, for: .normal)
+        m_cardButton.setImage(bcgImage, for: .normal)
+        mo_cardButton.setImage(bcgImage, for: .normal)
+        r_cardButton.setImage(bcgImage, for: .normal)
+        y_cardButton.setImage(bcgImage, for: .normal)
+        options_cardButton.setImage(bcgImage, for: .normal)
+        language_cardButton.setImage(bcgImage, for: .normal)
+        credits_cardButton.setImage(bcgImage, for: .normal)
     }
     
     
