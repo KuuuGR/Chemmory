@@ -54,15 +54,14 @@ class LanguageViewController: UIViewController {
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         
-        guard tempSettings.languageChosen != languageChoosen else {
-            return
-        }
-        tempSettings.languageChosen = languageChoosen
-        
-        let realm = try! Realm()
-        try! realm.write {
-            globalSettings.copyUserGameSetings(from: tempSettings, to: globalSettings)
-            realm.add(globalSettings, update: true)
+        // write only if different language choosen
+        if tempSettings.languageChosen != languageChoosen {
+            tempSettings.languageChosen = languageChoosen
+            let realm = try! Realm()
+            try! realm.write {
+                globalSettings.copyUserGameSetings(from: tempSettings, to: globalSettings)
+                realm.add(globalSettings, update: true)
+            }
         }
         
         self.navigationController?.popViewController(animated: true)
