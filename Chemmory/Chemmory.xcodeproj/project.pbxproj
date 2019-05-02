@@ -10,6 +10,8 @@
 		2219C7082231358C00875DD9 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C7072231358C00875DD9 /* win.wav */; };
 		2219C70A223135AB00875DD9 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2219C709223135AB00875DD9 /* lose.wav */; };
 		22240531223BA0BE008FCC4C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22240530223BA0BE008FCC4C /* Settings.swift */; };
+		22278A2F227ACEC100BDFA75 /* LocalizableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22278A2E227ACEC100BDFA75 /* LocalizableHelper.swift */; };
+		22278A32227AD11F00BDFA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22278A34227AD11F00BDFA75 /* Localizable.strings */; };
 		2227B865225F41B900B6A785 /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B864225F41B900B6A785 /* spring.wav */; };
 		2227B867226058E300B6A785 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B866226058E300B6A785 /* start.wav */; };
 		2227B86922605B2000B6A785 /* start1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B86822605B2000B6A785 /* start1.wav */; };
@@ -58,6 +60,13 @@
 		2219C7072231358C00875DD9 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		2219C709223135AB00875DD9 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
 		22240530223BA0BE008FCC4C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		22278A2E227ACEC100BDFA75 /* LocalizableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableHelper.swift; sourceTree = "<group>"; };
+		22278A33227AD11F00BDFA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A35227AD14B00BDFA75 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A37227AD8D600BDFA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A38227AD92000BDFA75 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A39227AD94E00BDFA75 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A3A227AD98B00BDFA75 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2227B864225F41B900B6A785 /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
 		2227B866226058E300B6A785 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
 		2227B86822605B2000B6A785 /* start1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start1.wav; sourceTree = "<group>"; };
@@ -193,6 +202,7 @@
 				228203952248CC8900CFFFB9 /* Elements.swift */,
 				22C481832226B91B00C6E530 /* AppDelegate.swift */,
 				22FA5AE5222958740026FC5D /* CardModel.swift */,
+				22278A2E227ACEC100BDFA75 /* LocalizableHelper.swift */,
 				22FA5AE7222961090026FC5D /* Card.swift */,
 				229934152231123A000E7851 /* SoundManager.swift */,
 				22240530223BA0BE008FCC4C /* Settings.swift */,
@@ -205,6 +215,7 @@
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
+				22278A34227AD11F00BDFA75 /* Localizable.strings */,
 				22993409223110A1000E7851 /* Sound */,
 			);
 			path = Chemmory;
@@ -264,6 +275,11 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
+				es,
+				ru,
+				fr,
+				de,
 			);
 			mainGroup = 22C481772226B91B00C6E530;
 			productRefGroup = 22C481812226B91B00C6E530 /* Products */;
@@ -305,6 +321,7 @@
 				229A695E226493FF009A049B /* Options.storyboard in Resources */,
 				22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */,
 				2235CF60225F387A00A334D4 /* plum.wav in Resources */,
+				22278A32227AD11F00BDFA75 /* Localizable.strings in Resources */,
 				2235CF61225F387A00A334D4 /* puck.wav in Resources */,
 				2235CF63225F3CA500A334D4 /* boom.wav in Resources */,
 				22A9E950224A2C6400EBA981 /* flipBack02.wav in Resources */,
@@ -340,11 +357,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chemmory/Pods-Chemmory-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IBLocalizable/IBLocalizable.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBLocalizable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -368,6 +387,7 @@
 				22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */,
 				223577A722379AB800553DCC /* Result.swift in Sources */,
 				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
+				22278A2F227ACEC100BDFA75 /* LocalizableHelper.swift in Sources */,
 				229934162231123A000E7851 /* SoundManager.swift in Sources */,
 				229A696022659E8D009A049B /* OptionsViewController.swift in Sources */,
 				223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */,
@@ -379,6 +399,19 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		22278A34227AD11F00BDFA75 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22278A33227AD11F00BDFA75 /* en */,
+				22278A35227AD14B00BDFA75 /* pl */,
+				22278A37227AD8D600BDFA75 /* es */,
+				22278A38227AD92000BDFA75 /* ru */,
+				22278A39227AD94E00BDFA75 /* fr */,
+				22278A3A227AD98B00BDFA75 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		22C481872226B91B00C6E530 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -402,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -463,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

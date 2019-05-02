@@ -8,6 +8,6 @@ target 'Chemmory' do
   # Pods for Chemmory
 
   pod 'RealmSwift'
-
+  pod 'IBLocalizable'
 
 end

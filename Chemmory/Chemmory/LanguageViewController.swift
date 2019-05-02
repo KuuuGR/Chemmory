@@ -57,6 +57,7 @@ class LanguageViewController: UIViewController {
         // write only if different language choosen
         if tempSettings.languageChosen != languageChoosen {
             tempSettings.languageChosen = languageChoosen
+            LocalizableHelper.language = languageChoosen
             let realm = try! Realm()
             try! realm.write {
                 globalSettings.copyUserGameSetings(from: tempSettings, to: globalSettings)

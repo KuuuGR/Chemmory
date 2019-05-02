@@ -41,7 +41,7 @@ class CardModel {
                 for element in elements {
                     if element.atomicNumber == randomNumber {
                         cardOne.elementMass = element.atomicMass
-                        cardOne.elementName = element.name
+                        cardOne.elementName = element.name.localized
                         cardOne.elementNumber = element.atomicNumber
                         cardOne.elementSybmol = element.symbol
                         cardOne.elementValence = element.valence
@@ -60,7 +60,7 @@ class CardModel {
                 for element in elements {
                     if element.atomicNumber == randomNumber {
                         cardTwo.elementMass = element.atomicMass
-                        cardTwo.elementName = element.name
+                        cardTwo.elementName = element.name.localized
                         cardTwo.elementNumber = element.atomicNumber
                         cardTwo.elementSybmol = element.symbol
                         cardTwo.elementValence = element.valence
@@ -77,7 +77,7 @@ class CardModel {
         }
         // Randomize the array
         //return generatedCardsArray.shuffled()   //TTTT -> uncomment this in final version and remove next line
-        return generatedCardsArray
+        return generatedCardsArray.shuffled()
     }
     
 }
