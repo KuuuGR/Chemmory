@@ -6,8 +6,12 @@
   Copyright © 2019 Grzesiek Kulesza. All rights reserved.
 */
 
+//OPTIONS STORYBOARD
 
-
+//RESULT STORYBOARD
+"Tap Your'e name" = "Wpisz swoje imię";
+"RESULTS" = "WYNIKI";
+"score" = "Punkty:";
 "Life bar" = "pasek życia";
 "select language" = "wybierz język";
 "start the game" = "rozpocznij grę";

@@ -6,8 +6,12 @@
   Copyright © 2019 Grzesiek Kulesza. All rights reserved.
 */
 
+//OPTIONS STORYBOARD
 
-
+//RESULT STORYBOARD
+"Tap Your'e name" = "Tap Your'e name";
+"RESULTS" = "RESULTS";
+"score" = "Score:";
 "Life bar" = "life bar";
 "select language" = "select language";
 "start the game" = "start the game";
