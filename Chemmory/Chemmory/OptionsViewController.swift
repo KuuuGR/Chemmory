@@ -116,18 +116,25 @@ class OptionsViewController: UIViewController {
     //MARK: - Front Card Color Options
     
     @IBAction func frontCardRZipperAction(_ sender: Any) {
-        setForegroundCardColor(view: frontElementView)
         tempSettings.cardFrontColorRed = frontCardRZipper.value
+        setForegroundCardColor(view: frontElementView)
+        setHintCardColors()
+        
+        
     }
     
     @IBAction func frontCardGZipperAction(_ sender: Any) {
-        setForegroundCardColor(view: frontElementView)
         tempSettings.cardFrontColorGreen = frontCardGZipper.value
+        setForegroundCardColor(view: frontElementView)
+        setHintCardColors()
+        
     }
     
     @IBAction func frontCardBZipperAction(_ sender: Any) {
-        setForegroundCardColor(view: frontElementView)
         tempSettings.cardFrontColorBlue = frontCardBZipper.value
+        setForegroundCardColor(view: frontElementView)
+        setHintCardColors()
+        
     }
     
     //MARK: - Game Bcakground
@@ -258,12 +265,13 @@ class OptionsViewController: UIViewController {
         frontCardRZipper.value = tempSettings.cardFrontColorRed
         frontCardGZipper.value = tempSettings.cardFrontColorGreen
         frontCardBZipper.value = tempSettings.cardFrontColorBlue
-    
         setForegroundCardColor(view: frontElementView)
-        setForegroundCardColor(view: hintCard01View)
-        setForegroundCardColor(view: hintCard02View)
-        setForegroundCardColor(view: hintCard03View)
-        setForegroundCardColor(view: hintCard04View)
+        if tempSettings.cardForegroundColorIsCustom == true {
+            setForegroundCardColor(view: hintCard01View)
+            setForegroundCardColor(view: hintCard02View)
+            setForegroundCardColor(view: hintCard03View)
+            setForegroundCardColor(view: hintCard04View)
+        }
     }
     
     //MARK: - Hints
@@ -320,6 +328,17 @@ class OptionsViewController: UIViewController {
     func roundCornersOptionsFoldViews(){
         for fold in OptionsFoldViews {
             fold.layer.cornerRadius = 10
+        }
+    }
+    
+    func setHintCardColors() {
+        if
+            tempSettings.cardForegroundColorIsCustom == true
+        {
+            setForegroundCardColor(view: hintCard01View)
+            setForegroundCardColor(view: hintCard02View)
+            setForegroundCardColor(view: hintCard03View)
+            setForegroundCardColor(view: hintCard04View)
         }
     }
     

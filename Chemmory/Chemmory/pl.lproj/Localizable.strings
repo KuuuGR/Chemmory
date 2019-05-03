@@ -7,15 +7,27 @@
 */
 
 //OPTIONS STORYBOARD
-
+"CARD BACKGROUND" = "TYŁ KARTY";
+"FONTS COLOR" = "KOLOR CZCIONKI";
+"FRONT CARD COLOR" = "KOLOR PRZODU KARTY";
+"GAME BACKGROUND" = "TŁO GRY";
+"CARD HINTS" = "PODPOWIEDZI NA KARCIE";
+"custom foreground" = "ustawiony przód karty";
+"SAVE" = "ZAPISZ";
+"YES" = "TAK";
+"NO" = "NIE";
 //RESULT STORYBOARD
 "Tap Your'e name" = "Wpisz swoje imię";
 "RESULTS" = "WYNIKI";
 "score" = "Punkty:";
+//GAME STORYBOARD
 "Life bar" = "pasek życia";
+//LANGUAGE STORYBOARD
 "select language" = "wybierz język";
+//MAIN STORYBOARD
 "start the game" = "rozpocznij grę";
 "start" = "Zacznij";
+//ELEMENTS NAMES
 "English" = "Polski";
 "Hydrogen" = "Wodór";
 "Helium" = "Hel";
