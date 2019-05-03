@@ -7,14 +7,14 @@
 */
 
 //OPTIONS STORYBOARD
-"CARD BACKGROUND" = "CARD BACKGROUND";
-"FONTS COLOR" = "FONTS COLOR";
-"FRONT CARD COLOR" = "FRONT CARD COLOR";
-"GAME BACKGROUND" = "GAME BACKGROUND";
-"CARD HINTS" = "CARD HINTS";
-"custom foreground" = "custom foreground";
-"SAVE" = "SAVE";
-"YES" = "YES";
+"CARD BACKGROUND" = "FONDO DE LA TARJETA";
+"FONTS COLOR" = "COLOR DE FUENTES";
+"FRONT CARD COLOR" = "COLOR TARJETA DELANTERA";
+"GAME BACKGROUND" = "FONDO DE JUEGO";
+"CARD HINTS" = "CONSEJOS DE TARJETA";
+"custom foreground" = "frente uniforme de la tarjeta";
+"SAVE" = "SALVAR";
+"YES" = "SÍ";
 "NO" = "NO";
 //RESULT STORYBOARD
 "Tap Your'e name" = "Ingresa tu nombre";

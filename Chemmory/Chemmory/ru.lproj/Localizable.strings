@@ -7,15 +7,15 @@
 */
 
 //OPTIONS STORYBOARD
-"CARD BACKGROUND" = "CARD BACKGROUND";
-"FONTS COLOR" = "FONTS COLOR";
-"FRONT CARD COLOR" = "FRONT CARD COLOR";
-"GAME BACKGROUND" = "GAME BACKGROUND";
-"CARD HINTS" = "CARD HINTS";
-"custom foreground" = "custom foreground";
-"SAVE" = "SAVE";
-"YES" = "YES";
-"NO" = "NO";
+"CARD BACKGROUND" = "ФОН КАРТЫ";
+"FONTS COLOR" = "ЦВЕТ ШРИФТОВ";
+"FRONT CARD COLOR" = "ЦВЕТ ПЕРЕДНЕЙ КАРТЫ";
+"GAME BACKGROUND" = "ФОН ИГРЫ";
+"CARD HINTS" = "КАРТЫ СОВЕТЫ";
+"custom foreground" = "единый фронт карты";
+"SAVE" = "СПАСТИ";
+"YES" = "ДА";
+"NO" = "НЕТ";
 //RESULT STORYBOARD
 "Tap Your'e name" = "Введите ваше имя";
 "RESULTS" = "РЕЗУЛЬТАТЫ";

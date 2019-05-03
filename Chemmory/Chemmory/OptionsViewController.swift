@@ -100,17 +100,17 @@ class OptionsViewController: UIViewController {
     //MARK: - Fonts color Options
     
     @IBAction func fontRZipperAction(_ sender: Any) {
-        setFontsColor()
         tempSettings.cardFontsColorRed = fontRZipper.value
+        setFontsColor()
     }
     @IBAction func fontGZipperAction(_ sender: Any) {
-        setFontsColor()
         tempSettings.cardFontsColorGreen = fontGZipper.value
+        setFontsColor()
     }
     
     @IBAction func fontBZipperAction(_ sender: Any) {
-        setFontsColor()
         tempSettings.cardFontsColorBlue = fontBZipper.value
+        setFontsColor()
     }
     
     //MARK: - Front Card Color Options
