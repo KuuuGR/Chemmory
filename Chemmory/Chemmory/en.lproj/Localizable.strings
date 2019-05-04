@@ -28,11 +28,10 @@
 "start the game" = "start the game";
 "start" = "Start";
 //ELEMENTS NAMES
-"English" = "English";
-"Hydrogen" = "Hydrogen";
-"Helium" = "Helium";
-"Lithium" = "Lithium";
-"Beryllium" = "Beryllium";
+"Hydrogen" = "Hydrogen"; //1
+"Helium" = "Helium"; //2
+"Lithium" = "Lithium";  //3
+"Beryllium" = "Beryllium";  //4
 "Boron" = "Boron";
 "Carbon" = "Carbon";
 "Nitrogen" = "Nitrogen";
@@ -140,3 +139,4 @@
 "Meitnerium" = "Meitnerium";
 "Darmstadtium" = "Darmstadtium";
 "Roentgenium" = "Roentgenium";
+"Copernicium" = "Copernicium";
