@@ -28,7 +28,6 @@
 "start the game" = "commencer le jeu";
 "start" = "Début";
 //ELEMENTS NAMES
-"English" = "française";
 "Hydrogen" = "Hydrogène";
 "Helium" = "Hélium";
 "Lithium" = "Lithium";
@@ -65,7 +64,7 @@
 "Selenium" = "Sélénium";
 "Bromine" = "Brome";
 "Krypton" = "Krypton";
-"Rubidium" = "Rubidium";
+"Rubidium" = "Rubidium"; //37
 "Strontium" = "Strontium";
 "Yttrium" = "Yttrium";
 "Zirconium" = "Zirconium";
@@ -84,7 +83,7 @@
 "Iodine" = "Iode";
 "Xenon" = "Xenon";
 "Cesium" = "Césium";
-"Barium" = "Barium";
+"Barium" = "Barium"; //56
 "Lanthanum" = "Lanthane";
 "Cerium" = "Cérium";
 "Praseodymium" = "Praseodymium";
@@ -100,9 +99,9 @@
 "Thulium" = "Thulium";
 "Ytterbium" = "Ytterbium";
 "Lutecium" = "Lutécium";
-"Hafnium" = "Hafnium";
+"Hafnium" = "Hafnium"; //72
 "Tantalum" = "Tantale";
-"Tungsten" = "Tungsten";
+"Tungsten" = "Tungstène"; //74
 "Rhenium" = "Rhénium";
 "Osmium" = "Osmium";
 "Iridium" = "Iridium";
@@ -113,7 +112,7 @@
 "Lead" = "Plomb";
 "Bismuth" = "Bismuth";
 "Polonium" = "Polonium";
-"Astatine" = "Astatine";
+"Astatine" = "Astate";
 "Radon" = "Radon";
 "Francium" = "Francium";
 "Radium" = "Radium";
@@ -123,21 +122,21 @@
 "Uranium" = "Uranium";
 "Neptunium" = "Neptunium";
 "Plutonium" = "Plutonium";
-"Americium" = "Americium";
+"Americium" = "Américium"; //95
 "Curium" = "Curium";
-"Berkelium" = "Berkelium";
+"Berkelium" = "Berkélium";
 "Californium" = "Californium";
 "Einsteinium" = "Einsteinium";
 "Fermium" = "Fermium";
-"Mendelevium" = "Mendelevium";
-"Nobelium" = "Nobelium";
+"Mendelevium" = "Mendélévium"; //101
+"Nobelium" = "Nobélium";
 "Lawrencium" = "Lawrencium";
 "Rutherfordium" = "Rutherfordium";
 "Dubnium" = "Dubnium";
 "Seaborgium" = "Seaborgium";
 "Bohrium" = "Bohrium";
 "Hassium" = "Hassium";
-"Meitnerium" = "Meitnerium";
+"Meitnerium" = "Meitnérium";
 "Darmstadtium" = "Darmstadtium";
 "Roentgenium" = "Roentgenium";
-"Copernicium" = "Kopernik"
+"Copernicium" = "Copernicium"

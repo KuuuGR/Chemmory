@@ -28,7 +28,6 @@
 "start the game" = "Starten Sie das Spiel";
 "start" = "Anfang";
 //ELEMENTS NAMES
-"English" = "Deutsche";
 "Hydrogen" = "Wasserstoff";
 "Helium" = "Helium";
 "Lithium" = "Lithium";
@@ -42,7 +41,7 @@
 "Sodium" = "Natrium";
 "Magnesium" = "Magnesium";
 "Aluminum" = "Aluminium";
-"Silicon" = "Silizium";
+"Silicon" = "Silicium"; //14
 "Phosphorus" = "Phosphor";
 "Sulfur" = "Schwefel";
 "Chlorine" = "Chlor";
@@ -55,7 +54,7 @@
 "Chromium" = "Chrom";
 "Manganese" = "Mangan";
 "Iron" = "Eisen";
-"Cobalt" = "Kobalt";
+"Cobalt" = "Cobalt"; //28
 "Nickel" = "Nickel";
 "Copper" = "Kupfer";
 "Zinc" = "Zink";
@@ -80,15 +79,15 @@
 "Indium" = "Indium";
 "Tin" = "Zinn";
 "Antimony" = "Antimon";
-"Tellurium" = "Tellurium";
-"Iodine" = "Jod";
+"Tellurium" = "Tellur"; //52
+"Iodine" = "Iod";
 "Xenon" = "Xenon";
-"Cesium" = "Caesium";
+"Cesium" = "Cäsium"; //55
 "Barium" = "Barium";
-"Lanthanum" = "Lanthanum";
+"Lanthanum" = "Lanthan";
 "Cerium" = "Cer";
-"Praseodymium" = "Praseodymium";
-"Neodymium" = "Neodymium";
+"Praseodymium" = "Praseodym";
+"Neodymium" = "Neodym";
 "Promethium" = "Promethium";
 "Samarium" = "Samarium";
 "Europium" = "Europium";
@@ -101,7 +100,7 @@
 "Ytterbium" = "Ytterbium";
 "Lutecium" = "Lutecium";
 "Hafnium" = "Hafnium";
-"Tantalum" = "Tantalum";
+"Tantalum" = "Tantal";
 "Tungsten" = "Wolfram";
 "Rhenium" = "Rhenium";
 "Osmium" = "Osmium";
@@ -113,7 +112,7 @@
 "Lead" = "Blei";
 "Bismuth" = "Bismut";
 "Polonium" = "Polonium";
-"Astatine" = "Astatine";
+"Astatine" = "Astat"; //85
 "Radon" = "Radon";
 "Francium" = "Francium";
 "Radium" = "Radium";
@@ -131,7 +130,7 @@
 "Fermium" = "Fermium";
 "Mendelevium" = "Mendelevium";
 "Nobelium" = "Nobelium";
-"Lawrencium" = "Lawrencium";
+"Lawrencium" = "Lawrencium"; //103
 "Rutherfordium" = "Rutherfordium";
 "Dubnium" = "Dubnium";
 "Seaborgium" = "Seaborgium";
@@ -139,5 +138,5 @@
 "Hassium" = "Hassium";
 "Meitnerium" = "Meitnerium";
 "Darmstadtium" = "Darmstadtium";
-"Roentgenium" = "Roentgenium";
-"Copernicium" = "Kopernik"
+"Roentgenium" = "Röntgenium";
+"Copernicium" = "Copernicium"
