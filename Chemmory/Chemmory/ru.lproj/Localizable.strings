@@ -81,7 +81,7 @@
 "Antimony" = "Сурьма";
 "Tellurium" = "Теллур";
 "Iodine" = "Йод";
-"Xenon" = "ксенон" //54;
+"Xenon" = "ксенон"; //54;
 "Cesium" = "Цезий";
 "Barium" = "Барий";
 "Lanthanum" = "Лантан";
@@ -139,4 +139,4 @@
 "Meitnerium" = "Мейтнерий"; //109
 "Darmstadtium" = "Дармштадтий"; //110
 "Roentgenium" = "Рентгений"; //111
-"Copernicium" = "Коперниций" //112
+"Copernicium" = "Коперниций"; //112
