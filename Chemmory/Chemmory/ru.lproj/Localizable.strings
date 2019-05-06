@@ -17,11 +17,18 @@
 "YES" = "ДА";
 "NO" = "НЕТ";
 //RESULT STORYBOARD
+"time:" = "время:";
+"day:" = "день:";
+"Player: time: day:" = "игрок: время: день:";
 "Tap Your'e name" = "Введите ваше имя";
 "RESULTS" = "РЕЗУЛЬТАТЫ";
 "score" = "Рекор:";
 //GAME STORYBOARD
 "Life bar" = "life bar";
+"Congratulations!" = "Поздравляю!";
+"You've won" = "Вы выиграли";
+"Game Over" = "Игра окончена";
+"You've lost" = "Вы проиграли";
 //LANGUAGE STORYBOARD
 "select language" = "выберите язык";
 //MAIN STORYBOARD

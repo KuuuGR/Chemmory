@@ -285,30 +285,30 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         let grabReluts = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
         
         if grabReluts.count >= 1 {
-            let firstName = grabReluts[0].name ?? "no Name"
+            let firstName = grabReluts[0].name ?? "no Name".systemLocalized
             let firstScore = String(format: "%.0f",grabReluts[0].score)
-            let firstDate = grabReluts[0].date ?? "no Date"
+            let firstDate = grabReluts[0].date ?? "no Date".systemLocalized
             let firstTime = String(format: "%.1f",grabReluts[0].time)
         
             if grabReluts.count >= 2 {
-                let secondName = grabReluts[1].name ?? "no Name"
+                let secondName = grabReluts[1].name ?? "no Name".systemLocalized
                 let secondScore = String(format: "%.0f",grabReluts[1].score)
-                let secondDate = grabReluts[1].date ?? "no Date"
+                let secondDate = grabReluts[1].date ?? "no Date".systemLocalized
                 let secondTime = String(format: "%.1f",grabReluts[1].time)
             
                 if grabReluts.count >= 3 {
-                    let thirdName = grabReluts[2].name ?? "no Name"
+                    let thirdName = grabReluts[2].name ?? "no Name".systemLocalized
                     let thirdScore = String(format: "%.0f",grabReluts[2].score)
-                    let thirdDate = grabReluts[2].date ?? "no Date"
+                    let thirdDate = grabReluts[2].date ?? "no Date".systemLocalized
                     let thirdTime = String(format: "%.1f",grabReluts[2].time)
 
-                    thirdPlaceHighScoreLabel.text = ("\(thirdName)\ntime: \(thirdTime) s\nday: \(thirdDate)")
+                    thirdPlaceHighScoreLabel.text = ("\(thirdName)\n" + "time:".systemLocalized + " \(thirdTime) s\n" + "day:".systemLocalized + " \(thirdDate)")
                     thirdPlaceScoreValueLabel.text = "\(thirdScore)"
                 }
-                secondPlaceHighScoreLabel.text = ("\(secondName)\ntime: \(secondTime) s\nday: \(secondDate)")
+                secondPlaceHighScoreLabel.text = ("\(secondName)\n" + "time:".systemLocalized + " \(secondTime) s\n" + "day:".systemLocalized + " \(secondDate)")
                 secondPlaceScoreValueLabel.text = "\(secondScore)"
             }
-            firstPlaceHighScoreLabel.text = ("\(firstName)\ntime: \(firstTime) s\nday: \(firstDate)")
+            firstPlaceHighScoreLabel.text = ("\(firstName)\n" + "time:".systemLocalized + " \(firstTime) s\n" + "day:".systemLocalized + " \(firstDate)")
             firstPlaceScoreValueLabel.text = "\(firstScore)"
         }
         

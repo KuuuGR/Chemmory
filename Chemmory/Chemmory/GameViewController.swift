@@ -295,8 +295,8 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 // OPTIONAL: - Makes background brighter (or pulse completion)
                 backgroundImage.alpha = 1
             }
-            title = "Congratulations!"
-            message = "You've won \n result: \(gameScore) pts."
+            title = "Congratulations!".systemLocalized
+            message = "You've won".systemLocalized + "\n result: \(gameScore) pts."
             endGame = true
             goNextBigButton.isHidden = false
             reloadBigButton.isHidden = false
@@ -308,8 +308,8 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 return
             }
             
-            title = "Game Over"
-            message = "You've lost"
+            title = "Game Over".systemLocalized
+            message = "You've lost".systemLocalized
             endGame = true
         }
     

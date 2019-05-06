@@ -17,11 +17,18 @@
 "YES" = "YES";
 "NO" = "NO";
 //RESULT STORYBOARD
+"time:" = "time:";
+"day:" = "day:";
+"Player: time: day:" = "Player: time: day:";
 "Tap Your'e name" = "Tap Your'e name";
 "RESULTS" = "RESULTS";
 "score" = "Score:";
 //GAME STORYBOARD
 "Life bar" = "life bar";
+"Congratulations!" = "Congratulations!";
+"You've won" = "You've won";
+"Game Over" = "Game Over";
+"You've lost" = "You've lost";
 //LANGUAGE STORYBOARD
 "select language" = "select language";
 //MAIN STORYBOARD
