@@ -22,6 +22,8 @@
 		2235CF63225F3CA500A334D4 /* boom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF62225F3CA500A334D4 /* boom.wav */; };
 		223FEF1B22783DE300B9876F /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223FEF1A22783DE300B9876F /* Language.storyboard */; };
 		223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FEF1C22783E2D00B9876F /* LanguageViewController.swift */; };
+		22426AE12280119400D7F2C1 /* Credits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22426AE02280119400D7F2C1 /* Credits.storyboard */; };
+		22426AE32280126E00D7F2C1 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22426AE22280126E00D7F2C1 /* CreditsViewController.swift */; };
 		22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE12229305D0026FC5D /* Gameboard.storyboard */; };
 		228203962248CC8900CFFFB9 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228203952248CC8900CFFFB9 /* Elements.swift */; };
 		22957C222233B688009AF033 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22957C212233B688009AF033 /* Results.storyboard */; };
@@ -77,6 +79,8 @@
 		2235CF62225F3CA500A334D4 /* boom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom.wav; sourceTree = "<group>"; };
 		223FEF1A22783DE300B9876F /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
 		223FEF1C22783E2D00B9876F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		22426AE02280119400D7F2C1 /* Credits.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Credits.storyboard; sourceTree = "<group>"; };
+		22426AE22280126E00D7F2C1 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		228203952248CC8900CFFFB9 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		22957C212233B688009AF033 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		22957C232233B7BD009AF033 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -207,10 +211,12 @@
 				229934152231123A000E7851 /* SoundManager.swift */,
 				22240530223BA0BE008FCC4C /* Settings.swift */,
 				223FEF1C22783E2D00B9876F /* LanguageViewController.swift */,
+				22426AE22280126E00D7F2C1 /* CreditsViewController.swift */,
 				223FEF1A22783DE300B9876F /* Language.storyboard */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
 				229A695D226493FF009A049B /* Options.storyboard */,
 				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
+				22426AE02280119400D7F2C1 /* Credits.storyboard */,
 				22957C212233B688009AF033 /* Results.storyboard */,
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
@@ -303,6 +309,7 @@
 				22A9E948224A29D300EBA981 /* flip08.wav in Resources */,
 				2299340E2231114A000E7851 /* dingwrong.wav in Resources */,
 				2299340F2231114A000E7851 /* cardflip.wav in Resources */,
+				22426AE12280119400D7F2C1 /* Credits.storyboard in Resources */,
 				229934102231114A000E7851 /* shuffle.wav in Resources */,
 				22A9E94A224A2A5300EBA981 /* flipBack01.wav in Resources */,
 				22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */,
@@ -383,6 +390,7 @@
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
 				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
 				22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */,
+				22426AE32280126E00D7F2C1 /* CreditsViewController.swift in Sources */,
 				22240531223BA0BE008FCC4C /* Settings.swift in Sources */,
 				22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */,
 				223577A722379AB800553DCC /* Result.swift in Sources */,

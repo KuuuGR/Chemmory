@@ -135,7 +135,14 @@ class MainViewController: UIViewController {
         credits_cardButton.setImage(#imageLiteral(resourceName: "card_oc"), for: .normal)
         creditsSplashImage.isHidden = false
         SoundManager.playSound(.options)
+        
+        if CreditsButtonTapped {
+            
+            switchToViewController(identifier: "CreditsViewController", sbName: "Credits")
+        }
+        CreditsButtonTapped = true
     }
+    
     
     @IBAction func startButtonPush(_ sender: Any) {
         SoundManager.playSound(.shuffle)
