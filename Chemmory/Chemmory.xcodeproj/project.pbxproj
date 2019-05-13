@@ -561,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D1276F7632D55D615BA1BE6 /* Pods-Chemmory.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3HJA47BQU;
 				INFOPLIST_FILE = Chemmory/Info.plist;
@@ -580,6 +581,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1551F878BC1FCB094F554423 /* Pods-Chemmory.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3HJA47BQU;
 				INFOPLIST_FILE = Chemmory/Info.plist;
