@@ -52,6 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="logoButton" destination="M07-G5-MBa" id="cuQ-dI-dmc"/>
+                        <outlet property="upperConstraint" destination="9ll-Lk-c0h" id="tRq-zA-Mpp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iO1-Gs-vPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
