@@ -17,6 +17,8 @@ class Card {
     var imageBackName = ""
     var elementName: String = ""
     var elementValence: String = ""
+    var elementValenceR: String = "" //rare valence
+    var elementValenceC: String = "" //common valence
     var elementNumber: Int = 0
     var elementSybmol: String = ""
     var elementMass: Float = 0.0

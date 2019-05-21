@@ -132,11 +132,49 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         
         backImageView.image = UIImage(named: card.imageBackName)
         elementNumberLabel.text = String(card.elementNumber)
-        elementValenceLabel.text = card.elementValence
         elementSymbolLabel.text = card.elementSybmol
         elementNameLabel.text = card.elementName
         elementMassLabel.text = String(format: "%.3f",card.elementMass)
         frontCardView.backgroundColor = returnElementGrupColor(grup: card.elementGrup)
+        
+        var ValText: String = card.elementValence
+        ValText.append(ValText)
+        
+        let actualTotalValence = valencesToArray(regular: card.elementValence, common: card.elementValenceC, rare: card.elementValenceR)
+        print(actualTotalValence)
+        let formattedString = NSMutableAttributedString()
+        /*formattedString
+            .bold("1")
+            .normal("2")
+            .bold("3")
+            .curs("4")
+        formattedString.curs("t")
+        */
+        for i in 1..<actualTotalValence.count {
+            switch actualTotalValence[i] {
+            case "R":
+                 formattedString.normal(String(i))
+            case "B":
+                 formattedString.bold(String(i))
+            case "T":
+                formattedString.curs(String(i))
+            default:
+                print("de")
+            }
+
+        }
+        
+        
+        
+        let lbl = UILabel()
+        lbl.attributedText = formattedString
+        
+        elementValenceLabel.attributedText = formattedString
+        //elementValenceLabel.text = ValText
+        //elementValenceLabel.textColor = UIColor.yellow
+        //elementValenceLabel.alpha = 0.9
+        
+
         
         
         
@@ -231,4 +269,55 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         
     }
     
+    func valencesToArray(regular: String, common: String, rare: String) -> [Character] {
+        
+        var ValenceD: [Character] = ["0","0","0","0","0","0","0","0","0"]
+        let regularS = regular.split(separator: ",")
+        let commonS = common.split(separator: ",")
+        let rareS = rare.split(separator: ",")
+        
+        for i in 0..<regularS.count {
+            if let valueTemp = Int(regularS[i]){
+                ValenceD[valueTemp] = "N"
+            }
+        }
+        for i in 0..<commonS.count {
+            if let valueTemp = Int(commonS[i]){
+                ValenceD[valueTemp] = "B"
+            }
+        }
+        
+        for i in 0..<rareS.count {
+            if let valueTemp = Int(rareS[i]){
+                ValenceD[valueTemp] = "T"
+            }
+        }
+        return ValenceD
+    }
+    
+}
+
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text: String) -> NSMutableAttributedString {
+        let attrs: [NSAttributedString.Key: Any] = [.font: UIFont(name: "AvenirNext-Bold", size: 15)!]
+        let boldString = NSMutableAttributedString(string:text, attributes: attrs)
+        append(boldString)
+        
+        return self
+    }
+    
+    @discardableResult func curs(_ text: String) -> NSMutableAttributedString {
+        let attrs: [NSAttributedString.Key: Any] = [.font: UIFont(name: "AvenirNext-UltraLight", size: 15)!]
+        let thinString = NSMutableAttributedString(string:text, attributes: attrs)
+        append(thinString)
+        
+        return self
+    }
+    
+    @discardableResult func normal(_ text: String) -> NSMutableAttributedString {
+        let normal = NSAttributedString(string: text)
+        append(normal)
+        
+        return self
+    }
 }

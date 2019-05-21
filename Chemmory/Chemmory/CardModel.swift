@@ -45,6 +45,8 @@ class CardModel {
                         cardOne.elementNumber = element.atomicNumber
                         cardOne.elementSybmol = element.symbol
                         cardOne.elementValence = element.valence
+                        cardOne.elementValenceR = element.valenceRare
+                        cardOne.elementValenceC = element.valenceCommon
                         globalSettings.cardForegroundColorIsCustom == true ? (cardOne.elementGrup = 11) : (cardOne.elementGrup = element.group)
                         // TODO: Make "bold part of string" if element rare and common
                         break
@@ -65,6 +67,8 @@ class CardModel {
                         cardTwo.elementSybmol = element.symbol
                         cardTwo.elementValence = element.valence
                         cardTwo.elementGrup = element.group
+                        cardTwo.elementValenceR = element.valenceRare
+                        cardTwo.elementValenceC = element.valenceCommon
                         globalSettings.cardForegroundColorIsCustom == true ? (cardTwo.elementGrup = 11) : (cardTwo.elementGrup = element.group)
                         // TODO: Make "bold part of string" if element rare and common
                         break
