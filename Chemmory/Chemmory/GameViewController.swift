@@ -78,13 +78,13 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Set total lifepoints
         lifeBarPointsFill(ammount: lifeBarScotchAmmount)
         // Set time equal lifepoints on bar
-        milliseconds = Float(lifeBarScotchAmmount * 1000)
+        milliseconds = Float(lifeBarScotchAmmount * lifeBarSpeed)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         
         // Play shuffle sound
-        if (milliseconds >= Float(lifeBarScotchAmmount - 1) * 1000) {} //SoundManager.playSound(.shuffle) }
+        if (milliseconds >= Float((lifeBarScotchAmmount - 1) * lifeBarSpeed)) {} //SoundManager.playSound(.shuffle) }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -342,7 +342,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func liveBar() {
-        if (Int(milliseconds) % 1000 == 0) && (LifeBarLabel.text?.count != 0) {
+        if (Int(milliseconds) % lifeBarSpeed == 0) && (LifeBarLabel.text?.count != 0) {
             LifeBarLabel.text = String((LifeBarLabel.text?.dropLast())!)
         }
         

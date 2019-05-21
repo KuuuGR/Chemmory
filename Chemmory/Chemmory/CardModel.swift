@@ -22,7 +22,7 @@ class CardModel {
         //Make it so we only have inique pair of cards
         while generatedNumbersArray.count < 9 {
             
-            //Get a random number
+            //Get a random number (depends on 112 elements in periodic table)
             let randomNumber = arc4random_uniform(112) + 1
             
             // Ensure that the number isn't one we already have
@@ -76,7 +76,6 @@ class CardModel {
             }
         }
         // Randomize the array
-        //return generatedCardsArray.shuffled()   //TTTT -> uncomment this in final version and remove next line
         return generatedCardsArray.shuffled()
     }
     
