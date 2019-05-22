@@ -11,7 +11,7 @@ import RealmSwift
 let lifeBarScotchAmmount: Int = 57 //default 57
 let lifeBarSpeed = 1400 // default 1000
 let maxBackgroundCardPictureNumber = 211
-let maxGameBackgroundPictureNumber = 22
+let maxGameBackgroundPictureNumber = 35
 
 class UserGameSettings: Object {
     
