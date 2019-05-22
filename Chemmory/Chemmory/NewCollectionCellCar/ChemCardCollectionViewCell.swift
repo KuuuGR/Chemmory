@@ -137,45 +137,31 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         elementMassLabel.text = String(format: "%.3f",card.elementMass)
         frontCardView.backgroundColor = returnElementGrupColor(grup: card.elementGrup)
         
+        // valence custom label font. If common - bold (B), regular - normal (N), rare - thin (T)
         var ValText: String = card.elementValence
         ValText.append(ValText)
         
         let actualTotalValence = valencesToArray(regular: card.elementValence, common: card.elementValenceC, rare: card.elementValenceR)
         print(actualTotalValence)
         let formattedString = NSMutableAttributedString()
-        /*formattedString
-            .bold("1")
-            .normal("2")
-            .bold("3")
-            .curs("4")
-        formattedString.curs("t")
-        */
+
         for i in 1..<actualTotalValence.count {
             switch actualTotalValence[i] {
-            case "R":
+            case "N":
                  formattedString.normal(String(i))
             case "B":
                  formattedString.bold(String(i))
             case "T":
                 formattedString.curs(String(i))
             default:
-                print("de")
+                continue
             }
 
         }
         
-        
-        
         let lbl = UILabel()
         lbl.attributedText = formattedString
-        
         elementValenceLabel.attributedText = formattedString
-        //elementValenceLabel.text = ValText
-        //elementValenceLabel.textColor = UIColor.yellow
-        //elementValenceLabel.alpha = 0.9
-        
-
-        
         
         
         // Determine if teh card is in flipped up state or flipped down state
@@ -278,18 +264,18 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         
         for i in 0..<regularS.count {
             if let valueTemp = Int(regularS[i]){
-                ValenceD[valueTemp] = "N"
+                ValenceD[valueTemp] = "N" //normal
             }
         }
         for i in 0..<commonS.count {
             if let valueTemp = Int(commonS[i]){
-                ValenceD[valueTemp] = "B"
+                ValenceD[valueTemp] = "B" //bold
             }
         }
         
         for i in 0..<rareS.count {
             if let valueTemp = Int(rareS[i]){
-                ValenceD[valueTemp] = "T"
+                ValenceD[valueTemp] = "T" //thin
             }
         }
         return ValenceD
