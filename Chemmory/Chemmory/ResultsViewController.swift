@@ -96,6 +96,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
             saveButton.alpha = 0.1
             //update result HighSore
             showRecordResults()
+            
+            // now we can leave ResultsView safely, just by one click back
+            backButtonTappedOnce = true
         }
     }
     
