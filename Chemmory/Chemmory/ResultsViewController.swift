@@ -108,9 +108,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         // show High Score
         showRecordResults()
         
-        // show segue from GameVC
-        //print(winGameResultsData)
-        
         // Show Keyboard with text field go up animation
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         //Hide keyboard when tap elsewhere
@@ -151,7 +148,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         
         bigElementSymbolConfig(atomicNumber: actualGamePosition, atomicSymbol: playAtomicSymbol, atomicName: playAtomicName, atomicMass: playAtomicMass, atomicGrup: playAtomicGrup)
   
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -248,7 +244,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         
         let gameMisses = Float(winGameResultsData.2) ?? 999.9
         let gameTime = Float(winGameResultsData.1) ?? 999.9
-        // score = 10000/(gameTime * (gameMisses+1))
         let gameScore = 10000/(gameTime * (gameMisses+1.0))
         return gameScore
     }

@@ -329,7 +329,6 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func backAction(){
-        //print("Back Button Clicked")
         timer?.invalidate()
         self.navigationController?.popViewController(animated: true)
     }
@@ -371,7 +370,6 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
 extension GameViewController: GameResultDelegate {
     func backFromResult(transferredDataToGameVC: String) {
-        print("Wracamy z \(transferredDataToGameVC)")
          if endGame == true {
             backAction()
         }

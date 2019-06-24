@@ -27,9 +27,6 @@ class CardModel {
             
             // Ensure that the number isn't one we already have
             if generatedNumbersArray.contains(Int(randomNumber)) == false {
-               
-                //Log the number
-                print(randomNumber)
                 
                 //Store the number into generatedNumberArray
                 generatedNumbersArray.append(Int(randomNumber))

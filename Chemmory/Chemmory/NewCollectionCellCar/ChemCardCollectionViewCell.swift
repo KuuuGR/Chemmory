@@ -21,7 +21,6 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var elementMassLabel: UILabel!
     @IBOutlet var elementFontLabels: [UILabel]!
     
-    
     var card:Card?
 
     override func awakeFromNib() {
@@ -41,8 +40,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
     
     func showOnly(_ part: elementPart){
         
-        // Show only one part of element
-        // as a hint for the better learn
+        // Show only one part of element as a hint for the better learn
         
         switch part {
         case .name:
@@ -86,11 +84,10 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
             backImageView.alpha = 0
             frontImageView.alpha = 0
             frontCardView.alpha = 0
-            
             return
         }
         else {
-            // If the card hasn't been matched, then make te image views visable
+            // If the card hasn't been matched, then make the image views visable
             backImageView.alpha = 1
             frontImageView.alpha = 0
             frontCardView.alpha = 1
@@ -142,7 +139,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         ValText.append(ValText)
         
         let actualTotalValence = valencesToArray(regular: card.elementValence, common: card.elementValenceC, rare: card.elementValenceR)
-        print(actualTotalValence)
+        
         let formattedString = NSMutableAttributedString()
 
         for i in 1..<actualTotalValence.count {
