@@ -98,7 +98,7 @@ class ChemCardCollectionViewCell: UICollectionViewCell {
         self.frontCardView.layer.borderWidth = 2
       
 
-        switch globalSettings.showHintUserSelect {
+        switch globalSettings.hintUserChose {
         case "name":
             if card.isCardOne {
                 showOnly(elementPart.name)

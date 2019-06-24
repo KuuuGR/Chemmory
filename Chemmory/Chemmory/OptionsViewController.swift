@@ -162,34 +162,34 @@ class OptionsViewController: UIViewController {
             for button in hintButtonsOnElement {
                 if button.tag == 1 {
                    button.alpha = 1.0
-                    tempSettings.showHintUserSelect = "number"
+                    tempSettings.hintUserChose = "number"
                 }
             }
         case 2:
             for button in hintButtonsOnElement {
                 if button.tag == 2 {
                     button.alpha = 1.0
-                    tempSettings.showHintUserSelect = "valence"
+                    tempSettings.hintUserChose = "valence"
                 }
             }
         case 3:
             for button in hintButtonsOnElement {
                 if button.tag == 3 {
                     button.alpha = 1.0
-                    tempSettings.showHintUserSelect = "name"
+                    tempSettings.hintUserChose = "name"
                 }
             }
         case 4:
             for button in hintButtonsOnElement {
                 if button.tag == 4 {
                     button.alpha = 1.0
-                    tempSettings.showHintUserSelect = "mass"
+                    tempSettings.hintUserChose = "mass"
                 }
             }
         default:
             for button in hintButtonsOnElement {
                 button.alpha = 0.2
-                tempSettings.showHintUserSelect = "symbol"
+                tempSettings.hintUserChose = "symbol"
             }
         }
     }
@@ -279,23 +279,23 @@ class OptionsViewController: UIViewController {
         for button in hintButtonsOnElement {
             switch button.tag {
             case 0:
-                if tempSettings.showHintUserSelect == "symbol" {
+                if tempSettings.hintUserChose == "symbol" {
                 button.alpha = 1
                 }
             case 1:
-                if tempSettings.showHintUserSelect == "number" {
+                if tempSettings.hintUserChose == "number" {
                 button.alpha = 1
                 }
             case 2:
-                if tempSettings.showHintUserSelect == "valence" {
+                if tempSettings.hintUserChose == "valence" {
                 button.alpha = 1
                 }
             case 3:
-                if tempSettings.showHintUserSelect == "name" {
+                if tempSettings.hintUserChose == "name" {
                 button.alpha = 1
                 }
             case 4:
-                if tempSettings.showHintUserSelect == "mass" {
+                if tempSettings.hintUserChose == "mass" {
                 button.alpha = 1
                 }
             default:

@@ -111,6 +111,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         // show High Score
         showRecordResults()
         
+        print(globalSettings.hintUserChose)
+        
         // Show Keyboard with text field go up animation
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         //Hide keyboard when tap elsewhere
