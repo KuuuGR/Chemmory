@@ -138,7 +138,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         case 3:
              crownImageView.image = #imageLiteral(resourceName: "krown_bronze")
         default:
-            crownImageView.image = #imageLiteral(resourceName: "Crown_cord01") // #imageLiteral(resourceName: "krown_metal")
+             crownImageView.image = #imageLiteral(resourceName: "Crown_cord01") // #imageLiteral(resourceName: "krown_metal")
         }
         
         for element in elements {
@@ -265,6 +265,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         myResult.time = Float(gameTime)
         myResult.misses = Int(gameMisses)
         myResult.score = countGameScore()
+        myResult.hint = globalSettings.hintUserChose
         
         // Add result to database
         let realm = try! Realm()
@@ -282,36 +283,63 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         
         let realm = try! Realm()
         
-        let grabReluts = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
+        let grabResults = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
         
-        if grabReluts.count >= 1 {
-            let firstName = grabReluts[0].name ?? "no Name".systemLocalized
-            let firstScore = String(format: "%.0f",grabReluts[0].score)
-            let firstDate = grabReluts[0].date ?? "no Date".systemLocalized
-            let firstTime = String(format: "%.1f",grabReluts[0].time)
-        
-            if grabReluts.count >= 2 {
-                let secondName = grabReluts[1].name ?? "no Name".systemLocalized
-                let secondScore = String(format: "%.0f",grabReluts[1].score)
-                let secondDate = grabReluts[1].date ?? "no Date".systemLocalized
-                let secondTime = String(format: "%.1f",grabReluts[1].time)
+        if grabResults.count >= 1 {
+            let firstName = grabResults[0].name ?? "no Name".systemLocalized
+            let firstScore = String(format: "%.0f",grabResults[0].score)
+            let firstDate = grabResults[0].date ?? "no Date".systemLocalized
+            let firstTime = String(format: "%.1f",grabResults[0].time)
+            let firstHint = hintToSymbol(grabResults[0].hint ?? "")
             
-                if grabReluts.count >= 3 {
-                    let thirdName = grabReluts[2].name ?? "no Name".systemLocalized
-                    let thirdScore = String(format: "%.0f",grabReluts[2].score)
-                    let thirdDate = grabReluts[2].date ?? "no Date".systemLocalized
-                    let thirdTime = String(format: "%.1f",grabReluts[2].time)
+            if grabResults.count >= 2 {
+                let secondName = grabResults[1].name ?? "no Name".systemLocalized
+                let secondScore = String(format: "%.0f",grabResults[1].score)
+                let secondDate = grabResults[1].date ?? "no Date".systemLocalized
+                let secondTime = String(format: "%.1f",grabResults[1].time)
+                let secondHint = hintToSymbol(grabResults[1].hint ?? "")
+            
+                if grabResults.count >= 3 {
+                    let thirdName = grabResults[2].name ?? "no Name".systemLocalized
+                    let thirdScore = String(format: "%.0f",grabResults[2].score)
+                    let thirdDate = grabResults[2].date ?? "no Date".systemLocalized
+                    let thirdTime = String(format: "%.1f",grabResults[2].time)
+                    let thirdHint = hintToSymbol(grabResults[2].hint ?? "")
 
                     thirdPlaceHighScoreLabel.text = ("\(thirdName)\n" + "time:".systemLocalized + " \(thirdTime) s\n" + "day:".systemLocalized + " \(thirdDate)")
-                    thirdPlaceScoreValueLabel.text = "\(thirdScore)"
+                    thirdPlaceScoreValueLabel.text = "\(thirdScore) \(thirdHint)"
                 }
                 secondPlaceHighScoreLabel.text = ("\(secondName)\n" + "time:".systemLocalized + " \(secondTime) s\n" + "day:".systemLocalized + " \(secondDate)")
-                secondPlaceScoreValueLabel.text = "\(secondScore)"
+                secondPlaceScoreValueLabel.text = "\(secondScore) \(secondHint)"
             }
             firstPlaceHighScoreLabel.text = ("\(firstName)\n" + "time:".systemLocalized + " \(firstTime) s\n" + "day:".systemLocalized + " \(firstDate)")
-            firstPlaceScoreValueLabel.text = "\(firstScore)"
+            firstPlaceScoreValueLabel.text = "\(firstScore) \(firstHint)"
         }
         
+    }
+    
+    func hintToSymbol(_ hint: String) -> String {
+        
+        switch hint {
+        case "mass":
+            return "🐘"
+            //return "M"
+        case "number":
+            return "🐠"
+            //return "N"
+        case "valence":
+            return "🐉"
+            //return "V"
+        case "name":
+            return "🐓"
+            //return "n"
+        case "symbol":
+            return "🐬"
+            //return " "
+        default:
+            return "🐛"
+        }
+
     }
     
      // MARK: - Password function
