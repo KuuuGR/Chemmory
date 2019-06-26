@@ -372,6 +372,6 @@ extension GameViewController: GameResultDelegate {
     func backFromResult(transferredDataToGameVC: String) {
          if endGame == true {
             backAction()
-        }
+         }
     }
 }

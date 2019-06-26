@@ -208,7 +208,7 @@ class OptionsViewController: UIViewController {
         let realm = try! Realm()
         try! realm.write {
             globalSettings.copyUserGameSetings(from: tempSettings, to: globalSettings)
-            realm.add(globalSettings, update: true)
+            realm.add(globalSettings, update: .modified)
         }
         //back to main view
         self.navigationController?.popViewController(animated: true)

@@ -61,7 +61,7 @@ class LanguageViewController: UIViewController {
             let realm = try! Realm()
             try! realm.write {
                 globalSettings.copyUserGameSetings(from: tempSettings, to: globalSettings)
-                realm.add(globalSettings, update: true)
+                realm.add(globalSettings, update: .modified)
             }
         }
         

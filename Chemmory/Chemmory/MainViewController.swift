@@ -168,7 +168,7 @@ class MainViewController: UIViewController {
         } else if objectExists(id: 0) == false {
             print("zakładam bazę danych")
             try! realm.write {
-                realm.add(globalSettings,update: false)
+                realm.add(globalSettings,update: .error)
             }
             
             loadSettings()
@@ -217,6 +217,7 @@ class MainViewController: UIViewController {
         optionsSplashImage.isHidden = true
         creditsSplashImage.isHidden = true
         languageSplashImage.isHidden = true
+    
     }
     
     

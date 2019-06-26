@@ -61,20 +61,24 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func resetButtonTapped(_ sender: Any) {
 
         preparePasswordField()
+        
         if  resetDbFuse && passwordCorrect() == true{
             SoundManager.playSound(.match)
             let realm = try! Realm()
+            
+            let result = realm.objects(Result.self)
+
             try! realm.write {
-                realm.deleteAll()
+                realm.delete(result)
             }
-            backAction()
+            self.navigationController?.popToRootViewController(animated: true)
+            
         } else if  passwordCorrect() == true{
             SoundManager.playSound(.nomatch)
             resetDbFuse = true
         } else if passwordView.isHidden == true{
             SoundManager.playSound(.nomatch)
             resetDbFuse = false
-            
         }
         
     }
