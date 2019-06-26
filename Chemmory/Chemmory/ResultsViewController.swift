@@ -161,6 +161,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        inputUserNameTextField.text = userDefaultName
     }
     
     func backAction(){
@@ -237,6 +238,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     // hide keyboard when pressed return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        userDefaultName = self.inputUserNameTextField.text
         self.inputUserNameTextField.alpha = 0.5
         self.textFieldTopConstraint.constant = 12
         return (true)
