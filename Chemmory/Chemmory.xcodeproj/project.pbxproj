@@ -7,21 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22240531223BA0BE008FCC4C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22240530223BA0BE008FCC4C /* Settings.swift */; };
+		22278A2F227ACEC100BDFA75 /* LocalizableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22278A2E227ACEC100BDFA75 /* LocalizableHelper.swift */; };
+		22278A32227AD11F00BDFA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22278A34227AD11F00BDFA75 /* Localizable.strings */; };
+		2227B865225F41B900B6A785 /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B864225F41B900B6A785 /* spring.wav */; };
+		2227B86922605B2000B6A785 /* start1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B86822605B2000B6A785 /* start1.wav */; };
+		2227B86B22605C8C00B6A785 /* shuffle1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B86A22605C8C00B6A785 /* shuffle1.wav */; };
+		223577A722379AB800553DCC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223577A622379AB800553DCC /* Result.swift */; };
+		2235CF60225F387A00A334D4 /* plum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5E225F387A00A334D4 /* plum.wav */; };
+		2235CF61225F387A00A334D4 /* puck.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5F225F387A00A334D4 /* puck.wav */; };
+		2235CF63225F3CA500A334D4 /* boom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF62225F3CA500A334D4 /* boom.wav */; };
+		223FEF1B22783DE300B9876F /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223FEF1A22783DE300B9876F /* Language.storyboard */; };
+		223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FEF1C22783E2D00B9876F /* LanguageViewController.swift */; };
+		22426AE12280119400D7F2C1 /* Credits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22426AE02280119400D7F2C1 /* Credits.storyboard */; };
+		22426AE32280126E00D7F2C1 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22426AE22280126E00D7F2C1 /* CreditsViewController.swift */; };
+		22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE12229305D0026FC5D /* Gameboard.storyboard */; };
+		228203962248CC8900CFFFB9 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228203952248CC8900CFFFB9 /* Elements.swift */; };
+		22957C222233B688009AF033 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22957C212233B688009AF033 /* Results.storyboard */; };
+		22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22957C232233B7BD009AF033 /* ResultsViewController.swift */; };
+		22993414223111CE000E7851 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22993413223111CE000E7851 /* AVFoundation.framework */; };
+		229934162231123A000E7851 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229934152231123A000E7851 /* SoundManager.swift */; };
+		229A695E226493FF009A049B /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A695D226493FF009A049B /* Options.storyboard */; };
+		229A696022659E8D009A049B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A695F22659E8D009A049B /* OptionsViewController.swift */; };
+		22A9E944224A28C000EBA981 /* win01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E943224A28C000EBA981 /* win01.wav */; };
+		22A9E946224A29A700EBA981 /* flip05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E945224A29A700EBA981 /* flip05.wav */; };
+		22A9E948224A29D300EBA981 /* flip08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E947224A29D200EBA981 /* flip08.wav */; };
+		22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E94B224A2AE800EBA981 /* fail01.wav */; };
+		22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E951224A2D4D00EBA981 /* flipBack04.wav */; };
+		22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */; };
+		22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */; };
+		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
 		22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481832226B91B00C6E530 /* AppDelegate.swift */; };
-		22C481862226B91B00C6E530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481852226B91B00C6E530 /* ViewController.swift */; };
+		22C481862226B91B00C6E530 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481852226B91B00C6E530 /* GameViewController.swift */; };
 		22C481892226B91B00C6E530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C481872226B91B00C6E530 /* Main.storyboard */; };
 		22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C4818A2226B91D00C6E530 /* Assets.xcassets */; };
 		22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */; };
+		22FA5AE6222958740026FC5D /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE5222958740026FC5D /* CardModel.swift */; };
+		22FA5AE8222961090026FC5D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FA5AE7222961090026FC5D /* Card.swift */; };
+		7E12DD00839EEF449712F239 /* Pods_Chemmory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA87ED334689E2CF4AB5F15 /* Pods_Chemmory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1551F878BC1FCB094F554423 /* Pods-Chemmory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemmory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chemmory/Pods-Chemmory.release.xcconfig"; sourceTree = "<group>"; };
+		22240530223BA0BE008FCC4C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		22278A2E227ACEC100BDFA75 /* LocalizableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableHelper.swift; sourceTree = "<group>"; };
+		22278A33227AD11F00BDFA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A35227AD14B00BDFA75 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A37227AD8D600BDFA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A38227AD92000BDFA75 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A39227AD94E00BDFA75 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22278A3A227AD98B00BDFA75 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2227B864225F41B900B6A785 /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
+		2227B86822605B2000B6A785 /* start1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start1.wav; sourceTree = "<group>"; };
+		2227B86A22605C8C00B6A785 /* shuffle1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle1.wav; sourceTree = "<group>"; };
+		223577A622379AB800553DCC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2235CF5E225F387A00A334D4 /* plum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = plum.wav; sourceTree = "<group>"; };
+		2235CF5F225F387A00A334D4 /* puck.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = puck.wav; sourceTree = "<group>"; };
+		2235CF62225F3CA500A334D4 /* boom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom.wav; sourceTree = "<group>"; };
+		223FEF1A22783DE300B9876F /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
+		223FEF1C22783E2D00B9876F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		22426AE02280119400D7F2C1 /* Credits.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Credits.storyboard; sourceTree = "<group>"; };
+		22426AE22280126E00D7F2C1 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		228203952248CC8900CFFFB9 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		22957C212233B688009AF033 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		22957C232233B7BD009AF033 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		22993413223111CE000E7851 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		229934152231123A000E7851 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		229A695D226493FF009A049B /* Options.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Options.storyboard; sourceTree = "<group>"; };
+		229A695F22659E8D009A049B /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		22A9E943224A28C000EBA981 /* win01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win01.wav; sourceTree = "<group>"; };
+		22A9E945224A29A700EBA981 /* flip05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip05.wav; sourceTree = "<group>"; };
+		22A9E947224A29D200EBA981 /* flip08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip08.wav; sourceTree = "<group>"; };
+		22A9E94B224A2AE800EBA981 /* fail01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail01.wav; sourceTree = "<group>"; };
+		22A9E951224A2D4D00EBA981 /* flipBack04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack04.wav; sourceTree = "<group>"; };
+		22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		22C481802226B91B00C6E530 /* Chemmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C481832226B91B00C6E530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22C481852226B91B00C6E530 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22C481852226B91B00C6E530 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		22C481882226B91B00C6E530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22C4818A2226B91D00C6E530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C4818D2226B91D00C6E530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C4818F2226B91D00C6E530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22FA5AE12229305D0026FC5D /* Gameboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gameboard.storyboard; sourceTree = "<group>"; };
+		22FA5AE5222958740026FC5D /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		22FA5AE7222961090026FC5D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5D1276F7632D55D615BA1BE6 /* Pods-Chemmory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chemmory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chemmory/Pods-Chemmory.debug.xcconfig"; sourceTree = "<group>"; };
+		DFA87ED334689E2CF4AB5F15 /* Pods_Chemmory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chemmory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +102,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22993414223111CE000E7851 /* AVFoundation.framework in Frameworks */,
+				7E12DD00839EEF449712F239 /* Pods_Chemmory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22993409223110A1000E7851 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				22A9E945224A29A700EBA981 /* flip05.wav */,
+				22A9E947224A29D200EBA981 /* flip08.wav */,
+				2227B864225F41B900B6A785 /* spring.wav */,
+				22A9E94B224A2AE800EBA981 /* fail01.wav */,
+				2235CF5E225F387A00A334D4 /* plum.wav */,
+				2235CF5F225F387A00A334D4 /* puck.wav */,
+				22A9E943224A28C000EBA981 /* win01.wav */,
+				2227B86A22605C8C00B6A785 /* shuffle1.wav */,
+				22A9E951224A2D4D00EBA981 /* flipBack04.wav */,
+				2235CF62225F3CA500A334D4 /* boom.wav */,
+				2227B86822605B2000B6A785 /* start1.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		22993412223111CE000E7851 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22993413223111CE000E7851 /* AVFoundation.framework */,
+				DFA87ED334689E2CF4AB5F15 /* Pods_Chemmory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22AE75BD22520D440026DA17 /* NewCollectionCellCar */ = {
+			isa = PBXGroup;
+			children = (
+				22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */,
+				22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */,
+			);
+			path = NewCollectionCellCar;
+			sourceTree = "<group>";
+		};
 		22C481772226B91B00C6E530 = {
 			isa = PBXGroup;
 			children = (
 				22C481822226B91B00C6E530 /* Chemmory */,
 				22C481812226B91B00C6E530 /* Products */,
+				22993412223111CE000E7851 /* Frameworks */,
+				D26F760458A06D832744AAD9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +167,43 @@
 		22C481822226B91B00C6E530 /* Chemmory */ = {
 			isa = PBXGroup;
 			children = (
+				22AE75BD22520D440026DA17 /* NewCollectionCellCar */,
+				22C21B73222D415200EC9A48 /* MainViewController.swift */,
+				22C481852226B91B00C6E530 /* GameViewController.swift */,
+				22957C232233B7BD009AF033 /* ResultsViewController.swift */,
+				229A695F22659E8D009A049B /* OptionsViewController.swift */,
+				223577A622379AB800553DCC /* Result.swift */,
+				228203952248CC8900CFFFB9 /* Elements.swift */,
 				22C481832226B91B00C6E530 /* AppDelegate.swift */,
-				22C481852226B91B00C6E530 /* ViewController.swift */,
+				22FA5AE5222958740026FC5D /* CardModel.swift */,
+				22278A2E227ACEC100BDFA75 /* LocalizableHelper.swift */,
+				22FA5AE7222961090026FC5D /* Card.swift */,
+				229934152231123A000E7851 /* SoundManager.swift */,
+				22240530223BA0BE008FCC4C /* Settings.swift */,
+				223FEF1C22783E2D00B9876F /* LanguageViewController.swift */,
+				22426AE22280126E00D7F2C1 /* CreditsViewController.swift */,
+				223FEF1A22783DE300B9876F /* Language.storyboard */,
 				22C481872226B91B00C6E530 /* Main.storyboard */,
-				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
+				229A695D226493FF009A049B /* Options.storyboard */,
+				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
+				22426AE02280119400D7F2C1 /* Credits.storyboard */,
+				22957C212233B688009AF033 /* Results.storyboard */,
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
+				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
+				22278A34227AD11F00BDFA75 /* Localizable.strings */,
+				22993409223110A1000E7851 /* Sound */,
 			);
 			path = Chemmory;
+			sourceTree = "<group>";
+		};
+		D26F760458A06D832744AAD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D1276F7632D55D615BA1BE6 /* Pods-Chemmory.debug.xcconfig */,
+				1551F878BC1FCB094F554423 /* Pods-Chemmory.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22C481922226B91D00C6E530 /* Build configuration list for PBXNativeTarget "Chemmory" */;
 			buildPhases = (
+				33E64E22E7B2E2EE858C600B /* [CP] Check Pods Manifest.lock */,
 				22C4817C2226B91B00C6E530 /* Sources */,
 				22C4817D2226B91B00C6E530 /* Frameworks */,
 				22C4817E2226B91B00C6E530 /* Resources */,
+				FE5E8C2F785A3CCF2850A044 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +240,7 @@
 				TargetAttributes = {
 					22C4817F2226B91B00C6E530 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -106,6 +251,11 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
+				es,
+				ru,
+				fr,
+				de,
 			);
 			mainGroup = 22C481772226B91B00C6E530;
 			productRefGroup = 22C481812226B91B00C6E530 /* Products */;
@@ -123,26 +273,113 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C4818E2226B91D00C6E530 /* LaunchScreen.storyboard in Resources */,
+				2227B865225F41B900B6A785 /* spring.wav in Resources */,
+				22A9E948224A29D300EBA981 /* flip08.wav in Resources */,
+				22426AE12280119400D7F2C1 /* Credits.storyboard in Resources */,
 				22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */,
+				22A9E944224A28C000EBA981 /* win01.wav in Resources */,
+				22957C222233B688009AF033 /* Results.storyboard in Resources */,
+				2227B86B22605C8C00B6A785 /* shuffle1.wav in Resources */,
+				22A9E946224A29A700EBA981 /* flip05.wav in Resources */,
+				223FEF1B22783DE300B9876F /* Language.storyboard in Resources */,
+				22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */,
+				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
+				2227B86922605B2000B6A785 /* start1.wav in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
+				229A695E226493FF009A049B /* Options.storyboard in Resources */,
+				22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */,
+				2235CF60225F387A00A334D4 /* plum.wav in Resources */,
+				22278A32227AD11F00BDFA75 /* Localizable.strings in Resources */,
+				2235CF61225F387A00A334D4 /* puck.wav in Resources */,
+				2235CF63225F3CA500A334D4 /* boom.wav in Resources */,
+				22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33E64E22E7B2E2EE858C600B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chemmory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5E8C2F785A3CCF2850A044 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chemmory/Pods-Chemmory-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IBLocalizable/IBLocalizable.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBLocalizable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chemmory/Pods-Chemmory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22C4817C2226B91B00C6E530 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C481862226B91B00C6E530 /* ViewController.swift in Sources */,
+				22C481862226B91B00C6E530 /* GameViewController.swift in Sources */,
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
+				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
+				22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */,
+				22426AE32280126E00D7F2C1 /* CreditsViewController.swift in Sources */,
+				22240531223BA0BE008FCC4C /* Settings.swift in Sources */,
+				22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */,
+				223577A722379AB800553DCC /* Result.swift in Sources */,
+				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
+				22278A2F227ACEC100BDFA75 /* LocalizableHelper.swift in Sources */,
+				229934162231123A000E7851 /* SoundManager.swift in Sources */,
+				229A696022659E8D009A049B /* OptionsViewController.swift in Sources */,
+				223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */,
+				228203962248CC8900CFFFB9 /* Elements.swift in Sources */,
+				22FA5AE8222961090026FC5D /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		22278A34227AD11F00BDFA75 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22278A33227AD11F00BDFA75 /* en */,
+				22278A35227AD14B00BDFA75 /* pl */,
+				22278A37227AD8D600BDFA75 /* es */,
+				22278A38227AD92000BDFA75 /* ru */,
+				22278A39227AD94E00BDFA75 /* fr */,
+				22278A3A227AD98B00BDFA75 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		22C481872226B91B00C6E530 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -166,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -196,6 +434,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=*]" = default;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -227,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -280,36 +521,40 @@
 		};
 		22C481932226B91D00C6E530 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D1276F7632D55D615BA1BE6 /* Pods-Chemmory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AQVN3U6RX9;
+				DEVELOPMENT_TEAM = F3HJA47BQU;
 				INFOPLIST_FILE = Chemmory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KuuuGR.Chemmory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		22C481942226B91D00C6E530 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1551F878BC1FCB094F554423 /* Pods-Chemmory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AQVN3U6RX9;
+				DEVELOPMENT_TEAM = F3HJA47BQU;
 				INFOPLIST_FILE = Chemmory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KuuuGR.Chemmory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

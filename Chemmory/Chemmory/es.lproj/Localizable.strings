@@ -1,0 +1,149 @@
+/* 
+  Localizable.strings
+  Chemmory
+
+  Created by Grzesiek Kulesza on 02/05/2019.
+  Copyright © 2019 Grzesiek Kulesza. All rights reserved.
+*/
+
+//OPTIONS STORYBOARD
+"CARD BACKGROUND" = "FONDO DE LA TARJETA";
+"FONTS COLOR" = "COLOR DE FUENTES";
+"FRONT CARD COLOR" = "COLOR TARJETA DELANTERA";
+"GAME BACKGROUND" = "FONDO DE JUEGO";
+"CARD HINTS" = "CONSEJOS DE TARJETA";
+"custom foreground" = "frente uniforme de la tarjeta";
+"SAVE" = "SALVAR";
+"YES" = "SÍ";
+"NO" = "NO";
+//RESULT STORYBOARD
+"time:" = "hora:";
+"day:" = "día:";
+"Player: time: day:" = "Jugador: hora: día:";
+"Tap Your'e name" = "Ingresa tu nombre";
+"RESULTS" = "RESULTADOS";
+"score" = "Puntuación:";
+//GAME STORYBOARD
+"Life bar" = "barra de vida";
+"Congratulations!" = "¡Felicitaciones!";
+"You've won" = "Has ganado";
+"Game Over" = "Game Over";
+"You've lost" = "Has perdido";
+//LANGUAGE STORYBOARD
+"select language" = "seleccione el idioma";
+//MAIN STORYBOARD
+"start the game" = "comienza el juego";
+"start" = "Comienzo";
+//ELEMENTS NAMES
+"Hydrogen" = "Hidrógeno";
+"Helium" = "Helio";
+"Lithium" = "Litio";
+"Beryllium" = "Berilio";
+"Boron" = "Boro";
+"Carbon" = "Carbono";
+"Nitrogen" = "Nitrógeno";
+"Oxygen" = "Oxígeno";
+"Fluorine" = "Flúor";
+"Neon" = "Neón";
+"Sodium" = "Sodio";
+"Magnesium" = "Magnesio";
+"Aluminum" = "Aluminio";
+"Silicon" = "Silicio";
+"Phosphorus" = "Fósforo";
+"Sulfur" = "Azufre";
+"Chlorine" = "Cloro";
+"Argon" = "Argón";
+"Potassium" = "Potasio";
+"Calcium" = "Calcio";
+"Scandium" = "Escandio";
+"Titanium" = "Titanio";
+"Vanadium" = "Vanadio";
+"Chromium" = "Cromo";
+"Manganese" = "Manganeso";
+"Iron" = "Hierro";
+"Cobalt" = "Cobalto";
+"Nickel" = "Níquel";
+"Copper" = "Cobre";
+"Zinc" = "Zinc";
+"Gallium" = "Galio";
+"Germanium" = "Germanio";
+"Arsenic" = "Arsénico";
+"Selenium" = "Selenio";
+"Bromine" = "Bromo";
+"Krypton" = "Kriptón";
+"Rubidium" = "Rubidio";
+"Strontium" = "Estroncio";
+"Yttrium" = "Itrio";
+"Zirconium" = "Zirconio";
+"Niobium" = "Niobio";
+"Molybdenum" = "Molibdeno";
+"Technetium" = "Tecnecio";
+"Ruthenium" = "Rutenio";
+"Rhodium" = "Rodio";
+"Palladium" = "Paladio";
+"Silver" = "Plata";
+"Cadmium" = "Cadmio";
+"Indium" = "Indio";
+"Tin" = "Estaño";
+"Antimony" = "Antimonio";
+"Tellurium" = "Telurio";
+"Iodine" = "Yodo";
+"Xenon" = "Xenón";
+"Cesium" = "Cesio";
+"Barium" = "Bario";
+"Lanthanum" = "Lantano";
+"Cerium" = "Cerio";
+"Praseodymium" = "Praseodimio";
+"Neodymium" = "Neodimio";
+"Promethium" = "Promethio";
+"Samarium" = "Samario";
+"Europium" = "Europio";
+"Gadolinium" = "Gadolinio";
+"Terbium" = "Terbio";
+"Dysprosium" = "Disprosio";
+"Holmium" = "Holmio";
+"Erbium" = "Erbio";
+"Thulium" = "Tulio";
+"Ytterbium" = "Yterbio";
+"Lutecium" = "Lutecio";
+"Hafnium" = "Hafnio";
+"Tantalum" = "Tantalio";
+"Tungsten" = "Wolframio";
+"Rhenium" = "Renio";
+"Osmium" = "Osmio";
+"Iridium" = "Iridio";
+"Platinum" = "Platino";
+"Gold" = "Oro";
+"Mercury" = "Mercurio";
+"Thallium" = "Talio";
+"Lead" = "Plomo";
+"Bismuth" = "Bismuto";
+"Polonium" = "Polonio";
+"Astatine" = "Astatino";
+"Radon" = "Radón";
+"Francium" = "Francio";
+"Radium" = "Radio";
+"Actinium" = "Actinio";
+"Thorium" = "Thorio";
+"Protactinium" = "Protactinio";
+"Uranium" = "Uranio";
+"Neptunium" = "Neptunio";
+"Plutonium" = "Plutonio";
+"Americium" = "Americio";
+"Curium" = "Curio";
+"Berkelium" = "Berkelio";
+"Californium" = "Californio";
+"Einsteinium" = "Einsteinio";
+"Fermium" = "Fermio";
+"Mendelevium" = "Mendelevio";
+"Nobelium" = "Nobelio";
+"Lawrencium" = "Laurencio";
+"Rutherfordium" = "Rutherfordio";
+"Dubnium" = "Dubnio";
+"Seaborgium" = "Seaborgio";
+"Bohrium" = "Bohrio";
+"Hassium" = "Hassio";
+"Meitnerium" = "Meitnerio";
+"Darmstadtium" = "Darmstadtio";
+"Roentgenium" = "Roentgenio";
+"Copernicium" = "Copernicio";

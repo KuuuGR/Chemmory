@@ -1,0 +1,149 @@
+/* 
+  Localizable.strings
+  Chemmory
+
+  Created by Grzesiek Kulesza on 02/05/2019.
+  Copyright © 2019 Grzesiek Kulesza. All rights reserved.
+*/
+
+//OPTIONS STORYBOARD
+"CARD BACKGROUND" = "ФОН КАРТЫ";
+"FONTS COLOR" = "ЦВЕТ ШРИФТОВ";
+"FRONT CARD COLOR" = "ЦВЕТ ПЕРЕДНЕЙ КАРТЫ";
+"GAME BACKGROUND" = "ФОН ИГРЫ";
+"CARD HINTS" = "КАРТЫ СОВЕТЫ";
+"custom foreground" = "единый фронт карты";
+"SAVE" = "СПАСТИ";
+"YES" = "ДА";
+"NO" = "НЕТ";
+//RESULT STORYBOARD
+"time:" = "время:";
+"day:" = "день:";
+"Player: time: day:" = "игрок: время: день:";
+"Tap Your'e name" = "Введите ваше имя";
+"RESULTS" = "РЕЗУЛЬТАТЫ";
+"score" = "Рекор:";
+//GAME STORYBOARD
+"Life bar" = "бар жизни";
+"Congratulations!" = "Поздравляю!";
+"You've won" = "Вы выиграли";
+"Game Over" = "Игра окончена";
+"You've lost" = "Вы проиграли";
+//LANGUAGE STORYBOARD
+"select language" = "выберите язык";
+//MAIN STORYBOARD
+"start the game" = "начать игру";
+"start" = "Запуск";
+//ELEMENTS NAMES
+"Hydrogen" = "Водород";
+"Helium" = "Гелий";
+"Lithium" = "Литий";
+"Beryllium" = "Бериллий";
+"Boron" = "Бор";
+"Carbon" = "Углерод";
+"Nitrogen" = "Азот";
+"Oxygen" = "Кислород";
+"Fluorine" = "Фтор";
+"Neon" = "Неон";
+"Sodium" = "Натрий";
+"Magnesium" = "Магний";
+"Aluminum" = "Алюминий";
+"Silicon" = "Кремний";
+"Phosphorus" = "Фосфор";
+"Sulfur" = "Сера";
+"Chlorine" = "Хлор";
+"Argon" = "Аргон";
+"Potassium" = "Калий";
+"Calcium" = "Кальций";
+"Scandium" = "Скандий";
+"Titanium" = "Титан";
+"Vanadium" = "Ванадий";
+"Chromium" = "Хром";
+"Manganese" = "Марганец";
+"Iron" = "Железный";
+"Cobalt" = "Кобальт";
+"Nickel" = "Никель";
+"Copper" = "Медь";
+"Zinc" = "Цинк";
+"Gallium" = "Га́ллий";
+"Germanium" = "Германий";
+"Arsenic" = "Мышьяк";
+"Selenium" = "Селен";
+"Bromine" = "Бром";
+"Krypton" = "Криптон";
+"Rubidium" = "Рубидий"; //37
+"Strontium" = "Стронций";
+"Yttrium" = "Иттрий";
+"Zirconium" = "Цирконий";
+"Niobium" = "Ниобий";
+"Molybdenum" = "Молибден";
+"Technetium" = "Технеций";
+"Ruthenium" = "Рутений"; //44
+"Rhodium" = "Родий";
+"Palladium" = "Палладий";
+"Silver" = "Серебро";
+"Cadmium" = "Кадмий";
+"Indium" = "Индий";
+"Tin" = "Олово";
+"Antimony" = "Сурьма";
+"Tellurium" = "Теллур";
+"Iodine" = "Йод";
+"Xenon" = "ксенон"; //54;
+"Cesium" = "Цезий";
+"Barium" = "Барий";
+"Lanthanum" = "Лантан";
+"Cerium" = "Церий"; //58
+"Praseodymium" = "Празеодим";
+"Neodymium" = "Неодим";
+"Promethium" = "Прометий";
+"Samarium" = "Самарий"; //62
+"Europium" = "Европий"; //63
+"Gadolinium" = "Гадолиний";
+"Terbium" = "Тербий";
+"Dysprosium" = "Диспрозий";
+"Holmium" = "Гольмиевый";
+"Erbium" = "Эрбий";
+"Thulium" = "Тулий";
+"Ytterbium" = "Иттербий";
+"Lutecium" = "Лютеций";
+"Hafnium" = "Гафний";
+"Tantalum" = "Тантал";
+"Tungsten" = "Вольфрам";
+"Rhenium" = "Рений";
+"Osmium" = "Осмий";
+"Iridium" = "Иридий"; //77
+"Platinum" = "ПлатинаИридий";
+"Gold" = "Золото";
+"Mercury" = "Ртуть"; //80
+"Thallium" = "Таллий";
+"Lead" = "Свинец";
+"Bismuth" = "Висмут";
+"Polonium" = "Полоний";
+"Astatine" = "Астат";
+"Radon" = "Радон";
+"Francium" = "Франций";
+"Radium" = "Радий"; //88
+"Actinium" = "Актиний";
+"Thorium" = "Торий";
+"Protactinium" = "Протактиний";
+"Uranium" = "Уран";
+"Neptunium" = "Нептуний"; //93
+"Plutonium" = "Плутоний";
+"Americium" = "Америций"; //95
+"Curium" = "Кюрий"; //96
+"Berkelium" = "Берклий";
+"Californium" = "Калифорния";
+"Einsteinium" = "Эйнштейний";
+"Fermium" = "Фермий"; //100
+"Mendelevium" = "Менделевий";
+"Nobelium" = "Нобелий"; //102
+"Lawrencium" = "Лоуренсий";
+"Rutherfordium" = "Резерфордий"; //104
+"Dubnium" = "Дубний";
+"Seaborgium" = "Сиборгий"; //106
+"Bohrium" = "Борий";
+"Hassium" = "Хассий"; //108
+"Meitnerium" = "Мейтнерий"; //109
+"Darmstadtium" = "Дармштадтий"; //110
+"Roentgenium" = "Рентгений"; //111
+"Copernicium" = "Коперниций"; //112
