@@ -7,10 +7,7 @@
 //
 
 import UIKit
-
-
-
-
+import RealmSwift
 
 
 class HighScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -42,17 +39,37 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animalArray.count
+        
+        // return as many records as elements in Realm
+        let realm = try! Realm()
+        let grabResults = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
+        return grabResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreCell", for: indexPath)
         
+        // prepare text for cell
+        let realm = try! Realm()
+        let grabResults = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
         var textForCell = ""
-        textForCell.append(String(indexPath.row))
-        textForCell.append(" ")
-        textForCell.append(animalArray[indexPath.row])
+        
+        let positionStr = String(indexPath.row + 1)
+        let nameStr = grabResults[indexPath.row].name ?? "noname"
+        
+        let timeStr = String(grabResults[indexPath.row].time)
+        let dayStr = grabResults[indexPath.row].date ?? "noday"
+        
+        let scoreStr = String(grabResults[indexPath.row].score)
+        let hintStr = grabResults[indexPath.row].hint ?? "unknown hint"
+        
+        //TODO: make score and time aproximate, make hint as a Emoji, add tekst hint:, time:, date,
+        // add localized names
+        
+        textForCell.append("\(positionStr). \(nameStr) \(timeStr) \(dayStr) \(scoreStr) \(hintStr)")
+        
         cell.textLabel!.text = textForCell
+        
         return cell
     }
 }

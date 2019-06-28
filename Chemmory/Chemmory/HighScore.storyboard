@@ -34,7 +34,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highScoreBackground" translatesAutoresizingMaskIntoConstraints="NO" id="xbc-DU-S5z">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highScoreBackground" translatesAutoresizingMaskIntoConstraints="NO" id="xbc-DU-S5z">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niz-Xo-90I">
