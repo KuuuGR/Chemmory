@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--High Score View Controller-->
+        <scene sceneID="Vci-Wj-49H">
+            <objects>
+                <viewController storyboardIdentifier="HighScoreStoryboard" id="8FE-Mk-UCt" customClass="HighScoreViewController" customModule="Chemmory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ySz-lI-esB">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9zK-TG-ut0">
+                                <rect key="frame" x="75" y="0.0" width="405" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HighScoreCell" id="NbO-Wo-dK3">
+                                        <rect key="frame" x="0.0" y="28" width="405" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NbO-Wo-dK3" id="dLz-pp-tbK">
+                                            <rect key="frame" x="0.0" y="0.0" width="405" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highScoreBackground" translatesAutoresizingMaskIntoConstraints="NO" id="xbc-DU-S5z">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niz-Xo-90I">
+                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2MJ-Ct-Hga"/>
+                                    <constraint firstAttribute="width" constant="45" id="uKL-96-bXh"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="leftArrow4"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="8FE-Mk-UCt" eventType="touchUpInside" id="Qcb-YW-mdf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84813523290000004" green="0.74672269820000003" blue="0.52608251569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="niz-Xo-90I" firstAttribute="leading" secondItem="ySz-lI-esB" secondAttribute="leading" id="A3T-aX-1co"/>
+                            <constraint firstItem="xbc-DU-S5z" firstAttribute="top" secondItem="ySz-lI-esB" secondAttribute="topMargin" id="BAk-m1-QFk"/>
+                            <constraint firstItem="kR0-yt-71d" firstAttribute="trailing" secondItem="xbc-DU-S5z" secondAttribute="trailing" id="Pyv-xG-bFf"/>
+                            <constraint firstItem="kR0-yt-71d" firstAttribute="trailing" secondItem="9zK-TG-ut0" secondAttribute="trailing" id="as6-mb-fSa"/>
+                            <constraint firstItem="9zK-TG-ut0" firstAttribute="leading" secondItem="niz-Xo-90I" secondAttribute="trailing" constant="30" id="d49-JB-wQz"/>
+                            <constraint firstItem="niz-Xo-90I" firstAttribute="top" secondItem="ySz-lI-esB" secondAttribute="top" id="l36-pE-1WD"/>
+                            <constraint firstItem="kR0-yt-71d" firstAttribute="bottom" secondItem="9zK-TG-ut0" secondAttribute="bottom" id="lHs-Vn-sLy"/>
+                            <constraint firstItem="xbc-DU-S5z" firstAttribute="leading" secondItem="kR0-yt-71d" secondAttribute="leading" id="lUF-RT-k5n"/>
+                            <constraint firstItem="9zK-TG-ut0" firstAttribute="top" secondItem="kR0-yt-71d" secondAttribute="top" id="lvB-wA-Ju0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xbc-DU-S5z" secondAttribute="bottom" id="qQL-g0-Rhp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kR0-yt-71d"/>
+                    </view>
+                    <connections>
+                        <outlet property="highScoreTableView" destination="9zK-TG-ut0" id="qej-dz-izH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cu8-WD-UXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-540" y="-338"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="highScoreBackground" width="925" height="542"/>
+        <image name="leftArrow4" width="380" height="380"/>
+    </resources>
+</document>

@@ -58,6 +58,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         backButtonTappedOnce = true
     }
     
+    
+    @IBAction func ResultsButtonTapped(_ sender: UIButton) {
+        print ("Duży")
+        switchToViewController(identifier: "HighScoreStoryboard", sbName: "HighScore")
+    }
+    
+    
+    
     @IBAction func resetButtonTapped(_ sender: Any) {
 
         preparePasswordField()
@@ -408,6 +416,16 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
         passSwitch6.isOn = false
         
         return (result)
+    }
+    
+    func switchToViewController(identifier: String, sbName: String? = nil) {
+        var storyBoard = self.storyboard
+        if let sbName = sbName {
+            storyBoard = UIStoryboard(name: sbName, bundle: nil)
+        }
+        if let viewController = storyBoard?.instantiateViewController(withIdentifier: identifier) {
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
 }  // End ResoultViewController class
