@@ -16,6 +16,11 @@
 "SAVE" = "СПАСТИ";
 "YES" = "ДА";
 "NO" = "НЕТ";
+//HIGHSCORE STORYBOARD
+"score: " = "счет: ";
+"time: " = "время: ";
+"\nhint: " = "\nнамек: ";
+"played on: " = "играл на: ";
 //RESULT STORYBOARD
 "time:" = "время:";
 "day:" = "день:";

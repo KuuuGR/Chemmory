@@ -16,6 +16,11 @@
 "SAVE" = "ZAPISZ";
 "YES" = "TAK";
 "NO" = "NIE";
+//HIGHSCORE STORYBOARD
+"score: " = "punkty: ";
+"time: " = "czas: ";
+"\nhint: " = "\npodpowiedź: ";
+"played on: " = "grano: ";
 //RESULT STORYBOARD
 "time:" = "czas:";
 "day:" = "dzień:";

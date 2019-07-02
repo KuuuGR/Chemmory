@@ -16,6 +16,11 @@
 "SAVE" = "ENREGISTRER";
 "YES" = "OUI";
 "NO" = "NON";
+//HIGHSCORE STORYBOARD
+"score: " = "score: ";
+"time: " = "temps: ";
+"\nhint: " = "\nallusion: ";
+"played on: " = "joué sur: ";
 //RESULT STORYBOARD
 "time:" = "temps:";
 "day:" = "journée:";
