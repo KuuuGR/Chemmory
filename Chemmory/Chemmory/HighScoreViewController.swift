@@ -12,16 +12,11 @@ import RealmSwift
 
 class HighScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-
     @IBOutlet weak var highScoreTableView: UITableView!
-    
-    let animalArray = ["kot", "pies", "krowa", "owca","kot", "pies", "krowa", "owca"]
     
     @IBAction func backButtonAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +25,6 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
         highScoreTableView.dataSource = self
         highScoreTableView.delegate = self
     }
-    
-
 
     // MARK: - TABLEVIEW DELEGATE & DATASOURCE
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,13 +56,9 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
         let scoreStr = String(format: "%.0f", grabResults[indexPath.row].score)
         let hintStr = hintToSymbol(grabResults[indexPath.row].hint ?? "unknown hint")
         
-        //TODO: add localized names
-        
 //        textForCell.append("\(positionStr). User: \(nameStr); score: \(scoreStr); time: \(timeStr)s; hint: \(hintStr); play at: \(dayStr)")
         
-        //let fontSize = 15.0 as CGFloat
         let fontSize = returnFontSize()
-        
         
         let attributedString = NSMutableAttributedString(string: "",
                                                   attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray,
@@ -90,7 +79,7 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
                         NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: fontSize) as Any])
         attributedString.append(attStr03)
         
-        let attStr04 = NSMutableAttributedString(string: "score: ",
+        let attStr04 = NSMutableAttributedString(string: "score: ".localized,
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray,
                         NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: fontSize) as Any])
         attributedString.append(attStr04)
@@ -100,7 +89,7 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
                         NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: fontSize) as Any])
         attributedString.append(attStr05)
         
-        let attStr06 = NSMutableAttributedString(string: "time: ",
+        let attStr06 = NSMutableAttributedString(string: "time: ".localized,
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray,
                         NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: fontSize) as Any])
         attributedString.append(attStr06)
@@ -110,17 +99,17 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
                         NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: fontSize) as Any])
         attributedString.append(attStr07)
         
-        let attStr08 = NSMutableAttributedString(string: "\nhint: ",
+        let attStr08 = NSMutableAttributedString(string: "\nhint: ".localized,
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray,
                         NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: fontSize) as Any])
         attributedString.append(attStr08)
         
         let attStr09 = NSMutableAttributedString(string: "\(hintStr) ",
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                        NSAttributedString.Key.font: UIFont(name: "Arial", size: 2 * fontSize) as Any])
+                        NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: 2 * fontSize) as Any])
         attributedString.append(attStr09)
         
-        let attStr10 = NSMutableAttributedString(string: "play at: ",
+        let attStr10 = NSMutableAttributedString(string: "played on: ".localized,
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray,
                         NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: fontSize) as Any])
         attributedString.append(attStr10)
@@ -129,8 +118,6 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
                                                  attributes:[NSAttributedString.Key.foregroundColor: UIColor.gray,
                                                              NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: fontSize) as Any])
         attributedString.append(attStr11)
-        
-
         
         //cell.textLabel!.text = textForCell
         cell.textLabel!.attributedText = attributedString

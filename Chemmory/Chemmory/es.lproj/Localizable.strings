@@ -16,6 +16,11 @@
 "SAVE" = "SALVAR";
 "YES" = "SÍ";
 "NO" = "NO";
+//HIGHSCORE STORYBOARD
+"score: " = "puntajes: ";
+"time: " = "tiempo: ";
+"\nhint: " = "\ninsinuación: ";
+"played on: " = "jugado en: ";
 //RESULT STORYBOARD
 "time:" = "hora:";
 "day:" = "día:";

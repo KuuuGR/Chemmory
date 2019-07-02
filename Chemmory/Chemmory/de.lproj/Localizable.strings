@@ -16,6 +16,11 @@
 "SAVE" = "SPAREN";
 "YES" = "JA";
 "NO" = "NEIN";
+//HIGHSCORE STORYBOARD
+"score: " = "Ergebnis: ";
+"time: " = "Zeit: ";
+"\nhint: " = "\nTipp: ";
+"played on: " = "weiterspielen: ";
 //RESULT STORYBOARD
 "time:" = "Zeit:";
 "day:" = "Tag:";
