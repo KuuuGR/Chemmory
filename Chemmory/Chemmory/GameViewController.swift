@@ -260,7 +260,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func checkGameEnded() {
     
     // Determine if there any cards unmached
-    var isWon = true
+        isWon = true
         
         for card in cardArray {
             

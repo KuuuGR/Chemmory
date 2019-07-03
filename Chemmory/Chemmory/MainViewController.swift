@@ -217,7 +217,8 @@ class MainViewController: UIViewController {
         optionsSplashImage.isHidden = true
         creditsSplashImage.isHidden = true
         languageSplashImage.isHidden = true
-    
+        
+        isWon = false
     }
     
     

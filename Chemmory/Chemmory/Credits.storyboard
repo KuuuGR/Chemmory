@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cld-uI-fEz">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                <rect key="frame" x="5" y="0.0" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="rlR-Ef-taA"/>
-                                    <constraint firstAttribute="width" constant="70" id="z6D-e2-eE1"/>
+                                    <constraint firstAttribute="height" constant="40" id="rlR-Ef-taA"/>
+                                    <constraint firstAttribute="width" constant="40" id="z6D-e2-eE1"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="leftArrow4"/>
                                 <connections>
@@ -46,7 +46,7 @@
                             <constraint firstItem="M07-G5-MBa" firstAttribute="top" secondItem="FzJ-G5-So1" secondAttribute="top" constant="30" id="9ll-Lk-c0h"/>
                             <constraint firstItem="M07-G5-MBa" firstAttribute="centerX" secondItem="Hap-TD-JmM" secondAttribute="centerX" id="H8l-sp-j5a"/>
                             <constraint firstItem="cld-uI-fEz" firstAttribute="top" secondItem="FzJ-G5-So1" secondAttribute="top" id="n0T-Y4-6rm"/>
-                            <constraint firstItem="cld-uI-fEz" firstAttribute="leading" secondItem="FzJ-G5-So1" secondAttribute="leading" id="qWa-Oi-zuM"/>
+                            <constraint firstItem="cld-uI-fEz" firstAttribute="leading" secondItem="FzJ-G5-So1" secondAttribute="leading" constant="5" id="qWa-Oi-zuM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hap-TD-JmM"/>
                     </view>

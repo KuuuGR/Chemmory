@@ -168,6 +168,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        crownImageView.isHidden = !isWon
         super.viewWillAppear(animated)
         inputUserNameTextField.text = userDefaultName
     }
