@@ -45,7 +45,6 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
         // prepare text for cell
         let realm = try! Realm()
         let grabResults = realm.objects(Result.self).sorted(byKeyPath: "score", ascending: false)
-//        var textForCell = ""
         
         let positionStr = String(indexPath.row + 1)
         let nameStr = grabResults[indexPath.row].name ?? "noname"
@@ -55,8 +54,6 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let scoreStr = String(format: "%.0f", grabResults[indexPath.row].score)
         let hintStr = hintToSymbol(grabResults[indexPath.row].hint ?? "unknown hint")
-        
-//        textForCell.append("\(positionStr). User: \(nameStr); score: \(scoreStr); time: \(timeStr)s; hint: \(hintStr); play at: \(dayStr)")
         
         let fontSize = returnFontSize()
         
@@ -68,11 +65,6 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.gray,
                         NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: fontSize) as Any])
         attributedString.append(attStr01)
-       
-//        let attStr02 = NSMutableAttributedString(string: "user: ",
-//            attributes:[NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-//                        NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 10.0) as Any])
-//        attributedString.append(attStr02)
         
         let attStr03 = NSMutableAttributedString(string: "\(nameStr) ",
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.black,
@@ -119,7 +111,6 @@ class HighScoreViewController: UIViewController, UITableViewDelegate, UITableVie
                                                              NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: fontSize) as Any])
         attributedString.append(attStr11)
         
-        //cell.textLabel!.text = textForCell
         cell.textLabel!.attributedText = attributedString
         cell.textLabel?.numberOfLines = 0
         return cell

@@ -34,7 +34,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var firstFlippedCardIndex: IndexPath?
     
     var timer:Timer?
-    var milliseconds:Float = 30 * 1000 // 30 pseudo - seconds
+    var milliseconds:Float = 30 * 1000 // 30 pseudo-seconds
     
     //Need for results count time elapsed and actual date
     let timeCountStartingPoint = Date()

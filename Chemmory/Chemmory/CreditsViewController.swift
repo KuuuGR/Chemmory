@@ -30,7 +30,6 @@ class CreditsViewController: UIViewController {
         }, completion: { (true) in //self.animationLoadCycle()
             self.logoButton.stopRotating()
             })
-       // upperConstraint.constant = 120.0
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {

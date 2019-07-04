@@ -261,6 +261,4 @@ class MainViewController: UIViewController {
         credits_cardButton.setImage(bcgImage, for: .normal)
     }
     
-    
 }
-

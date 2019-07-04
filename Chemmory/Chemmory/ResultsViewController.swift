@@ -65,7 +65,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
     @IBAction func resetButtonTapped(_ sender: Any) {
 
         preparePasswordField()
@@ -214,7 +213,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
             elementLogoView.backgroundColor = UIColor.chNoName
         }
     }
-    
     
     func resultButtonViewConfig(){
         self.resultButtonView.alpha = 0.9
