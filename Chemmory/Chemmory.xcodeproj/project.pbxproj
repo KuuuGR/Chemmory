@@ -13,6 +13,8 @@
 		2227B865225F41B900B6A785 /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B864225F41B900B6A785 /* spring.wav */; };
 		2227B86922605B2000B6A785 /* start1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B86822605B2000B6A785 /* start1.wav */; };
 		2227B86B22605C8C00B6A785 /* shuffle1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2227B86A22605C8C00B6A785 /* shuffle1.wav */; };
+		222E0EF322EF10BE00AF8F58 /* HiddenGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222E0EF222EF10BE00AF8F58 /* HiddenGame.storyboard */; };
+		222E0EF722EF11C400AF8F58 /* HiddenGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E0EF622EF11C400AF8F58 /* HiddenGameViewController.swift */; };
 		222F8B8422C61EA20057E60D /* HighScore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222F8B8322C61EA20057E60D /* HighScore.storyboard */; };
 		222F8B8622C61F640057E60D /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F8B8522C61F640057E60D /* HighScoreViewController.swift */; };
 		223577A722379AB800553DCC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223577A622379AB800553DCC /* Result.swift */; };
@@ -62,6 +64,8 @@
 		2227B864225F41B900B6A785 /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
 		2227B86822605B2000B6A785 /* start1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start1.wav; sourceTree = "<group>"; };
 		2227B86A22605C8C00B6A785 /* shuffle1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle1.wav; sourceTree = "<group>"; };
+		222E0EF222EF10BE00AF8F58 /* HiddenGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HiddenGame.storyboard; sourceTree = "<group>"; };
+		222E0EF622EF11C400AF8F58 /* HiddenGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenGameViewController.swift; sourceTree = "<group>"; };
 		222F8B8322C61EA20057E60D /* HighScore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HighScore.storyboard; sourceTree = "<group>"; };
 		222F8B8522C61F640057E60D /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		223577A622379AB800553DCC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
 				22426AE02280119400D7F2C1 /* Credits.storyboard */,
 				22957C212233B688009AF033 /* Results.storyboard */,
+				222E0EF222EF10BE00AF8F58 /* HiddenGame.storyboard */,
+				222E0EF622EF11C400AF8F58 /* HiddenGameViewController.swift */,
 				222F8B8322C61EA20057E60D /* HighScore.storyboard */,
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
@@ -287,6 +293,7 @@
 				22957C222233B688009AF033 /* Results.storyboard in Resources */,
 				2227B86B22605C8C00B6A785 /* shuffle1.wav in Resources */,
 				22A9E946224A29A700EBA981 /* flip05.wav in Resources */,
+				222E0EF322EF10BE00AF8F58 /* HiddenGame.storyboard in Resources */,
 				223FEF1B22783DE300B9876F /* Language.storyboard in Resources */,
 				22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */,
 				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
@@ -367,6 +374,7 @@
 				229934162231123A000E7851 /* SoundManager.swift in Sources */,
 				229A696022659E8D009A049B /* OptionsViewController.swift in Sources */,
 				223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */,
+				222E0EF722EF11C400AF8F58 /* HiddenGameViewController.swift in Sources */,
 				228203962248CC8900CFFFB9 /* Elements.swift in Sources */,
 				22FA5AE8222961090026FC5D /* Card.swift in Sources */,
 			);

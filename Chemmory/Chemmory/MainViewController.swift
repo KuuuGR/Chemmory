@@ -66,8 +66,9 @@ class MainViewController: UIViewController {
         m_cardButton.setImage(#imageLiteral(resourceName: "card_m1"), for: .normal)
         SoundManager.playSound(.title)
         mPress += 1
-        if mPress > 50 {
+        if mPress > 3{ //50 {  //TODO: make 50 taps
             m_cardButton.setImage(#imageLiteral(resourceName: "card_m1_color"), for: .normal)
+            switchToViewController(identifier: "HiddenGameViewController", sbName: "HiddenGame")
         }
     }
     
