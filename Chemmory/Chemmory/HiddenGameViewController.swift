@@ -14,35 +14,33 @@ class HiddenGameViewController: UIViewController {
     @IBOutlet var playButtons: [UIButton]!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var memorySequenceArray: [Int] = [1,2,3,4,1,2,3,4,0]
+    var memorySequenceArray: [Int] = [1,1,1,1,1,2,3,3]
     
     var timer:Timer?
     var milliseconds:Float = 0
     var showingSpeed: Float = 0.01
     
+    var greyBorder: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create timer
-        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
-        //RunLoop.main.add(timer!, forMode: .common)
-        //self.firstTurnGame()
-
+        prepareGameBoardButtons()
+        
     }
     
     
-    
-    @IBAction func playButtonTapped(_ sender: UIButton) {
+    @IBAction func gameBoardButtonTapped(_ sender: UIButton) {
        
-        allButtonsWhite()
         makeButtonColor(sender.tag)
         
     }
     
     
     @IBAction func startButtonTapped(_ sender: Any) {
-        allButtonsWhite()
+        
         scoreLabel.text = ""
+        nextTurn()
     }
     
     @IBAction func backButtonTaped(_ sender: UIButton) {
@@ -52,20 +50,26 @@ class HiddenGameViewController: UIViewController {
     func allButtonsWhite() {
         for button in playButtons {
             button.backgroundColor = UIColor.white
+            button.layer.borderColor = UIColor.white.cgColor
         }
     }
     
     func firstTurnGame() {
-        memorySequenceArray.append(Int.random(in: 0 ... 4))
-    
-//        for memmiks in memorySequenceArray {
-//                self.makeButtonColor(memmiks)
-//        }
-        
+        // TODO do some stuff here
         
     }
     
-    func makeButtonColor(_ tag: Int) {
+    func nextTurn() {
+        // TODO keep buttons not clicable
+        memorySequenceArray.append(Int.random(in: 0 ... 4))
+        milliseconds = 0
+        showingSpeed = 0.01
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+    }
+    
+    func makeButtonColor(_ tag: Int, isGreyBorderColor: Bool? = false) {
+        
+        isGreyBorderColor == true ? (playButtons[tag].layer.borderColor = UIColor.yellow.cgColor) : (playButtons[tag].layer.borderColor = UIColor.white.cgColor)
         
         switch tag {
         case 1:
@@ -81,24 +85,44 @@ class HiddenGameViewController: UIViewController {
         }
     }
     
+    func prepareGameBoardButtons() {
+        for button in playButtons {
+            //button.backgroundColor = .clear
+            button.layer.cornerRadius = 10
+            button.layer.borderWidth = 3
+            button.layer.borderColor = UIColor.white.cgColor
+        }
+        
+    }
+    
     // MARK: - Timer Methods
     @objc func timerElapsed() {
         
         milliseconds += showingSpeed
         let milInt = Int(milliseconds)
+
+        scoreLabel.text = String(milliseconds)
+        allButtonsWhite()
+        
+        let actualSequenceTag: Int = milInt % memorySequenceArray.count
+        
+        
+        // make grey borderColor
+        
+        if memorySequenceArray.count > 1, actualSequenceTag > 0, memorySequenceArray[actualSequenceTag] ==  memorySequenceArray[actualSequenceTag - 1], !greyBorder {
+            greyBorder = !greyBorder
+        } else if greyBorder == true { greyBorder = false}
+        else { greyBorder = false}
+        
+        makeButtonColor(memorySequenceArray[actualSequenceTag], isGreyBorderColor: greyBorder)
         
         //When the timer reached max
         if milInt >= memorySequenceArray.count {
             // Stop the timer
             timer?.invalidate()
+            allButtonsWhite()
         }
 
-        scoreLabel.text = String(milliseconds)
-        allButtonsWhite()
- 
-        makeButtonColor(memorySequenceArray[milInt % memorySequenceArray.count])
-        
-        
     }
     
 }
