@@ -20,6 +20,11 @@ class HiddenGameViewController: UIViewController {
     var milliseconds:Float = 0
     var showingSpeed: Float = 0.01
     
+    @IBOutlet weak var actualScore: UILabel!
+    @IBOutlet weak var highScore: UILabel!
+    var highScoreTemp: Int = 0
+    
+    
     var greyBorder: Bool = false
     
 //    var isBorderColor0: Bool = false
@@ -48,7 +53,6 @@ class HiddenGameViewController: UIViewController {
 //                scoreLabel.text = "Good"
 //            }
 //            makeButtonColor(sender.tag)
-        
         timer?.invalidate()
         allButtonsWhite()
         makeButtonColor(sender.tag)
@@ -67,8 +71,14 @@ class HiddenGameViewController: UIViewController {
                 }
             }
             
-            nextTurn()
+            if Int(milliseconds) > highScoreTemp {
+                highScoreTemp = Int(milliseconds)
+                highScore.text = String(highScoreTemp)
+            }
             scoreLabel.text = "Good"
+            actualScore.text = String(memorySequenceArray.count)
+            nextTurn()
+            
         }
         
         
@@ -165,10 +175,9 @@ class HiddenGameViewController: UIViewController {
         milliseconds += showingSpeed
         let milInt = Int(milliseconds)
 
-        scoreLabel.text = String(milliseconds)
+        scoreLabel.text = String(format: "%.8f", milliseconds)
         
         let actualSequenceTag: Int = milInt % memorySequenceArray.count
-        
         // make grey borderColor
         
 //        if memorySequenceArray.count > 1, actualSequenceTag > 0, memorySequenceArray[actualSequenceTag] ==  memorySequenceArray[actualSequenceTag - 1], !greyBorder {
