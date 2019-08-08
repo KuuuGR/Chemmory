@@ -18,21 +18,16 @@ class HiddenGameViewController: UIViewController {
     var playerMemorySequenceArray: [Int] = []
     var timer:Timer?
     var milliseconds:Float = 0
-    var showingSpeed: Float = 0.01
+    var showingSpeed: Float = 0.008
     
     @IBOutlet weak var actualScore: UILabel!
     @IBOutlet weak var highScore: UILabel!
     var highScoreTemp: Int = 0
     
+    @IBOutlet weak var repeatSameAnswerButton: UIButton!
+    var allowRepQues: Bool = true
     
     var greyBorder: Bool = false
-    
-//    var isBorderColor0: Bool = false
-//    var isBorderColor1: Bool = false
-//    var isBorderColor2: Bool = false
-//    var isBorderColor3: Bool = false
-//    var isBorderColor4: Bool = false
-//    var isBorderColor5: Bool = false
         var playing = false
     
     override func viewDidLoad() {
@@ -44,15 +39,6 @@ class HiddenGameViewController: UIViewController {
     
     @IBAction func gameBoardButtonTapped(_ sender: UIButton) {
         
-//        guard (memorySequenceArray.count == playerMemorySequenceArray.count + 1) else {return scoreLabel.text = "outOfRage"}
-//            playerMemorySequenceArray.append(sender.tag)
-//            for i in 0..<playerMemorySequenceArray.count - 1 {
-//                if playerMemorySequenceArray[i] != memorySequenceArray [i] {
-//                 scoreLabel.text = "BAD"
-//                } else {nextTurn()}
-//                scoreLabel.text = "Good"
-//            }
-//            makeButtonColor(sender.tag)
         timer?.invalidate()
         allButtonsWhite()
         makeButtonColor(sender.tag)
@@ -74,29 +60,32 @@ class HiddenGameViewController: UIViewController {
             if Int(milliseconds) > highScoreTemp {
                 highScoreTemp = Int(milliseconds)
                 highScore.text = String(highScoreTemp)
+                SoundManager.playSound(.record)
             }
             scoreLabel.text = "Good"
             actualScore.text = String(memorySequenceArray.count)
             nextTurn()
-            
         }
-        
-        
     }
     
-    
     @IBAction func startButtonTapped(_ sender: Any) {
+        SoundManager.playSound(.hPlay)
             resetGame()
         guard milliseconds == 0 else {return}
-            //timer?.invalidate()
-            //resetGame()
             playing = true
             scoreLabel.text = ""
             nextTurn()
     }
     
     @IBAction func backButtonTaped(_ sender: UIButton) {
+        SoundManager.playSound(.hBack)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func repeatSameAnswerButtonPush(_ sender: UIButton) {
+        SoundManager.playSound(.noRep)
+        allowRepQues = !allowRepQues
+        allowRepQues == true ? sender.setImage(#imageLiteral(resourceName: "RepeatYes"), for: .normal) : sender.setImage(#imageLiteral(resourceName: "RepeatNo"), for: .normal)
     }
     
     func allButtonsWhite() {
@@ -106,20 +95,15 @@ class HiddenGameViewController: UIViewController {
         }
     }
     
-    func firstTurnGame() {
-        // TODO do some stuff here
-        
-    }
-    
     func nextTurn() {
         // TODO keep buttons not clicable
-        //timer?.invalidate()
         playing = true
         playerMemorySequenceArray = []
-        memorySequenceArray.append(Int.random(in: 0 ... 4))
+        
+        memorySequenceArray = appendWithRepeatitions(memorySequenceArray,allowRepQues)
+        
         milliseconds = 0
-        showingSpeed = 0.01
-        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: Double(showingSpeed), target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
     }
     
     func makeButtonColor(_ tag: Int, isGreyBorderColor: Bool? = false) {
@@ -129,25 +113,39 @@ class HiddenGameViewController: UIViewController {
         switch tag {
         case 1:
             playButtons[tag].backgroundColor = UIColor.cyan
-//            isBorderColor1 == true ? (playButtons[tag].layer.borderColor = UIColor.cyan.cgColor) : (playButtons[tag].layer.borderColor = UIColor.white.cgColor)
-//            isBorderColor1 = !isBorderColor1
+           // SoundManager.playSound(.up)
+
         case 2:
             playButtons[tag].backgroundColor = UIColor.green
-//            isBorderColor2 == true ? (playButtons[tag].layer.borderColor = UIColor.green.cgColor) : (playButtons[tag].layer.borderColor = UIColor.white.cgColor)
-//            isBorderColor2 = !isBorderColor2
+           // SoundManager.playSound(.right)
+
         case 3:
             playButtons[tag].backgroundColor = UIColor.blue
-//            isBorderColor3 == true ? (playButtons[tag].layer.borderColor = UIColor.blue.cgColor) : (playButtons[tag].layer.borderColor = UIColor.white.cgColor)
-//            isBorderColor3 = !isBorderColor3
+           // SoundManager.playSound(.down)
+
         case 4:
             playButtons[tag].backgroundColor = UIColor.red
-//            isBorderColor4 == true ? (playButtons[tag].layer.borderColor = UIColor.red.cgColor) : (playButtons[tag].layer.borderColor = UIColor.white.cgColor)
-//            isBorderColor4 = !isBorderColor4
+           // SoundManager.playSound(.left)
+
         default:
             playButtons[tag].backgroundColor = UIColor.yellow
-//            isBorderColor0 == true ? (playButtons[tag].layer.borderColor = UIColor.yellow.cgColor) : (playButtons[tag].layer.borderColor = UIColor.white.cgColor)
-//            isBorderColor0 = !isBorderColor0
+           // SoundManager.playSound(.middle)
+
         }
+    }
+    
+    func appendWithRepeatitions(_ array: [Int], _ allowRepeat: Bool) -> [Int] {
+        var output = array
+        var randomDigit = Int.random(in: 0 ... 4)
+        if allowRepeat == true {
+           output.append(randomDigit)
+        } else {
+            while array.last == randomDigit {
+                randomDigit = Int.random(in: 0 ... 4)
+            }
+            output.append(randomDigit)
+        }
+        return output
     }
     
     func prepareGameBoardButtons() {
@@ -156,7 +154,6 @@ class HiddenGameViewController: UIViewController {
             button.layer.borderWidth = 3
             button.layer.borderColor = UIColor.white.cgColor
         }
-        
     }
     
     func resetGame() {
@@ -174,16 +171,9 @@ class HiddenGameViewController: UIViewController {
         
         milliseconds += showingSpeed
         let milInt = Int(milliseconds)
+        //scoreLabel.text = String(format: "%.8f", milliseconds)
 
-        scoreLabel.text = String(format: "%.8f", milliseconds)
-        
         let actualSequenceTag: Int = milInt % memorySequenceArray.count
-        // make grey borderColor
-        
-//        if memorySequenceArray.count > 1, actualSequenceTag > 0, memorySequenceArray[actualSequenceTag] ==  memorySequenceArray[actualSequenceTag - 1], !greyBorder {
-//            greyBorder = true
-//        } else if greyBorder == true { greyBorder = false}
-//        else { greyBorder = false}
         
         allButtonsWhite()
         makeButtonColor(memorySequenceArray[actualSequenceTag], isGreyBorderColor: greyBorder)
@@ -196,7 +186,6 @@ class HiddenGameViewController: UIViewController {
             timer?.invalidate()
             allButtonsWhite()
         }
-
     }
     
 }
