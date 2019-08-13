@@ -240,6 +240,12 @@
                         <outletCollection property="playButtons" destination="fzA-6g-Piy" collectionClass="NSMutableArray" id="GIO-fQ-fCh"/>
                         <outletCollection property="playButtons" destination="iKY-a8-hBU" collectionClass="NSMutableArray" id="MBG-YI-uBg"/>
                         <outletCollection property="playButtons" destination="n71-qW-dex" collectionClass="NSMutableArray" id="KeN-ml-E0W"/>
+                        <outletCollection property="highScoreFruitLabels" destination="W05-3x-qMV" collectionClass="NSMutableArray" id="wLs-yL-rof"/>
+                        <outletCollection property="highScoreFruitLabels" destination="Dip-vk-NHq" collectionClass="NSMutableArray" id="4Pv-5H-VdA"/>
+                        <outletCollection property="highScoreFruitLabels" destination="vtG-oY-Kh4" collectionClass="NSMutableArray" id="PNO-36-BMN"/>
+                        <outletCollection property="highScoreFruitLabels" destination="33h-QE-Mq7" collectionClass="NSMutableArray" id="fks-rf-NhW"/>
+                        <outletCollection property="highScoreFruitLabels" destination="T9L-7e-MJg" collectionClass="NSMutableArray" id="Cfo-b6-sVO"/>
+                        <outletCollection property="highScoreFruitLabels" destination="NWF-nB-xHp" collectionClass="NSMutableArray" id="efN-l0-GB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76P-Na-nnW" userLabel="First Responder" sceneMemberID="firstResponder"/>

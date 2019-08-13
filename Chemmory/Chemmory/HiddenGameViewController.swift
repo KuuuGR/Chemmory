@@ -13,6 +13,10 @@ class HiddenGameViewController: UIViewController {
     
     @IBOutlet var playButtons: [UIButton]!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var repeatSameAnswerButton: UIButton!
+    @IBOutlet weak var actualScore: UILabel!
+    @IBOutlet weak var highScore: UILabel!
+    @IBOutlet var highScoreFruitLabels: [UIImageView]!
     
     var memorySequenceArray: [Int] = []
     var playerMemorySequenceArray: [Int] = []
@@ -20,21 +24,26 @@ class HiddenGameViewController: UIViewController {
     var milliseconds:Float = 0
     var showingSpeed: Float = 0.008
     
-    @IBOutlet weak var actualScore: UILabel!
-    @IBOutlet weak var highScore: UILabel!
     var highScoreTemp: Int = 0
     
-    @IBOutlet weak var repeatSameAnswerButton: UIButton!
     var allowRepQues: Bool = true
     
     var greyBorder: Bool = false
-        var playing = false
+    var playing = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareGameBoardButtons()
+        hideFruits()
         
+    }
+    
+    deinit {
+        playButtons.removeAll()
+        highScoreFruitLabels.removeAll()
     }
     
     @IBAction func gameBoardButtonTapped(_ sender: UIButton) {
@@ -64,6 +73,7 @@ class HiddenGameViewController: UIViewController {
             }
             scoreLabel.text = "Good"
             actualScore.text = String(memorySequenceArray.count)
+            showMyFruit(memorySequenceArray.count)
             nextTurn()
         }
     }
@@ -164,6 +174,33 @@ class HiddenGameViewController: UIViewController {
         showingSpeed = 0.01
         allButtonsWhite()
         timer?.invalidate()
+        hideFruits()
+    }
+    
+    func showMyFruit(_ score: Int) {
+        switch score {
+        case 5:
+            highScoreFruitLabels[0].isHidden = false
+        case 10:
+            highScoreFruitLabels[1].isHidden = false
+        case 15:
+            highScoreFruitLabels[2].isHidden = false
+        case 20:
+            highScoreFruitLabels[3].isHidden = false
+        case 30:
+            highScoreFruitLabels[4].isHidden = false
+        case 50:
+            highScoreFruitLabels[5].isHidden = false
+            
+        default: return
+        }
+    
+    }
+    
+    func hideFruits(){
+        for fruit in highScoreFruitLabels {
+            fruit.isHidden = true
+        }
     }
     
     // MARK: - Timer Methods
