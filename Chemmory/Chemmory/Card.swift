@@ -24,5 +24,4 @@ class Card {
     var elementMass: Float = 0.0
     var elementGrup: Int = 0
     
-    //need som additional linformation - valence (common, rare)
 }

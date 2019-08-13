@@ -25,6 +25,17 @@ class SoundManager {
         case results
         case back
         case start
+        //effect for hidden game
+        case middle
+        case right
+        case down
+        case left
+        case up
+        case hBack
+        case record
+        case hPlay
+        case noRep
+        
     }
     
     static func playSound(_ effect: SoundEffect){
@@ -67,6 +78,33 @@ class SoundManager {
             
         case .start:
             soundFilename = "start1"
+            
+        case .middle:
+            soundFilename = "middle"
+            
+        case .right:
+            soundFilename = "right"
+            
+        case .down:
+            soundFilename = "down"
+            
+        case .left:
+            soundFilename = "left"
+            
+        case .up:
+            soundFilename = "up"
+            
+        case .hBack:
+            soundFilename = "hBack"
+            
+        case .record:
+            soundFilename = "record"
+            
+        case .hPlay:
+            soundFilename = "hPlay"
+            
+        case .noRep:
+            soundFilename = "noRep"
         
         }
         

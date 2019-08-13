@@ -13,6 +13,7 @@ let lifeBarSpeed = 1400 // default 1000
 let maxBackgroundCardPictureNumber = 211
 let maxGameBackgroundPictureNumber = 35
 var userDefaultName: String? 
+var isWon = false
 
 class UserGameSettings: Object {
     

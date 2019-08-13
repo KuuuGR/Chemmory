@@ -65,7 +65,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
     @IBAction func resetButtonTapped(_ sender: Any) {
 
         preparePasswordField()
@@ -168,6 +167,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        crownImageView.isHidden = !isWon
         super.viewWillAppear(animated)
         inputUserNameTextField.text = userDefaultName
     }
@@ -213,7 +213,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
             elementLogoView.backgroundColor = UIColor.chNoName
         }
     }
-    
     
     func resultButtonViewConfig(){
         self.resultButtonView.alpha = 0.9

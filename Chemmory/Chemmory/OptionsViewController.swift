@@ -119,22 +119,18 @@ class OptionsViewController: UIViewController {
         tempSettings.cardFrontColorRed = frontCardRZipper.value
         setForegroundCardColor(view: frontElementView)
         setHintCardColors()
-        
-        
     }
     
     @IBAction func frontCardGZipperAction(_ sender: Any) {
         tempSettings.cardFrontColorGreen = frontCardGZipper.value
         setForegroundCardColor(view: frontElementView)
         setHintCardColors()
-        
     }
     
     @IBAction func frontCardBZipperAction(_ sender: Any) {
         tempSettings.cardFrontColorBlue = frontCardBZipper.value
         setForegroundCardColor(view: frontElementView)
         setHintCardColors()
-        
     }
     
     //MARK: - Game Bcakground
@@ -198,7 +194,6 @@ class OptionsViewController: UIViewController {
     @IBAction func hintForegroundButtonPressed(_ sender: Any) {
         tempSettings.cardForegroundColorIsCustom  = !tempSettings.cardForegroundColorIsCustom
         markWhiteForegroundChecked()
-        
     }
     
     //MARK: - SAVE OPTIONS
@@ -344,5 +339,3 @@ class OptionsViewController: UIViewController {
     
 
 } // MARK: - End of class
-
-

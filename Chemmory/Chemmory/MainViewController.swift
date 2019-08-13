@@ -66,8 +66,11 @@ class MainViewController: UIViewController {
         m_cardButton.setImage(#imageLiteral(resourceName: "card_m1"), for: .normal)
         SoundManager.playSound(.title)
         mPress += 1
-        if mPress > 50 {
+        if mPress > 3{ //50 {  //TODO: make 50 taps
             m_cardButton.setImage(#imageLiteral(resourceName: "card_m1_color"), for: .normal)
+            if mPress > 6{
+            switchToViewController(identifier: "HiddenGameViewController", sbName: "HiddenGame") //hidden minigame
+            }
         }
     }
     
@@ -217,7 +220,8 @@ class MainViewController: UIViewController {
         optionsSplashImage.isHidden = true
         creditsSplashImage.isHidden = true
         languageSplashImage.isHidden = true
-    
+        
+        isWon = false
     }
     
     
@@ -260,6 +264,4 @@ class MainViewController: UIViewController {
         credits_cardButton.setImage(bcgImage, for: .normal)
     }
     
-    
 }
-
