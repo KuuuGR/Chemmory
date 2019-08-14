@@ -90,8 +90,12 @@ class MainViewController: UIViewController {
         r_cardButton.setImage(#imageLiteral(resourceName: "card_r1"), for: .normal)
         SoundManager.playSound(.title)
         rPress += 1
-        if rPress > 50 {
+        if rPress > 3 {
             r_cardButton.setImage(#imageLiteral(resourceName: "card_r1_color"), for: .normal)
+            if rPress > 6{
+                switchToViewController(identifier: "TowerGameViewController", sbName: "TowerGame") //hidden minigame
+        
+            }
         }
     }
     

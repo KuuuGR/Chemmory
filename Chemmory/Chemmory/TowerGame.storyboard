@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zrW-No-p1B">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TowerGameViewController-->
+        <scene sceneID="3vr-N9-Tqi">
+            <objects>
+                <viewController storyboardIdentifier="TowerGameViewController" title="TowerGameViewController" id="zrW-No-p1B" customClass="TowerGameViewController" customModule="Chemmory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qsS-AM-qNB">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBv-5o-9Lh">
+                                <rect key="frame" x="8" y="8" width="50" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="towerBack"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="bXQ-fo-OFN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-Qb-kFN">
+                                <rect key="frame" x="161" y="245" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="PNf-tU-78H"/>
+                                    <constraint firstAttribute="height" constant="70" id="yDJ-z3-I8G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Si">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqI-L3-lUU">
+                                <rect key="frame" x="239" y="245" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Lpx-7v-UWJ"/>
+                                    <constraint firstAttribute="width" constant="70" id="pYq-kd-qnl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Si">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUn-jp-DSQ">
+                                <rect key="frame" x="83" y="245" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="QKb-UP-pPn"/>
+                                    <constraint firstAttribute="width" constant="70" id="k54-vd-DMw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Si">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHW-iB-HWi">
+                                <rect key="frame" x="5" y="245" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Zaj-f4-KKJ"/>
+                                    <constraint firstAttribute="width" constant="70" id="bMu-vN-uTN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Si">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="102" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6c-oc-Wgl">
+                                <rect key="frame" x="156" y="120" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.14901960780000001" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="K8K-wZ-tmE"/>
+                                    <constraint firstAttribute="height" constant="80" id="UBC-hR-Znv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ooooooo.oooooooooooooooooooo.ooooooooooooooooooooooooooooo.ooooooooooooo.ooooooooooo.ooooooooooooooooooooooooooooo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpi-4N-wpE">
+                                <rect key="frame" x="395" y="5" width="80" height="310"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="kna-Aa-pPI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-aQ-1SR">
+                                <rect key="frame" x="317" y="245" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="NtR-Ns-Zaw"/>
+                                    <constraint firstAttribute="width" constant="70" id="PGH-un-HEr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Si">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bR9-iR-TuZ">
+                                <rect key="frame" x="395" y="319" width="80" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="N0i-xc-b4b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zpi-4N-wpE" firstAttribute="centerX" secondItem="bR9-iR-TuZ" secondAttribute="centerX" id="16N-lD-0hh"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="eqI-L3-lUU" secondAttribute="bottom" constant="5" id="5Tj-S5-vEq"/>
+                            <constraint firstItem="bR9-iR-TuZ" firstAttribute="top" secondItem="Zpi-4N-wpE" secondAttribute="bottom" constant="4" id="HJL-AD-6Fn"/>
+                            <constraint firstItem="V6c-oc-Wgl" firstAttribute="centerX" secondItem="WV4-Qb-kFN" secondAttribute="centerX" id="IXJ-7a-O0r"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="P1Q-aQ-1SR" secondAttribute="bottom" constant="5" id="JTV-0J-tzL"/>
+                            <constraint firstItem="bR9-iR-TuZ" firstAttribute="leading" secondItem="P1Q-aQ-1SR" secondAttribute="trailing" constant="8" id="Ksp-xg-Fdc"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="bR9-iR-TuZ" secondAttribute="bottom" id="RTM-Fe-WBI"/>
+                            <constraint firstItem="P1Q-aQ-1SR" firstAttribute="leading" secondItem="eqI-L3-lUU" secondAttribute="trailing" constant="8" id="YLf-nx-iDF"/>
+                            <constraint firstItem="V6c-oc-Wgl" firstAttribute="centerY" secondItem="SpM-j4-fQQ" secondAttribute="centerY" id="gKa-ds-sjf"/>
+                            <constraint firstItem="Zpi-4N-wpE" firstAttribute="top" secondItem="SpM-j4-fQQ" secondAttribute="top" constant="5" id="jW1-sh-wFz"/>
+                            <constraint firstItem="eqI-L3-lUU" firstAttribute="leading" secondItem="WV4-Qb-kFN" secondAttribute="trailing" constant="8" id="jfy-x6-aJ5"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="trailing" secondItem="bR9-iR-TuZ" secondAttribute="trailing" constant="5" id="kBT-rp-uZc"/>
+                            <constraint firstItem="WV4-Qb-kFN" firstAttribute="leading" secondItem="ZUn-jp-DSQ" secondAttribute="trailing" constant="8" id="lz3-yV-GY4"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="WV4-Qb-kFN" secondAttribute="bottom" constant="5" id="oDE-fq-4SC"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="qHW-iB-HWi" secondAttribute="bottom" constant="5" id="ohX-hy-WRL"/>
+                            <constraint firstItem="ZUn-jp-DSQ" firstAttribute="leading" secondItem="qHW-iB-HWi" secondAttribute="trailing" constant="8" id="ref-QO-cKm"/>
+                            <constraint firstItem="qHW-iB-HWi" firstAttribute="leading" secondItem="SpM-j4-fQQ" secondAttribute="leading" constant="5" id="u3L-8m-NX2"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="ZUn-jp-DSQ" secondAttribute="bottom" constant="5" id="y0F-9Q-xJy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SpM-j4-fQQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O05-XF-4iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-360" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="towerBack" width="329" height="762"/>
+    </resources>
+</document>

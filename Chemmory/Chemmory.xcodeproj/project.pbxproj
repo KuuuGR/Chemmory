@@ -38,6 +38,8 @@
 		22A9E948224A29D300EBA981 /* flip08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E947224A29D200EBA981 /* flip08.wav */; };
 		22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E94B224A2AE800EBA981 /* fail01.wav */; };
 		22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E951224A2D4D00EBA981 /* flipBack04.wav */; };
+		22AC6FEC23040E2400C000EA /* TowerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC6FEB23040E2400C000EA /* TowerGameViewController.swift */; };
+		22AC6FEE23040F5C00C000EA /* TowerGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC6FED23040F5C00C000EA /* TowerGame.storyboard */; };
 		22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */; };
 		22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */; };
 		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
@@ -97,6 +99,8 @@
 		22A9E947224A29D200EBA981 /* flip08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip08.wav; sourceTree = "<group>"; };
 		22A9E94B224A2AE800EBA981 /* fail01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail01.wav; sourceTree = "<group>"; };
 		22A9E951224A2D4D00EBA981 /* flipBack04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack04.wav; sourceTree = "<group>"; };
+		22AC6FEB23040E2400C000EA /* TowerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerGameViewController.swift; sourceTree = "<group>"; };
+		22AC6FED23040F5C00C000EA /* TowerGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TowerGame.storyboard; sourceTree = "<group>"; };
 		22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 				22957C212233B688009AF033 /* Results.storyboard */,
 				222E0EF222EF10BE00AF8F58 /* HiddenGame.storyboard */,
 				222E0EF622EF11C400AF8F58 /* HiddenGameViewController.swift */,
+				22AC6FED23040F5C00C000EA /* TowerGame.storyboard */,
+				22AC6FEB23040E2400C000EA /* TowerGameViewController.swift */,
 				222F8B8322C61EA20057E60D /* HighScore.storyboard */,
 				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
@@ -331,6 +337,7 @@
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
 				22E10CBD22FC47400046C728 /* hBack.wav in Resources */,
 				229A695E226493FF009A049B /* Options.storyboard in Resources */,
+				22AC6FEE23040F5C00C000EA /* TowerGame.storyboard in Resources */,
 				22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */,
 				22E10CBF22FC47400046C728 /* right.wav in Resources */,
 				22E10CC022FC47400046C728 /* middle.wav in Resources */,
@@ -406,6 +413,7 @@
 				22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */,
 				223577A722379AB800553DCC /* Result.swift in Sources */,
 				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
+				22AC6FEC23040E2400C000EA /* TowerGameViewController.swift in Sources */,
 				22278A2F227ACEC100BDFA75 /* LocalizableHelper.swift in Sources */,
 				229934162231123A000E7851 /* SoundManager.swift in Sources */,
 				229A696022659E8D009A049B /* OptionsViewController.swift in Sources */,
