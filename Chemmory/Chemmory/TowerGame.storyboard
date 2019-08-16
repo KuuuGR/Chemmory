@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-Qb-kFN">
-                                <rect key="frame" x="161" y="245" width="70" height="70"/>
+                                <rect key="frame" x="155" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="PNf-tU-78H"/>
@@ -39,7 +39,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqI-L3-lUU">
-                                <rect key="frame" x="239" y="245" width="70" height="70"/>
+                                <rect key="frame" x="230" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Lpx-7v-UWJ"/>
@@ -51,7 +51,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUn-jp-DSQ">
-                                <rect key="frame" x="83" y="245" width="70" height="70"/>
+                                <rect key="frame" x="80" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="QKb-UP-pPn"/>
@@ -75,7 +75,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="102" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6c-oc-Wgl">
-                                <rect key="frame" x="156" y="120" width="80" height="80"/>
+                                <rect key="frame" x="150" y="120" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.015686274510000001" green="0.14901960780000001" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="K8K-wZ-tmE"/>
@@ -85,18 +85,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ooooooo.oooooooooooooooooooo.ooooooooooooooooooooooooooooo.ooooooooooooo.ooooooooooo.ooooooooooooooooooooooooooooo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpi-4N-wpE">
-                                <rect key="frame" x="395" y="5" width="80" height="310"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="kna-Aa-pPI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-aQ-1SR">
-                                <rect key="frame" x="317" y="245" width="70" height="70"/>
+                                <rect key="frame" x="305" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="NtR-Ns-Zaw"/>
@@ -106,45 +96,57 @@
                                 <state key="normal" title="Si">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="button5of5tapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="7dM-Da-v1h"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bR9-iR-TuZ">
-                                <rect key="frame" x="395" y="319" width="80" height="1"/>
+                                <rect key="frame" x="380" y="319" width="95" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="N0i-xc-b4b"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle25" translatesAutoresizingMaskIntoConstraints="NO" id="gQK-QV-Imm">
+                                <rect key="frame" x="379" y="5" width="96" height="309"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Zpi-4N-wpE" firstAttribute="centerX" secondItem="bR9-iR-TuZ" secondAttribute="centerX" id="16N-lD-0hh"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="eqI-L3-lUU" secondAttribute="bottom" constant="5" id="5Tj-S5-vEq"/>
-                            <constraint firstItem="bR9-iR-TuZ" firstAttribute="top" secondItem="Zpi-4N-wpE" secondAttribute="bottom" constant="4" id="HJL-AD-6Fn"/>
+                            <constraint firstItem="gQK-QV-Imm" firstAttribute="width" secondItem="qsS-AM-qNB" secondAttribute="width" multiplier="0.2" constant="0.20000000000000001" id="871-ov-mQl"/>
                             <constraint firstItem="V6c-oc-Wgl" firstAttribute="centerX" secondItem="WV4-Qb-kFN" secondAttribute="centerX" id="IXJ-7a-O0r"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="P1Q-aQ-1SR" secondAttribute="bottom" constant="5" id="JTV-0J-tzL"/>
-                            <constraint firstItem="bR9-iR-TuZ" firstAttribute="leading" secondItem="P1Q-aQ-1SR" secondAttribute="trailing" constant="8" id="Ksp-xg-Fdc"/>
+                            <constraint firstItem="bR9-iR-TuZ" firstAttribute="leading" secondItem="P1Q-aQ-1SR" secondAttribute="trailing" constant="5" id="Ksp-xg-Fdc"/>
+                            <constraint firstItem="bR9-iR-TuZ" firstAttribute="top" secondItem="gQK-QV-Imm" secondAttribute="bottom" constant="5" id="MT8-zC-huc"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="bR9-iR-TuZ" secondAttribute="bottom" id="RTM-Fe-WBI"/>
-                            <constraint firstItem="P1Q-aQ-1SR" firstAttribute="leading" secondItem="eqI-L3-lUU" secondAttribute="trailing" constant="8" id="YLf-nx-iDF"/>
+                            <constraint firstItem="P1Q-aQ-1SR" firstAttribute="leading" secondItem="eqI-L3-lUU" secondAttribute="trailing" constant="5" id="YLf-nx-iDF"/>
+                            <constraint firstItem="gQK-QV-Imm" firstAttribute="top" secondItem="qsS-AM-qNB" secondAttribute="top" constant="5" id="Zsu-1k-aGK"/>
                             <constraint firstItem="V6c-oc-Wgl" firstAttribute="centerY" secondItem="SpM-j4-fQQ" secondAttribute="centerY" id="gKa-ds-sjf"/>
-                            <constraint firstItem="Zpi-4N-wpE" firstAttribute="top" secondItem="SpM-j4-fQQ" secondAttribute="top" constant="5" id="jW1-sh-wFz"/>
-                            <constraint firstItem="eqI-L3-lUU" firstAttribute="leading" secondItem="WV4-Qb-kFN" secondAttribute="trailing" constant="8" id="jfy-x6-aJ5"/>
+                            <constraint firstItem="SpM-j4-fQQ" firstAttribute="trailing" secondItem="gQK-QV-Imm" secondAttribute="trailing" constant="5" id="i9L-Y4-Da4"/>
+                            <constraint firstItem="eqI-L3-lUU" firstAttribute="leading" secondItem="WV4-Qb-kFN" secondAttribute="trailing" constant="5" id="jfy-x6-aJ5"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="trailing" secondItem="bR9-iR-TuZ" secondAttribute="trailing" constant="5" id="kBT-rp-uZc"/>
-                            <constraint firstItem="WV4-Qb-kFN" firstAttribute="leading" secondItem="ZUn-jp-DSQ" secondAttribute="trailing" constant="8" id="lz3-yV-GY4"/>
+                            <constraint firstItem="WV4-Qb-kFN" firstAttribute="leading" secondItem="ZUn-jp-DSQ" secondAttribute="trailing" constant="5" id="lz3-yV-GY4"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="WV4-Qb-kFN" secondAttribute="bottom" constant="5" id="oDE-fq-4SC"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="qHW-iB-HWi" secondAttribute="bottom" constant="5" id="ohX-hy-WRL"/>
-                            <constraint firstItem="ZUn-jp-DSQ" firstAttribute="leading" secondItem="qHW-iB-HWi" secondAttribute="trailing" constant="8" id="ref-QO-cKm"/>
+                            <constraint firstItem="ZUn-jp-DSQ" firstAttribute="leading" secondItem="qHW-iB-HWi" secondAttribute="trailing" constant="5" id="ref-QO-cKm"/>
                             <constraint firstItem="qHW-iB-HWi" firstAttribute="leading" secondItem="SpM-j4-fQQ" secondAttribute="leading" constant="5" id="u3L-8m-NX2"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="ZUn-jp-DSQ" secondAttribute="bottom" constant="5" id="y0F-9Q-xJy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SpM-j4-fQQ"/>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="V6c-oc-Wgl" id="mlK-hw-l8v"/>
+                        <outlet property="towerImageView" destination="gQK-QV-Imm" id="ZkT-aP-i1Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O05-XF-4iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-360" y="84.375"/>
+            <point key="canvasLocation" x="-360.32608695652175" y="84.057971014492765"/>
         </scene>
     </scenes>
     <resources>
+        <image name="puzzle25" width="300" height="767"/>
         <image name="towerBack" width="329" height="762"/>
     </resources>
 </document>

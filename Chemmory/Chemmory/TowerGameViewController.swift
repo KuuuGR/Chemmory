@@ -10,8 +10,14 @@ import UIKit
 
 class TowerGameViewController: UIViewController {
 
+    var picNumber = 0
+    @IBOutlet weak var towerImageView: UIImageView!
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -20,6 +26,13 @@ class TowerGameViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: UIButton) {
         SoundManager.playSound(.back)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func button5of5tapped(_ sender: UIButton) {
+        let imageName = "puzzle" + String(picNumber) + ".png"
+        towerImageView.image = UIImage(named: imageName)
+        //towerImageView.image = UIImage(contentsOfFile: imageName)
+        picNumber += 1
     }
     
     
