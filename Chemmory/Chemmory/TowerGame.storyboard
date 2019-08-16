@@ -37,6 +37,9 @@
                                 <state key="normal" title="Si">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="IJT-8o-VIk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqI-L3-lUU">
                                 <rect key="frame" x="230" y="245" width="70" height="70"/>
@@ -49,6 +52,9 @@
                                 <state key="normal" title="Si">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="qbj-KX-GYU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUn-jp-DSQ">
                                 <rect key="frame" x="80" y="245" width="70" height="70"/>
@@ -61,6 +67,9 @@
                                 <state key="normal" title="Si">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="235-xe-avx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHW-iB-HWi">
                                 <rect key="frame" x="5" y="245" width="70" height="70"/>
@@ -73,6 +82,9 @@
                                 <state key="normal" title="Si">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="cz5-b2-mWC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="102" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6c-oc-Wgl">
                                 <rect key="frame" x="150" y="120" width="80" height="80"/>
@@ -97,6 +109,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="h0l-36-n38"/>
                                     <action selector="button5of5tapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="7dM-Da-v1h"/>
                                 </connections>
                             </button>
@@ -138,6 +151,11 @@
                     <connections>
                         <outlet property="questionLabel" destination="V6c-oc-Wgl" id="mlK-hw-l8v"/>
                         <outlet property="towerImageView" destination="gQK-QV-Imm" id="ZkT-aP-i1Q"/>
+                        <outletCollection property="answerButons" destination="qHW-iB-HWi" collectionClass="NSMutableArray" id="w5c-Od-6ee"/>
+                        <outletCollection property="answerButons" destination="ZUn-jp-DSQ" collectionClass="NSMutableArray" id="noO-M6-j6g"/>
+                        <outletCollection property="answerButons" destination="WV4-Qb-kFN" collectionClass="NSMutableArray" id="czU-PT-LVF"/>
+                        <outletCollection property="answerButons" destination="eqI-L3-lUU" collectionClass="NSMutableArray" id="5Z4-Pc-W9u"/>
+                        <outletCollection property="answerButons" destination="P1Q-aQ-1SR" collectionClass="NSMutableArray" id="iUD-B1-yol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O05-XF-4iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
