@@ -26,7 +26,7 @@
                                     <action selector="backButtonTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="bXQ-fo-OFN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-Qb-kFN">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV4-Qb-kFN">
                                 <rect key="frame" x="155" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -41,7 +41,7 @@
                                     <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="IJT-8o-VIk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqI-L3-lUU">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqI-L3-lUU">
                                 <rect key="frame" x="230" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -56,7 +56,7 @@
                                     <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="qbj-KX-GYU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUn-jp-DSQ">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUn-jp-DSQ">
                                 <rect key="frame" x="80" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -86,9 +86,9 @@
                                     <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="cz5-b2-mWC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="102" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6c-oc-Wgl">
-                                <rect key="frame" x="150" y="120" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.015686274510000001" green="0.14901960780000001" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6c-oc-Wgl">
+                                <rect key="frame" x="150" y="88" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.20905425313424658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="K8K-wZ-tmE"/>
                                     <constraint firstAttribute="height" constant="80" id="UBC-hR-Znv"/>
@@ -97,7 +97,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-aQ-1SR">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-aQ-1SR">
                                 <rect key="frame" x="305" y="245" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -110,7 +110,6 @@
                                 </state>
                                 <connections>
                                     <action selector="answerButtoTapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="h0l-36-n38"/>
-                                    <action selector="button5of5tapped:" destination="zrW-No-p1B" eventType="touchUpInside" id="7dM-Da-v1h"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bR9-iR-TuZ">
@@ -120,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="1" id="N0i-xc-b4b"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle25" translatesAutoresizingMaskIntoConstraints="NO" id="gQK-QV-Imm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle0" translatesAutoresizingMaskIntoConstraints="NO" id="gQK-QV-Imm">
                                 <rect key="frame" x="379" y="5" width="96" height="309"/>
                             </imageView>
                         </subviews>
@@ -135,7 +134,7 @@
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="bR9-iR-TuZ" secondAttribute="bottom" id="RTM-Fe-WBI"/>
                             <constraint firstItem="P1Q-aQ-1SR" firstAttribute="leading" secondItem="eqI-L3-lUU" secondAttribute="trailing" constant="5" id="YLf-nx-iDF"/>
                             <constraint firstItem="gQK-QV-Imm" firstAttribute="top" secondItem="qsS-AM-qNB" secondAttribute="top" constant="5" id="Zsu-1k-aGK"/>
-                            <constraint firstItem="V6c-oc-Wgl" firstAttribute="centerY" secondItem="SpM-j4-fQQ" secondAttribute="centerY" id="gKa-ds-sjf"/>
+                            <constraint firstItem="V6c-oc-Wgl" firstAttribute="centerY" secondItem="SpM-j4-fQQ" secondAttribute="centerY" multiplier="0.8" id="gKa-ds-sjf"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="trailing" secondItem="gQK-QV-Imm" secondAttribute="trailing" constant="5" id="i9L-Y4-Da4"/>
                             <constraint firstItem="eqI-L3-lUU" firstAttribute="leading" secondItem="WV4-Qb-kFN" secondAttribute="trailing" constant="5" id="jfy-x6-aJ5"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="trailing" secondItem="bR9-iR-TuZ" secondAttribute="trailing" constant="5" id="kBT-rp-uZc"/>
@@ -164,7 +163,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="puzzle25" width="300" height="767"/>
+        <image name="puzzle0" width="300" height="767"/>
         <image name="towerBack" width="329" height="762"/>
     </resources>
 </document>
