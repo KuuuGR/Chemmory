@@ -12,7 +12,10 @@ class TowerGameViewController: UIViewController {
 
     var questionNumber = 1
     var answer: [Int] = [0,0,0,0,0]
+    var tryings: Int = 0
     @IBOutlet weak var towerImageView: UIImageView!
+    @IBOutlet weak var towerRubbleImageView: UIImageView!
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var answerButons: [UIButton]!
     
@@ -35,8 +38,8 @@ class TowerGameViewController: UIViewController {
     
     @IBAction func answerButtoTapped(_ sender: UIButton) {
        
-        answer[sender.tag] == questionNumber ? (SoundManager.playSound(.down)) : (SoundManager.playSound(.results))
-        answer[sender.tag] == questionNumber ? (questionNumber += 1) : (questionNumber = 1)
+        answer[sender.tag] == questionNumber ? success() : fail()
+        
         questionLabel.text = String(questionNumber)
         answer = prepareRandomAnswers(questionNumber, answer, 112)
         //signAnswerButtonsValues()
@@ -44,7 +47,27 @@ class TowerGameViewController: UIViewController {
         showPartPicture(questionNumber, 112)
     }
     
+    func fail() {
+        SoundManager.playSound(.results)
+        questionNumber = 1
+        tryings += 1
+        let PicTry = Int(tryings/10)
+        let imageRubbleName = "gruz" + String(PicTry) + ".png"
     
+        if PicTry >= 16 {
+        towerRubbleImageView.image = UIImage(named: "gruz16.png")
+        } else {
+            towerRubbleImageView.image = UIImage(named: imageRubbleName)
+        }
+        
+        
+    }
+    
+    func success() {
+        SoundManager.playSound(.down)
+        questionNumber += 1
+        
+    }
     func prepareButtons(){
         // round corners in image of the tower
         towerImageView.layer.cornerRadius = 16.0

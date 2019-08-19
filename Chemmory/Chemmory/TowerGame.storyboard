@@ -122,15 +122,26 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puzzle0" translatesAutoresizingMaskIntoConstraints="NO" id="gQK-QV-Imm">
                                 <rect key="frame" x="379" y="5" width="96" height="309"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gruz0" translatesAutoresizingMaskIntoConstraints="NO" id="XT4-Ae-oZh">
+                                <rect key="frame" x="5" y="117" width="140" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="LlF-fs-pSQ"/>
+                                    <constraint firstAttribute="width" constant="140" id="aEd-Tf-h3f"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZUn-jp-DSQ" firstAttribute="top" secondItem="XT4-Ae-oZh" secondAttribute="bottom" constant="8" id="0Xd-F1-9dd"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="eqI-L3-lUU" secondAttribute="bottom" constant="5" id="5Tj-S5-vEq"/>
                             <constraint firstItem="gQK-QV-Imm" firstAttribute="width" secondItem="qsS-AM-qNB" secondAttribute="width" multiplier="0.2" constant="0.20000000000000001" id="871-ov-mQl"/>
+                            <constraint firstItem="XT4-Ae-oZh" firstAttribute="leading" secondItem="SpM-j4-fQQ" secondAttribute="leading" constant="5" id="A23-KU-qKF"/>
                             <constraint firstItem="V6c-oc-Wgl" firstAttribute="centerX" secondItem="WV4-Qb-kFN" secondAttribute="centerX" id="IXJ-7a-O0r"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="P1Q-aQ-1SR" secondAttribute="bottom" constant="5" id="JTV-0J-tzL"/>
                             <constraint firstItem="bR9-iR-TuZ" firstAttribute="leading" secondItem="P1Q-aQ-1SR" secondAttribute="trailing" constant="5" id="Ksp-xg-Fdc"/>
                             <constraint firstItem="bR9-iR-TuZ" firstAttribute="top" secondItem="gQK-QV-Imm" secondAttribute="bottom" constant="5" id="MT8-zC-huc"/>
+                            <constraint firstItem="V6c-oc-Wgl" firstAttribute="leading" secondItem="XT4-Ae-oZh" secondAttribute="trailing" constant="5" id="QjN-Wr-SUS"/>
                             <constraint firstItem="SpM-j4-fQQ" firstAttribute="bottom" secondItem="bR9-iR-TuZ" secondAttribute="bottom" id="RTM-Fe-WBI"/>
                             <constraint firstItem="P1Q-aQ-1SR" firstAttribute="leading" secondItem="eqI-L3-lUU" secondAttribute="trailing" constant="5" id="YLf-nx-iDF"/>
                             <constraint firstItem="gQK-QV-Imm" firstAttribute="top" secondItem="qsS-AM-qNB" secondAttribute="top" constant="5" id="Zsu-1k-aGK"/>
@@ -150,6 +161,7 @@
                     <connections>
                         <outlet property="questionLabel" destination="V6c-oc-Wgl" id="mlK-hw-l8v"/>
                         <outlet property="towerImageView" destination="gQK-QV-Imm" id="ZkT-aP-i1Q"/>
+                        <outlet property="towerRubbleImageView" destination="XT4-Ae-oZh" id="juC-or-cb0"/>
                         <outletCollection property="answerButons" destination="qHW-iB-HWi" collectionClass="NSMutableArray" id="w5c-Od-6ee"/>
                         <outletCollection property="answerButons" destination="ZUn-jp-DSQ" collectionClass="NSMutableArray" id="noO-M6-j6g"/>
                         <outletCollection property="answerButons" destination="WV4-Qb-kFN" collectionClass="NSMutableArray" id="czU-PT-LVF"/>
@@ -159,10 +171,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O05-XF-4iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-360.32608695652175" y="84.057971014492765"/>
+            <point key="canvasLocation" x="-361.25" y="82.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gruz0" width="933" height="564"/>
         <image name="puzzle0" width="300" height="767"/>
         <image name="towerBack" width="329" height="762"/>
     </resources>
