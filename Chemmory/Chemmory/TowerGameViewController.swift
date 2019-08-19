@@ -60,12 +60,12 @@ class TowerGameViewController: UIViewController {
             towerRubbleImageView.image = UIImage(named: imageRubbleName)
         }
         
-        
     }
     
     func success() {
         SoundManager.playSound(.down)
-        questionNumber += 1
+        questionNumber > 112 ? (questionNumber += 0) : (questionNumber += 1)
+        
         
     }
     func prepareButtons(){
