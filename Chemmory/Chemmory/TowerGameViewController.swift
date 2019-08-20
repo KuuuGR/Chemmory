@@ -25,7 +25,7 @@ class TowerGameViewController: UIViewController {
         
         prepareButtons()
         
-        answer = prepareRandomAnswers(questionNumber, answer, 112)
+        answer = prepareRandomAnswers(questionNumber, 112)
         //signAnswerButtonsValues()
         setAnswerButtonsChemicalNames()
     }
@@ -41,7 +41,7 @@ class TowerGameViewController: UIViewController {
         answer[sender.tag] == questionNumber ? success() : fail()
         
         questionLabel.text = String(questionNumber)
-        answer = prepareRandomAnswers(questionNumber, answer, 112)
+        answer = prepareRandomAnswers(questionNumber, 112)
         //signAnswerButtonsValues()
         setAnswerButtonsChemicalNames()
         showPartPicture(questionNumber, 112)
@@ -95,21 +95,13 @@ class TowerGameViewController: UIViewController {
         towerImageView.image = UIImage(named: imageName)
     }
     
-    func prepareRandomAnswers(_ trueValue: Int, _ answers: [Int], _ maxAnswer: Int) -> [Int] {
-        var newAnswers = answers
-        var randomInt = 1
-        newAnswers[0] = trueValue
-        
-        // TODO: remove repetition of elements
-        for i in 1...4 {
-            repeat {
-                randomInt = Int.random(in: 1...maxAnswer)
-                newAnswers[i] = randomInt
-            } while !(newAnswers.contains(randomInt))
+    func prepareRandomAnswers(_ correctAnswer: Int,_ maxAnswer: Int) -> [Int] {
+        let numberOfAnswers = 5
+        var answers: Set<Int> = [correctAnswer]
+        while answers.count < numberOfAnswers {
+            answers.insert(Int.random(in: 1...maxAnswer))
         }
-        
-        newAnswers = newAnswers.shuffled()
-        return newAnswers
+        return answers.shuffled()
     }
     
     func signAnswerButtonsValues(){
