@@ -33,6 +33,7 @@
 		229934162231123A000E7851 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229934152231123A000E7851 /* SoundManager.swift */; };
 		229A695E226493FF009A049B /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229A695D226493FF009A049B /* Options.storyboard */; };
 		229A696022659E8D009A049B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A695F22659E8D009A049B /* OptionsViewController.swift */; };
+		22A355DE230C0F3B001445A8 /* BottleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A355DD230C0F3B001445A8 /* BottleGameViewController.swift */; };
 		22A9E944224A28C000EBA981 /* win01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E943224A28C000EBA981 /* win01.wav */; };
 		22A9E946224A29A700EBA981 /* flip05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E945224A29A700EBA981 /* flip05.wav */; };
 		22A9E948224A29D300EBA981 /* flip08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E947224A29D200EBA981 /* flip08.wav */; };
@@ -40,6 +41,7 @@
 		22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E951224A2D4D00EBA981 /* flipBack04.wav */; };
 		22AC6FEC23040E2400C000EA /* TowerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC6FEB23040E2400C000EA /* TowerGameViewController.swift */; };
 		22AC6FEE23040F5C00C000EA /* TowerGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC6FED23040F5C00C000EA /* TowerGame.storyboard */; };
+		22AC6FF0230BF89A00C000EA /* BottleGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC6FEF230BF89900C000EA /* BottleGame.storyboard */; };
 		22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */; };
 		22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */; };
 		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
@@ -94,6 +96,7 @@
 		229934152231123A000E7851 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		229A695D226493FF009A049B /* Options.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Options.storyboard; sourceTree = "<group>"; };
 		229A695F22659E8D009A049B /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		22A355DD230C0F3B001445A8 /* BottleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleGameViewController.swift; sourceTree = "<group>"; };
 		22A9E943224A28C000EBA981 /* win01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win01.wav; sourceTree = "<group>"; };
 		22A9E945224A29A700EBA981 /* flip05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip05.wav; sourceTree = "<group>"; };
 		22A9E947224A29D200EBA981 /* flip08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip08.wav; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		22A9E951224A2D4D00EBA981 /* flipBack04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flipBack04.wav; sourceTree = "<group>"; };
 		22AC6FEB23040E2400C000EA /* TowerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerGameViewController.swift; sourceTree = "<group>"; };
 		22AC6FED23040F5C00C000EA /* TowerGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TowerGame.storyboard; sourceTree = "<group>"; };
+		22AC6FEF230BF89900C000EA /* BottleGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BottleGame.storyboard; sourceTree = "<group>"; };
 		22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -228,12 +232,14 @@
 				22FA5AE12229305D0026FC5D /* Gameboard.storyboard */,
 				22426AE02280119400D7F2C1 /* Credits.storyboard */,
 				22957C212233B688009AF033 /* Results.storyboard */,
+				222F8B8322C61EA20057E60D /* HighScore.storyboard */,
+				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
 				222E0EF222EF10BE00AF8F58 /* HiddenGame.storyboard */,
 				222E0EF622EF11C400AF8F58 /* HiddenGameViewController.swift */,
 				22AC6FED23040F5C00C000EA /* TowerGame.storyboard */,
 				22AC6FEB23040E2400C000EA /* TowerGameViewController.swift */,
-				222F8B8322C61EA20057E60D /* HighScore.storyboard */,
-				22C4818C2226B91D00C6E530 /* LaunchScreen.storyboard */,
+				22AC6FEF230BF89900C000EA /* BottleGame.storyboard */,
+				22A355DD230C0F3B001445A8 /* BottleGameViewController.swift */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
 				22278A34227AD11F00BDFA75 /* Localizable.strings */,
@@ -329,6 +335,7 @@
 				22E10CB922FC47400046C728 /* noRep.wav in Resources */,
 				222E0EF322EF10BE00AF8F58 /* HiddenGame.storyboard in Resources */,
 				223FEF1B22783DE300B9876F /* Language.storyboard in Resources */,
+				22AC6FF0230BF89A00C000EA /* BottleGame.storyboard in Resources */,
 				22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */,
 				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
 				2227B86922605B2000B6A785 /* start1.wav in Resources */,
@@ -412,6 +419,7 @@
 				22240531223BA0BE008FCC4C /* Settings.swift in Sources */,
 				22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */,
 				223577A722379AB800553DCC /* Result.swift in Sources */,
+				22A355DE230C0F3B001445A8 /* BottleGameViewController.swift in Sources */,
 				22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */,
 				22AC6FEC23040E2400C000EA /* TowerGameViewController.swift in Sources */,
 				22278A2F227ACEC100BDFA75 /* LocalizableHelper.swift in Sources */,
