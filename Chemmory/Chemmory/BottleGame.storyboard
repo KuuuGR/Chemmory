@@ -145,7 +145,7 @@
                                     <color key="titleColor" red="0.015686274510000001" green="0.14901960780000001" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6R-8v-fO7">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6R-8v-fO7">
                                 <rect key="frame" x="425" y="265" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -156,8 +156,11 @@
                                 <state key="normal" title="29">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="Vag-uy-g6z" eventType="touchUpInside" id="Dxg-iF-Pf9"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ro4-1P-Sad">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ro4-1P-Sad">
                                 <rect key="frame" x="425" y="210" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.015686274510000001" green="0.14901960780000001" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -168,8 +171,11 @@
                                 <state key="normal" title="1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="Vag-uy-g6z" eventType="touchUpInside" id="QsW-7q-Cw5"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-fs-gWz">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-fs-gWz">
                                 <rect key="frame" x="425" y="60" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.015686274510000001" green="0.14901960780000001" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -180,6 +186,9 @@
                                 <state key="normal" title="87">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="Vag-uy-g6z" eventType="touchUpInside" id="DaT-R9-Q9d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKM-0m-r8y">
                                 <rect key="frame" x="425" y="5" width="50" height="50"/>
@@ -192,6 +201,9 @@
                                 <state key="normal" title="107">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="Vag-uy-g6z" eventType="touchUpInside" id="eNO-18-d9s"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dY-sB-O48">
                                 <rect key="frame" x="403" y="14" width="17" height="32"/>
@@ -280,6 +292,7 @@
                     <connections>
                         <outlet property="centerBottleButton" destination="ErG-dK-J1M" id="CkH-Vg-SnA"/>
                         <outlet property="roundLabel" destination="peH-Jq-h2i" id="Qeo-Ma-w2v"/>
+                        <outlet property="winLabel" destination="dEu-gT-lVk" id="Skx-xe-6Eq"/>
                         <outletCollection property="questButtons" destination="t39-r1-Wan" collectionClass="NSMutableArray" id="qGB-9e-SAL"/>
                         <outletCollection property="questButtons" destination="cJ5-QI-4es" collectionClass="NSMutableArray" id="tSy-4L-nMR"/>
                         <outletCollection property="questButtons" destination="Ee4-kS-w5d" collectionClass="NSMutableArray" id="kWK-L3-Gow"/>

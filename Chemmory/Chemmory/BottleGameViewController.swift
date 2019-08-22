@@ -11,12 +11,15 @@ import UIKit
 class BottleGameViewController: UIViewController {
     
     @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var winLabel: UILabel!
+    
     @IBOutlet weak var centerBottleButton: UIButton!
     @IBOutlet var questButtons: [UIButton]!
     @IBOutlet var answerButtons: [UIButton]!
     
     var rotAngle = Int.random(in: 0...7)
     var round: Int = 0
+    var winCounter: Int = 0
     var question: [Int] = [0,0,0,0,0,0,0,0]
     var answer: [Int] = [0,0,0,0]
     
@@ -42,6 +45,19 @@ class BottleGameViewController: UIViewController {
         SoundManager.playSound(.back)
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    @IBAction func answerButtonTapped(_ sender: UIButton) {
+        if answer[sender.tag] == question[rotAngle] {
+            print("yes yes yes")
+            winCounter += 1
+        } else {
+            winCounter -= 1
+            
+        }
+        winLabel.text = ("win: \(winCounter)")
+    }
+    
     
     @IBAction func bottleButtonTapped(_ sender: UIButton) {
         
