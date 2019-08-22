@@ -13,9 +13,12 @@ class BottleGameViewController: UIViewController {
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var centerBottleButton: UIButton!
     @IBOutlet var questButtons: [UIButton]!
+    @IBOutlet var answerButtons: [UIButton]!
     
     var rotAngle = Int.random(in: 0...7)
     var round: Int = 0
+    var question: [Int] = [0,0,0,0,0,0,0,0]
+    var answer: [Int] = [0,0,0,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +32,11 @@ class BottleGameViewController: UIViewController {
                 (true) in self.centerBottleButton.stopRotating()
             })
         
-        
-        
         let bottleImage  = UIImage(named: "bottle" + String(Int.random(in: 0...5)) + ".png")
         centerBottleButton.setImage(bottleImage, for: .normal)
         
         // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         SoundManager.playSound(.back)
@@ -60,20 +60,9 @@ class BottleGameViewController: UIViewController {
         
         
         let rotAngleCG = CGFloat(rotAngle) * 0.78539816339
-        let rotDeg = (rotAngleCG * 360 / 2 / 3.141592653589793)
-        print(rotDeg.rounded())
-        print(rotAngle)
-        
-        switch rotAngle {
-        case 0:
-            print("cóś")
-        case 1:
-            print("north")
-        case 2:
-            print("south")
-        default:
-            print ("different")
-        }
+//        let rotDeg = (rotAngleCG * 360 / 2 / 3.141592653589793)
+//        print(rotDeg.rounded())
+//        print(rotAngle)
         
         
         // bottle rotation animation
@@ -85,8 +74,15 @@ class BottleGameViewController: UIViewController {
             self.questButtons[self.rotAngle].backgroundColor = UIColor.chOtherNonMetals
             //self.questButtons[self.rotAngle].titleLabel?.textColor = UIColor.black
             //self.questButtons[self.rotAngle].layer.borderColor = UIColor.yellow.cgColor
-            
         })
+        
+        question = prepareRandomQuestion(112)
+        answer = prepareRandomAnswers(question[rotAngle], 112)
+        
+        print("questins: \(question)")
+        print("answers: \(answer)")
+        
+        setQuestionsAndAnswersLabels()
         
     }
     
@@ -100,6 +96,31 @@ class BottleGameViewController: UIViewController {
         }
     }
     
+    func prepareRandomAnswers(_ correctAnswer: Int,_ maxAnswer: Int) -> [Int] {
+        let numberOfAnswers = 4
+        var answers: Set<Int> = [correctAnswer]
+        while answers.count < numberOfAnswers {
+            answers.insert(Int.random(in: 1...maxAnswer))
+        }
+        return answers.shuffled()
+    }
     
-
+    func prepareRandomQuestion(_ maxQuestion: Int) -> [Int] {
+        let numberOfQuestions = 8
+        var questions: Set<Int> = []
+        while questions.count < numberOfQuestions {
+            questions.insert(Int.random(in: 1...maxQuestion))
+        }
+        return questions.shuffled()
+    }
+    
+    func setQuestionsAndAnswersLabels(){
+        for i in 0...7 {
+            questButtons[i].setTitle("\(question[i])", for: .normal)
+        }
+        for i in 0...3 {
+            answerButtons[i].setTitle("\(answer[i])", for: .normal)
+        }
+    }
+    
 }

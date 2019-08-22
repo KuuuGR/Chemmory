@@ -288,6 +288,10 @@
                         <outletCollection property="questButtons" destination="fh6-jt-rpt" collectionClass="NSMutableArray" id="lwN-4h-mNm"/>
                         <outletCollection property="questButtons" destination="d93-K1-fsH" collectionClass="NSMutableArray" id="fHc-nt-USN"/>
                         <outletCollection property="questButtons" destination="qHg-8o-GnM" collectionClass="NSMutableArray" id="hT7-Ke-2NF"/>
+                        <outletCollection property="answerButtons" destination="iKM-0m-r8y" collectionClass="NSMutableArray" id="xbm-9O-Z0R"/>
+                        <outletCollection property="answerButtons" destination="cQ9-fs-gWz" collectionClass="NSMutableArray" id="J0Z-jL-F61"/>
+                        <outletCollection property="answerButtons" destination="ro4-1P-Sad" collectionClass="NSMutableArray" id="O3C-au-IB0"/>
+                        <outletCollection property="answerButtons" destination="I6R-8v-fO7" collectionClass="NSMutableArray" id="iHi-Cs-SmH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RX-Dz-Duo" userLabel="First Responder" sceneMemberID="firstResponder"/>
