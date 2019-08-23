@@ -305,6 +305,10 @@
                         <outletCollection property="answerButtons" destination="cQ9-fs-gWz" collectionClass="NSMutableArray" id="J0Z-jL-F61"/>
                         <outletCollection property="answerButtons" destination="ro4-1P-Sad" collectionClass="NSMutableArray" id="O3C-au-IB0"/>
                         <outletCollection property="answerButtons" destination="I6R-8v-fO7" collectionClass="NSMutableArray" id="iHi-Cs-SmH"/>
+                        <outletCollection property="answerABCdLabels" destination="6dY-sB-O48" collectionClass="NSMutableArray" id="03X-jc-wB8"/>
+                        <outletCollection property="answerABCdLabels" destination="kZX-sK-0y9" collectionClass="NSMutableArray" id="r8k-9H-e0T"/>
+                        <outletCollection property="answerABCdLabels" destination="4nj-AL-B7x" collectionClass="NSMutableArray" id="ZZY-k4-EPU"/>
+                        <outletCollection property="answerABCdLabels" destination="nRx-Xx-pPt" collectionClass="NSMutableArray" id="4YJ-Fx-oVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RX-Dz-Duo" userLabel="First Responder" sceneMemberID="firstResponder"/>

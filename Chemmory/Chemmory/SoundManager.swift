@@ -35,6 +35,8 @@ class SoundManager {
         case record
         case hPlay
         case noRep
+        case wrong
+        case correct
         
     }
     
@@ -105,6 +107,12 @@ class SoundManager {
             
         case .noRep:
             soundFilename = "noRep"
+            
+        case .correct:
+            soundFilename = "correct"
+            
+        case .wrong:
+            soundFilename = "wrong"
         
         }
         

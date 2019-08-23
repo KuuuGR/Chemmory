@@ -44,6 +44,8 @@
 		22AC6FF0230BF89A00C000EA /* BottleGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC6FEF230BF89900C000EA /* BottleGame.storyboard */; };
 		22AE75C022520D8E0026DA17 /* ChemCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */; };
 		22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */; };
+		22B53970231008C400C8EE73 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22B5396E231008C400C8EE73 /* correct.wav */; };
+		22B53971231008C400C8EE73 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22B5396F231008C400C8EE73 /* wrong.wav */; };
 		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
 		22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481832226B91B00C6E530 /* AppDelegate.swift */; };
 		22C481862226B91B00C6E530 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481852226B91B00C6E530 /* GameViewController.swift */; };
@@ -107,6 +109,8 @@
 		22AC6FEF230BF89900C000EA /* BottleGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BottleGame.storyboard; sourceTree = "<group>"; };
 		22AE75BE22520D8E0026DA17 /* ChemCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		22B5396E231008C400C8EE73 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		22B5396F231008C400C8EE73 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
 		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		22C481802226B91B00C6E530 /* Chemmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C481832226B91B00C6E530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				22E10CB422FC473F0046C728 /* hBack.wav */,
 				22E10CB322FC473F0046C728 /* hPlay.wav */,
 				22E10CB122FC473F0046C728 /* left.wav */,
+				22B5396E231008C400C8EE73 /* correct.wav */,
+				22B5396F231008C400C8EE73 /* wrong.wav */,
 				22E10CB722FC47400046C728 /* middle.wav */,
 				22E10CB022FC473E0046C728 /* noRep.wav */,
 				22E10CB222FC473F0046C728 /* record.wav */,
@@ -341,9 +347,11 @@
 				2227B86922605B2000B6A785 /* start1.wav in Resources */,
 				22E10CBB22FC47400046C728 /* record.wav in Resources */,
 				22E10CBA22FC47400046C728 /* left.wav in Resources */,
+				22B53970231008C400C8EE73 /* correct.wav in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
 				22E10CBD22FC47400046C728 /* hBack.wav in Resources */,
 				229A695E226493FF009A049B /* Options.storyboard in Resources */,
+				22B53971231008C400C8EE73 /* wrong.wav in Resources */,
 				22AC6FEE23040F5C00C000EA /* TowerGame.storyboard in Resources */,
 				22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */,
 				22E10CBF22FC47400046C728 /* right.wav in Resources */,

@@ -16,6 +16,8 @@ class BottleGameViewController: UIViewController {
     @IBOutlet weak var centerBottleButton: UIButton!
     @IBOutlet var questButtons: [UIButton]!
     @IBOutlet var answerButtons: [UIButton]!
+    @IBOutlet var answerABCdLabels: [UILabel]!
+    
     
     var rotAngle = Int.random(in: 0...7)
     var round: Int = 0
@@ -26,7 +28,8 @@ class BottleGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareButtons()
+        prepareQuestionButtons()
+        answerTurnIsNow(false)
         
         centerBottleButton.rotate()
         UIView.animate(withDuration: durationAnimation, delay: 0, options: .curveEaseOut, animations: {
@@ -49,13 +52,16 @@ class BottleGameViewController: UIViewController {
     
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         if answer[sender.tag] == question[rotAngle] {
-            print("yes yes yes")
+            SoundManager.playSound(.correct)
             winCounter += 1
         } else {
+            SoundManager.playSound(.wrong)
             winCounter -= 1
             
         }
         winLabel.text = ("win: \(winCounter)")
+        answerTurnIsNow(false)
+        
     }
     
     
@@ -73,7 +79,6 @@ class BottleGameViewController: UIViewController {
         while rotAngleMemo == rotAngle {
            rotAngle = Int.random(in: 0...7)
         }
-        
         
         let rotAngleCG = CGFloat(rotAngle) * 0.78539816339
 //        let rotDeg = (rotAngleCG * 360 / 2 / 3.141592653589793)
@@ -100,9 +105,51 @@ class BottleGameViewController: UIViewController {
         
         setQuestionsAndAnswersLabels()
         
+        //wait till answer is tapped
+        centerBottleButton.isEnabled = false
+        answerTurnIsNow(true)
+        
     }
     
-    func prepareButtons(){
+    func answerTurnIsNow(_ isNow: Bool) {
+        centerBottleButton.isEnabled = !isNow
+        prepareAnswerButtonsActive(isNow)
+    }
+    
+    func prepareAnswerButtonsActive(_ isActive: Bool){
+        if isActive == true {
+            for button in answerButtons {
+                button.isEnabled = isActive
+                UIView.animate(withDuration: 2.0, animations: {
+                    button.titleLabel?.textColor = .darkGray
+                    button.setTitleColor(.white, for: .normal)
+                    button.backgroundColor = UIColor.blue
+                })
+            }
+            for label in answerABCdLabels {
+                label.textColor = UIColor.white
+            }
+            
+        }else {
+            for button in answerButtons {
+                button.isEnabled = false
+                button.backgroundColor = .darkGray
+                //button.titleLabel?.textColor = .yellow
+                button.setTitleColor(.gray, for: .normal)
+                
+                // color red - wrong answer and green good answer
+                let value = Int(button.titleLabel?.text ?? "0")
+                value == question[rotAngle] ? button.setTitleColor(UIColor.chPoorMetals, for: .normal) : button.setTitleColor(UIColor.chHydrogen, for: .normal)
+                
+            }
+            for label in answerABCdLabels {
+                label.textColor = UIColor.gray
+            }
+        }
+    }
+    
+    
+    func prepareQuestionButtons(){
         
         for button in questButtons {
             button.backgroundColor = .clear
@@ -132,7 +179,8 @@ class BottleGameViewController: UIViewController {
     
     func setQuestionsAndAnswersLabels(){
         for i in 0...7 {
-            questButtons[i].setTitle("\(question[i])", for: .normal)
+            let elementNumber = question[i]
+            questButtons[i].setTitle(elements[elementNumber].symbol, for: .normal)
         }
         for i in 0...3 {
             answerButtons[i].setTitle("\(answer[i])", for: .normal)
