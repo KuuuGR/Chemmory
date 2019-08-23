@@ -107,6 +107,10 @@ class MainViewController: UIViewController {
         yPress += 1
         if yPress > 5 {
             y_cardButton.setImage(#imageLiteral(resourceName: "card_y_color"), for: .normal)
+            if yPress > 7{
+                switchToViewController(identifier: "BottleGameViewController", sbName: "BottleGame") //hidden minigame
+                
+            }
         }
     }
     
