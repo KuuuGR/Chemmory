@@ -79,8 +79,11 @@ class MainViewController: UIViewController {
         mo_cardButton.setImage(#imageLiteral(resourceName: "card_mo"), for: .normal)
         SoundManager.playSound(.title)
         moPress += 1
-        if moPress > 5 {
+        if moPress > 3 {
             mo_cardButton.setImage(#imageLiteral(resourceName: "card_mo_color"), for: .normal)
+            if moPress > 6{
+                switchToViewController(identifier: "ScaleGameViewController", sbName: "ScaleGame") //hidden minigame
+            }
         }
     }
     
