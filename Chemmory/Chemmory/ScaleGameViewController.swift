@@ -79,18 +79,7 @@ class ScaleGameViewController: UIViewController {
         let titleEl1 = elements[elementsOnScale[0]].symbol
         let titleEl2 = elements[elementsOnScale[1]].symbol
         
-        if backgroundElementsIsColorfull == true {
-            elementBackgroundColor(leftButton, elements[elementsOnScale[0]].group)
-            elementBackgroundColor(rightButton, elements[elementsOnScale[1]].group)
-            leftButton.setTitleColor(.black, for: .normal)
-            rightButton.setTitleColor(.black, for: .normal)
-        } else {
-            elementBackgroundColor(leftButton, 11)
-            elementBackgroundColor(rightButton, 11)
-            leftButton.setTitleColor(.black, for: .normal)
-            rightButton.setTitleColor(.black, for: .normal)
-        }
-        
+        makesElementsBackgroundColorfull(backgroundElementsIsColorfull)
         
         leftButton.setTitle(titleEl1, for: .normal)
         rightButton.setTitle(titleEl2, for: .normal)
@@ -160,6 +149,20 @@ class ScaleGameViewController: UIViewController {
             button.backgroundColor = UIColor.chNobelGasses
         default:
             button.backgroundColor = UIColor.chNoName
+        }
+    }
+    
+    func makesElementsBackgroundColorfull(_ colorIt: Bool) {
+        if colorIt == true {
+            elementBackgroundColor(leftButton, elements[elementsOnScale[0]].group)
+            elementBackgroundColor(rightButton, elements[elementsOnScale[1]].group)
+            leftButton.setTitleColor(.black, for: .normal)
+            rightButton.setTitleColor(.black, for: .normal)
+        } else {
+            elementBackgroundColor(leftButton, 11)
+            elementBackgroundColor(rightButton, 11)
+            leftButton.setTitleColor(.black, for: .normal)
+            rightButton.setTitleColor(.black, for: .normal)
         }
     }
 }
