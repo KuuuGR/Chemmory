@@ -17,7 +17,9 @@ class ScaleGameViewController: UIViewController {
     
     @IBOutlet weak var winLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var colorStarButton: UIButton!
     
+    var backgroundElementsIsColorfull: Bool = true
     var elementsOnScale:[Int] = [1,0]
     var firstElementIsHeavier: Bool = false
     var scaleQuestion = Int.random(in: 0...1)
@@ -31,19 +33,8 @@ class ScaleGameViewController: UIViewController {
         prepareButton(rightButton)
         waitForAnswer()
         
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func answerButtonTapped(_ sender: UIButton) {
        
@@ -60,19 +51,22 @@ class ScaleGameViewController: UIViewController {
         } else {
             badAnswer()
         }
-    
     }
-    
     
     @IBAction func backButtonAction(_ sender: UIButton) {
         SoundManager.playSound(.back)
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func colorStarButtonTapped(_ sender: UIButton) {
+        
+        backgroundElementsIsColorfull = !backgroundElementsIsColorfull
+        backgroundElementsIsColorfull == true ? (colorStarButton.setImage(#imageLiteral(resourceName: "rinbowStar"), for: .normal)) : (colorStarButton.setImage(#imageLiteral(resourceName: "rinbowStarGrey"), for: .normal))
+    }
+    
     func prepareButton(_ button: UIButton){
         
-       // TODO: make background colors as a element has in table of elements
-                //button.backgroundColor = .clear
                 button.backgroundColor = .gray
                 button.layer.cornerRadius = 25
                 button.layer.borderWidth = 3
@@ -84,6 +78,20 @@ class ScaleGameViewController: UIViewController {
         elementsOnScale = prepareRandomQuestion(112)
         let titleEl1 = elements[elementsOnScale[0]].symbol
         let titleEl2 = elements[elementsOnScale[1]].symbol
+        
+        if backgroundElementsIsColorfull == true {
+            elementBackgroundColor(leftButton, elements[elementsOnScale[0]].group)
+            elementBackgroundColor(rightButton, elements[elementsOnScale[1]].group)
+            leftButton.setTitleColor(.black, for: .normal)
+            rightButton.setTitleColor(.black, for: .normal)
+        } else {
+            elementBackgroundColor(leftButton, 11)
+            elementBackgroundColor(rightButton, 11)
+            leftButton.setTitleColor(.black, for: .normal)
+            rightButton.setTitleColor(.black, for: .normal)
+        }
+        
+        
         leftButton.setTitle(titleEl1, for: .normal)
         rightButton.setTitle(titleEl2, for: .normal)
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
@@ -123,5 +131,35 @@ class ScaleGameViewController: UIViewController {
             questions.insert(Int.random(in: 1...maxQuestion))
         }
         return questions.shuffled()
+    }
+    
+    func elementBackgroundColor(_ button: UIButton ,_ atomicGrup: Int){
+        
+        switch atomicGrup {
+        case 0:
+            button.backgroundColor = UIColor.chHydrogen
+        case 1:
+            button.backgroundColor = UIColor.chAlkaliMetals
+        case 2:
+            button.backgroundColor = UIColor.chAlkalineEarthMetals
+        case 3:
+            button.backgroundColor = UIColor.chTransitionMetals
+        case 4:
+            button.backgroundColor = UIColor.chLanthanides
+        case 5:
+            button.backgroundColor = UIColor.chActinides
+        case 6:
+            button.backgroundColor = UIColor.chPoorMetals
+        case 7:
+            button.backgroundColor = UIColor.chMetaloids
+        case 8:
+            button.backgroundColor = UIColor.chOtherNonMetals
+        case 9:
+            button.backgroundColor = UIColor.chHalogens
+        case 10:
+            button.backgroundColor = UIColor.chNobelGasses
+        default:
+            button.backgroundColor = UIColor.chNoName
+        }
     }
 }

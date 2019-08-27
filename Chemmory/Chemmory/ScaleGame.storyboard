@@ -82,6 +82,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-1H-Dbc">
+                                <rect key="frame" x="440" y="280" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="HUD-sC-lyd"/>
+                                    <constraint firstAttribute="height" constant="30" id="fKZ-8M-T1V"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="rinbowStar"/>
+                                <connections>
+                                    <action selector="colorStarButtonTapped:" destination="Ezd-rO-gyd" eventType="touchUpInside" id="GCk-vQ-Bae"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -90,12 +101,14 @@
                             <constraint firstItem="dxy-ih-DuN" firstAttribute="bottom" secondItem="aF3-mX-tId" secondAttribute="bottom" constant="5" id="DYQ-xM-VfJ"/>
                             <constraint firstItem="aF3-mX-tId" firstAttribute="leading" secondItem="dxy-ih-DuN" secondAttribute="leading" constant="5" id="Eci-Ij-hmD"/>
                             <constraint firstItem="dxy-ih-DuN" firstAttribute="trailing" secondItem="Mk6-bl-cFr" secondAttribute="trailing" id="H5c-I5-UKP"/>
+                            <constraint firstItem="dxy-ih-DuN" firstAttribute="trailing" secondItem="CWH-1H-Dbc" secondAttribute="trailing" constant="10" id="H87-ch-V7j"/>
                             <constraint firstItem="dMF-d9-Rnd" firstAttribute="centerY" secondItem="Mk6-bl-cFr" secondAttribute="centerY" id="Ik4-4b-gmq"/>
                             <constraint firstItem="sUR-am-gfT" firstAttribute="top" secondItem="dxy-ih-DuN" secondAttribute="top" constant="5" id="JdL-BZ-iS9"/>
                             <constraint firstItem="MhU-4f-3vN" firstAttribute="centerY" secondItem="1LD-or-uHr" secondAttribute="centerY" id="MGk-71-J6C"/>
                             <constraint firstItem="aF3-mX-tId" firstAttribute="top" secondItem="5Qw-2v-Km2" secondAttribute="bottom" constant="5" id="OKN-7a-9D7"/>
                             <constraint firstItem="sUR-am-gfT" firstAttribute="centerX" secondItem="Mk6-bl-cFr" secondAttribute="centerX" id="QsG-W1-27e"/>
                             <constraint firstItem="aF3-mX-tId" firstAttribute="top" secondItem="5Qw-2v-Km2" secondAttribute="bottom" constant="5" id="Rl5-1R-7Iv"/>
+                            <constraint firstItem="dxy-ih-DuN" firstAttribute="bottom" secondItem="CWH-1H-Dbc" secondAttribute="bottom" constant="10" id="UnJ-Ch-TUe"/>
                             <constraint firstItem="Pdq-No-dxq" firstAttribute="top" secondItem="Aa5-x3-PpV" secondAttribute="top" constant="5" id="acH-Wn-bOK"/>
                             <constraint firstItem="1LD-or-uHr" firstAttribute="centerY" secondItem="Mk6-bl-cFr" secondAttribute="centerY" id="c4j-u8-c0e"/>
                             <constraint firstItem="Mk6-bl-cFr" firstAttribute="leading" secondItem="dxy-ih-DuN" secondAttribute="leading" id="h0b-Fq-sCC"/>
@@ -109,6 +122,7 @@
                         <viewLayoutGuide key="safeArea" id="dxy-ih-DuN"/>
                     </view>
                     <connections>
+                        <outlet property="colorStarButton" destination="CWH-1H-Dbc" id="PCW-Zv-dyI"/>
                         <outlet property="comparisonLabel" destination="MhU-4f-3vN" id="sIm-G6-3aE"/>
                         <outlet property="emojiLabel" destination="sUR-am-gfT" id="pP1-GF-ifA"/>
                         <outlet property="leftButton" destination="1LD-or-uHr" id="gd4-GC-n3n"/>
@@ -124,6 +138,7 @@
     </scenes>
     <resources>
         <image name="ScaleBackgroundInv" width="1021" height="775"/>
+        <image name="rinbowStar" width="240" height="225"/>
         <image name="scaleBack" width="428" height="604"/>
     </resources>
 </document>
