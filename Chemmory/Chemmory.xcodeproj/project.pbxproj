@@ -46,6 +46,8 @@
 		22AE75C122520D8E0026DA17 /* ChemCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */; };
 		22B53970231008C400C8EE73 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22B5396E231008C400C8EE73 /* correct.wav */; };
 		22B53971231008C400C8EE73 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22B5396F231008C400C8EE73 /* wrong.wav */; };
+		22B539752313A88700C8EE73 /* ScaleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B539742313A88700C8EE73 /* ScaleGameViewController.swift */; };
+		22B539772313A8A900C8EE73 /* ScaleGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B539762313A8A900C8EE73 /* ScaleGame.storyboard */; };
 		22C21B74222D415200EC9A48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C21B73222D415200EC9A48 /* MainViewController.swift */; };
 		22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481832226B91B00C6E530 /* AppDelegate.swift */; };
 		22C481862226B91B00C6E530 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C481852226B91B00C6E530 /* GameViewController.swift */; };
@@ -111,6 +113,8 @@
 		22AE75BF22520D8E0026DA17 /* ChemCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChemCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		22B5396E231008C400C8EE73 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		22B5396F231008C400C8EE73 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		22B539742313A88700C8EE73 /* ScaleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleGameViewController.swift; sourceTree = "<group>"; };
+		22B539762313A8A900C8EE73 /* ScaleGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScaleGame.storyboard; sourceTree = "<group>"; };
 		22C21B73222D415200EC9A48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		22C481802226B91B00C6E530 /* Chemmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chemmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C481832226B91B00C6E530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				22AC6FEB23040E2400C000EA /* TowerGameViewController.swift */,
 				22AC6FEF230BF89900C000EA /* BottleGame.storyboard */,
 				22A355DD230C0F3B001445A8 /* BottleGameViewController.swift */,
+				22B539762313A8A900C8EE73 /* ScaleGame.storyboard */,
+				22B539742313A88700C8EE73 /* ScaleGameViewController.swift */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
 				22278A34227AD11F00BDFA75 /* Localizable.strings */,
@@ -334,6 +340,7 @@
 				22A9E948224A29D300EBA981 /* flip08.wav in Resources */,
 				22426AE12280119400D7F2C1 /* Credits.storyboard in Resources */,
 				22C4818B2226B91D00C6E530 /* Assets.xcassets in Resources */,
+				22B539772313A8A900C8EE73 /* ScaleGame.storyboard in Resources */,
 				22A9E944224A28C000EBA981 /* win01.wav in Resources */,
 				22957C222233B688009AF033 /* Results.storyboard in Resources */,
 				2227B86B22605C8C00B6A785 /* shuffle1.wav in Resources */,
@@ -435,6 +442,7 @@
 				229A696022659E8D009A049B /* OptionsViewController.swift in Sources */,
 				223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */,
 				222E0EF722EF11C400AF8F58 /* HiddenGameViewController.swift in Sources */,
+				22B539752313A88700C8EE73 /* ScaleGameViewController.swift in Sources */,
 				228203962248CC8900CFFFB9 /* Elements.swift in Sources */,
 				22FA5AE8222961090026FC5D /* Card.swift in Sources */,
 			);
