@@ -10,14 +10,15 @@ import UIKit
 
 class RadioactiveGameViewController: UIViewController {
 
-    
+    @IBOutlet weak var elementBackgroundView: UIView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        prepareMainElement()
+        
     }
     
     
@@ -26,6 +27,13 @@ class RadioactiveGameViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func prepareMainElement(){
+        elementBackgroundView.layer.cornerRadius = 15.0
+        elementBackgroundView.layer.borderColor = UIColor.white.cgColor
+        elementBackgroundView.layer.borderWidth = 5
+        elementBackgroundView.backgroundColor = .black
+        elementBackgroundView.clipsToBounds = true
+    }
 
 }
 
