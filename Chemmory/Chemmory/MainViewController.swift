@@ -58,6 +58,9 @@ class MainViewController: UIViewController {
         hePress += 1
         if hePress > 5 {
             he_cardButton.setImage(#imageLiteral(resourceName: "card_he_color"), for: .normal)
+            if hePress > 8{
+                switchToViewController(identifier: "RadioactiveGameViewController", sbName: "RadioactiveGame") //hidden "radioactive" minigame
+            }
         }
     }
     
@@ -69,7 +72,7 @@ class MainViewController: UIViewController {
         if mPress > 3{ //50 {  //TODO: make 50 taps
             m_cardButton.setImage(#imageLiteral(resourceName: "card_m1_color"), for: .normal)
             if mPress > 6{
-            switchToViewController(identifier: "HiddenGameViewController", sbName: "HiddenGame") //hidden minigame
+            switchToViewController(identifier: "HiddenGameViewController", sbName: "HiddenGame") //hidden "simon" minigame
             }
         }
     }

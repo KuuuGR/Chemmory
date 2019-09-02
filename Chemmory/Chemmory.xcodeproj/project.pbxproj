@@ -21,6 +21,8 @@
 		2235CF60225F387A00A334D4 /* plum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5E225F387A00A334D4 /* plum.wav */; };
 		2235CF61225F387A00A334D4 /* puck.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF5F225F387A00A334D4 /* puck.wav */; };
 		2235CF63225F3CA500A334D4 /* boom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2235CF62225F3CA500A334D4 /* boom.wav */; };
+		223BA73D231D322300DB6C6A /* RadioactiveGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223BA73C231D322300DB6C6A /* RadioactiveGame.storyboard */; };
+		223BA73F231D324100DB6C6A /* RadioactiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223BA73E231D324100DB6C6A /* RadioactiveGameViewController.swift */; };
 		223FEF1B22783DE300B9876F /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223FEF1A22783DE300B9876F /* Language.storyboard */; };
 		223FEF1D22783E2D00B9876F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FEF1C22783E2D00B9876F /* LanguageViewController.swift */; };
 		22426AE12280119400D7F2C1 /* Credits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22426AE02280119400D7F2C1 /* Credits.storyboard */; };
@@ -89,6 +91,8 @@
 		2235CF5E225F387A00A334D4 /* plum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = plum.wav; sourceTree = "<group>"; };
 		2235CF5F225F387A00A334D4 /* puck.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = puck.wav; sourceTree = "<group>"; };
 		2235CF62225F3CA500A334D4 /* boom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom.wav; sourceTree = "<group>"; };
+		223BA73C231D322300DB6C6A /* RadioactiveGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RadioactiveGame.storyboard; sourceTree = "<group>"; };
+		223BA73E231D324100DB6C6A /* RadioactiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioactiveGameViewController.swift; sourceTree = "<group>"; };
 		223FEF1A22783DE300B9876F /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
 		223FEF1C22783E2D00B9876F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		22426AE02280119400D7F2C1 /* Credits.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Credits.storyboard; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 				22A355DD230C0F3B001445A8 /* BottleGameViewController.swift */,
 				22B539762313A8A900C8EE73 /* ScaleGame.storyboard */,
 				22B539742313A88700C8EE73 /* ScaleGameViewController.swift */,
+				223BA73C231D322300DB6C6A /* RadioactiveGame.storyboard */,
+				223BA73E231D324100DB6C6A /* RadioactiveGameViewController.swift */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
 				22278A34227AD11F00BDFA75 /* Localizable.strings */,
@@ -353,6 +359,7 @@
 				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
 				2227B86922605B2000B6A785 /* start1.wav in Resources */,
 				22E10CBB22FC47400046C728 /* record.wav in Resources */,
+				223BA73D231D322300DB6C6A /* RadioactiveGame.storyboard in Resources */,
 				22E10CBA22FC47400046C728 /* left.wav in Resources */,
 				22B53970231008C400C8EE73 /* correct.wav in Resources */,
 				22C481892226B91B00C6E530 /* Main.storyboard in Resources */,
@@ -425,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223BA73F231D324100DB6C6A /* RadioactiveGameViewController.swift in Sources */,
 				22C481862226B91B00C6E530 /* GameViewController.swift in Sources */,
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
 				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
