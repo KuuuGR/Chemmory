@@ -84,6 +84,9 @@
                                     <constraint firstAttribute="trailing" secondItem="ZPe-nn-Yav" secondAttribute="trailing" id="xMC-eV-Ccl"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xTd-ME-ysm">
+                                <rect key="frame" x="165" y="20" width="150" height="150"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUt-LL-ijD">
                                 <rect key="frame" x="230" y="250" width="20" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,6 +159,8 @@
                         <constraints>
                             <constraint firstItem="Ldy-1e-1dq" firstAttribute="top" secondItem="Mgh-B1-kq6" secondAttribute="top" constant="20" id="1Q7-gU-nzJ"/>
                             <constraint firstItem="u1m-l7-8oP" firstAttribute="centerY" secondItem="wUt-LL-ijD" secondAttribute="centerY" id="2M0-Eo-CAI"/>
+                            <constraint firstItem="xTd-ME-ysm" firstAttribute="width" secondItem="Ldy-1e-1dq" secondAttribute="width" id="2uu-S3-7ZH"/>
+                            <constraint firstItem="xTd-ME-ysm" firstAttribute="centerX" secondItem="Ldy-1e-1dq" secondAttribute="centerX" id="AYM-5z-Nho"/>
                             <constraint firstItem="b8h-zI-FA9" firstAttribute="leading" secondItem="SKg-8h-Xha" secondAttribute="leading" constant="5" id="Cl8-mz-KmB"/>
                             <constraint firstItem="7DY-9l-Rfv" firstAttribute="centerY" secondItem="Mgh-B1-kq6" secondAttribute="centerY" id="DWz-wC-1d0"/>
                             <constraint firstItem="wUt-LL-ijD" firstAttribute="leading" secondItem="u1m-l7-8oP" secondAttribute="trailing" constant="40" id="Lih-gU-alP"/>
@@ -166,7 +171,9 @@
                             <constraint firstItem="Wz4-iv-05R" firstAttribute="leading" secondItem="b8h-zI-FA9" secondAttribute="trailing" constant="5" id="RqA-MZ-lfF"/>
                             <constraint firstItem="gSI-2T-rjx" firstAttribute="bottom" secondItem="Mgh-B1-kq6" secondAttribute="bottom" id="VzN-xB-743"/>
                             <constraint firstItem="tkP-F4-u2p" firstAttribute="centerY" secondItem="wUt-LL-ijD" secondAttribute="centerY" id="WzS-7m-7EZ"/>
+                            <constraint firstItem="xTd-ME-ysm" firstAttribute="centerY" secondItem="Ldy-1e-1dq" secondAttribute="centerY" id="XZi-7Q-gIO"/>
                             <constraint firstItem="sdq-Zp-5UA" firstAttribute="top" secondItem="7DY-9l-Rfv" secondAttribute="bottom" constant="20" id="Xv5-Uo-ec4"/>
+                            <constraint firstItem="xTd-ME-ysm" firstAttribute="height" secondItem="Ldy-1e-1dq" secondAttribute="height" id="YT8-uI-O4C"/>
                             <constraint firstItem="7DY-9l-Rfv" firstAttribute="top" secondItem="fLm-IL-vhR" secondAttribute="bottom" constant="20" id="c11-d0-kjF"/>
                             <constraint firstItem="Ldy-1e-1dq" firstAttribute="centerX" secondItem="Mgh-B1-kq6" secondAttribute="centerX" id="eii-GD-cr0"/>
                             <constraint firstItem="b8h-zI-FA9" firstAttribute="top" secondItem="SKg-8h-Xha" secondAttribute="top" constant="5" id="eyQ-Y7-KFG"/>
@@ -194,6 +201,7 @@
                         <outlet property="bigImageView" destination="gSI-2T-rjx" id="eZB-jb-EgT"/>
                         <outlet property="corretLabel" destination="eBA-hr-Ht0" id="Ywx-ft-RAp"/>
                         <outlet property="elementBackgroundView" destination="Ldy-1e-1dq" id="vY6-x7-EEG"/>
+                        <outlet property="imageCorrectWrongImageView" destination="xTd-ME-ysm" id="Kne-Fd-X1h"/>
                         <outlet property="levelLabel" destination="Wz4-iv-05R" id="P8L-lq-0bU"/>
                     </connections>
                 </viewController>

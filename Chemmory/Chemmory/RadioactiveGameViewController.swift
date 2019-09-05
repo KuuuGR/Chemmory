@@ -19,6 +19,8 @@ class RadioactiveGameViewController: UIViewController {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var corretLabel: UILabel!
     
+    @IBOutlet weak var imageCorrectWrongImageView: UIImageView!
+    
     @IBOutlet weak var barrelOneButton: UIButton!
     @IBOutlet weak var barrelTwoButton: UIButton!
     @IBOutlet weak var barrelThreeButton: UIButton!
@@ -61,6 +63,7 @@ class RadioactiveGameViewController: UIViewController {
     
     @IBAction func barrelButtonPressed(_ sender: UIButton) {
         
+        SoundManager.playSound(.nukExplosion)
         switch sender.tag {
         case 0:
             self.bigImageView.image = #imageLiteral(resourceName: "nuclearBoom01")
@@ -114,17 +117,20 @@ class RadioactiveGameViewController: UIViewController {
     }
     
     func correctAnswer() {
+        
+        SoundManager.playSound(.nukCorrect)
+        correctAnimation()
         correctAnsCount += 1
         prepareScoreLabels()
         
         switch correctAnsCount {
-        case (10...100):
+        case (10...99):
             prepareBarBarrel(001)
             barrelThreeButton.isEnabled = true
-        case (101...1000):
+        case (100...499):
             prepareBarBarrel(011)
             barrelTwoButton.isEnabled = true
-        case (1001...10000):
+        case (500...5000):
             prepareBarBarrel(111)
             barrelOneButton.isEnabled = true
         default:
@@ -133,9 +139,37 @@ class RadioactiveGameViewController: UIViewController {
     }
     
     func incorrectAnswer() {
+        
+        SoundManager.playSound(.nukWrong)
+        wrongAnimation()
         correctAnsCount -= 1
         prepareScoreLabels()
     }
+    
+    func correctAnimation() {
+        imageCorrectWrongImageView.image = #imageLiteral(resourceName: "nukOk")
+        imageCorrectWrongImageView.alpha = 0.0
+        UIView.animate(withDuration: 0.25, animations: {
+            self.imageCorrectWrongImageView.alpha = 1.0
+        })
+        UIView.animate(withDuration: 0.25, animations: {
+            self.imageCorrectWrongImageView.alpha = 0.0
+        })
+    }
+    
+    func wrongAnimation() {
+        imageCorrectWrongImageView.image = #imageLiteral(resourceName: "nukWrong")
+        imageCorrectWrongImageView.alpha = 0.0
+        UIView.animate(withDuration: 0.25, animations: {
+            self.imageCorrectWrongImageView.alpha = 1.0
+        })
+        UIView.animate(withDuration: 0.25, animations: {
+            self.imageCorrectWrongImageView.alpha = 0.0
+        })
+    }
+    
+    
+ 
     
     func prepareBarBarrel(_ barrelSequence: Int){
         
