@@ -28,13 +28,15 @@ class RadioactiveGameViewController: UIViewController {
     @IBOutlet weak var bigImageView: UIImageView!
     
     var randomElementNumber = Int.random(in: 1...112)
-    //var randomElementNumber = 1
+    var atomicIsotopeMass: Int = 0
     
     var correctAnsCount: Int = 0
     var levelCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        atomicIsotopeMass = randomIsotopeMass(randomElementNumber)
         
         prepareMainElementLook()
         prepareMainElementValues()
@@ -48,6 +50,8 @@ class RadioactiveGameViewController: UIViewController {
         
         levelCount += 1
         randomElementNumber = Int.random(in: 1...112)
+        atomicIsotopeMass = randomIsotopeMass(randomElementNumber)
+        
         prepareMainElementValues()
     }
     
@@ -57,6 +61,8 @@ class RadioactiveGameViewController: UIViewController {
 
         levelCount += 1
         randomElementNumber = Int.random(in: 1...112)
+        atomicIsotopeMass = randomIsotopeMass(randomElementNumber)
+        
         prepareMainElementValues()
     }
     
@@ -105,12 +111,14 @@ class RadioactiveGameViewController: UIViewController {
         atomicNumberLabel.text = String(randomElementNumber)
         atomicNameLabel.text = elements[randomElementNumber].name
         atomicSymbolLabel.text = elements[randomElementNumber].symbol
-        atomicMassLabel.text = String(Int(elements[randomElementNumber].atomicMass))
+        //atomicMassLabel.text = String(Int(elements[randomElementNumber].atomicMass))
+        atomicMassLabel.text = String(atomicIsotopeMass)
     }
     
     func checkIsElementRadioactive() -> Bool {
         if randomElementNumber < stableElementsArray2D.count {
-        return !stableElementsArray2D[randomElementNumber].contains(Int(elements[randomElementNumber].atomicMass))
+        //return !stableElementsArray2D[randomElementNumber].contains(Int(elements[randomElementNumber].atomicMass))
+            return !stableElementsArray2D[randomElementNumber].contains(atomicIsotopeMass)
         } else {
             return true
         }
@@ -168,9 +176,6 @@ class RadioactiveGameViewController: UIViewController {
         })
     }
     
-    
- 
-    
     func prepareBarBarrel(_ barrelSequence: Int){
         
         switch barrelSequence {
@@ -198,6 +203,15 @@ class RadioactiveGameViewController: UIViewController {
         levelLabel.text = "Level: \(levelCount)"
         corretLabel.text = "correct: \(correctAnsCount)"
     }
+    
+    func randomIsotopeMass(_ atomicNumber: Int) -> Int {
+        
+        let masses = elementsRangeArray2D[atomicNumber].count - 1
+        let randomMas = Int.random(in: 0...masses)
+        
+        return (elementsRangeArray2D[atomicNumber][randomMas])
+    }
+    
     
 }
 
