@@ -154,6 +154,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-2T-rjx">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                             </imageView>
+                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-h8-B0X">
+                                <rect key="frame" x="10" y="267.5" width="60" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3Gr-h8-B0X" secondAttribute="height" multiplier="406:289" id="7ZW-Vw-b2I"/>
+                                    <constraint firstAttribute="width" constant="60" id="REq-jY-WnW"/>
+                                </constraints>
+                                <state key="normal" image="nuklearFirstAid"/>
+                                <connections>
+                                    <action selector="helpButtonPressed:" destination="RsR-pE-drr" eventType="touchUpInside" id="3gZ-ZB-d5P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -175,10 +186,12 @@
                             <constraint firstItem="sdq-Zp-5UA" firstAttribute="top" secondItem="7DY-9l-Rfv" secondAttribute="bottom" constant="20" id="Xv5-Uo-ec4"/>
                             <constraint firstItem="xTd-ME-ysm" firstAttribute="height" secondItem="Ldy-1e-1dq" secondAttribute="height" id="YT8-uI-O4C"/>
                             <constraint firstItem="7DY-9l-Rfv" firstAttribute="top" secondItem="fLm-IL-vhR" secondAttribute="bottom" constant="20" id="c11-d0-kjF"/>
+                            <constraint firstItem="Mgh-B1-kq6" firstAttribute="bottom" secondItem="3Gr-h8-B0X" secondAttribute="bottom" constant="10" id="cqa-KC-Zon"/>
                             <constraint firstItem="Ldy-1e-1dq" firstAttribute="centerX" secondItem="Mgh-B1-kq6" secondAttribute="centerX" id="eii-GD-cr0"/>
                             <constraint firstItem="b8h-zI-FA9" firstAttribute="top" secondItem="SKg-8h-Xha" secondAttribute="top" constant="5" id="eyQ-Y7-KFG"/>
                             <constraint firstItem="gSI-2T-rjx" firstAttribute="top" secondItem="Mgh-B1-kq6" secondAttribute="top" id="g5f-f3-Nb5"/>
                             <constraint firstItem="Ldy-1e-1dq" firstAttribute="leading" secondItem="eBA-hr-Ht0" secondAttribute="trailing" constant="5" id="hLj-cn-XCe"/>
+                            <constraint firstItem="3Gr-h8-B0X" firstAttribute="leading" secondItem="Mgh-B1-kq6" secondAttribute="leading" constant="10" id="nbq-7f-mFg"/>
                             <constraint firstItem="gSI-2T-rjx" firstAttribute="trailing" secondItem="Mgh-B1-kq6" secondAttribute="trailing" id="npe-Rn-02A"/>
                             <constraint firstItem="Ldy-1e-1dq" firstAttribute="leading" secondItem="Wz4-iv-05R" secondAttribute="trailing" constant="5" id="pZS-UZ-81n"/>
                             <constraint firstItem="Mgh-B1-kq6" firstAttribute="trailing" secondItem="fLm-IL-vhR" secondAttribute="trailing" constant="5" id="pqZ-75-dgE"/>
@@ -215,5 +228,6 @@
         <image name="nuclearEscape" width="452" height="529"/>
         <image name="nuclearLogo" width="497" height="490"/>
         <image name="nuclearSave" width="420" height="421"/>
+        <image name="nuklearFirstAid" width="812" height="578"/>
     </resources>
 </document>

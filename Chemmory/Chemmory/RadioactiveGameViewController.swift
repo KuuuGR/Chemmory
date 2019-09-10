@@ -92,6 +92,12 @@ class RadioactiveGameViewController: UIViewController {
     }
     
     
+    @IBAction func helpButtonPressed(_ sender: UIButton) {
+        checkIsElementRadioactive() ? (elementBackgroundView.backgroundColor = UIColor.red) : (elementBackgroundView.backgroundColor = UIColor.green)
+    }
+    
+    
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         SoundManager.playSound(.back)
         self.navigationController?.popViewController(animated: true)
@@ -113,6 +119,7 @@ class RadioactiveGameViewController: UIViewController {
         atomicSymbolLabel.text = elements[randomElementNumber].symbol
         //atomicMassLabel.text = String(Int(elements[randomElementNumber].atomicMass))
         atomicMassLabel.text = String(atomicIsotopeMass)
+        elementBackgroundView.backgroundColor = .black // this is necessary for help button
     }
     
     func checkIsElementRadioactive() -> Bool {
