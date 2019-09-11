@@ -37,6 +37,9 @@ class SoundManager {
         case noRep
         case wrong
         case correct
+        case nukExplosion
+        case nukCorrect
+        case nukWrong
         
     }
     
@@ -114,6 +117,18 @@ class SoundManager {
         case .wrong:
             soundFilename = "wrong"
         
+        case .nukExplosion:
+            soundFilename = "nukExplosion"
+            
+        case .nukCorrect:
+            soundFilename = "nukCorrect"
+            
+        case .nukWrong:
+            soundFilename = "nukWrong"
+            
+            
+            
+            
         }
         
         // Get the path to the sound file inside the bundle
