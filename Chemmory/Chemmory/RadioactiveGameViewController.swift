@@ -18,6 +18,8 @@ class RadioactiveGameViewController: UIViewController {
     
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var corretLabel: UILabel!
+    @IBOutlet weak var incorrectLabel: UILabel!
+    
     
     @IBOutlet weak var imageCorrectWrongImageView: UIImageView!
     
@@ -31,6 +33,7 @@ class RadioactiveGameViewController: UIViewController {
     var atomicIsotopeMass: Int = 0
     
     var correctAnsCount: Int = 0
+    var incorrectAnsCount: Int = 0
     var levelCount: Int = 0
     
     override func viewDidLoad() {
@@ -140,14 +143,20 @@ class RadioactiveGameViewController: UIViewController {
         
         switch correctAnsCount {
         case (10...99):
-            prepareBarBarrel(001)
-            barrelThreeButton.isEnabled = true
+            if incorrectAnsCount < 1 {
+                prepareBarBarrel(001)
+                barrelThreeButton.isEnabled = true
+            }
         case (100...499):
-            prepareBarBarrel(011)
-            barrelTwoButton.isEnabled = true
+            if incorrectAnsCount < 10 {
+                prepareBarBarrel(011)
+                barrelTwoButton.isEnabled = true
+            }
         case (500...5000):
-            prepareBarBarrel(111)
-            barrelOneButton.isEnabled = true
+            if incorrectAnsCount < 20 {
+                prepareBarBarrel(111)
+                barrelOneButton.isEnabled = true
+            }
         default:
             prepareBarBarrel(000)
         }
@@ -157,7 +166,7 @@ class RadioactiveGameViewController: UIViewController {
         
         SoundManager.playSound(.nukWrong)
         wrongAnimation()
-        correctAnsCount -= 1
+        incorrectAnsCount += 1
         prepareScoreLabels()
     }
     
@@ -209,6 +218,7 @@ class RadioactiveGameViewController: UIViewController {
     func prepareScoreLabels(){
         levelLabel.text = "Level: \(levelCount)"
         corretLabel.text = "correct: \(correctAnsCount)"
+        incorrectLabel.text = "wrong: \(incorrectAnsCount)"
     }
     
     func randomIsotopeMass(_ atomicNumber: Int) -> Int {

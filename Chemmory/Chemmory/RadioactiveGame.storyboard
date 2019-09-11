@@ -140,13 +140,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="level: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wz4-iv-05R">
-                                <rect key="frame" x="80" y="20" width="80" height="15"/>
+                                <rect key="frame" x="80" y="10" width="80" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="correct: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBA-hr-Ht0">
-                                <rect key="frame" x="80" y="40" width="80" height="15"/>
+                                <rect key="frame" x="80" y="30" width="80" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wrong:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUJ-hU-RHJ" userLabel="IncorrectLabel">
+                                <rect key="frame" x="80" y="55" width="39" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -171,6 +177,8 @@
                             <constraint firstItem="Ldy-1e-1dq" firstAttribute="top" secondItem="Mgh-B1-kq6" secondAttribute="top" constant="20" id="1Q7-gU-nzJ"/>
                             <constraint firstItem="u1m-l7-8oP" firstAttribute="centerY" secondItem="wUt-LL-ijD" secondAttribute="centerY" id="2M0-Eo-CAI"/>
                             <constraint firstItem="xTd-ME-ysm" firstAttribute="width" secondItem="Ldy-1e-1dq" secondAttribute="width" id="2uu-S3-7ZH"/>
+                            <constraint firstItem="EUJ-hU-RHJ" firstAttribute="top" secondItem="eBA-hr-Ht0" secondAttribute="bottom" constant="10" id="7mh-lc-Fwy"/>
+                            <constraint firstItem="EUJ-hU-RHJ" firstAttribute="leading" secondItem="eBA-hr-Ht0" secondAttribute="leading" id="A3g-UU-vfD"/>
                             <constraint firstItem="xTd-ME-ysm" firstAttribute="centerX" secondItem="Ldy-1e-1dq" secondAttribute="centerX" id="AYM-5z-Nho"/>
                             <constraint firstItem="b8h-zI-FA9" firstAttribute="leading" secondItem="SKg-8h-Xha" secondAttribute="leading" constant="5" id="Cl8-mz-KmB"/>
                             <constraint firstItem="7DY-9l-Rfv" firstAttribute="centerY" secondItem="Mgh-B1-kq6" secondAttribute="centerY" id="DWz-wC-1d0"/>
@@ -195,7 +203,7 @@
                             <constraint firstItem="gSI-2T-rjx" firstAttribute="trailing" secondItem="Mgh-B1-kq6" secondAttribute="trailing" id="npe-Rn-02A"/>
                             <constraint firstItem="Ldy-1e-1dq" firstAttribute="leading" secondItem="Wz4-iv-05R" secondAttribute="trailing" constant="5" id="pZS-UZ-81n"/>
                             <constraint firstItem="Mgh-B1-kq6" firstAttribute="trailing" secondItem="fLm-IL-vhR" secondAttribute="trailing" constant="5" id="pqZ-75-dgE"/>
-                            <constraint firstItem="Wz4-iv-05R" firstAttribute="top" secondItem="Mgh-B1-kq6" secondAttribute="top" constant="20" id="qJN-Cg-YA3"/>
+                            <constraint firstItem="Wz4-iv-05R" firstAttribute="top" secondItem="Mgh-B1-kq6" secondAttribute="top" constant="10" id="qJN-Cg-YA3"/>
                             <constraint firstItem="Mgh-B1-kq6" firstAttribute="trailing" secondItem="sdq-Zp-5UA" secondAttribute="trailing" constant="5" id="rb8-S6-gUG"/>
                             <constraint firstItem="eBA-hr-Ht0" firstAttribute="leading" secondItem="b8h-zI-FA9" secondAttribute="trailing" constant="5" id="sMT-En-hgB"/>
                             <constraint firstItem="eBA-hr-Ht0" firstAttribute="top" secondItem="Wz4-iv-05R" secondAttribute="bottom" constant="5" id="uj9-xe-tAJ"/>
@@ -215,6 +223,7 @@
                         <outlet property="corretLabel" destination="eBA-hr-Ht0" id="Ywx-ft-RAp"/>
                         <outlet property="elementBackgroundView" destination="Ldy-1e-1dq" id="vY6-x7-EEG"/>
                         <outlet property="imageCorrectWrongImageView" destination="xTd-ME-ysm" id="Kne-Fd-X1h"/>
+                        <outlet property="incorrectLabel" destination="EUJ-hU-RHJ" id="biU-yH-sZ4"/>
                         <outlet property="levelLabel" destination="Wz4-iv-05R" id="P8L-lq-0bU"/>
                     </connections>
                 </viewController>
