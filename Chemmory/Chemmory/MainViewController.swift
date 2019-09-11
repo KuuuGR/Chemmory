@@ -48,6 +48,9 @@ class MainViewController: UIViewController {
         cPress += 1
         if cPress > 5 {
             c_cardButton.setImage(#imageLiteral(resourceName: "card_c_color"), for: .normal)
+            if cPress > 9{
+                switchToViewController(identifier: "noFiveMiniGameViewController", sbName: "noFiveMinigame") //hidden "noFiveGame" minigame
+            }
         }
     }
     

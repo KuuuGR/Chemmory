@@ -30,6 +30,8 @@
 		2246CF022321100E00F0161E /* nukExplosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2246CEFF2321100A00F0161E /* nukExplosion.wav */; };
 		2246CF032321100E00F0161E /* nukWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2246CF002321100B00F0161E /* nukWrong.wav */; };
 		2246CF042321100E00F0161E /* nukCorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2246CF012321100C00F0161E /* nukCorrect.wav */; };
+		2246CF062328E4D300F0161E /* noFiveMinigame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2246CF052328E4D300F0161E /* noFiveMinigame.storyboard */; };
+		2246CF082328E51700F0161E /* noFiveMiniGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246CF072328E51700F0161E /* noFiveMiniGameViewController.swift */; };
 		22727E84222D32E6004A9687 /* Gameboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FA5AE12229305D0026FC5D /* Gameboard.storyboard */; };
 		228203962248CC8900CFFFB9 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228203952248CC8900CFFFB9 /* Elements.swift */; };
 		22957C222233B688009AF033 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22957C212233B688009AF033 /* Results.storyboard */; };
@@ -103,6 +105,8 @@
 		2246CEFF2321100A00F0161E /* nukExplosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nukExplosion.wav; sourceTree = "<group>"; };
 		2246CF002321100B00F0161E /* nukWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nukWrong.wav; sourceTree = "<group>"; };
 		2246CF012321100C00F0161E /* nukCorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nukCorrect.wav; sourceTree = "<group>"; };
+		2246CF052328E4D300F0161E /* noFiveMinigame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = noFiveMinigame.storyboard; sourceTree = "<group>"; };
+		2246CF072328E51700F0161E /* noFiveMiniGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noFiveMiniGameViewController.swift; sourceTree = "<group>"; };
 		228203952248CC8900CFFFB9 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 		22957C212233B688009AF033 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		22957C232233B7BD009AF033 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 				22B539742313A88700C8EE73 /* ScaleGameViewController.swift */,
 				223BA73C231D322300DB6C6A /* RadioactiveGame.storyboard */,
 				223BA73E231D324100DB6C6A /* RadioactiveGameViewController.swift */,
+				2246CF052328E4D300F0161E /* noFiveMinigame.storyboard */,
+				2246CF072328E51700F0161E /* noFiveMiniGameViewController.swift */,
 				22C4818A2226B91D00C6E530 /* Assets.xcassets */,
 				22C4818F2226B91D00C6E530 /* Info.plist */,
 				22278A34227AD11F00BDFA75 /* Localizable.strings */,
@@ -364,6 +370,7 @@
 				22E10CB922FC47400046C728 /* noRep.wav in Resources */,
 				222E0EF322EF10BE00AF8F58 /* HiddenGame.storyboard in Resources */,
 				223FEF1B22783DE300B9876F /* Language.storyboard in Resources */,
+				2246CF062328E4D300F0161E /* noFiveMinigame.storyboard in Resources */,
 				22AC6FF0230BF89A00C000EA /* BottleGame.storyboard in Resources */,
 				22A9E952224A2D4D00EBA981 /* flipBack04.wav in Resources */,
 				22A9E94C224A2AE800EBA981 /* fail01.wav in Resources */,
@@ -448,6 +455,7 @@
 				22C481862226B91B00C6E530 /* GameViewController.swift in Sources */,
 				22C481842226B91B00C6E530 /* AppDelegate.swift in Sources */,
 				22FA5AE6222958740026FC5D /* CardModel.swift in Sources */,
+				2246CF082328E51700F0161E /* noFiveMiniGameViewController.swift in Sources */,
 				222F8B8622C61F640057E60D /* HighScoreViewController.swift in Sources */,
 				22957C242233B7BD009AF033 /* ResultsViewController.swift in Sources */,
 				22426AE32280126E00D7F2C1 /* CreditsViewController.swift in Sources */,
