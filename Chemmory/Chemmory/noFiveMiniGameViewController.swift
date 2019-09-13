@@ -13,11 +13,14 @@ class noFiveMiniGameViewController: UIViewController {
     @IBOutlet weak var centralSaveButton: UIButton!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var winLabel: UILabel!
+    @IBOutlet weak var speedLabel: UILabel!
     
     @IBOutlet weak var medal1: UIImageView!
     @IBOutlet weak var medal2: UIImageView!
     @IBOutlet weak var medal3: UIImageView!
     @IBOutlet weak var medal4: UIImageView!
+    
+    
     
     @IBOutlet var allButtons: [UIButton]!
     
@@ -25,6 +28,7 @@ class noFiveMiniGameViewController: UIViewController {
     var winCounter: Int = 0
     var roundCounter: Int = 0
     var answer: Int = 0
+    let timeCountStartingPoint = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +65,8 @@ class noFiveMiniGameViewController: UIViewController {
         if question[sender.tag] == answer {
             SoundManager.playSound(.correct)
             winCounter += 1
+            speedLabel.text = returnSpeed()
+            
             showAwards(winCounter)
         } else {SoundManager.playSound(.wrong)}
         refreshScoreLabels()
@@ -156,6 +162,13 @@ class noFiveMiniGameViewController: UIViewController {
             return
         }
 
+    }
+    
+    func returnSpeed() -> String{
+        let timeStartToWinGame = (self.timeCountStartingPoint.timeIntervalSinceNow * -1)
+        print (timeStartToWinGame)
+        let speedValue = Double(winCounter)/timeStartToWinGame * 60
+        return String(format: "%.01f",speedValue) + "\n[epm]"
     }
 
 }
