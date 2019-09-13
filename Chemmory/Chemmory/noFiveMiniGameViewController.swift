@@ -43,7 +43,6 @@ class noFiveMiniGameViewController: UIViewController {
 
     }
     
-    
     @IBAction func centralSaveButton(_ sender: UIButton) {
         SoundManager.playSound(.up)
         roundCounter += 1
@@ -55,7 +54,6 @@ class noFiveMiniGameViewController: UIViewController {
         
         question = prepareRandomAnswers(answer, 112)
         setButtonsValues()
-        print(answer)
         
     }
     
@@ -64,8 +62,12 @@ class noFiveMiniGameViewController: UIViewController {
             SoundManager.playSound(.correct)
             winCounter += 1
             showAwards(winCounter)
-        }
+        } else {SoundManager.playSound(.wrong)}
         refreshScoreLabels()
+        
+        let buttonChoosen = showOnlyRandomOne()
+        answer = question[buttonChoosen]
+        centralSaveButton.isEnabled = true
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -136,17 +138,17 @@ class noFiveMiniGameViewController: UIViewController {
     func showAwards(_ wins: Int){
         
         switch wins {
-        case 1...10:
+        case 10...49:
             medal1.isHidden = false
-        case 11...50:
+        case 50...99:
             medal2.isHidden = false
-        case 51...400:
+        case 100...399:
             medal3.isHidden = false
-        case 401...1000:
+        case 400...999:
             medal4.isHidden = false
-        case 1001...2000:
+        case 1000...1999:
             centralSaveButton.setImage(#imageLiteral(resourceName: "miniVSaveGold"), for: .normal)
-        case 2001...5000:
+        case 2000...4999:
             centralSaveButton.setImage(#imageLiteral(resourceName: "miniVSaveClock"), for: .normal)
         case 5000...20000:
             centralSaveButton.setImage(#imageLiteral(resourceName: "rinbowStar"), for: .normal)
