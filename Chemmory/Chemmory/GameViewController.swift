@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol GameResultDelegate: class {
+protocol GameResultDelegate: AnyObject {
 
     func backFromResult(transferredDataToGameVC: String)
 }
