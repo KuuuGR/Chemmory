@@ -1,26 +1,22 @@
 PODS:
-  - IBLocalizable (1.2.0)
-  - Realm (3.16.2):
-    - Realm/Headers (= 3.16.2)
-  - Realm/Headers (3.16.2)
-  - RealmSwift (3.16.2):
-    - Realm (= 3.16.2)
+  - Realm (20.0.3):
+    - Realm/Headers (= 20.0.3)
+  - Realm/Headers (20.0.3)
+  - RealmSwift (20.0.3):
+    - Realm (= 20.0.3)
 
 DEPENDENCIES:
-  - IBLocalizable
   - RealmSwift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - IBLocalizable
+  trunk:
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
-  IBLocalizable: a78e25dfef92f78be85c199948d22e0771f0c9d1
-  Realm: 0e73b4edeb5b6a90da3d83206883b2e34e00eb38
-  RealmSwift: a81e650171ef0a5f999df1ed8d39ba8d6fce88a4
+  Realm: 853e5089d6042dff807bda000277eadfe2da93d2
+  RealmSwift: f33c19577cefcbf681345d721fcbc7b42be4c949
 
-PODFILE CHECKSUM: efe20938959c185bc96cb5ac33a74ba7fae2044e
+PODFILE CHECKSUM: f76aa3cf8fc55d5d0f8d458ad2d488ea24871e55
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.16.2
