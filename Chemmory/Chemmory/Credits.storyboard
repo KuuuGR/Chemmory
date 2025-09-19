@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,12 +39,20 @@
                                     <action selector="logoButtonTapped:" destination="tY4-0c-eX8" eventType="touchUpInside" id="oSL-0w-eCf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special thanks to 9bits Labs 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BC-gM-a9c">
+                                <rect key="frame" x="460" y="373" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hap-TD-JmM"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="M07-G5-MBa" firstAttribute="top" secondItem="FzJ-G5-So1" secondAttribute="top" constant="30" id="9ll-Lk-c0h"/>
+                            <constraint firstItem="Hap-TD-JmM" firstAttribute="bottom" secondItem="7BC-gM-a9c" secondAttribute="bottom" constant="20" id="BpS-Wm-EhP"/>
                             <constraint firstItem="M07-G5-MBa" firstAttribute="centerX" secondItem="Hap-TD-JmM" secondAttribute="centerX" id="H8l-sp-j5a"/>
+                            <constraint firstItem="Hap-TD-JmM" firstAttribute="trailing" secondItem="7BC-gM-a9c" secondAttribute="trailing" constant="20" id="mI0-7j-rKO"/>
                             <constraint firstItem="cld-uI-fEz" firstAttribute="top" secondItem="FzJ-G5-So1" secondAttribute="top" id="n0T-Y4-6rm"/>
                             <constraint firstItem="cld-uI-fEz" firstAttribute="leading" secondItem="FzJ-G5-So1" secondAttribute="leading" constant="5" id="qWa-Oi-zuM"/>
                         </constraints>
@@ -61,5 +70,8 @@
     <resources>
         <image name="app_logo" width="1024" height="1024"/>
         <image name="leftArrow4" width="380" height="380"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
