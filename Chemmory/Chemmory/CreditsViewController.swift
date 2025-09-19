@@ -38,7 +38,7 @@ class CreditsViewController: UIViewController {
     
     @IBAction func logoButtonTapped(_ sender: Any) {
         
-        UIApplication.shared.openURL(URL(string: "https://www.9bits.com/")!)
+        UIApplication.shared.openURL(URL(string: "https://github.com/KuuuGR")!)
     }
     
 }

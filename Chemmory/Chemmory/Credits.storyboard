@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,17 +28,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M07-G5-MBa">
-                                <rect key="frame" x="169.66666666666663" y="30" width="397" height="183"/>
+                                <rect key="frame" x="268" y="30" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="naE-kx-YvS"/>
-                                    <constraint firstAttribute="width" constant="397" id="tng-Dv-6tO"/>
+                                    <constraint firstAttribute="height" constant="200" id="naE-kx-YvS"/>
+                                    <constraint firstAttribute="width" constant="200" id="tng-Dv-6tO"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="9BitsLogo"/>
+                                <state key="normal" title="Button" image="app_logo"/>
                                 <connections>
                                     <action selector="logoButtonTapped:" destination="tY4-0c-eX8" eventType="touchUpInside" id="oSL-0w-eCf"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hap-TD-JmM"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="M07-G5-MBa" firstAttribute="top" secondItem="FzJ-G5-So1" secondAttribute="top" constant="30" id="9ll-Lk-c0h"/>
@@ -48,7 +47,6 @@
                             <constraint firstItem="cld-uI-fEz" firstAttribute="top" secondItem="FzJ-G5-So1" secondAttribute="top" id="n0T-Y4-6rm"/>
                             <constraint firstItem="cld-uI-fEz" firstAttribute="leading" secondItem="FzJ-G5-So1" secondAttribute="leading" constant="5" id="qWa-Oi-zuM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Hap-TD-JmM"/>
                     </view>
                     <connections>
                         <outlet property="logoButton" destination="M07-G5-MBa" id="cuQ-dI-dmc"/>
@@ -61,7 +59,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9BitsLogo" width="1534" height="733"/>
+        <image name="app_logo" width="1024" height="1024"/>
         <image name="leftArrow4" width="380" height="380"/>
     </resources>
 </document>
