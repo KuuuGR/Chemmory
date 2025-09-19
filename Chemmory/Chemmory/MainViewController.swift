@@ -96,7 +96,7 @@ class MainViewController: UIViewController {
     
     @IBAction func rButtonPush(_ sender: Any) {
         r_cardButton.alpha = alphaTappedCard
-        r_cardButton.setImage(#imageLiteral(resourceName: "card_r1"), for: .normal)
+        r_cardButton.setImage(#imageLiteral(resourceName: "card_R1"), for: .normal)
         SoundManager.playSound(.title)
         rPress += 1
         if rPress > 3 {
@@ -225,7 +225,7 @@ class MainViewController: UIViewController {
         }
         if rPress >= 1 {
             rPress = 0
-            r_cardButton.setImage(#imageLiteral(resourceName: "card_r1"), for: .normal)
+            r_cardButton.setImage(#imageLiteral(resourceName: "card_R1"), for: .normal)
         }
         
         super.viewDidAppear(true)

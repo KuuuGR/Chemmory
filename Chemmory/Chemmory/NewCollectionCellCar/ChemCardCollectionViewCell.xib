@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMe-zp-7ff" userLabel="ElementDetailsView">
-                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                        <rect key="frame" x="0.0" y="12.666666666666671" width="111" height="111"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-La-jti">
                                 <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dy" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17u-9t-vVa">
-                                <rect key="frame" x="20" y="19.5" width="71" height="44.5"/>
+                                <rect key="frame" x="20" y="19.333333333333332" width="71" height="44.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -39,37 +37,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oxygenium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sLq-tA-bcA">
-                                <rect key="frame" x="3" y="64" width="105" height="25.5"/>
+                                <rect key="frame" x="3" y="63.666666666666664" width="105" height="25.666666666666664"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="878.234" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-6n-kcW">
-                                <rect key="frame" x="16" y="87.5" width="79" height="16.5"/>
+                                <rect key="frame" x="16" y="87.333333333333329" width="79" height="16.666666666666671"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6J-Im-Bde">
-                                <rect key="frame" x="10" y="5" width="91" height="14.5"/>
+                                <rect key="frame" x="10" y="5.0000000000000009" width="91" height="14.333333333333336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Efz-tg-PZV">
-                                        <rect key="frame" x="0.0" y="0.0" width="27" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="26.666666666666668" height="14.333333333333334"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-wE-VpZ">
-                                        <rect key="frame" x="27" y="0.0" width="1" height="14.5"/>
+                                        <rect key="frame" x="26.666666666666664" y="0.0" width="1" height="14.333333333333334"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="QsD-kw-rNx"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="260" usesAttributedText="YES" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-rw-w20">
-                                        <rect key="frame" x="30" y="0.0" width="61" height="14.5"/>
+                                        <rect key="frame" x="29.666666666666661" y="0.0" width="61.333333333333343" height="14.333333333333334"/>
                                         <attributedString key="attributedText">
                                             <fragment content="56765">
                                                 <attributes>
                                                     <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="15" name="Ubuntu-Bold"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -123,13 +121,13 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="UMe-zp-7ff" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="3Ny-ub-hGf"/>
                 <constraint firstItem="UMe-zp-7ff" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="9he-Z0-iKK"/>
                 <constraint firstItem="UMe-zp-7ff" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Yug-Fo-GHI"/>
                 <constraint firstItem="UMe-zp-7ff" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="dBG-r8-Gqf"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="1181" height="944"/>
             <connections>
                 <outlet property="backImageView" destination="Zbz-qj-AQF" id="8NU-3e-YPm"/>
